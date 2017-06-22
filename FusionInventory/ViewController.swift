@@ -26,6 +26,7 @@
  */
 
 import UIKit
+import FlyveMDMInventory
 
 class ViewController: UIViewController {
     
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
         button.layer.backgroundColor = UIColor.black.cgColor
         button.setTitle("Post XML Inventory", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
-        button.addTarget(self, action: #selector(self.sendXmlInventory), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.generateXML), for: .touchUpInside)
         return button
     }()
     
@@ -116,8 +117,22 @@ class ViewController: UIViewController {
         
     }
     
-    func sendXmlInventory() {
+    func generateXML() {
+        
+        messageLabel.text = ""
+        loadingIndicatorView.startAnimating()
+        
+        let inventoryTask = InventoryTask()
+        
+        inventoryTask.execute("Agent_v1.0") { result in
+            
+            sendXmlInventory(result)
+        }
+    }
     
+    func sendXmlInventory(_ xml: String) {
+        
+        print(xml)
     }
 }
 
