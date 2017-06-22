@@ -8,6 +8,7 @@ target 'FusionInventory' do
   # Pods for FusionInventory
 
   pod 'FlyveMDMInventory', :path => '../flyve-mdm-ios-inventory'
+  pod 'Alamofire', '~> 4.5'
 
   target 'FusionInventoryTests' do
     inherit! :search_paths
