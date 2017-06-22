@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         let imageView = UIImageView(image: UIImage(named: "logo"))
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = false
         
         return imageView
     }()
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         let button = UIButton(type: .custom)
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.backgroundColor = UIColor.init(red: 6.0/255.0, green: 135.0/255.0, blue: 133.0/255.0, alpha: 1.0).cgColor
+        button.layer.backgroundColor = UIColor.black.cgColor
         button.setTitle("Post XML Inventory", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
         button.addTarget(self, action: #selector(self.sendXmlInventory), for: .touchUpInside)
@@ -78,7 +78,8 @@ class ViewController: UIViewController {
     func addConstraints() {
         
         
-        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 48).isActive = true
+        logoImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -48).isActive = true
         logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         messageLabel.bottomAnchor.constraint(equalTo: logoImageView.topAnchor, constant: -16).isActive = true

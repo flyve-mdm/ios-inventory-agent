@@ -1,0 +1,943 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D3A1191E47C79D70B3A7079710F7AAB /* Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A556F61DA39099F1EC7A20D7124FE7B /* Hardware.m */; };
+		0DD982DBC8399A0D7610217341947938 /* Memory.h in Headers */ = {isa = PBXBuildFile; fileRef = E54E7979871752A4623F5C0D5ED5DC1D /* Memory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13663F8CFB12CBB583D744093FCBB2BE /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA227BD6BCFC279C63499B6A232A3A /* Network.m */; };
+		18689021CCB0C09C01FF81D35B6B3D80 /* FlyveMDMInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = B7464C1D5900EED4AAF2B06EC22CE697 /* FlyveMDMInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFFC254084807C7815CD3B3859BF5B0 /* Carrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 11403992DD4DC1B090CFEEBF38CAAAFA /* Carrier.m */; };
+		200F7B07B59613FAD49188E27585564E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		270C07A18635F6480A621D0F3D6786A2 /* Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767CB4C4A39588FF36E40E09781FAAE /* Memory.m */; };
+		27EDBA0735042CCE67B5E0D299458D0C /* Pods-FusionInventoryTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F2EE17C40B2458512391AD213637F /* Pods-FusionInventoryTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		286137924D387837D3763DBA77405143 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = F49B80D7DECB63F08071664A7C70D0B8 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A41C9D821FE549681BD4F12006E8DF0 /* Hardware.h in Headers */ = {isa = PBXBuildFile; fileRef = 91BDCBDAE6E8479871D9586B86C8ED57 /* Hardware.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FAD5A4807892FAE31DA93EB59ABE9AD /* FlyveMDMInventory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C491D7870AE4602F640179BE3CA5BA28 /* FlyveMDMInventory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DFE9CDCCE79C51DDE79565915BF4254 /* Pods-FusionInventoryUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0FE3C443CB91ED9EB295EF5FB34F63 /* Pods-FusionInventoryUITests-dummy.m */; };
+		68D7EFE9F463FCFC891D2A7B75B72E5F /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6D0A99B6E7A017C348464C04AF2A9B /* Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68E035BF39E0341EB783503086EAC9CE /* Battery.h in Headers */ = {isa = PBXBuildFile; fileRef = C808C461565F9D659DE0D07AC7BB968B /* Battery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AF3DC300B04D6A415F120C2F8E01D8F /* Pods-FusionInventory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26C1742AD1599184699F3AF806D21321 /* Pods-FusionInventory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77AE4B00AAA41CF6B30CB73E3C88F306 /* OperatingSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 837EEF8E1BAF86FCEBF91690C4F5A864 /* OperatingSystem.m */; };
+		7B357767ABC813C64940ED610A21DA2C /* Carrier.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC0E6044C7CF1FB3BE9C29E8C266CD3 /* Carrier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A5223B86F7CB03EECBCD0C354CF6456 /* Battery.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCE544ACA92F79590380881ECA82F6C /* Battery.m */; };
+		8F525F83D8E7403E5C3AF2DD882DC145 /* Cpu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA9A33107D34CADC818B6F060BB6576 /* Cpu.m */; };
+		91C46EB576D3FF843A49D00604E4C99A /* Pods-FusionInventoryUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ECFF33805BF091A521DA08B95D69407 /* Pods-FusionInventoryUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0B402E08AFCFFDF8C6BEF3A8A1D654D /* OperatingSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E410E369C20E0EFDA8EFA51B5E025DE0 /* OperatingSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3FC5BC467E06A277C80CA52DB505049 /* FlyveMDMInventory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 089A7C644328CF8CD0F854DA16158728 /* FlyveMDMInventory-dummy.m */; };
+		A419EFE116189D15C18213B984C031D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		ADDCDFB604405CC3F2D90DF6DA686A7B /* Pods-FusionInventory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B48A37630D707A4562FECF9C27070F /* Pods-FusionInventory-dummy.m */; };
+		C55B711B90847DCAD46277DB0A71F08C /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2334D77DB509FC44FAD9D22E76631 /* Storage.m */; };
+		CAC6FBA81C2ECC18EEBFE8BC9E3F9E2C /* Pods-FusionInventoryTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE536349851B1301C8E5D8CDC04DCC0B /* Pods-FusionInventoryTests-dummy.m */; };
+		D76F5D6EE90A49C406E855EC527B000D /* Cpu.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AFE45764690936C56F9D6DA3DF5CF9 /* Cpu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA4F539120C848B5B13A213D87B95812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EE912E5551558A052154CF2870A454F1 /* InventoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17089E3CD6181C81714E95B7695D5001 /* InventoryTask.swift */; };
+		EFDA282D25F0000B88E3243DD307741E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFD37B1293BF8B28D582F2F8CDC7A39B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9750441406260FBBD31C368005B2DDD4;
+			remoteInfo = FlyveMDMInventory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B8C5E9BD01C8721CDC481B2778F079 /* Pods-FusionInventoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusionInventoryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0250114187CB61AF488038D7BA4E3580 /* Pods-FusionInventoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusionInventoryTests.release.xcconfig"; sourceTree = "<group>"; };
+		037D4637950AE23C7D4ED491D5C5E3F3 /* Pods-FusionInventoryTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusionInventoryTests-resources.sh"; sourceTree = "<group>"; };
+		0468C65B6272CAB559C53CA67239E777 /* Pods-FusionInventoryUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FusionInventoryUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		089A7C644328CF8CD0F854DA16158728 /* FlyveMDMInventory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlyveMDMInventory-dummy.m"; sourceTree = "<group>"; };
+		0C640C65FBE12ECEDE363AD3C8A79083 /* FlyveMDMInventory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlyveMDMInventory.xcconfig; sourceTree = "<group>"; };
+		101448432F6B798240F620DF85F22C1B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11403992DD4DC1B090CFEEBF38CAAAFA /* Carrier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Carrier.m; sourceTree = "<group>"; };
+		1563D80090000E26BC7BC46986721966 /* FlyveMDMInventory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlyveMDMInventory-prefix.pch"; sourceTree = "<group>"; };
+		17089E3CD6181C81714E95B7695D5001 /* InventoryTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InventoryTask.swift; sourceTree = "<group>"; };
+		19C338A258B3A2EB6CA521E07D81A154 /* Pods-FusionInventoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusionInventoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		24B48A37630D707A4562FECF9C27070F /* Pods-FusionInventory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FusionInventory-dummy.m"; sourceTree = "<group>"; };
+		26C1742AD1599184699F3AF806D21321 /* Pods-FusionInventory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FusionInventory-umbrella.h"; sourceTree = "<group>"; };
+		280C04346C18BC006000421790FBC778 /* Pods-FusionInventoryTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FusionInventoryTests.modulemap"; sourceTree = "<group>"; };
+		2A556F61DA39099F1EC7A20D7124FE7B /* Hardware.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Hardware.m; sourceTree = "<group>"; };
+		2ACE9F8AC0D3EC4E688C5D71E2CD98BA /* Pods-FusionInventoryUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusionInventoryUITests-frameworks.sh"; sourceTree = "<group>"; };
+		33FA227BD6BCFC279C63499B6A232A3A /* Network.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
+		36AF3F53B999B3A057678F1D60739D53 /* Pods-FusionInventory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FusionInventory.modulemap"; sourceTree = "<group>"; };
+		3DA9A33107D34CADC818B6F060BB6576 /* Cpu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Cpu.m; sourceTree = "<group>"; };
+		3E1A5C216F4AFC1DE2B8AB0C0E56D601 /* Pods-FusionInventory-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusionInventory-resources.sh"; sourceTree = "<group>"; };
+		444192C79B2681F43918B9785C03CB63 /* Pods-FusionInventory-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FusionInventory-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4C12941D7A8D54941D17783E38A30300 /* Pods-FusionInventory-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FusionInventory-acknowledgements.plist"; sourceTree = "<group>"; };
+		5B6D0A99B6E7A017C348464C04AF2A9B /* Storage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
+		5FC0E6044C7CF1FB3BE9C29E8C266CD3 /* Carrier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Carrier.h; sourceTree = "<group>"; };
+		6303B9988029F5182928F45C9A7F01BE /* Pods_FusionInventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FusionInventory.framework; path = "Pods-FusionInventory.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6B168D1D0CC174445345BEAF610E3AA2 /* FlyveMDMInventory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FlyveMDMInventory.modulemap; sourceTree = "<group>"; };
+		76BE920943E3E347CFFFDF4A6D22296A /* Pods-FusionInventory-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusionInventory-frameworks.sh"; sourceTree = "<group>"; };
+		7767CB4C4A39588FF36E40E09781FAAE /* Memory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Memory.m; sourceTree = "<group>"; };
+		78AFE45764690936C56F9D6DA3DF5CF9 /* Cpu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Cpu.h; sourceTree = "<group>"; };
+		795F2EE17C40B2458512391AD213637F /* Pods-FusionInventoryTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FusionInventoryTests-umbrella.h"; sourceTree = "<group>"; };
+		79BECA8A8057724497BEC55898A12D93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B7AB650272E1DA44AAEE4594EA82679 /* Pods-FusionInventoryTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FusionInventoryTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7ECFF33805BF091A521DA08B95D69407 /* Pods-FusionInventoryUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FusionInventoryUITests-umbrella.h"; sourceTree = "<group>"; };
+		8355AF66EF0F6183BD0EED10733A36B0 /* Pods-FusionInventory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusionInventory.release.xcconfig"; sourceTree = "<group>"; };
+		837EEF8E1BAF86FCEBF91690C4F5A864 /* OperatingSystem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OperatingSystem.m; sourceTree = "<group>"; };
+		9190A90890DDE95E60D1ADFA2C5C60BD /* Pods-FusionInventoryUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FusionInventoryUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		91BDCBDAE6E8479871D9586B86C8ED57 /* Hardware.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Hardware.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F5538045FC3E324F482DB652C34779 /* Pods-FusionInventoryUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusionInventoryUITests-resources.sh"; sourceTree = "<group>"; };
+		99FDA37C338060030A4F0AD7F8A57A57 /* Pods_FusionInventoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FusionInventoryTests.framework; path = "Pods-FusionInventoryTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A648AC5A8CE56628DD1FE7BD198C3895 /* Pods_FusionInventoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FusionInventoryUITests.framework; path = "Pods-FusionInventoryUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70353574EF218D7B6C95E34E8ABFD0D /* Pods-FusionInventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusionInventory.debug.xcconfig"; sourceTree = "<group>"; };
+		B7464C1D5900EED4AAF2B06EC22CE697 /* FlyveMDMInventory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FlyveMDMInventory.h; sourceTree = "<group>"; };
+		C491D7870AE4602F640179BE3CA5BA28 /* FlyveMDMInventory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlyveMDMInventory-umbrella.h"; sourceTree = "<group>"; };
+		C808C461565F9D659DE0D07AC7BB968B /* Battery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Battery.h; sourceTree = "<group>"; };
+		D1494D623FA93F9594A1256FE0160BC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D269343E0E3084CB6C11DBEF7E94E9CA /* FlyveMDMInventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlyveMDMInventory.framework; path = FlyveMDMInventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3ADC5D75599BBC6EF641D7D4EF6CCF8 /* Pods-FusionInventoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusionInventoryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D57896859E14D3C944CC3C3D3D5F2C67 /* Pods-FusionInventoryTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusionInventoryTests-frameworks.sh"; sourceTree = "<group>"; };
+		D710EBC318A1FDE27E18E68011FBE494 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E410E369C20E0EFDA8EFA51B5E025DE0 /* OperatingSystem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OperatingSystem.h; sourceTree = "<group>"; };
+		E54E7979871752A4623F5C0D5ED5DC1D /* Memory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
+		EBCE544ACA92F79590380881ECA82F6C /* Battery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Battery.m; sourceTree = "<group>"; };
+		EDE2334D77DB509FC44FAD9D22E76631 /* Storage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Storage.m; sourceTree = "<group>"; };
+		EE536349851B1301C8E5D8CDC04DCC0B /* Pods-FusionInventoryTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FusionInventoryTests-dummy.m"; sourceTree = "<group>"; };
+		F00EA056B925D7EEDF0E48F1DFB905F5 /* Pods-FusionInventoryTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FusionInventoryTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F029CABBCE94E9B7714C32D27A7743F7 /* Pods-FusionInventoryUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FusionInventoryUITests.modulemap"; sourceTree = "<group>"; };
+		F49B80D7DECB63F08071664A7C70D0B8 /* Network.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		FE0FE3C443CB91ED9EB295EF5FB34F63 /* Pods-FusionInventoryUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FusionInventoryUITests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31382AEFBDBB16FE1A29FF10668E5E7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDA282D25F0000B88E3243DD307741E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C0B1B90CDA58C9636648B349DF8C71F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4F539120C848B5B13A213D87B95812 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7422A29AC224EC1BB4492C86A514E1F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				200F7B07B59613FAD49188E27585564E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B195FA307EF5C1888CD710A3EDF8D182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A419EFE116189D15C18213B984C031D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D073522EC6A0D1F36BDB09531800C8C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B168D1D0CC174445345BEAF610E3AA2 /* FlyveMDMInventory.modulemap */,
+				0C640C65FBE12ECEDE363AD3C8A79083 /* FlyveMDMInventory.xcconfig */,
+				089A7C644328CF8CD0F854DA16158728 /* FlyveMDMInventory-dummy.m */,
+				1563D80090000E26BC7BC46986721966 /* FlyveMDMInventory-prefix.pch */,
+				C491D7870AE4602F640179BE3CA5BA28 /* FlyveMDMInventory-umbrella.h */,
+				101448432F6B798240F620DF85F22C1B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../fusioninventory-ios/Pods/Target Support Files/FlyveMDMInventory";
+			sourceTree = "<group>";
+		};
+		0FA1229C148EFA5FEEB2F8DB348D5500 /* Pods-FusionInventoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				79BECA8A8057724497BEC55898A12D93 /* Info.plist */,
+				280C04346C18BC006000421790FBC778 /* Pods-FusionInventoryTests.modulemap */,
+				7B7AB650272E1DA44AAEE4594EA82679 /* Pods-FusionInventoryTests-acknowledgements.markdown */,
+				F00EA056B925D7EEDF0E48F1DFB905F5 /* Pods-FusionInventoryTests-acknowledgements.plist */,
+				EE536349851B1301C8E5D8CDC04DCC0B /* Pods-FusionInventoryTests-dummy.m */,
+				D57896859E14D3C944CC3C3D3D5F2C67 /* Pods-FusionInventoryTests-frameworks.sh */,
+				037D4637950AE23C7D4ED491D5C5E3F3 /* Pods-FusionInventoryTests-resources.sh */,
+				795F2EE17C40B2458512391AD213637F /* Pods-FusionInventoryTests-umbrella.h */,
+				00B8C5E9BD01C8721CDC481B2778F079 /* Pods-FusionInventoryTests.debug.xcconfig */,
+				0250114187CB61AF488038D7BA4E3580 /* Pods-FusionInventoryTests.release.xcconfig */,
+			);
+			name = "Pods-FusionInventoryTests";
+			path = "Target Support Files/Pods-FusionInventoryTests";
+			sourceTree = "<group>";
+		};
+		21351CE272A0477CA100D3325971D817 /* FlyveMDMInventory */ = {
+			isa = PBXGroup;
+			children = (
+				C808C461565F9D659DE0D07AC7BB968B /* Battery.h */,
+				EBCE544ACA92F79590380881ECA82F6C /* Battery.m */,
+				5FC0E6044C7CF1FB3BE9C29E8C266CD3 /* Carrier.h */,
+				11403992DD4DC1B090CFEEBF38CAAAFA /* Carrier.m */,
+				78AFE45764690936C56F9D6DA3DF5CF9 /* Cpu.h */,
+				3DA9A33107D34CADC818B6F060BB6576 /* Cpu.m */,
+				B7464C1D5900EED4AAF2B06EC22CE697 /* FlyveMDMInventory.h */,
+				91BDCBDAE6E8479871D9586B86C8ED57 /* Hardware.h */,
+				2A556F61DA39099F1EC7A20D7124FE7B /* Hardware.m */,
+				17089E3CD6181C81714E95B7695D5001 /* InventoryTask.swift */,
+				E54E7979871752A4623F5C0D5ED5DC1D /* Memory.h */,
+				7767CB4C4A39588FF36E40E09781FAAE /* Memory.m */,
+				F49B80D7DECB63F08071664A7C70D0B8 /* Network.h */,
+				33FA227BD6BCFC279C63499B6A232A3A /* Network.m */,
+				E410E369C20E0EFDA8EFA51B5E025DE0 /* OperatingSystem.h */,
+				837EEF8E1BAF86FCEBF91690C4F5A864 /* OperatingSystem.m */,
+				5B6D0A99B6E7A017C348464C04AF2A9B /* Storage.h */,
+				EDE2334D77DB509FC44FAD9D22E76631 /* Storage.m */,
+			);
+			name = FlyveMDMInventory;
+			path = FlyveMDMInventory;
+			sourceTree = "<group>";
+		};
+		5885B25E9E18F87FA52CE34DABAE694C /* Pods-FusionInventory */ = {
+			isa = PBXGroup;
+			children = (
+				D710EBC318A1FDE27E18E68011FBE494 /* Info.plist */,
+				36AF3F53B999B3A057678F1D60739D53 /* Pods-FusionInventory.modulemap */,
+				444192C79B2681F43918B9785C03CB63 /* Pods-FusionInventory-acknowledgements.markdown */,
+				4C12941D7A8D54941D17783E38A30300 /* Pods-FusionInventory-acknowledgements.plist */,
+				24B48A37630D707A4562FECF9C27070F /* Pods-FusionInventory-dummy.m */,
+				76BE920943E3E347CFFFDF4A6D22296A /* Pods-FusionInventory-frameworks.sh */,
+				3E1A5C216F4AFC1DE2B8AB0C0E56D601 /* Pods-FusionInventory-resources.sh */,
+				26C1742AD1599184699F3AF806D21321 /* Pods-FusionInventory-umbrella.h */,
+				B70353574EF218D7B6C95E34E8ABFD0D /* Pods-FusionInventory.debug.xcconfig */,
+				8355AF66EF0F6183BD0EED10733A36B0 /* Pods-FusionInventory.release.xcconfig */,
+			);
+			name = "Pods-FusionInventory";
+			path = "Target Support Files/Pods-FusionInventory";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				AB35D4983DC373BAFA1F12BF51B1A9A3 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				E79C162B67B2ED91E6E8B1215D2DDD23 /* Products */,
+				ED819054038DAC0BBF900E22D81AA8A8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8FF3CD81F62E23CCA00AEF825A7F8ABC /* Pods-FusionInventoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1494D623FA93F9594A1256FE0160BC0 /* Info.plist */,
+				F029CABBCE94E9B7714C32D27A7743F7 /* Pods-FusionInventoryUITests.modulemap */,
+				9190A90890DDE95E60D1ADFA2C5C60BD /* Pods-FusionInventoryUITests-acknowledgements.markdown */,
+				0468C65B6272CAB559C53CA67239E777 /* Pods-FusionInventoryUITests-acknowledgements.plist */,
+				FE0FE3C443CB91ED9EB295EF5FB34F63 /* Pods-FusionInventoryUITests-dummy.m */,
+				2ACE9F8AC0D3EC4E688C5D71E2CD98BA /* Pods-FusionInventoryUITests-frameworks.sh */,
+				94F5538045FC3E324F482DB652C34779 /* Pods-FusionInventoryUITests-resources.sh */,
+				7ECFF33805BF091A521DA08B95D69407 /* Pods-FusionInventoryUITests-umbrella.h */,
+				19C338A258B3A2EB6CA521E07D81A154 /* Pods-FusionInventoryUITests.debug.xcconfig */,
+				D3ADC5D75599BBC6EF641D7D4EF6CCF8 /* Pods-FusionInventoryUITests.release.xcconfig */,
+			);
+			name = "Pods-FusionInventoryUITests";
+			path = "Target Support Files/Pods-FusionInventoryUITests";
+			sourceTree = "<group>";
+		};
+		AB35D4983DC373BAFA1F12BF51B1A9A3 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EFA59D2276CF6C97EEBC4C1A6E2DD /* FlyveMDMInventory */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC6EFA59D2276CF6C97EEBC4C1A6E2DD /* FlyveMDMInventory */ = {
+			isa = PBXGroup;
+			children = (
+				21351CE272A0477CA100D3325971D817 /* FlyveMDMInventory */,
+				0D073522EC6A0D1F36BDB09531800C8C /* Support Files */,
+			);
+			name = FlyveMDMInventory;
+			path = "../../flyve-mdm-ios-inventory";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E79C162B67B2ED91E6E8B1215D2DDD23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D269343E0E3084CB6C11DBEF7E94E9CA /* FlyveMDMInventory.framework */,
+				6303B9988029F5182928F45C9A7F01BE /* Pods_FusionInventory.framework */,
+				99FDA37C338060030A4F0AD7F8A57A57 /* Pods_FusionInventoryTests.framework */,
+				A648AC5A8CE56628DD1FE7BD198C3895 /* Pods_FusionInventoryUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED819054038DAC0BBF900E22D81AA8A8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5885B25E9E18F87FA52CE34DABAE694C /* Pods-FusionInventory */,
+				0FA1229C148EFA5FEEB2F8DB348D5500 /* Pods-FusionInventoryTests */,
+				8FF3CD81F62E23CCA00AEF825A7F8ABC /* Pods-FusionInventoryUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		23D426BCBFBE4E40643EF08AC00E181F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E035BF39E0341EB783503086EAC9CE /* Battery.h in Headers */,
+				7B357767ABC813C64940ED610A21DA2C /* Carrier.h in Headers */,
+				D76F5D6EE90A49C406E855EC527B000D /* Cpu.h in Headers */,
+				2FAD5A4807892FAE31DA93EB59ABE9AD /* FlyveMDMInventory-umbrella.h in Headers */,
+				18689021CCB0C09C01FF81D35B6B3D80 /* FlyveMDMInventory.h in Headers */,
+				2A41C9D821FE549681BD4F12006E8DF0 /* Hardware.h in Headers */,
+				0DD982DBC8399A0D7610217341947938 /* Memory.h in Headers */,
+				286137924D387837D3763DBA77405143 /* Network.h in Headers */,
+				A0B402E08AFCFFDF8C6BEF3A8A1D654D /* OperatingSystem.h in Headers */,
+				68D7EFE9F463FCFC891D2A7B75B72E5F /* Storage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C97D9A6F19BEFF3026F01DD220616E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27EDBA0735042CCE67B5E0D299458D0C /* Pods-FusionInventoryTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71BF67E9FB2344F8A9B4A88DC8568CBE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C46EB576D3FF843A49D00604E4C99A /* Pods-FusionInventoryUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08D2F1605E9709D3189A75108CE8034 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AF3DC300B04D6A415F120C2F8E01D8F /* Pods-FusionInventory-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		27B239C69D430F38F647AD9104767191 /* Pods-FusionInventoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF32FCB5BF841267E1EBDF377B8D122 /* Build configuration list for PBXNativeTarget "Pods-FusionInventoryUITests" */;
+			buildPhases = (
+				E9318CAD0AC7E49A851941E57E574E54 /* Sources */,
+				31382AEFBDBB16FE1A29FF10668E5E7E /* Frameworks */,
+				71BF67E9FB2344F8A9B4A88DC8568CBE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FusionInventoryUITests";
+			productName = "Pods-FusionInventoryUITests";
+			productReference = A648AC5A8CE56628DD1FE7BD198C3895 /* Pods_FusionInventoryUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9750441406260FBBD31C368005B2DDD4 /* FlyveMDMInventory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16B2032877C1662E1FDF52FFE085D6E1 /* Build configuration list for PBXNativeTarget "FlyveMDMInventory" */;
+			buildPhases = (
+				F22738C3ED4F2D20D6EBAC961E5AA381 /* Sources */,
+				3C0B1B90CDA58C9636648B349DF8C71F /* Frameworks */,
+				23D426BCBFBE4E40643EF08AC00E181F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlyveMDMInventory;
+			productName = FlyveMDMInventory;
+			productReference = D269343E0E3084CB6C11DBEF7E94E9CA /* FlyveMDMInventory.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A589B4161F11DC15B18098910BDA5533 /* Pods-FusionInventoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58155326FE0718AE75128CA5D6E0DD26 /* Build configuration list for PBXNativeTarget "Pods-FusionInventoryTests" */;
+			buildPhases = (
+				4BFBE38F081C47A6992C617C471EE561 /* Sources */,
+				B195FA307EF5C1888CD710A3EDF8D182 /* Frameworks */,
+				2C97D9A6F19BEFF3026F01DD220616E3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FusionInventoryTests";
+			productName = "Pods-FusionInventoryTests";
+			productReference = 99FDA37C338060030A4F0AD7F8A57A57 /* Pods_FusionInventoryTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB0F2678D11DF19A2F8A8F32477B3258 /* Pods-FusionInventory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD8C1ACD81EE429CA8FC71D04C56B214 /* Build configuration list for PBXNativeTarget "Pods-FusionInventory" */;
+			buildPhases = (
+				F610D0921BE778A6C2D2DF3B4C2F096B /* Sources */,
+				7422A29AC224EC1BB4492C86A514E1F7 /* Frameworks */,
+				D08D2F1605E9709D3189A75108CE8034 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C104A16FE01C23B3B846838A6064FCF /* PBXTargetDependency */,
+			);
+			name = "Pods-FusionInventory";
+			productName = "Pods-FusionInventory";
+			productReference = 6303B9988029F5182928F45C9A7F01BE /* Pods_FusionInventory.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E79C162B67B2ED91E6E8B1215D2DDD23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9750441406260FBBD31C368005B2DDD4 /* FlyveMDMInventory */,
+				CB0F2678D11DF19A2F8A8F32477B3258 /* Pods-FusionInventory */,
+				A589B4161F11DC15B18098910BDA5533 /* Pods-FusionInventoryTests */,
+				27B239C69D430F38F647AD9104767191 /* Pods-FusionInventoryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BFBE38F081C47A6992C617C471EE561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC6FBA81C2ECC18EEBFE8BC9E3F9E2C /* Pods-FusionInventoryTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9318CAD0AC7E49A851941E57E574E54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFE9CDCCE79C51DDE79565915BF4254 /* Pods-FusionInventoryUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22738C3ED4F2D20D6EBAC961E5AA381 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5223B86F7CB03EECBCD0C354CF6456 /* Battery.m in Sources */,
+				1FFFC254084807C7815CD3B3859BF5B0 /* Carrier.m in Sources */,
+				8F525F83D8E7403E5C3AF2DD882DC145 /* Cpu.m in Sources */,
+				A3FC5BC467E06A277C80CA52DB505049 /* FlyveMDMInventory-dummy.m in Sources */,
+				0D3A1191E47C79D70B3A7079710F7AAB /* Hardware.m in Sources */,
+				EE912E5551558A052154CF2870A454F1 /* InventoryTask.swift in Sources */,
+				270C07A18635F6480A621D0F3D6786A2 /* Memory.m in Sources */,
+				13663F8CFB12CBB583D744093FCBB2BE /* Network.m in Sources */,
+				77AE4B00AAA41CF6B30CB73E3C88F306 /* OperatingSystem.m in Sources */,
+				C55B711B90847DCAD46277DB0A71F08C /* Storage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F610D0921BE778A6C2D2DF3B4C2F096B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDCDFB604405CC3F2D90DF6DA686A7B /* Pods-FusionInventory-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C104A16FE01C23B3B846838A6064FCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlyveMDMInventory;
+			target = 9750441406260FBBD31C368005B2DDD4 /* FlyveMDMInventory */;
+			targetProxy = DFD37B1293BF8B28D582F2F8CDC7A39B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2FC0CEBFE3D5A381F0F2207DFF613F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19C338A258B3A2EB6CA521E07D81A154 /* Pods-FusionInventoryUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FusionInventoryUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FusionInventoryUITests/Pods-FusionInventoryUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FusionInventoryUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		58EB0F782969A8589BC24C9EC1C443E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3ADC5D75599BBC6EF641D7D4EF6CCF8 /* Pods-FusionInventoryUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FusionInventoryUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FusionInventoryUITests/Pods-FusionInventoryUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FusionInventoryUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		643C76AA582046977B7877822ED7A258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6FE6E810A53F9FDE5EB28C3AB26BF6FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C640C65FBE12ECEDE363AD3C8A79083 /* FlyveMDMInventory.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FlyveMDMInventory/FlyveMDMInventory-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlyveMDMInventory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlyveMDMInventory/FlyveMDMInventory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FlyveMDMInventory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		81B5CA0DDB5E134563FD0F0061AF88BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0250114187CB61AF488038D7BA4E3580 /* Pods-FusionInventoryTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FusionInventoryTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FusionInventoryTests/Pods-FusionInventoryTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FusionInventoryTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0984C6C5634A4A16621A8970EE09B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8355AF66EF0F6183BD0EED10733A36B0 /* Pods-FusionInventory.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FusionInventory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FusionInventory/Pods-FusionInventory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FusionInventory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DB3C9AC65A5194474BBCF2564ACAA1CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00B8C5E9BD01C8721CDC481B2778F079 /* Pods-FusionInventoryTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FusionInventoryTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FusionInventoryTests/Pods-FusionInventoryTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FusionInventoryTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA22808166315DFE965FE6ADCACF33B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C640C65FBE12ECEDE363AD3C8A79083 /* FlyveMDMInventory.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FlyveMDMInventory/FlyveMDMInventory-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlyveMDMInventory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlyveMDMInventory/FlyveMDMInventory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FlyveMDMInventory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F23B7FE0C74DE758AAB591F94A87F29C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70353574EF218D7B6C95E34E8ABFD0D /* Pods-FusionInventory.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FusionInventory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FusionInventory/Pods-FusionInventory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FusionInventory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16B2032877C1662E1FDF52FFE085D6E1 /* Build configuration list for PBXNativeTarget "FlyveMDMInventory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA22808166315DFE965FE6ADCACF33B6 /* Debug */,
+				6FE6E810A53F9FDE5EB28C3AB26BF6FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643C76AA582046977B7877822ED7A258 /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58155326FE0718AE75128CA5D6E0DD26 /* Build configuration list for PBXNativeTarget "Pods-FusionInventoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3C9AC65A5194474BBCF2564ACAA1CB /* Debug */,
+				81B5CA0DDB5E134563FD0F0061AF88BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCF32FCB5BF841267E1EBDF377B8D122 /* Build configuration list for PBXNativeTarget "Pods-FusionInventoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FC0CEBFE3D5A381F0F2207DFF613F0C /* Debug */,
+				58EB0F782969A8589BC24C9EC1C443E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD8C1ACD81EE429CA8FC71D04C56B214 /* Build configuration list for PBXNativeTarget "Pods-FusionInventory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F23B7FE0C74DE758AAB591F94A87F29C /* Debug */,
+				D0984C6C5634A4A16621A8970EE09B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
