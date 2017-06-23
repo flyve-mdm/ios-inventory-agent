@@ -1,0 +1,19 @@
+PODS:
+  - Alamofire (4.5.0)
+  - FlyveMDMInventory (1.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - FlyveMDMInventory (from `../flyve-mdm-ios-inventory`)
+
+EXTERNAL SOURCES:
+  FlyveMDMInventory:
+    :path: "../flyve-mdm-ios-inventory"
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FlyveMDMInventory: 189f4247abbc902ea637b557d1c8f49e2a01e3fd
+
+PODFILE CHECKSUM: 72f56bc7ef86512564c8fc24d3b1485729e0a06b
+
+COCOAPODS: 1.2.1
