@@ -27,6 +27,7 @@
 
 import UIKit
 import FlyveMDMInventory
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -67,13 +68,13 @@ class ViewController: UIViewController {
     }()
     
     lazy var postButton: UIButton = {
-        
-        let button = UIButton(type: .custom)
-        
+
+        let button = UIButton(type: UIButtonType.custom)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.backgroundColor = UIColor.black.cgColor
-        button.setTitle("Post XML Inventory", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.backgroundColor = UIColor.white.cgColor
+        button.layer.borderColor = UIColor.darkGray.cgColor
+        button.setTitle("Run inventory now", for: .normal)
+        button.setTitleColor(UIColor.darkGray, for: .normal)
         button.addTarget(self, action: #selector(self.generateXML), for: .touchUpInside)
         return button
     }()
@@ -102,37 +103,59 @@ class ViewController: UIViewController {
         logoImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -48).isActive = true
         logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
-        messageLabel.bottomAnchor.constraint(equalTo: logoImageView.topAnchor, constant: -16).isActive = true
-        messageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
-        messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
-        
-        loadingIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loadingIndicatorView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 16).isActive = true
-        
         postButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24).isActive = true
         postButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
         postButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
-        
         postButton.heightAnchor.constraint(equalToConstant: 50)
+        
+        loadingIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loadingIndicatorView.bottomAnchor.constraint(equalTo: postButton.topAnchor, constant: -24).isActive = true
+        
+        messageLabel.bottomAnchor.constraint(equalTo: loadingIndicatorView.topAnchor, constant: -16).isActive = true
+        messageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
+        messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
         
     }
     
     func generateXML() {
         
-        messageLabel.text = ""
+        messageLabel.text = "Generating XML Inventory..."
         loadingIndicatorView.startAnimating()
         
         let inventoryTask = InventoryTask()
         
-        inventoryTask.execute("Agent_v1.0") { result in
-            
+        inventoryTask.execute("FusionInventory-Agent-iOS_v1.0") { result in
+
             sendXmlInventory(result)
         }
     }
     
     func sendXmlInventory(_ xml: String) {
         
-        print(xml)
+        messageLabel.text = "Sending XML Inventory..."
+        
+        let headers: HTTPHeaders = [
+            "User-Agent": "FusionInventory-Agent-iOS_v1.0",
+            "Content-Type": "text/plain; charset=ISO-8859-1"
+        ]
+        
+        Alamofire.request("https://dev.flyve.org/glpi/plugins/fusioninventory/", method: .post, parameters: [:], encoding: xml, headers: headers).responseString { response in
+            
+            print("Response String: \(response.result.value ?? "Response Empty")")
+            
+            self.messageLabel.text = "\(response.result.value ?? "Response Empty")"
+            self.loadingIndicatorView.stopAnimating()
+        }
     }
+}
+
+extension String: ParameterEncoding {
+    
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var request = try urlRequest.asURLRequest()
+        request.httpBody = data(using: .utf8, allowLossyConversion: false)
+        return request
+    }
+    
 }
 

@@ -580,7 +580,7 @@
 				DEVELOPMENT_TEAM = G3UM9C856M;
 				INFOPLIST_FILE = FusionInventory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FusionInventory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FusionInventoryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -595,7 +595,7 @@
 				DEVELOPMENT_TEAM = G3UM9C856M;
 				INFOPLIST_FILE = FusionInventory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FusionInventory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FusionInventoryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -682,6 +682,7 @@
 				0AEF560A1EFC03C50048DA6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AEF560B1EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FusionInventoryTests" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +691,7 @@
 				0AEF560D1EFC03C50048DA6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AEF560E1EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FusionInventoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +700,7 @@
 				0AEF56101EFC03C50048DA6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
