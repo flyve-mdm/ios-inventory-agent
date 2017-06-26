@@ -31,6 +31,26 @@ import Alamofire
 
 class ViewController: UIViewController {
     
+    let cellId = "InventoryCell"
+    
+    lazy var inventoryTableView: UITableView = {
+        let table = UITableView(frame: .zero, style: .plain)
+        
+        table.delegate = self
+        table.dataSource = self
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.tableFooterView = UIView()
+        table.backgroundColor = UIColor.init(red: 239.0/255.0, green: 239.0/255.0, blue: 244.0/255.0, alpha: 1.0)
+        table.isScrollEnabled = false
+
+        table.rowHeight = UITableViewAutomaticDimension
+        table.estimatedRowHeight = 100
+        
+        table.register(UITableViewCell.self, forCellReuseIdentifier: self.cellId)
+        
+        return table
+    }()
+    
     let logoImageView: UIImageView = {
         
         let imageView = UIImageView(image: UIImage(named: "logo"))
@@ -59,8 +79,9 @@ class ViewController: UIViewController {
     
     let loadingIndicatorView: UIActivityIndicatorView = {
         
-        let loading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let loading = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         
+        loading.color = .gray
         loading.translatesAutoresizingMaskIntoConstraints = false
         loading.hidesWhenStopped = true
         
@@ -90,30 +111,22 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        view.addSubview(messageLabel)
-        view.addSubview(logoImageView)
+        navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
+        
+        view.addSubview(inventoryTableView)
         view.addSubview(loadingIndicatorView)
-        view.addSubview(postButton)
     }
     
     func addConstraints() {
         
-        
-        logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 48).isActive = true
-        logoImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -48).isActive = true
-        logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        postButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24).isActive = true
-        postButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
-        postButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
-        postButton.heightAnchor.constraint(equalToConstant: 50)
+        inventoryTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        inventoryTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        inventoryTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        inventoryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         loadingIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loadingIndicatorView.bottomAnchor.constraint(equalTo: postButton.topAnchor, constant: -24).isActive = true
-        
-        messageLabel.bottomAnchor.constraint(equalTo: loadingIndicatorView.topAnchor, constant: -16).isActive = true
-        messageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
-        messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
+        loadingIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+
         
     }
     
@@ -149,6 +162,69 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if section == 0 {
+            return 2
+        } else {
+            return 1
+        }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellId)
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            
+            cell.textLabel?.text = "Inventory"
+            cell.detailTextLabel?.text = "Click to disable inventory"
+            
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            
+            cell.textLabel?.text = "Run inventory now"
+            cell.detailTextLabel?.text = "Run now"
+        } else if indexPath.section == 1 && indexPath.row == 0 {
+            
+            cell.textLabel?.text = "Global settings"
+            cell.detailTextLabel?.text = "Setup, certificates, server..."
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == 0 {
+            return "Inventory"
+        } else {
+            return "Global"
+        }
+        
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if let headerView = view as? UITableViewHeaderFooterView, let textLabel = headerView.textLabel {
+            
+            headerView.backgroundView?.backgroundColor = UIColor.init(red: 239.0/255.0, green: 239.0/255.0, blue: 244.0/255.0, alpha: 1.0)
+            
+            textLabel.font = UIFont.systemFont(ofSize: 12.0, weight: UIFontWeightBold)
+            textLabel.textColor = UIColor.gray
+        }
+    }
+
+}
+
 extension String: ParameterEncoding {
     
     public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
@@ -157,5 +233,31 @@ extension String: ParameterEncoding {
         return request
     }
     
+}
+
+class InventoryCell: UITableViewCell {
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String!)
+    {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        selectionStyle = UITableViewCellSelectionStyle.none
+        contentView.backgroundColor = .clear
+        
+        setupViews()
+        addConstraints()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViews() {
+    
+    }
+    
+    func addConstraints() {
+    
+    }
 }
 
