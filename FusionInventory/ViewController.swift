@@ -51,15 +51,13 @@ class ViewController: UIViewController {
         return table
     }()
     
-    let logoImageView: UIImageView = {
+    let footerView: UIView = {
         
-        let imageView = UIImageView(image: UIImage(named: "logo"))
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
         
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = false
-        
-        return imageView
+        return view
     }()
     
     let messageLabel: UILabel = {
@@ -114,7 +112,9 @@ class ViewController: UIViewController {
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
         
         view.addSubview(inventoryTableView)
-        view.addSubview(loadingIndicatorView)
+        view.addSubview(footerView)
+        footerView.addSubview(messageLabel)
+        footerView.addSubview(loadingIndicatorView)
     }
     
     func addConstraints() {
@@ -124,9 +124,18 @@ class ViewController: UIViewController {
         inventoryTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         inventoryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        loadingIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loadingIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-
+        footerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        footerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        footerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        footerView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        
+        loadingIndicatorView.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -24).isActive = true
+        loadingIndicatorView.centerXAnchor.constraint(equalTo: footerView.centerXAnchor).isActive = true
+        
+        messageLabel.bottomAnchor.constraint(equalTo: loadingIndicatorView.topAnchor, constant: -24).isActive = true
+        messageLabel.leftAnchor.constraint(equalTo: footerView.leftAnchor).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor).isActive = true
+        messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
         
     }
     
@@ -220,6 +229,22 @@ extension ViewController: UITableViewDelegate {
             
             textLabel.font = UIFont.systemFont(ofSize: 12.0, weight: UIFontWeightBold)
             textLabel.textColor = UIColor.gray
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            
+            //disable inventory
+            
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            
+            //run now
+            
+        } else if indexPath.section == 1 && indexPath.row == 0 {
+            
+            //Global settings
         }
     }
 
