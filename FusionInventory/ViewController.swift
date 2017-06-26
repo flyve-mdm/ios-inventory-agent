@@ -71,6 +71,7 @@ class ViewController: UIViewController {
         label.textAlignment = .center
         label.backgroundColor = .clear
         label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightRegular)
         
         return label
     }()
@@ -84,18 +85,6 @@ class ViewController: UIViewController {
         loading.hidesWhenStopped = true
         
         return loading
-    }()
-    
-    lazy var postButton: UIButton = {
-
-        let button = UIButton(type: UIButtonType.custom)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.backgroundColor = UIColor.white.cgColor
-        button.layer.borderColor = UIColor.darkGray.cgColor
-        button.setTitle("Run inventory now", for: .normal)
-        button.setTitleColor(UIColor.darkGray, for: .normal)
-        button.addTarget(self, action: #selector(self.generateXML), for: .touchUpInside)
-        return button
     }()
     
     override func loadView() {
@@ -241,6 +230,7 @@ extension ViewController: UITableViewDelegate {
         } else if indexPath.section == 0 && indexPath.row == 1 {
             
             //run now
+            generateXML()
             
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
