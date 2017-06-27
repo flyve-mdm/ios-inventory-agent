@@ -32,7 +32,6 @@ class GlobalSettingsController: UIViewController {
     let cellId = "InventoryCell"
     var bootOption = false
     var notificationOption = false
-    var login = ""
     var password = ""
     
     lazy var settingsTableView: UITableView = {
@@ -212,8 +211,8 @@ extension GlobalSettingsController: UITableViewDataSource {
             
             cell.textLabel?.text = "Login"
             
-            if login != "" {
-                cell.detailTextLabel?.text = login
+            if UserDefaults.standard.string(forKey: "login") != "" {
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "login")
             } else {
                 cell.detailTextLabel?.text = ""
             }
@@ -331,7 +330,7 @@ extension GlobalSettingsController: UITableViewDelegate {
             
         } else if indexPath.section == 2 && indexPath.row == 0 {
             
-            //Server settings
+            //login
             DispatchQueue.main.async {
                 
                 let alert = UIAlertController(title: "Login", message: "Define login", preferredStyle: UIAlertControllerStyle.alert)
@@ -340,7 +339,7 @@ extension GlobalSettingsController: UITableViewDelegate {
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
                 alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
                     
-                    self.login = alert.textFields?[0].text ?? ""
+                    UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "login")
                     
                     tableView.beginUpdates()
                     tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -349,7 +348,7 @@ extension GlobalSettingsController: UITableViewDelegate {
                 ))
                 alert.addTextField(configurationHandler: {(textField: UITextField!) in
                     textField.placeholder = ""
-                    textField.text = self.login
+                    textField.text = UserDefaults.standard.string(forKey: "login") ?? ""
                     textField.isSecureTextEntry = false // for password input
                 })
                 self.present(alert, animated: true, completion: nil)
