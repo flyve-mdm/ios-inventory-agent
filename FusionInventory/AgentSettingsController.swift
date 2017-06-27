@@ -28,6 +28,7 @@
 import UIKit
 import FlyveMDMInventory
 import Alamofire
+import  UserNotifications
 
 class AgentSettingsController: UIViewController {
     
@@ -162,8 +163,7 @@ class AgentSettingsController: UIViewController {
                 headers[authorizationHeader.key] = authorizationHeader.value
             }
         }
-        print(server)
-//        "https://dev.flyve.org/glpi/plugins/fusioninventory/front/communication.php"
+
         Alamofire.request(server, method: .post, parameters: [:], encoding: xml, headers: headers)
             .validate(statusCode: 200..<300)
             .responseString { response in
@@ -171,13 +171,37 @@ class AgentSettingsController: UIViewController {
             switch response.result {
             case .success:
                 self.messageLabel.text = "XML send successful"
+                
+                if UserDefaults.standard.bool(forKey: "notifications") {
+                    let notification = UNMutableNotificationContent()
+                    notification.title = "Fusion Inventory Agent"
+                    notification.subtitle = ""
+                    notification.body = "XML send successful"
+                    
+                    let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
+                    
+                    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                }
+                
             case .failure( _):
                 
                 self.messageLabel.text = "Error: \(response.result.error?.localizedDescription ?? "failure")"
-            }
                 
+                if UserDefaults.standard.bool(forKey: "notifications") {
+                    let notification = UNMutableNotificationContent()
+                    notification.title = "Fusion Inventory Agent"
+                    notification.subtitle = ""
+                    notification.body = "XML send failure Error: \(response.result.error?.localizedDescription ?? "")"
+                    
+                    let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
+                    
+                    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                }
+            }
             
-                self.loadingIndicatorView.stopAnimating()
+            self.loadingIndicatorView.stopAnimating()
         }
     }
 }
