@@ -32,7 +32,6 @@ class GlobalSettingsController: UIViewController {
     let cellId = "InventoryCell"
     var bootOption = false
     var notificationOption = false
-    var nameServer = ""
     var nameTag = ""
     var login = ""
     var password = ""
@@ -192,8 +191,9 @@ extension GlobalSettingsController: UITableViewDataSource {
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
             cell.textLabel?.text = "Server address"
-            if nameServer != "" {
-                cell.detailTextLabel?.text = nameServer
+            UserDefaults.standard.string(forKey: "nameServer")
+            if UserDefaults.standard.string(forKey: "nameServer") != "" {
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameServer")
             } else {
                 cell.detailTextLabel?.text = "Define server address"
             }
@@ -291,7 +291,7 @@ extension GlobalSettingsController: UITableViewDelegate {
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
                 alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
                     
-                    self.nameServer = alert.textFields?[0].text ?? ""
+                    UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "nameServer")
                     
                     tableView.beginUpdates()
                     tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -300,7 +300,7 @@ extension GlobalSettingsController: UITableViewDelegate {
                 ))
                 alert.addTextField(configurationHandler: {(textField: UITextField!) in
                     textField.placeholder = ""
-                    textField.text = self.nameServer
+                    textField.text = UserDefaults.standard.string(forKey: "nameServer") ?? ""
                     textField.isSecureTextEntry = false // for password input
                 })
                 self.present(alert, animated: true, completion: nil)
