@@ -32,7 +32,6 @@ class GlobalSettingsController: UIViewController {
     let cellId = "InventoryCell"
     var bootOption = false
     var notificationOption = false
-    var nameTag = ""
     var login = ""
     var password = ""
     
@@ -191,7 +190,7 @@ extension GlobalSettingsController: UITableViewDataSource {
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
             cell.textLabel?.text = "Server address"
-            UserDefaults.standard.string(forKey: "nameServer")
+            
             if UserDefaults.standard.string(forKey: "nameServer") != "" {
                 cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameServer")
             } else {
@@ -203,8 +202,8 @@ extension GlobalSettingsController: UITableViewDataSource {
             
             cell.textLabel?.text = "Tag"
             
-            if nameTag != "" {
-                cell.detailTextLabel?.text = nameTag
+            if UserDefaults.standard.string(forKey: "nameTag") != "" {
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameTag")
             } else {
                 cell.detailTextLabel?.text = ""
             }
@@ -282,12 +281,11 @@ extension GlobalSettingsController: UITableViewDelegate {
             
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
-            //Server settings
+            //Server address
             DispatchQueue.main.async {
                 
                 let alert = UIAlertController(title: "Server address", message: "Define server address", preferredStyle: UIAlertControllerStyle.alert)
-                
-                
+
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
                 alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
                     
@@ -308,16 +306,15 @@ extension GlobalSettingsController: UITableViewDelegate {
             
         } else if indexPath.section == 1 && indexPath.row == 1 {
             
-            //Server settings
+            //Tag
             DispatchQueue.main.async {
                 
                 let alert = UIAlertController(title: "Tag", message: "Define Tag", preferredStyle: UIAlertControllerStyle.alert)
-                
-                
+
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
                 alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
                     
-                    self.nameTag = alert.textFields?[0].text ?? ""
+                    UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "nameTag")
                     
                     tableView.beginUpdates()
                     tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -326,7 +323,7 @@ extension GlobalSettingsController: UITableViewDelegate {
                 ))
                 alert.addTextField(configurationHandler: {(textField: UITextField!) in
                     textField.placeholder = ""
-                    textField.text = self.nameTag
+                    textField.text = UserDefaults.standard.string(forKey: "nameTag") ?? ""
                     textField.isSecureTextEntry = false // for password input
                 })
                 self.present(alert, animated: true, completion: nil)
