@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AEF55E41EFC03C50048DA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF55E31EFC03C50048DA6B /* AppDelegate.swift */; };
-		0AEF55E61EFC03C50048DA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF55E51EFC03C50048DA6B /* ViewController.swift */; };
+		0AEF55E61EFC03C50048DA6B /* AgentSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF55E51EFC03C50048DA6B /* AgentSettingsController.swift */; };
 		0AEF55EB1EFC03C50048DA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF55EA1EFC03C50048DA6B /* Assets.xcassets */; };
 		0AEF55F91EFC03C50048DA6B /* FusionInventoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF55F81EFC03C50048DA6B /* FusionInventoryTests.swift */; };
 		0AEF56041EFC03C50048DA6B /* FusionInventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF56031EFC03C50048DA6B /* FusionInventoryUITests.swift */; };
@@ -40,7 +40,7 @@
 		07C2CBFAA98B13A47507ED04 /* Pods-FusionInventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FusionInventory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FusionInventory/Pods-FusionInventory.debug.xcconfig"; sourceTree = "<group>"; };
 		0AEF55E01EFC03C50048DA6B /* FusionInventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FusionInventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEF55E31EFC03C50048DA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AEF55E51EFC03C50048DA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AEF55E51EFC03C50048DA6B /* AgentSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSettingsController.swift; sourceTree = "<group>"; };
 		0AEF55EA1EFC03C50048DA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AEF55EF1EFC03C50048DA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AEF55F41EFC03C50048DA6B /* FusionInventoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FusionInventoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0AEF55E31EFC03C50048DA6B /* AppDelegate.swift */,
-				0AEF55E51EFC03C50048DA6B /* ViewController.swift */,
+				0AEF55E51EFC03C50048DA6B /* AgentSettingsController.swift */,
 				0AEF55EA1EFC03C50048DA6B /* Assets.xcassets */,
 				0AEF55EF1EFC03C50048DA6B /* Info.plist */,
 			);
@@ -441,7 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEF55E61EFC03C50048DA6B /* ViewController.swift in Sources */,
+				0AEF55E61EFC03C50048DA6B /* AgentSettingsController.swift in Sources */,
 				0AEF55E41EFC03C50048DA6B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,7 @@ import UIKit
 import FlyveMDMInventory
 import Alamofire
 
-class ViewController: UIViewController {
+class AgentSettingsController: UIViewController {
     
     let cellId = "InventoryCell"
     var disable = true
@@ -161,7 +161,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension AgentSettingsController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -226,7 +226,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension AgentSettingsController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
