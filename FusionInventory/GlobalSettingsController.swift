@@ -32,7 +32,6 @@ class GlobalSettingsController: UIViewController {
     let cellId = "InventoryCell"
     var bootOption = false
     var notificationOption = false
-    var password = ""
     
     lazy var settingsTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
@@ -191,7 +190,7 @@ extension GlobalSettingsController: UITableViewDataSource {
             cell.textLabel?.text = "Server address"
             
             if UserDefaults.standard.string(forKey: "nameServer") != "" {
-                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameServer")
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameServer") ?? "Define server address"
             } else {
                 cell.detailTextLabel?.text = "Define server address"
             }
@@ -202,7 +201,7 @@ extension GlobalSettingsController: UITableViewDataSource {
             cell.textLabel?.text = "Tag"
             
             if UserDefaults.standard.string(forKey: "nameTag") != "" {
-                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameTag")
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameTag") ?? ""
             } else {
                 cell.detailTextLabel?.text = ""
             }
@@ -212,7 +211,7 @@ extension GlobalSettingsController: UITableViewDataSource {
             cell.textLabel?.text = "Login"
             
             if UserDefaults.standard.string(forKey: "login") != "" {
-                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "login")
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "login") ?? ""
             } else {
                 cell.detailTextLabel?.text = ""
             }
@@ -221,8 +220,8 @@ extension GlobalSettingsController: UITableViewDataSource {
             
             cell.textLabel?.text = "Password"
             
-            if password != "" {
-                cell.detailTextLabel?.text = password
+            if UserDefaults.standard.string(forKey: "password") != "" {
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "password") ?? ""
             } else {
                 cell.detailTextLabel?.text = ""
             }
@@ -365,7 +364,7 @@ extension GlobalSettingsController: UITableViewDelegate {
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
                 alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
                     
-                    self.password = alert.textFields?[0].text ?? ""
+                    UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "password")
                     
                     tableView.beginUpdates()
                     tableView.reloadRows(at: [indexPath], with: .automatic)
@@ -374,7 +373,7 @@ extension GlobalSettingsController: UITableViewDelegate {
                 ))
                 alert.addTextField(configurationHandler: {(textField: UITextField!) in
                     textField.placeholder = ""
-                    textField.text = self.password
+                    textField.text = UserDefaults.standard.string(forKey: "password") ?? ""
                     textField.isSecureTextEntry = false // for password input
                 })
                 self.present(alert, animated: true, completion: nil)
