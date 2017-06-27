@@ -30,8 +30,6 @@ import UIKit
 class GlobalSettingsController: UIViewController {
 
     let cellId = "InventoryCell"
-    var bootOption = false
-    var notificationOption = false
     
     lazy var settingsTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
@@ -137,7 +135,12 @@ extension GlobalSettingsController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        if section == 0 {
+            return 1
+        } else {
+            return 2
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -148,32 +151,12 @@ extension GlobalSettingsController: UITableViewDataSource {
         
         if indexPath.section == 0 && indexPath.row == 0 {
             
-            let bootSwitch = UISwitch()
-            bootSwitch.translatesAutoresizingMaskIntoConstraints = false
-            
-            cell.textLabel?.text = "Boot options"
-            
-            if bootOption {
-                cell.detailTextLabel?.text = "Click to disable automatic boot"
-            } else {
-                cell.detailTextLabel?.text = "Click to enable automatic boot"
-            }
-            
-            cell.contentView.addSubview(bootSwitch)
-            bootSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
-            bootSwitch.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: -16.0).isActive = true
-            
-            bootSwitch.setOn(bootOption, animated: false)
-            
-            
-        } else if indexPath.section == 0 && indexPath.row == 1 {
-            
             let notificationSwitch = UISwitch()
             notificationSwitch.translatesAutoresizingMaskIntoConstraints = false
             
             cell.textLabel?.text = "Notifications"
             
-            if notificationOption {
+            if UserDefaults.standard.bool(forKey: "notifications") {
                 cell.detailTextLabel?.text = "Click to disable notifications"
             } else {
                 cell.detailTextLabel?.text = "Click to enable notifications"
@@ -183,7 +166,7 @@ extension GlobalSettingsController: UITableViewDataSource {
             notificationSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
             notificationSwitch.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: -16.0).isActive = true
             
-            notificationSwitch.setOn(notificationOption, animated: false)
+            notificationSwitch.setOn(UserDefaults.standard.bool(forKey: "notifications"), animated: false)
             
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
@@ -260,19 +243,10 @@ extension GlobalSettingsController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.section == 0 && indexPath.row == 0 {
-            
-            bootOption = !bootOption
-            
-            //automatic boot
-            tableView.beginUpdates()
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-            tableView.endUpdates()
-            
-        } else if indexPath.section == 0 && indexPath.row == 1 {
 
-            notificationOption = !notificationOption
+            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "notifications"), forKey: "notifications")
             
-            //automatic boot
+            //notifications
             tableView.beginUpdates()
             tableView.reloadRows(at: [indexPath], with: .automatic)
             tableView.endUpdates()
@@ -355,7 +329,7 @@ extension GlobalSettingsController: UITableViewDelegate {
             
         } else if indexPath.section == 2 && indexPath.row == 1 {
             
-            //Server settings
+            //password
             DispatchQueue.main.async {
                 
                 let alert = UIAlertController(title: "Password", message: "Define password", preferredStyle: UIAlertControllerStyle.alert)
