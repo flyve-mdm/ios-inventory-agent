@@ -144,16 +144,25 @@ class AgentSettingsController: UIViewController {
         
         messageLabel.text = "Sending XML Inventory..."
         
+        guard let server = UserDefaults.standard.string(forKey: "nameServer"), !server.isEmpty else {
+            messageLabel.text = "The server address is not configured"
+            self.loadingIndicatorView.stopAnimating()
+            return
+        }
+        
         var headers: HTTPHeaders = [
             "User-Agent": "FusionInventory-Agent-iOS_v1.0",
             "Content-Type": "text/plain; charset=ISO-8859-1"
         ]
-
-        if let authorizationHeader = Request.authorizationHeader(user: "flyvemdm", password: "nicepassword") {
-            headers[authorizationHeader.key] = authorizationHeader.value
+        
+        if let user = UserDefaults.standard.string(forKey: "login"), let password = UserDefaults.standard.string(forKey: "password"), !user.isEmpty ,!password.isEmpty  {
+            
+            if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
+                headers[authorizationHeader.key] = authorizationHeader.value
+            }
         }
-
-        Alamofire.request("https://dev.flyve.org/glpi/plugins/fusioninventory/front/communications.php", method: .post, parameters: [:], encoding: xml, headers: headers).responseString { response in
+//        "https://dev.flyve.org/glpi/plugins/fusioninventory/front/communication.php"
+        Alamofire.request(server, method: .post, parameters: [:], encoding: xml, headers: headers).responseString { response in
                 
                 self.messageLabel.text = "\(response.result.value ?? "")"
                 self.loadingIndicatorView.stopAnimating()
