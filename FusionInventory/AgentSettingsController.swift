@@ -61,13 +61,14 @@ class AgentSettingsController: UIViewController {
         return view
     }()
     
-    let messageLabel: UITextView = {
+    let messageLabel: UILabel = {
         
-        let label = UITextView()
+        let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.backgroundColor = .clear
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightRegular)
@@ -121,8 +122,8 @@ class AgentSettingsController: UIViewController {
         loadingIndicatorView.centerXAnchor.constraint(equalTo: footerView.centerXAnchor).isActive = true
         
         messageLabel.bottomAnchor.constraint(equalTo: loadingIndicatorView.topAnchor, constant: -24).isActive = true
-        messageLabel.leftAnchor.constraint(equalTo: footerView.leftAnchor).isActive = true
-        messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor).isActive = true
+        messageLabel.leftAnchor.constraint(equalTo: footerView.leftAnchor, constant: 16).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor, constant: -16).isActive = true
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
         
     }
@@ -161,10 +162,21 @@ class AgentSettingsController: UIViewController {
                 headers[authorizationHeader.key] = authorizationHeader.value
             }
         }
+        print(server)
 //        "https://dev.flyve.org/glpi/plugins/fusioninventory/front/communication.php"
-        Alamofire.request(server, method: .post, parameters: [:], encoding: xml, headers: headers).responseString { response in
+        Alamofire.request(server, method: .post, parameters: [:], encoding: xml, headers: headers)
+            .validate(statusCode: 200..<300)
+            .responseString { response in
+            
+            switch response.result {
+            case .success:
+                self.messageLabel.text = "XML send successful"
+            case .failure( _):
                 
-                self.messageLabel.text = "\(response.result.value ?? "")"
+                self.messageLabel.text = "Error: \(response.result.error?.localizedDescription ?? "failure")"
+            }
+                
+            
                 self.loadingIndicatorView.stopAnimating()
         }
     }
