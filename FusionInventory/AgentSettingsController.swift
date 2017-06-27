@@ -260,6 +260,7 @@ extension AgentSettingsController: UITableViewDelegate {
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
             //Global settings
+            navigationController?.pushViewController(GlobalSettingsController(), animated: true)
         }
     }
 
