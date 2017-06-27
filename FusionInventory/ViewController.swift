@@ -32,6 +32,7 @@ import Alamofire
 class ViewController: UIViewController {
     
     let cellId = "InventoryCell"
+    var disable = true
     
     lazy var inventoryTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
@@ -179,15 +180,32 @@ extension ViewController: UITableViewDataSource {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellId)
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        
         if indexPath.section == 0 && indexPath.row == 0 {
+            
+            let inventorySwitch = UISwitch()
+            inventorySwitch.translatesAutoresizingMaskIntoConstraints = false
             
             cell.textLabel?.text = "Inventory"
             cell.detailTextLabel?.text = "Click to disable inventory"
             
+            cell.contentView.addSubview(inventorySwitch)
+            inventorySwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
+            inventorySwitch.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: -16.0).isActive = true
+            
+            inventorySwitch.setOn(disable, animated: false)
+            
+            
         } else if indexPath.section == 0 && indexPath.row == 1 {
+            
+            cell.isUserInteractionEnabled = disable
+            cell.textLabel!.isEnabled = disable
+            cell.detailTextLabel!.isEnabled = disable
             
             cell.textLabel?.text = "Run inventory now"
             cell.detailTextLabel?.text = "Run now"
+        
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
             cell.textLabel?.text = "Global settings"
@@ -225,7 +243,14 @@ extension ViewController: UITableViewDelegate {
         
         if indexPath.section == 0 && indexPath.row == 0 {
             
+            let index:IndexPath = IndexPath(row: 1, section: 0)
+            
+            disable = !disable
+            
             //disable inventory
+            tableView.beginUpdates()
+            tableView.reloadRows(at: [indexPath, index], with: .automatic)
+            tableView.endUpdates()
             
         } else if indexPath.section == 0 && indexPath.row == 1 {
             
