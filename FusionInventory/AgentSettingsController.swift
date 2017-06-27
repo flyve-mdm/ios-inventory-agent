@@ -61,14 +61,12 @@ class AgentSettingsController: UIViewController {
         return view
     }()
     
-    let messageLabel: UILabel = {
+    let messageLabel: UITextView = {
         
-        let label = UILabel()
+        let label = UITextView()
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
-        label.sizeToFit()
-        label.numberOfLines = 0
         label.textAlignment = .center
         label.backgroundColor = .clear
         label.textColor = .gray
@@ -146,17 +144,19 @@ class AgentSettingsController: UIViewController {
         
         messageLabel.text = "Sending XML Inventory..."
         
-        let headers: HTTPHeaders = [
+        var headers: HTTPHeaders = [
             "User-Agent": "FusionInventory-Agent-iOS_v1.0",
             "Content-Type": "text/plain; charset=ISO-8859-1"
         ]
-        
-        Alamofire.request("https://dev.flyve.org/glpi/plugins/fusioninventory/", method: .post, parameters: [:], encoding: xml, headers: headers).responseString { response in
-            
-            print("Response String: \(response.result.value ?? "Response Empty")")
-            
-            self.messageLabel.text = "\(response.result.value ?? "Response Empty")"
-            self.loadingIndicatorView.stopAnimating()
+
+        if let authorizationHeader = Request.authorizationHeader(user: "flyvemdm", password: "nicepassword") {
+            headers[authorizationHeader.key] = authorizationHeader.value
+        }
+
+        Alamofire.request("https://dev.flyve.org/glpi/plugins/fusioninventory/front/communications.php", method: .post, parameters: [:], encoding: xml, headers: headers).responseString { response in
+                
+                self.messageLabel.text = "\(response.result.value ?? "")"
+                self.loadingIndicatorView.stopAnimating()
         }
     }
 }
