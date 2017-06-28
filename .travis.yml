@@ -1,0 +1,10 @@
+language: objective-c
+osx_image: xcode8.3
+xcode_project: FusionInventory.xcodeproj
+xcode_scheme: FusionInventory
+
+script:
+- xcodebuild clean build -workspace FusionInventory.xcworkspace -scheme FusionInventory
+
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
