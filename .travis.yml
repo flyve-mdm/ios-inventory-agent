@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode8.3
-xcode_project: FusionInventory.xcodeproj
+xcode_workspace: FusionInventory.xcworkspace
 xcode_scheme: FusionInventory
 
 script:
