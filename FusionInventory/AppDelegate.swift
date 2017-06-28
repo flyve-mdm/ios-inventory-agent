@@ -11,7 +11,7 @@
  * as published by the Free Software Foundation; either version 3
  * of the License, or (at your option) any later version.
  *
- * Example is distributed in the hope that it will be useful,
+ * FusionInventory is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -26,6 +26,7 @@
  */
 
 import UIKit
+import  UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,10 +36,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //Requesting Authorization for User Interactions
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization.
+        }
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = ViewController()
+        let navigationController = UINavigationController(rootViewController: AgentSettingsController())
+        
+        window?.rootViewController = navigationController
 
         return true
     }
