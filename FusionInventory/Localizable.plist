@@ -42,12 +42,12 @@
 	<string>Inventory not complet</string>
 	<key>ok_inventory</key>
 	<string>Inventory complet</string>
-	<key>error_send_inventoryi</key>
+	<key>error_send_inventory</key>
 	<string>Inventory not send</string>
 	<key>ok_send_inventory</key>
-	<string>ok_send_inventory</string>
+	<string>Inventory send</string>
 	<key>service_notif_id</key>
-	<string>FusioninventoryInventory Agent</string>
+	<string>Fusion Inventory Agent</string>
 	<key>agent_settings</key>
 	<string>Agent settings</string>
 	<key>phone_boot</key>
@@ -64,9 +64,49 @@
 	<string>HTTP authentication credentials</string>
 	<key>login</key>
 	<string>Login</string>
+	<key>login_input</key>
+	<string>Define login</string>
 	<key>password</key>
 	<string>Password</string>
+	<key>password_input</key>
+	<string>Define password</string>
 	<key>tag</key>
 	<string>Tag</string>
+	<key>tag_input</key>
+	<string>Define tag</string>
+	<key>server_empty</key>
+	<string>The server address is not configured</string>
+	<key>inventory</key>
+	<string>Inventory</string>
+	<key>inventory_disable</key>
+	<string>Click to disable inventory</string>
+	<key>inventory_enable</key>
+	<string>Click to enable inventory</string>
+	<key>inventory_run</key>
+	<string>Run inventory now</string>
+	<key>run</key>
+	<string>Run now</string>
+	<key>global</key>
+	<string>Global</string>
+	<key>global_title</key>
+	<string>Global settings</string>
+	<key>global_subtitle</key>
+	<string>Setup, certificates, server...</string>
+	<key>notifications</key>
+	<string>Notifications</string>
+	<key>notifications_disable</key>
+	<string>Click to disable notifications</string>
+	<key>notifications_enable</key>
+	<string>Click to enable notifications</string>
+	<key>server</key>
+	<string>Server address</string>
+	<key>server_title</key>
+	<string>Server settings</string>
+	<key>server_input</key>
+	<string>Define server address</string>
+	<key>cancel</key>
+	<string>Cancel</string>
+	<key>accept</key>
+	<string>Accept</string>
 </dict>
 </plist>

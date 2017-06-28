@@ -121,8 +121,8 @@
 				0AEF55E51EFC03C50048DA6B /* AgentSettingsController.swift */,
 				0AD83F071F02B4E6000940D8 /* GlobalSettingsController.swift */,
 				0AB94AD81F04075A00BDE630 /* Localizator.swift */,
-				0AEF55EF1EFC03C50048DA6B /* Info.plist */,
 				0AB94AD61F04068500BDE630 /* Localizable.plist */,
+				0AEF55EF1EFC03C50048DA6B /* Info.plist */,
 			);
 			path = FusionInventory;
 			sourceTree = "<group>";

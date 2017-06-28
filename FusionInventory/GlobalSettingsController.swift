@@ -129,7 +129,16 @@ class GlobalSettingsController: UIViewController {
     func switchAtValueChanged(uiSwitch: UISwitch) {
 
         if uiSwitch.tag == 777 {
+            
+            let index:IndexPath = IndexPath(row: 0, section: 0)
+            
             UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "notifications"), forKey: "notifications")
+            
+            //disable inventory
+            settingsTableView.beginUpdates()
+            settingsTableView.reloadRows(at: [index], with: .automatic)
+            settingsTableView.endUpdates()
+
         }
     }
 }
@@ -163,12 +172,12 @@ extension GlobalSettingsController: UITableViewDataSource {
             notificationSwitch.tag = 777
             notificationSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             
-            cell.textLabel?.text = "Notifications"
+            cell.textLabel?.text = "notifications".localized
             
             if UserDefaults.standard.bool(forKey: "notifications") {
-                cell.detailTextLabel?.text = "Click to disable notifications"
+                cell.detailTextLabel?.text = "notifications_disable".localized
             } else {
-                cell.detailTextLabel?.text = "Click to enable notifications"
+                cell.detailTextLabel?.text = "notifications_enable".localized
             }
             
             cell.contentView.addSubview(notificationSwitch)
@@ -179,18 +188,18 @@ extension GlobalSettingsController: UITableViewDataSource {
             
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
-            cell.textLabel?.text = "Server address"
+            cell.textLabel?.text = "server".localized
             
             if UserDefaults.standard.string(forKey: "nameServer") != "" {
-                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameServer") ?? "Define server address"
+                cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameServer") ?? "server_input".localized
             } else {
-                cell.detailTextLabel?.text = "Define server address"
+                cell.detailTextLabel?.text = "server_input".localized
             }
             
             
         } else if indexPath.section == 1 && indexPath.row == 1 {
             
-            cell.textLabel?.text = "Tag"
+            cell.textLabel?.text = "tag".localized
             
             if UserDefaults.standard.string(forKey: "nameTag") != "" {
                 cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameTag") ?? ""
@@ -200,7 +209,7 @@ extension GlobalSettingsController: UITableViewDataSource {
             
         } else if indexPath.section == 2 && indexPath.row == 0 {
             
-            cell.textLabel?.text = "Login"
+            cell.textLabel?.text = "login".localized
             
             if UserDefaults.standard.string(forKey: "login") != "" {
                 cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "login") ?? ""
@@ -210,7 +219,7 @@ extension GlobalSettingsController: UITableViewDataSource {
             
         } else if indexPath.section == 2 && indexPath.row == 1 {
             
-            cell.textLabel?.text = "Password"
+            cell.textLabel?.text = "password".localized
             
             if UserDefaults.standard.string(forKey: "password") != "" {
                 cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "password") ?? ""
@@ -226,11 +235,11 @@ extension GlobalSettingsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         if section == 0 {
-            return "Global settings"
+            return "global_title".localized
         } else if section == 1 {
-            return "Server settings"
+            return "server".localized
         } else {
-            return "HTTP authentication credentials"
+            return "authentication_credentials".localized
         }
         
     }
@@ -265,10 +274,10 @@ extension GlobalSettingsController: UITableViewDelegate {
             //Server address
             DispatchQueue.main.async {
                 
-                let alert = UIAlertController(title: "Server address", message: "Define server address", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "server".localized, message: "server_input".localized, preferredStyle: UIAlertControllerStyle.alert)
 
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
-                alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
+                alert.addAction(UIAlertAction(title: "cancel".localized, style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "accept".localized, style: UIAlertActionStyle.default, handler: { action in
                     
                     UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "nameServer")
                     
@@ -290,10 +299,10 @@ extension GlobalSettingsController: UITableViewDelegate {
             //Tag
             DispatchQueue.main.async {
                 
-                let alert = UIAlertController(title: "Tag", message: "Define Tag", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "tag".localized, message: "tag_input".localized, preferredStyle: UIAlertControllerStyle.alert)
 
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
-                alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
+                alert.addAction(UIAlertAction(title: "cancel".localized, style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "accept".localized, style: UIAlertActionStyle.default, handler: { action in
                     
                     UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "nameTag")
                     
@@ -315,11 +324,11 @@ extension GlobalSettingsController: UITableViewDelegate {
             //login
             DispatchQueue.main.async {
                 
-                let alert = UIAlertController(title: "Login", message: "Define login", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "login".localized, message: "login_input".localized, preferredStyle: UIAlertControllerStyle.alert)
                 
                 
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
-                alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
+                alert.addAction(UIAlertAction(title: "cancel".localized, style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "accept".localized, style: UIAlertActionStyle.default, handler: { action in
                     
                     UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "login")
                     
@@ -341,11 +350,11 @@ extension GlobalSettingsController: UITableViewDelegate {
             //password
             DispatchQueue.main.async {
                 
-                let alert = UIAlertController(title: "Password", message: "Define password", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "password".localized, message: "password_input".localized, preferredStyle: UIAlertControllerStyle.alert)
                 
                 
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
-                alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { action in
+                alert.addAction(UIAlertAction(title: "cancel".localized, style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "accept".localized, style: UIAlertActionStyle.default, handler: { action in
                     
                     UserDefaults.standard.set(alert.textFields?[0].text ?? "", forKey: "password")
                     

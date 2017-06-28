@@ -131,7 +131,9 @@ class AgentSettingsController: UIViewController {
     
     func generateXML() {
         
-        messageLabel.text = "Generating XML Inventory..."
+//        "Generating XML Inventory..."
+        messageLabel.text = "button_start_inventory".localized
+        
         loadingIndicatorView.startAnimating()
         
         let inventoryTask = InventoryTask()
@@ -144,10 +146,11 @@ class AgentSettingsController: UIViewController {
     
     func sendXmlInventory(_ xml: String) {
         
-        messageLabel.text = "Sending XML Inventory..."
+//        "Sending XML Inventory..."
+        messageLabel.text = "inventory_sended".localized
         
         guard let server = UserDefaults.standard.string(forKey: "nameServer"), !server.isEmpty else {
-            messageLabel.text = "The server address is not configured"
+            messageLabel.text = "server_empty".localized
             self.loadingIndicatorView.stopAnimating()
             return
         }
@@ -170,13 +173,13 @@ class AgentSettingsController: UIViewController {
             
             switch response.result {
             case .success:
-                self.messageLabel.text = "XML send successful"
+                self.messageLabel.text = "ok_send_inventory".localized
                 
                 if UserDefaults.standard.bool(forKey: "notifications") {
                     let notification = UNMutableNotificationContent()
-                    notification.title = "Fusion Inventory Agent"
+                    notification.title = "service_notif_id".localized
                     notification.subtitle = ""
-                    notification.body = "XML send successful"
+                    notification.body = "ok_send_inventory".localized
                     
                     let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                     let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
@@ -186,13 +189,14 @@ class AgentSettingsController: UIViewController {
                 
             case .failure( _):
                 
-                self.messageLabel.text = "Error: \(response.result.error?.localizedDescription ?? "failure")"
+//                "Error: \(response.result.error?.localizedDescription ?? "failure")"
+                self.messageLabel.text = "error_send_inventory".localized + "\n\(response.result.error?.localizedDescription ?? "failure")"
                 
                 if UserDefaults.standard.bool(forKey: "notifications") {
                     let notification = UNMutableNotificationContent()
-                    notification.title = "Fusion Inventory Agent"
+                    notification.title = "service_notif_id".localized
                     notification.subtitle = ""
-                    notification.body = "XML send failure Error: \(response.result.error?.localizedDescription ?? "")"
+                    notification.body = "error_send_inventory".localized
                     
                     let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                     let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
@@ -202,6 +206,22 @@ class AgentSettingsController: UIViewController {
             }
             
             self.loadingIndicatorView.stopAnimating()
+        }
+    }
+    
+    func switchAtValueChanged(uiSwitch: UISwitch) {
+        
+        if uiSwitch.tag == 777 {
+            
+            let indexMe:IndexPath = IndexPath(row: 0, section: 0)
+            let index:IndexPath = IndexPath(row: 1, section: 0)
+            
+            disable = !disable
+            
+            //disable inventory
+            inventoryTableView.beginUpdates()
+            inventoryTableView.reloadRows(at: [indexMe, index], with: .automatic)
+            inventoryTableView.endUpdates()
         }
     }
 }
@@ -231,9 +251,17 @@ extension AgentSettingsController: UITableViewDataSource {
             
             let inventorySwitch = UISwitch()
             inventorySwitch.translatesAutoresizingMaskIntoConstraints = false
+            inventorySwitch.tag = 777
+            inventorySwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             
-            cell.textLabel?.text = "Inventory"
-            cell.detailTextLabel?.text = "Click to disable inventory"
+            cell.textLabel?.text = "inventory".localized
+            
+            if disable {
+                cell.detailTextLabel?.text = "inventory_disable".localized
+            } else {
+                cell.detailTextLabel?.text = "inventory_enable".localized
+            }
+            
             
             cell.contentView.addSubview(inventorySwitch)
             inventorySwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
@@ -248,13 +276,13 @@ extension AgentSettingsController: UITableViewDataSource {
             cell.textLabel!.isEnabled = disable
             cell.detailTextLabel!.isEnabled = disable
             
-            cell.textLabel?.text = "Run inventory now"
-            cell.detailTextLabel?.text = "Run now"
+            cell.textLabel?.text = "inventory_run".localized
+            cell.detailTextLabel?.text = "run".localized
         
         } else if indexPath.section == 1 && indexPath.row == 0 {
             
-            cell.textLabel?.text = "Global settings"
-            cell.detailTextLabel?.text = "Setup, certificates, server..."
+            cell.textLabel?.text = "global_title".localized
+            cell.detailTextLabel?.text = "global_subtitle".localized
         }
         
         return cell
@@ -263,9 +291,9 @@ extension AgentSettingsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         if section == 0 {
-            return "Inventory"
+            return "inventory".localized
         } else {
-            return "Global"
+            return "global".localized
         }
         
     }
