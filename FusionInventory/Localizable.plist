@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>app_name</key>
-	<string>Fusioninventory</string>
+	<string>FusionInventory</string>
 	<key>agent_started</key>
-	<string>Fusioninventory Agent is started</string>
+	<string>FusionInventory Agent is started</string>
 	<key>agent_stopped</key>
-	<string>Fusioninventory Agent is stopped</string>
+	<string>FusionInventory Agent is stopped</string>
 	<key>agent_reboot</key>
-	<string>Fusioninventory Agent is restarted</string>
+	<string>FusionInventory Agent is restarted</string>
 	<key>agent_description</key>
 	<string>Agent is running in background</string>
 	<key>button_start_inventory</key>
@@ -43,11 +43,11 @@
 	<key>ok_inventory</key>
 	<string>Inventory complet</string>
 	<key>error_send_inventory</key>
-	<string>Inventory not send</string>
+	<string>Inventory not sent</string>
 	<key>ok_send_inventory</key>
-	<string>Inventory send</string>
+	<string>Inventory sent</string>
 	<key>service_notif_id</key>
-	<string>Fusion Inventory Agent</string>
+	<string>FusionInventory Agent</string>
 	<key>agent_settings</key>
 	<string>Agent settings</string>
 	<key>phone_boot</key>
