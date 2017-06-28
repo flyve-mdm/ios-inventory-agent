@@ -136,7 +136,7 @@ class AgentSettingsController: UIViewController {
         
         let inventoryTask = InventoryTask()
         
-        inventoryTask.execute("FusionInventory-Agent-iOS_v1.0") { result in
+        inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: UserDefaults.standard.string(forKey: "nameTag") ?? "") { result in
 
             sendXmlInventory(result)
         }
