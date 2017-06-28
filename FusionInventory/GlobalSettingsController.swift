@@ -125,6 +125,13 @@ class GlobalSettingsController: UIViewController {
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
         
     }
+    
+    func switchAtValueChanged(uiSwitch: UISwitch) {
+
+        if uiSwitch.tag == 777 {
+            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "notifications"), forKey: "notifications")
+        }
+    }
 }
 
 extension GlobalSettingsController: UITableViewDataSource {
@@ -153,6 +160,8 @@ extension GlobalSettingsController: UITableViewDataSource {
             
             let notificationSwitch = UISwitch()
             notificationSwitch.translatesAutoresizingMaskIntoConstraints = false
+            notificationSwitch.tag = 777
+            notificationSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             
             cell.textLabel?.text = "Notifications"
             
