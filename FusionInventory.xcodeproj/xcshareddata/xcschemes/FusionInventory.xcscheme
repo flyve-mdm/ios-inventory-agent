@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AEF55DF1EFC03C50048DA6B"
-               BuildableName = "FusionInventory.app"
-               BlueprintName = "FusionInventory"
-               ReferencedContainer = "container:FusionInventory.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "88E9EC28B8B46C3631E6B242B50F4442"
                BuildableName = "Alamofire.framework"
                BlueprintName = "Alamofire"
@@ -42,10 +28,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68EAA4423A3F4DE9D246E6163AD301A9"
-               BuildableName = "Pods_FusionInventory.framework"
-               BlueprintName = "Pods-FusionInventory"
+               BlueprintIdentifier = "9750441406260FBBD31C368005B2DDD4"
+               BuildableName = "FlyveMDMInventory.framework"
+               BlueprintName = "FlyveMDMInventory"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0AEF55DF1EFC03C50048DA6B"
+               BuildableName = "FusionInventory.app"
+               BlueprintName = "FusionInventory"
+               ReferencedContainer = "container:FusionInventory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
