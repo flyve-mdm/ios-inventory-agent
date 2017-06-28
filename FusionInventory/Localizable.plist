@@ -1,14 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Localizable.plist
-   FusionInventory
-
-   Created by Hector Rondon on 28/06/17.
-   Copyright (c) 2017 Teclib. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>app_name</key>
+	<string>Fusioninventory</string>
+	<key>agent_started</key>
+	<string>Fusioninventory Agent is started</string>
+	<key>agent_stopped</key>
+	<string>Fusioninventory Agent is stopped</string>
+	<key>agent_reboot</key>
+	<string>Fusioninventory Agent is restarted</string>
+	<key>agent_description</key>
+	<string>Agent is running in background</string>
+	<key>button_start_inventory</key>
+	<string>Start Inventory</string>
+	<key>menu_settings</key>
+	<string>Settings</string>
+	<key>menu_clearlog</key>
+	<string>Clear Log</string>
+	<key>menu_send</key>
+	<string>Send</string>
+	<key>menu_getinv</key>
+	<string>Get Inventory</string>
+	<key>all_permissions</key>
+	<string>Grant all possible permissions</string>
+	<key>agent_connected</key>
+	<string>Connected to Agent Service</string>
+	<key>agent_disconnected</key>
+	<string>Disconnected from Agent Service</string>
+	<key>inventory_started</key>
+	<string>Starting inventory...</string>
+	<key>inventory_sended</key>
+	<string>Sending inventory...</string>
+	<key>inventory_ended</key>
+	<string>End of inventory.</string>
+	<key>button_connect_agent</key>
+	<string>Connect Agent</string>
+	<key>button_disconnect_agent</key>
+	<string>Disconnect Agent</string>
+	<key>error_inventory</key>
+	<string>Inventory not complet</string>
+	<key>ok_inventory</key>
+	<string>Inventory complet</string>
+	<key>error_send_inventoryi</key>
+	<string>Inventory not send</string>
+	<key>ok_send_inventory</key>
+	<string>ok_send_inventory</string>
+	<key>service_notif_id</key>
+	<string>FusioninventoryInventory Agent</string>
+	<key>agent_settings</key>
+	<string>Agent settings</string>
+	<key>phone_boot</key>
+	<string>Agent must be launched at phone boot</string>
+	<key>manual_launch</key>
+	<string>Agent must be launched manually</string>
+	<key>boot_options</key>
+	<string>Boot options</string>
+	<key>inventory_server</key>
+	<string>Inventory server</string>
+	<key>log_text</key>
+	<string>Server response</string>
+	<key>authentication_credentials</key>
+	<string>HTTP authentication credentials</string>
+	<key>login</key>
+	<string>Login</string>
+	<key>password</key>
+	<string>Password</string>
+	<key>tag</key>
+	<string>Tag</string>
+</dict>
 </plist>
