@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme_^#shared#^_</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FlyveMDMInventory.xcscheme_^#shared#^_</key>
+		<key>FlyveMDMInventory.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
