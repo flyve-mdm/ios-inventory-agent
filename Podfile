@@ -7,7 +7,7 @@ target 'FusionInventory' do
 
   # Pods for FusionInventory
 
-  pod 'FlyveMDMInventory', :path => '../flyve-mdm-ios-inventory'
+  pod 'FlyveMDMInventory', '~> 1.1'
   pod 'Alamofire', '~> 4.5'
 
   target 'FusionInventoryTests' do
