@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>app_name</key>
+	<string>FusionInventory</string>
+	<key>agent_started</key>
+	<string>FusionInventory Agent is started</string>
+	<key>agent_stopped</key>
+	<string>FusionInventory Agent is stopped</string>
+	<key>agent_reboot</key>
+	<string>FusionInventory Agent is restarted</string>
+	<key>agent_description</key>
+	<string>Agent is running in background</string>
+	<key>button_start_inventory</key>
+	<string>Start Inventory</string>
+	<key>menu_settings</key>
+	<string>Settings</string>
+	<key>menu_clearlog</key>
+	<string>Clear Log</string>
+	<key>menu_send</key>
+	<string>Send</string>
+	<key>menu_getinv</key>
+	<string>Get Inventory</string>
+	<key>all_permissions</key>
+	<string>Grant all possible permissions</string>
+	<key>agent_connected</key>
+	<string>Connected to Agent Service</string>
+	<key>agent_disconnected</key>
+	<string>Disconnected from Agent Service</string>
+	<key>inventory_started</key>
+	<string>Starting inventory...</string>
+	<key>inventory_sended</key>
+	<string>Sending inventory...</string>
+	<key>inventory_ended</key>
+	<string>End of inventory.</string>
+	<key>button_connect_agent</key>
+	<string>Connect Agent</string>
+	<key>button_disconnect_agent</key>
+	<string>Disconnect Agent</string>
+	<key>error_inventory</key>
+	<string>Inventory not complet</string>
+	<key>ok_inventory</key>
+	<string>Inventory complet</string>
+	<key>error_send_inventory</key>
+	<string>Inventory not sent</string>
+	<key>ok_send_inventory</key>
+	<string>Inventory sent</string>
+	<key>service_notif_id</key>
+	<string>FusionInventory Agent</string>
+	<key>agent_settings</key>
+	<string>Agent settings</string>
+	<key>phone_boot</key>
+	<string>Agent must be launched at phone boot</string>
+	<key>manual_launch</key>
+	<string>Agent must be launched manually</string>
+	<key>boot_options</key>
+	<string>Boot options</string>
+	<key>inventory_server</key>
+	<string>Inventory server</string>
+	<key>log_text</key>
+	<string>Server response</string>
+	<key>authentication_credentials</key>
+	<string>HTTP authentication credentials</string>
+	<key>login</key>
+	<string>Login</string>
+	<key>login_input</key>
+	<string>Define login</string>
+	<key>password</key>
+	<string>Password</string>
+	<key>password_input</key>
+	<string>Define password</string>
+	<key>tag</key>
+	<string>Tag</string>
+	<key>tag_input</key>
+	<string>Define tag</string>
+	<key>server_empty</key>
+	<string>The server address is not configured</string>
+	<key>inventory</key>
+	<string>Inventory</string>
+	<key>inventory_disable</key>
+	<string>Click to disable inventory</string>
+	<key>inventory_enable</key>
+	<string>Click to enable inventory</string>
+	<key>inventory_run</key>
+	<string>Run inventory now</string>
+	<key>run</key>
+	<string>Run now</string>
+	<key>global</key>
+	<string>Global</string>
+	<key>global_title</key>
+	<string>Global settings</string>
+	<key>global_subtitle</key>
+	<string>Setup, certificates, server...</string>
+	<key>notifications</key>
+	<string>Notifications</string>
+	<key>notifications_disable</key>
+	<string>Click to disable notifications</string>
+	<key>notifications_enable</key>
+	<string>Click to enable notifications</string>
+	<key>server</key>
+	<string>Server address</string>
+	<key>server_title</key>
+	<string>Server settings</string>
+	<key>server_input</key>
+	<string>Define server address</string>
+	<key>cancel</key>
+	<string>Cancel</string>
+	<key>accept</key>
+	<string>Accept</string>
+</dict>
+</plist>

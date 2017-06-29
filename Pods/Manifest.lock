@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.5.0)
+  - FlyveMDMInventory (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - FlyveMDMInventory (~> 1.1)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FlyveMDMInventory: e1b343fad8b30f73125668517105832a8e45176b
+
+PODFILE CHECKSUM: 8d3755eb53d9b715cc912a09afb14e1b6afde761
+
+COCOAPODS: 1.2.1

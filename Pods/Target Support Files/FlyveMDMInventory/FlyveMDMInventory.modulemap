@@ -1,0 +1,6 @@
+framework module FlyveMDMInventory {
+  umbrella header "FlyveMDMInventory-umbrella.h"
+
+  export *
+  module * { export * }
+}
