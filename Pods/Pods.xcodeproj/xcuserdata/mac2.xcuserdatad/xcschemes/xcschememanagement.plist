@@ -14,17 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FusionInventory.xcscheme</key>
+		<key>Pods-FlyveMDMInventoryAgent.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FusionInventoryTests.xcscheme</key>
+		<key>Pods-FlyveMDMInventoryAgentTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FusionInventoryUITests.xcscheme</key>
+		<key>Pods-FlyveMDMInventoryAgentUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>27B239C69D430F38F647AD9104767191</key>
+		<key>324136023D02E85BB3C3A7E3E40DB3AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68EAA4423A3F4DE9D246E6163AD301A9</key>
+		<key>5CC28811B7B31B09799FA659728DBEF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A589B4161F11DC15B18098910BDA5533</key>
+		<key>BD1B251D68EFEFC533A046891737BEEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
