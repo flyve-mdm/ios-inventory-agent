@@ -1,10 +1,10 @@
 language: objective-c
 osx_image: xcode8.3
-xcode_workspace: FusionInventory.xcworkspace
-xcode_scheme: FusionInventory
+xcode_workspace: FlyveMDMInventoryAgent.xcworkspace
+xcode_scheme: FlyveMDMInventoryAgent
 
 script:
-- xcodebuild clean build -workspace FusionInventory.xcworkspace -scheme FusionInventory
+- xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent -sdk iphonesimulator10.3 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
