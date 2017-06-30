@@ -7,7 +7,7 @@
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-blue.svg)](https://t.me/flyvemdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![GitHub release](https://img.shields.io/github/release/flyve-mdm/flyve-mdm-ios-inventory-agent.svg)](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/releases)
-[![Maven Central](https://img.shields.io/maven-central/v/com.flyvemdm/inventory.svg)](https://bintray.com/flyve-mdm/inventory/flyve-mdm-ios-inventory-agent/)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 Flyve MDM is a Mobile device management software that enables you to secure and manage all the mobile devices of your business or family via a web-based console.
 
