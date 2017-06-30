@@ -74,6 +74,9 @@ Flyve MDM Inventory Agent for iOS is running on iOS 9.3 and higher.
 
 Download the latest IPA, from GitHub releases, TestFligh or Apple Store.
 
+[<img src="https://user-images.githubusercontent.com/663460/26986739-23bffc6e-4d49-11e7-92a2-cdba1b517a08.png" alt="Download from iTunes" height="60">](https://itunes.apple.com/us/app/flyve-mdm-inventory-agent)
+[<img src="https://user-images.githubusercontent.com/663460/26973090-f8fdc986-4d14-11e7-995a-e7c5e79ed925.png" alt="Download APK from GitHub" height="60">](https://github.com/itds-consulting/android-silent-ping-sms/releases/latest)
+
 ## Documentation
 
 We share long-form content about the project in the [wiki](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/wiki).
