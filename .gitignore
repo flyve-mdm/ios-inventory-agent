@@ -15,14 +15,12 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-project.xcworkspace/
 xcuserdata/
 
 ## Other
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-*.xcuserstate
 
 ## Obj-C/Swift specific
 *.hmap
