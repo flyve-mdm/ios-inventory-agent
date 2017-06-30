@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>app_name</key>
-	<string>FusionInventory</string>
+	<string>Flyve MDM Inventory Agent</string>
 	<key>agent_started</key>
-	<string>FusionInventory Agent is started</string>
+	<string>Flyve MDM Inventory Agent is started</string>
 	<key>agent_stopped</key>
-	<string>FusionInventory Agent is stopped</string>
+	<string>Flyve MDM Inventory Agent is stopped</string>
 	<key>agent_reboot</key>
-	<string>FusionInventory Agent is restarted</string>
+	<string>Flyve MDM Inventory Agent is restarted</string>
 	<key>agent_description</key>
 	<string>Agent is running in background</string>
 	<key>button_start_inventory</key>
@@ -47,7 +47,7 @@
 	<key>ok_send_inventory</key>
 	<string>Inventory sent</string>
 	<key>service_notif_id</key>
-	<string>FusionInventory Agent</string>
+	<string>Flyve MDM Inventory Agent</string>
 	<key>agent_settings</key>
 	<string>Agent settings</string>
 	<key>phone_boot</key>
