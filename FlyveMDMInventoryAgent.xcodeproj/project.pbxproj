@@ -493,6 +493,101 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0A4EDE361F0C427A008B41D2 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		0A4EDE371F0C427A008B41D2 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14B53793360C5C83EBDB3152 /* Pods-FlyveMDMInventoryAgent.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.flyve.inventory.agent.example.ad-hoc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Ad Hoc";
+		};
+		0A4EDE381F0C427A008B41D2 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0660E367A7865AC3EF45E72 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G3UM9C856M;
+				INFOPLIST_FILE = FlyveMDMInventoryAgentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyveMDMInventoryAgent.app/FlyveMDMInventoryAgent";
+			};
+			name = "Ad Hoc";
+		};
+		0A4EDE391F0C427A008B41D2 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B309CFB5762D491558F11D0 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = G3UM9C856M;
+				INFOPLIST_FILE = FlyveMDMInventoryAgentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FlyveMDMInventoryAgent;
+			};
+			name = "Ad Hoc";
+		};
 		0ABAF5521F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -543,7 +638,7 @@
 			};
 			name = Debug;
 		};
-		0ABAF5531F09686100BAC771 /* Release */ = {
+		0ABAF5531F09686100BAC771 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -584,7 +679,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "App Store";
 		};
 		0ABAF5551F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -598,7 +693,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent.example;
+				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent.example.development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -608,26 +703,26 @@
 			};
 			name = Debug;
 		};
-		0ABAF5561F09686100BAC771 /* Release */ = {
+		0ABAF5561F09686100BAC771 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14B53793360C5C83EBDB3152 /* Pods-FlyveMDMInventoryAgent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent.example;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.flyve.inventory.agent.example.app-store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
-			name = Release;
+			name = "App Store";
 		};
 		0ABAF5581F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -645,7 +740,7 @@
 			};
 			name = Debug;
 		};
-		0ABAF5591F09686100BAC771 /* Release */ = {
+		0ABAF5591F09686100BAC771 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E0660E367A7865AC3EF45E72 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */;
 			buildSettings = {
@@ -659,7 +754,7 @@
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyveMDMInventoryAgent.app/FlyveMDMInventoryAgent";
 			};
-			name = Release;
+			name = "App Store";
 		};
 		0ABAF55B1F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -676,7 +771,7 @@
 			};
 			name = Debug;
 		};
-		0ABAF55C1F09686100BAC771 /* Release */ = {
+		0ABAF55C1F09686100BAC771 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B309CFB5762D491558F11D0 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */;
 			buildSettings = {
@@ -689,7 +784,7 @@
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FlyveMDMInventoryAgent;
 			};
-			name = Release;
+			name = "App Store";
 		};
 /* End XCBuildConfiguration section */
 
@@ -698,37 +793,41 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ABAF5521F09686100BAC771 /* Debug */,
-				0ABAF5531F09686100BAC771 /* Release */,
+				0ABAF5531F09686100BAC771 /* App Store */,
+				0A4EDE361F0C427A008B41D2 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		0ABAF5541F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ABAF5551F09686100BAC771 /* Debug */,
-				0ABAF5561F09686100BAC771 /* Release */,
+				0ABAF5561F09686100BAC771 /* App Store */,
+				0A4EDE371F0C427A008B41D2 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		0ABAF5571F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ABAF5581F09686100BAC771 /* Debug */,
-				0ABAF5591F09686100BAC771 /* Release */,
+				0ABAF5591F09686100BAC771 /* App Store */,
+				0A4EDE381F0C427A008B41D2 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		0ABAF55A1F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ABAF55B1F09686100BAC771 /* Debug */,
-				0ABAF55C1F09686100BAC771 /* Release */,
+				0ABAF55C1F09686100BAC771 /* App Store */,
+				0A4EDE391F0C427A008B41D2 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 /* End XCConfigurationList section */
 	};
