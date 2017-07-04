@@ -10,7 +10,8 @@ before_install:
 - chmod a+x scripts/remove-key.sh
 # - "./scripts/add-key.sh"
 script:
-- "./scripts/build-app.sh"
+# - "./scripts/build-app.sh"
+- xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent -sdk iphonesimulator10.3 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 after_success:
 # - "./scripts/create-ipa.sh"
 after_script:
