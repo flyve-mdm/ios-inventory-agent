@@ -2,7 +2,7 @@
 //  FlyveMDMInventoryAgentTests.swift
 //  FlyveMDMInventoryAgentTests
 //
-//  Created by Hector Rondon on 22/06/17.
+//  Created by Hector Rondon on 02/07/17.
 //  Copyright © 2017 Teclib. All rights reserved.
 //
 
