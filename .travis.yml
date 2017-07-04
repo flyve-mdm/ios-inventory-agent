@@ -2,14 +2,26 @@ language: objective-c
 osx_image: xcode8.3
 xcode_workspace: FlyveMDMInventoryAgent.xcworkspace
 xcode_scheme: FlyveMDMInventoryAgent
-podfile: Podfile  
-
-before_install:  
-- pod repo update
-- pod install
-
+podfile: Podfile
+before_install:
+- chmod a+x scripts/add-key.sh
+- chmod a+x scripts/build-app.sh
+- chmod a+x scripts/create-ipa.sh
+- chmod a+x scripts/remove-key.sh
+- "./scripts/add-key.sh"
 script:
-- set -o pipefail && xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent -sdk iphonesimulator10.3 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO | xcpretty
-
+- "./scripts/build-app.sh"
+after_success:
+- "./scripts/create-ipa.sh"
+after_script:
+- "./scripts/remove-key.sh"
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+env:
+  global:
+  - APPNAME="FlyveMDMInventoryAgent"
+  - PROFILE_UUID=XC_iOS_orgflyveinventoryagentexample
+  - SCRIPT_PATH=./scripts
+  - CERTIFICATES_PATH=./scripts/cert
+  - PROFILE_PATH=./scripts/profile
+  - secure: fJI2J55EtqBR+Cop1C/PlEa6Vo2oJjOzE+MK1t4s6L6IX8rcM8n70gzDYmVEBDRs0QIwuXVWdRiJZJMgzTnPlhKWajHnyt0ic/3KTiPSDI14tX9X0AHYKNNP2t8QScJuW1hYKtZSlcJ7UB0QZwjSWB6snIcl3rhNDRM9pMOjU7cvsHgxYsWrg04C0+KDnWHq5xSmnp3KtU3OpXpK2+GskcKG61QEK/jLRYMzsbHD5lcwCSWjXF8F4mDL8TtnA/mAVZx0i0uAckVz4FRxwGNDYEMnug4lVF621SMHVwSJ8rheQ8hE177fqAQCnNAmWouHTBHsa3S/0GE3Jjz91b+6X9jN/M7XbHkvA0yV4tbz+qboQSChjDq/826u7zOdiA0PofhQDH/8Axf+T9/M9An0PH0kokD7asA0kizy1Heqai9Cy70CA9lJc17bFPr2Nv6u9u5YyY7MnPLq+T9oqZ8YcsbGSB5MKRsBs83pNbfbbiN/269o8nCIGqtIyxbyjBquOZITS1itNgjdLG6VE3Pk7faz8oGOev+W6dDuFvLWU+N/VlzykvBVEyabOE/Hjjz8wrwVJcIQIkAHSgOe+oQONrPHqguY4Ss9Pe98DdLUfb8L5s7knljgzkcRFQYHzzxZC1nKOSLV3J+ZR2JvTdagGcdnq6BXUocB7D69d+CF1ec=

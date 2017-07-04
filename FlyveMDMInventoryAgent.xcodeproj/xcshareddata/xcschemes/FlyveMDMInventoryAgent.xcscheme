@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9750441406260FBBD31C368005B2DDD4"
-               BuildableName = "FlyveMDMInventory.framework"
-               BlueprintName = "FlyveMDMInventory"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "88E9EC28B8B46C3631E6B242B50F4442"
                BuildableName = "Alamofire.framework"
                BlueprintName = "Alamofire"
@@ -42,10 +28,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AEF55DF1EFC03C50048DA6B"
-               BuildableName = "FusionInventory.app"
-               BlueprintName = "FusionInventory"
-               ReferencedContainer = "container:FusionInventory.xcodeproj">
+               BlueprintIdentifier = "9750441406260FBBD31C368005B2DDD4"
+               BuildableName = "FlyveMDMInventory.framework"
+               BlueprintName = "FlyveMDMInventory"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0ABAF52B1F09686100BAC771"
+               BuildableName = "FlyveMDMInventoryAgent.app"
+               BlueprintName = "FlyveMDMInventoryAgent"
+               ReferencedContainer = "container:FlyveMDMInventoryAgent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -60,27 +60,27 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AEF55F31EFC03C50048DA6B"
-               BuildableName = "FusionInventoryTests.xctest"
-               BlueprintName = "FusionInventoryTests"
-               ReferencedContainer = "container:FusionInventory.xcodeproj">
+               BlueprintIdentifier = "0ABAF53F1F09686100BAC771"
+               BuildableName = "FlyveMDMInventoryAgentTests.xctest"
+               BlueprintName = "FlyveMDMInventoryAgentTests"
+               ReferencedContainer = "container:FlyveMDMInventoryAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AEF55FE1EFC03C50048DA6B"
-               BuildableName = "FusionInventoryUITests.xctest"
-               BlueprintName = "FusionInventoryUITests"
-               ReferencedContainer = "container:FusionInventory.xcodeproj">
+               BlueprintIdentifier = "0ABAF54A1F09686100BAC771"
+               BuildableName = "FlyveMDMInventoryAgentUITests.xctest"
+               BlueprintName = "FlyveMDMInventoryAgentUITests"
+               ReferencedContainer = "container:FlyveMDMInventoryAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0AEF55DF1EFC03C50048DA6B"
+            BlueprintIdentifier = "0ABAF52B1F09686100BAC771"
             BuildableName = "FlyveMDMInventoryAgent.app"
             BlueprintName = "FlyveMDMInventoryAgent"
             ReferencedContainer = "container:FlyveMDMInventoryAgent.xcodeproj">
@@ -103,7 +103,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0AEF55DF1EFC03C50048DA6B"
+            BlueprintIdentifier = "0ABAF52B1F09686100BAC771"
             BuildableName = "FlyveMDMInventoryAgent.app"
             BlueprintName = "FlyveMDMInventoryAgent"
             ReferencedContainer = "container:FlyveMDMInventoryAgent.xcodeproj">
@@ -122,10 +122,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0AEF55DF1EFC03C50048DA6B"
-            BuildableName = "FusionInventory.app"
-            BlueprintName = "FusionInventory"
-            ReferencedContainer = "container:FusionInventory.xcodeproj">
+            BlueprintIdentifier = "0ABAF52B1F09686100BAC771"
+            BuildableName = "FlyveMDMInventoryAgent.app"
+            BlueprintName = "FlyveMDMInventoryAgent"
+            ReferencedContainer = "container:FlyveMDMInventoryAgent.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

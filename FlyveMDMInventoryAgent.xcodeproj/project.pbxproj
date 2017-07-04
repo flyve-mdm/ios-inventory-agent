@@ -7,262 +7,265 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AB94AD71F04068500BDE630 /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AB94AD61F04068500BDE630 /* Localizable.plist */; };
-		0AB94AD91F04075A00BDE630 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB94AD81F04075A00BDE630 /* Localizator.swift */; };
-		0AD83F081F02B4E6000940D8 /* GlobalSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD83F071F02B4E6000940D8 /* GlobalSettingsController.swift */; };
-		0AEF55E41EFC03C50048DA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF55E31EFC03C50048DA6B /* AppDelegate.swift */; };
-		0AEF55E61EFC03C50048DA6B /* AgentSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF55E51EFC03C50048DA6B /* AgentSettingsController.swift */; };
-		0AEF55EB1EFC03C50048DA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF55EA1EFC03C50048DA6B /* Assets.xcassets */; };
-		0AEF55F91EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF55F81EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.swift */; };
-		0AEF56041EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF56031EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.swift */; };
-		4426CBEDAD96521C6FFE44BE /* Pods_FlyveMDMInventoryAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A134C92440749BF279C17301 /* Pods_FlyveMDMInventoryAgent.framework */; };
-		FA0F95362C68544481DB3DA0 /* Pods_FlyveMDMInventoryAgentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8688CD6AC327E316F97F14 /* Pods_FlyveMDMInventoryAgentUITests.framework */; };
-		FDC054C57AD900D45182EFB9 /* Pods_FlyveMDMInventoryAgentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E77ED9AE76EE362F5AC2D /* Pods_FlyveMDMInventoryAgentTests.framework */; };
+		0ABAF5371F09686100BAC771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABAF5361F09686100BAC771 /* Assets.xcassets */; };
+		0ABAF5451F09686100BAC771 /* FlyveMDMInventoryAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAF5441F09686100BAC771 /* FlyveMDMInventoryAgentTests.swift */; };
+		0ABAF5501F09686100BAC771 /* FlyveMDMInventoryAgentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAF54F1F09686100BAC771 /* FlyveMDMInventoryAgentUITests.swift */; };
+		0ABAF5631F09695700BAC771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAF55E1F09695700BAC771 /* AppDelegate.swift */; };
+		0ABAF5641F09695700BAC771 /* AgentSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAF55F1F09695700BAC771 /* AgentSettingsController.swift */; };
+		0ABAF5651F09695700BAC771 /* GlobalSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAF5601F09695700BAC771 /* GlobalSettingsController.swift */; };
+		0ABAF5661F09695700BAC771 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAF5611F09695700BAC771 /* Localizator.swift */; };
+		0ABAF5671F09695700BAC771 /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ABAF5621F09695700BAC771 /* Localizable.plist */; };
+		9BE7AF3A9CA5D9EC47C6130C /* Pods_FlyveMDMInventoryAgentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D24FF1DC56D97ABFCBD46DB /* Pods_FlyveMDMInventoryAgentUITests.framework */; };
+		CE8CA70A27C7D68E3569AE40 /* Pods_FlyveMDMInventoryAgentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87884CD0B79BCDA22D92E7B /* Pods_FlyveMDMInventoryAgentTests.framework */; };
+		E36ADDBD533580EA4B45BE2D /* Pods_FlyveMDMInventoryAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BB902437AB77C67326AEB3 /* Pods_FlyveMDMInventoryAgent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0AEF55F51EFC03C50048DA6B /* PBXContainerItemProxy */ = {
+		0ABAF5411F09686100BAC771 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0AEF55D81EFC03C50048DA6B /* Project object */;
+			containerPortal = 0ABAF5241F09686100BAC771 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0AEF55DF1EFC03C50048DA6B;
-			remoteInfo = FusionInventory;
+			remoteGlobalIDString = 0ABAF52B1F09686100BAC771;
+			remoteInfo = FlyveMDMInventoryAgent;
 		};
-		0AEF56001EFC03C50048DA6B /* PBXContainerItemProxy */ = {
+		0ABAF54C1F09686100BAC771 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0AEF55D81EFC03C50048DA6B /* Project object */;
+			containerPortal = 0ABAF5241F09686100BAC771 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0AEF55DF1EFC03C50048DA6B;
-			remoteInfo = FusionInventory;
+			remoteGlobalIDString = 0ABAF52B1F09686100BAC771;
+			remoteInfo = FlyveMDMInventoryAgent;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AB94AD61F04068500BDE630 /* Localizable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Localizable.plist; sourceTree = "<group>"; };
-		0AB94AD81F04075A00BDE630 /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
-		0AD83F071F02B4E6000940D8 /* GlobalSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettingsController.swift; sourceTree = "<group>"; };
-		0AEF55E01EFC03C50048DA6B /* FlyveMDMInventoryAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyveMDMInventoryAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AEF55E31EFC03C50048DA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AEF55E51EFC03C50048DA6B /* AgentSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSettingsController.swift; sourceTree = "<group>"; };
-		0AEF55EA1EFC03C50048DA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FlyveMDMInventoryAgent/Assets.xcassets; sourceTree = "<group>"; };
-		0AEF55EF1EFC03C50048DA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AEF55F41EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyveMDMInventoryAgentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AEF55F81EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyveMDMInventoryAgentTests.swift; sourceTree = "<group>"; };
-		0AEF55FA1EFC03C50048DA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AEF55FF1EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyveMDMInventoryAgentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AEF56031EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyveMDMInventoryAgentUITests.swift; sourceTree = "<group>"; };
-		0AEF56051EFC03C50048DA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16E252F886FF6E79839CDC24 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.release.xcconfig"; sourceTree = "<group>"; };
-		2D9E77ED9AE76EE362F5AC2D /* Pods_FlyveMDMInventoryAgentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B06D4244B4B0264DF944B50 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7D1A187E21556BBDD7BB5029 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent.debug.xcconfig"; sourceTree = "<group>"; };
-		81E5721087DA5F2BE9AA2B19 /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A134C92440749BF279C17301 /* Pods_FlyveMDMInventoryAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA8E8E0844A084235ED6478D /* Pods-FlyveMDMInventoryAgent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgent.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent.release.xcconfig"; sourceTree = "<group>"; };
-		C969DAFD38B0DCE92F98DB6B /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FD8688CD6AC327E316F97F14 /* Pods_FlyveMDMInventoryAgentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABAF52C1F09686100BAC771 /* FlyveMDMInventoryAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyveMDMInventoryAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABAF5361F09686100BAC771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FlyveMDMInventoryAgent/Assets.xcassets; sourceTree = "<group>"; };
+		0ABAF53B1F09686100BAC771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ABAF5401F09686100BAC771 /* FlyveMDMInventoryAgentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyveMDMInventoryAgentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABAF5441F09686100BAC771 /* FlyveMDMInventoryAgentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyveMDMInventoryAgentTests.swift; sourceTree = "<group>"; };
+		0ABAF5461F09686100BAC771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ABAF54B1F09686100BAC771 /* FlyveMDMInventoryAgentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyveMDMInventoryAgentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABAF54F1F09686100BAC771 /* FlyveMDMInventoryAgentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyveMDMInventoryAgentUITests.swift; sourceTree = "<group>"; };
+		0ABAF5511F09686100BAC771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ABAF55D1F09695600BAC771 /* FlyveMDMInventoryAgent-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FlyveMDMInventoryAgent-Bridging-Header.h"; path = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h"; sourceTree = "<group>"; };
+		0ABAF55E1F09695700BAC771 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0ABAF55F1F09695700BAC771 /* AgentSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSettingsController.swift; sourceTree = "<group>"; };
+		0ABAF5601F09695700BAC771 /* GlobalSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettingsController.swift; sourceTree = "<group>"; };
+		0ABAF5611F09695700BAC771 /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
+		0ABAF5621F09695700BAC771 /* Localizable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Localizable.plist; sourceTree = "<group>"; };
+		14B53793360C5C83EBDB3152 /* Pods-FlyveMDMInventoryAgent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgent.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent.release.xcconfig"; sourceTree = "<group>"; };
+		5D24FF1DC56D97ABFCBD46DB /* Pods_FlyveMDMInventoryAgentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A04FDAE4D7E767A3847942 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent.debug.xcconfig"; sourceTree = "<group>"; };
+		77BB902437AB77C67326AEB3 /* Pods_FlyveMDMInventoryAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B309CFB5762D491558F11D0 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B5849FB3A1DBF878AC57838D /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C87884CD0B79BCDA22D92E7B /* Pods_FlyveMDMInventoryAgentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA145F40E0301CC0BD1C76CB /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0660E367A7865AC3EF45E72 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0AEF55DD1EFC03C50048DA6B /* Frameworks */ = {
+		0ABAF5291F09686100BAC771 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4426CBEDAD96521C6FFE44BE /* Pods_FlyveMDMInventoryAgent.framework in Frameworks */,
+				E36ADDBD533580EA4B45BE2D /* Pods_FlyveMDMInventoryAgent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AEF55F11EFC03C50048DA6B /* Frameworks */ = {
+		0ABAF53D1F09686100BAC771 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDC054C57AD900D45182EFB9 /* Pods_FlyveMDMInventoryAgentTests.framework in Frameworks */,
+				CE8CA70A27C7D68E3569AE40 /* Pods_FlyveMDMInventoryAgentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AEF55FC1EFC03C50048DA6B /* Frameworks */ = {
+		0ABAF5481F09686100BAC771 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0F95362C68544481DB3DA0 /* Pods_FlyveMDMInventoryAgentUITests.framework in Frameworks */,
+				9BE7AF3A9CA5D9EC47C6130C /* Pods_FlyveMDMInventoryAgentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AEF55D71EFC03C50048DA6B = {
+		0ABAF5231F09686100BAC771 = {
 			isa = PBXGroup;
 			children = (
-				0AEF55EA1EFC03C50048DA6B /* Assets.xcassets */,
-				0AEF55E21EFC03C50048DA6B /* FlyveMDMInventoryAgent */,
-				0AEF55F71EFC03C50048DA6B /* FlyveMDMInventoryAgentTests */,
-				0AEF56021EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests */,
-				0AEF55E11EFC03C50048DA6B /* Products */,
-				B0F50C77BDA393CD3019EBD1 /* Pods */,
-				2DA3BA85B6FDFA47472F43D6 /* Frameworks */,
+				0ABAF55D1F09695600BAC771 /* FlyveMDMInventoryAgent-Bridging-Header.h */,
+				0ABAF5361F09686100BAC771 /* Assets.xcassets */,
+				0ABAF52E1F09686100BAC771 /* FlyveMDMInventoryAgent */,
+				0ABAF5431F09686100BAC771 /* FlyveMDMInventoryAgentTests */,
+				0ABAF54E1F09686100BAC771 /* FlyveMDMInventoryAgentUITests */,
+				0ABAF52D1F09686100BAC771 /* Products */,
+				8ECCF820C1E5123DD7B1B2F8 /* Pods */,
+				CBFE960A11CEA0879A160634 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		0AEF55E11EFC03C50048DA6B /* Products */ = {
+		0ABAF52D1F09686100BAC771 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AEF55E01EFC03C50048DA6B /* FlyveMDMInventoryAgent.app */,
-				0AEF55F41EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.xctest */,
-				0AEF55FF1EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.xctest */,
+				0ABAF52C1F09686100BAC771 /* FlyveMDMInventoryAgent.app */,
+				0ABAF5401F09686100BAC771 /* FlyveMDMInventoryAgentTests.xctest */,
+				0ABAF54B1F09686100BAC771 /* FlyveMDMInventoryAgentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0AEF55E21EFC03C50048DA6B /* FlyveMDMInventoryAgent */ = {
+		0ABAF52E1F09686100BAC771 /* FlyveMDMInventoryAgent */ = {
 			isa = PBXGroup;
 			children = (
-				0AEF55E31EFC03C50048DA6B /* AppDelegate.swift */,
-				0AEF55E51EFC03C50048DA6B /* AgentSettingsController.swift */,
-				0AD83F071F02B4E6000940D8 /* GlobalSettingsController.swift */,
-				0AB94AD81F04075A00BDE630 /* Localizator.swift */,
-				0AB94AD61F04068500BDE630 /* Localizable.plist */,
-				0AEF55EF1EFC03C50048DA6B /* Info.plist */,
+				0ABAF55E1F09695700BAC771 /* AppDelegate.swift */,
+				0ABAF55F1F09695700BAC771 /* AgentSettingsController.swift */,
+				0ABAF5601F09695700BAC771 /* GlobalSettingsController.swift */,
+				0ABAF5611F09695700BAC771 /* Localizator.swift */,
+				0ABAF5621F09695700BAC771 /* Localizable.plist */,
+				0ABAF53B1F09686100BAC771 /* Info.plist */,
 			);
 			path = FlyveMDMInventoryAgent;
 			sourceTree = "<group>";
 		};
-		0AEF55F71EFC03C50048DA6B /* FlyveMDMInventoryAgentTests */ = {
+		0ABAF5431F09686100BAC771 /* FlyveMDMInventoryAgentTests */ = {
 			isa = PBXGroup;
 			children = (
-				0AEF55F81EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.swift */,
-				0AEF55FA1EFC03C50048DA6B /* Info.plist */,
+				0ABAF5441F09686100BAC771 /* FlyveMDMInventoryAgentTests.swift */,
+				0ABAF5461F09686100BAC771 /* Info.plist */,
 			);
 			path = FlyveMDMInventoryAgentTests;
 			sourceTree = "<group>";
 		};
-		0AEF56021EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests */ = {
+		0ABAF54E1F09686100BAC771 /* FlyveMDMInventoryAgentUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0AEF56031EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.swift */,
-				0AEF56051EFC03C50048DA6B /* Info.plist */,
+				0ABAF54F1F09686100BAC771 /* FlyveMDMInventoryAgentUITests.swift */,
+				0ABAF5511F09686100BAC771 /* Info.plist */,
 			);
 			path = FlyveMDMInventoryAgentUITests;
 			sourceTree = "<group>";
 		};
-		2DA3BA85B6FDFA47472F43D6 /* Frameworks */ = {
+		8ECCF820C1E5123DD7B1B2F8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A134C92440749BF279C17301 /* Pods_FlyveMDMInventoryAgent.framework */,
-				2D9E77ED9AE76EE362F5AC2D /* Pods_FlyveMDMInventoryAgentTests.framework */,
-				FD8688CD6AC327E316F97F14 /* Pods_FlyveMDMInventoryAgentUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B0F50C77BDA393CD3019EBD1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7D1A187E21556BBDD7BB5029 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */,
-				AA8E8E0844A084235ED6478D /* Pods-FlyveMDMInventoryAgent.release.xcconfig */,
-				C969DAFD38B0DCE92F98DB6B /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */,
-				16E252F886FF6E79839CDC24 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */,
-				81E5721087DA5F2BE9AA2B19 /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */,
-				3B06D4244B4B0264DF944B50 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */,
+				77A04FDAE4D7E767A3847942 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */,
+				14B53793360C5C83EBDB3152 /* Pods-FlyveMDMInventoryAgent.release.xcconfig */,
+				B5849FB3A1DBF878AC57838D /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */,
+				E0660E367A7865AC3EF45E72 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */,
+				DA145F40E0301CC0BD1C76CB /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */,
+				9B309CFB5762D491558F11D0 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CBFE960A11CEA0879A160634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77BB902437AB77C67326AEB3 /* Pods_FlyveMDMInventoryAgent.framework */,
+				C87884CD0B79BCDA22D92E7B /* Pods_FlyveMDMInventoryAgentTests.framework */,
+				5D24FF1DC56D97ABFCBD46DB /* Pods_FlyveMDMInventoryAgentUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0AEF55DF1EFC03C50048DA6B /* FlyveMDMInventoryAgent */ = {
+		0ABAF52B1F09686100BAC771 /* FlyveMDMInventoryAgent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AEF56081EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgent" */;
+			buildConfigurationList = 0ABAF5541F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgent" */;
 			buildPhases = (
-				E77282A5F84A32DCD38C8E62 /* [CP] Check Pods Manifest.lock */,
-				0AEF55DC1EFC03C50048DA6B /* Sources */,
-				0AEF55DD1EFC03C50048DA6B /* Frameworks */,
-				0AEF55DE1EFC03C50048DA6B /* Resources */,
-				E51B6ECBCE27D808FCCB1098 /* [CP] Embed Pods Frameworks */,
-				065AB4DAD4A7311C1D8886CC /* [CP] Copy Pods Resources */,
+				EB6BD96700ED51B1EBAB96E0 /* [CP] Check Pods Manifest.lock */,
+				0ABAF5281F09686100BAC771 /* Sources */,
+				0ABAF5291F09686100BAC771 /* Frameworks */,
+				0ABAF52A1F09686100BAC771 /* Resources */,
+				018608978B98E20F43CDF295 /* [CP] Embed Pods Frameworks */,
+				5127B8409D450F32E4CBC8E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FlyveMDMInventoryAgent;
-			productName = FusionInventory;
-			productReference = 0AEF55E01EFC03C50048DA6B /* FlyveMDMInventoryAgent.app */;
+			productName = FlyveMDMInventoryAgent;
+			productReference = 0ABAF52C1F09686100BAC771 /* FlyveMDMInventoryAgent.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0AEF55F31EFC03C50048DA6B /* FlyveMDMInventoryAgentTests */ = {
+		0ABAF53F1F09686100BAC771 /* FlyveMDMInventoryAgentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AEF560B1EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentTests" */;
+			buildConfigurationList = 0ABAF5571F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentTests" */;
 			buildPhases = (
-				27EE5508DFF6CA802D47F3EA /* [CP] Check Pods Manifest.lock */,
-				0AEF55F01EFC03C50048DA6B /* Sources */,
-				0AEF55F11EFC03C50048DA6B /* Frameworks */,
-				0AEF55F21EFC03C50048DA6B /* Resources */,
-				B2E10CE905EFDFFF08123C7C /* [CP] Embed Pods Frameworks */,
-				211C9558D96D0CF46DC2C997 /* [CP] Copy Pods Resources */,
+				A0E4B6DD91050406BFC4CD59 /* [CP] Check Pods Manifest.lock */,
+				0ABAF53C1F09686100BAC771 /* Sources */,
+				0ABAF53D1F09686100BAC771 /* Frameworks */,
+				0ABAF53E1F09686100BAC771 /* Resources */,
+				BB70E863D0F1746156B08813 /* [CP] Embed Pods Frameworks */,
+				912ADFC9426759B87AA1085A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0AEF55F61EFC03C50048DA6B /* PBXTargetDependency */,
+				0ABAF5421F09686100BAC771 /* PBXTargetDependency */,
 			);
 			name = FlyveMDMInventoryAgentTests;
-			productName = FusionInventoryTests;
-			productReference = 0AEF55F41EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.xctest */;
+			productName = FlyveMDMInventoryAgentTests;
+			productReference = 0ABAF5401F09686100BAC771 /* FlyveMDMInventoryAgentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0AEF55FE1EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests */ = {
+		0ABAF54A1F09686100BAC771 /* FlyveMDMInventoryAgentUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AEF560E1EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentUITests" */;
+			buildConfigurationList = 0ABAF55A1F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentUITests" */;
 			buildPhases = (
-				D988074A2CCD0991365078A8 /* [CP] Check Pods Manifest.lock */,
-				0AEF55FB1EFC03C50048DA6B /* Sources */,
-				0AEF55FC1EFC03C50048DA6B /* Frameworks */,
-				0AEF55FD1EFC03C50048DA6B /* Resources */,
-				0F406963E6C30524E1E72081 /* [CP] Embed Pods Frameworks */,
-				08A654AA3EC3C6AE90A6CB6D /* [CP] Copy Pods Resources */,
+				858A90B5FF6C038EFE661BCE /* [CP] Check Pods Manifest.lock */,
+				0ABAF5471F09686100BAC771 /* Sources */,
+				0ABAF5481F09686100BAC771 /* Frameworks */,
+				0ABAF5491F09686100BAC771 /* Resources */,
+				7FD58D6EAD80D9D535FBF7EB /* [CP] Embed Pods Frameworks */,
+				B65D6FF46E35F279309B5AAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0AEF56011EFC03C50048DA6B /* PBXTargetDependency */,
+				0ABAF54D1F09686100BAC771 /* PBXTargetDependency */,
 			);
 			name = FlyveMDMInventoryAgentUITests;
-			productName = FusionInventoryUITests;
-			productReference = 0AEF55FF1EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.xctest */;
+			productName = FlyveMDMInventoryAgentUITests;
+			productReference = 0ABAF54B1F09686100BAC771 /* FlyveMDMInventoryAgentUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0AEF55D81EFC03C50048DA6B /* Project object */ = {
+		0ABAF5241F09686100BAC771 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Teclib;
 				TargetAttributes = {
-					0AEF55DF1EFC03C50048DA6B = {
-						CreatedOnToolsVersion = 8.3.2;
+					0ABAF52B1F09686100BAC771 = {
+						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = G3UM9C856M;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
 					};
-					0AEF55F31EFC03C50048DA6B = {
-						CreatedOnToolsVersion = 8.3.2;
+					0ABAF53F1F09686100BAC771 = {
+						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = G3UM9C856M;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0AEF55DF1EFC03C50048DA6B;
+						ProvisioningStyle = Manual;
+						TestTargetID = 0ABAF52B1F09686100BAC771;
 					};
-					0AEF55FE1EFC03C50048DA6B = {
-						CreatedOnToolsVersion = 8.3.2;
+					0ABAF54A1F09686100BAC771 = {
+						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = G3UM9C856M;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0AEF55DF1EFC03C50048DA6B;
+						ProvisioningStyle = Manual;
+						TestTargetID = 0ABAF52B1F09686100BAC771;
 					};
 				};
 			};
-			buildConfigurationList = 0AEF55DB1EFC03C50048DA6B /* Build configuration list for PBXProject "FlyveMDMInventoryAgent" */;
+			buildConfigurationList = 0ABAF5271F09686100BAC771 /* Build configuration list for PBXProject "FlyveMDMInventoryAgent" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -270,36 +273,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 0AEF55D71EFC03C50048DA6B;
-			productRefGroup = 0AEF55E11EFC03C50048DA6B /* Products */;
+			mainGroup = 0ABAF5231F09686100BAC771;
+			productRefGroup = 0ABAF52D1F09686100BAC771 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AEF55DF1EFC03C50048DA6B /* FlyveMDMInventoryAgent */,
-				0AEF55F31EFC03C50048DA6B /* FlyveMDMInventoryAgentTests */,
-				0AEF55FE1EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests */,
+				0ABAF52B1F09686100BAC771 /* FlyveMDMInventoryAgent */,
+				0ABAF53F1F09686100BAC771 /* FlyveMDMInventoryAgentTests */,
+				0ABAF54A1F09686100BAC771 /* FlyveMDMInventoryAgentUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0AEF55DE1EFC03C50048DA6B /* Resources */ = {
+		0ABAF52A1F09686100BAC771 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB94AD71F04068500BDE630 /* Localizable.plist in Resources */,
-				0AEF55EB1EFC03C50048DA6B /* Assets.xcassets in Resources */,
+				0ABAF5371F09686100BAC771 /* Assets.xcassets in Resources */,
+				0ABAF5671F09695700BAC771 /* Localizable.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AEF55F21EFC03C50048DA6B /* Resources */ = {
+		0ABAF53E1F09686100BAC771 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AEF55FD1EFC03C50048DA6B /* Resources */ = {
+		0ABAF5491F09686100BAC771 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,112 +312,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		065AB4DAD4A7311C1D8886CC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		08A654AA3EC3C6AE90A6CB6D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0F406963E6C30524E1E72081 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		211C9558D96D0CF46DC2C997 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27EE5508DFF6CA802D47F3EA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B2E10CE905EFDFFF08123C7C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D988074A2CCD0991365078A8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E51B6ECBCE27D808FCCB1098 /* [CP] Embed Pods Frameworks */ = {
+		018608978B98E20F43CDF295 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,7 +327,112 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E77282A5F84A32DCD38C8E62 /* [CP] Check Pods Manifest.lock */ = {
+		5127B8409D450F32E4CBC8E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FD58D6EAD80D9D535FBF7EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		858A90B5FF6C038EFE661BCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		912ADFC9426759B87AA1085A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0E4B6DD91050406BFC4CD59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B65D6FF46E35F279309B5AAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB70E863D0F1746156B08813 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB6BD96700ED51B1EBAB96E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -447,50 +450,50 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0AEF55DC1EFC03C50048DA6B /* Sources */ = {
+		0ABAF5281F09686100BAC771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB94AD91F04075A00BDE630 /* Localizator.swift in Sources */,
-				0AEF55E61EFC03C50048DA6B /* AgentSettingsController.swift in Sources */,
-				0AEF55E41EFC03C50048DA6B /* AppDelegate.swift in Sources */,
-				0AD83F081F02B4E6000940D8 /* GlobalSettingsController.swift in Sources */,
+				0ABAF5661F09695700BAC771 /* Localizator.swift in Sources */,
+				0ABAF5641F09695700BAC771 /* AgentSettingsController.swift in Sources */,
+				0ABAF5631F09695700BAC771 /* AppDelegate.swift in Sources */,
+				0ABAF5651F09695700BAC771 /* GlobalSettingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AEF55F01EFC03C50048DA6B /* Sources */ = {
+		0ABAF53C1F09686100BAC771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEF55F91EFC03C50048DA6B /* FlyveMDMInventoryAgentTests.swift in Sources */,
+				0ABAF5451F09686100BAC771 /* FlyveMDMInventoryAgentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AEF55FB1EFC03C50048DA6B /* Sources */ = {
+		0ABAF5471F09686100BAC771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEF56041EFC03C50048DA6B /* FlyveMDMInventoryAgentUITests.swift in Sources */,
+				0ABAF5501F09686100BAC771 /* FlyveMDMInventoryAgentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0AEF55F61EFC03C50048DA6B /* PBXTargetDependency */ = {
+		0ABAF5421F09686100BAC771 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AEF55DF1EFC03C50048DA6B /* FlyveMDMInventoryAgent */;
-			targetProxy = 0AEF55F51EFC03C50048DA6B /* PBXContainerItemProxy */;
+			target = 0ABAF52B1F09686100BAC771 /* FlyveMDMInventoryAgent */;
+			targetProxy = 0ABAF5411F09686100BAC771 /* PBXContainerItemProxy */;
 		};
-		0AEF56011EFC03C50048DA6B /* PBXTargetDependency */ = {
+		0ABAF54D1F09686100BAC771 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AEF55DF1EFC03C50048DA6B /* FlyveMDMInventoryAgent */;
-			targetProxy = 0AEF56001EFC03C50048DA6B /* PBXContainerItemProxy */;
+			target = 0ABAF52B1F09686100BAC771 /* FlyveMDMInventoryAgent */;
+			targetProxy = 0ABAF54C1F09686100BAC771 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0AEF56061EFC03C50048DA6B /* Debug */ = {
+		0ABAF5521F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -512,7 +515,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -541,7 +543,7 @@
 			};
 			name = Debug;
 		};
-		0AEF56071EFC03C50048DA6B /* Release */ = {
+		0ABAF5531F09686100BAC771 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -563,7 +565,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -585,45 +586,52 @@
 			};
 			name = Release;
 		};
-		0AEF56091EFC03C50048DA6B /* Debug */ = {
+		0ABAF5551F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D1A187E21556BBDD7BB5029 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */;
+			baseConfigurationReference = 77A04FDAE4D7E767A3847942 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = G3UM9C856M;
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "021a4eef-d3c7-47ae-b0b1-55ded4b4473b";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent.example";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		0AEF560A1EFC03C50048DA6B /* Release */ = {
+		0ABAF5561F09686100BAC771 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA8E8E0844A084235ED6478D /* Pods-FlyveMDMInventoryAgent.release.xcconfig */;
+			baseConfigurationReference = 14B53793360C5C83EBDB3152 /* Pods-FlyveMDMInventoryAgent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = G3UM9C856M;
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "021a4eef-d3c7-47ae-b0b1-55ded4b4473b";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent.example";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		0AEF560C1EFC03C50048DA6B /* Debug */ = {
+		0ABAF5581F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C969DAFD38B0DCE92F98DB6B /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */;
+			baseConfigurationReference = B5849FB3A1DBF878AC57838D /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -637,9 +645,9 @@
 			};
 			name = Debug;
 		};
-		0AEF560D1EFC03C50048DA6B /* Release */ = {
+		0ABAF5591F09686100BAC771 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16E252F886FF6E79839CDC24 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */;
+			baseConfigurationReference = E0660E367A7865AC3EF45E72 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -653,9 +661,9 @@
 			};
 			name = Release;
 		};
-		0AEF560F1EFC03C50048DA6B /* Debug */ = {
+		0ABAF55B1F09686100BAC771 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81E5721087DA5F2BE9AA2B19 /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */;
+			baseConfigurationReference = DA145F40E0301CC0BD1C76CB /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G3UM9C856M;
@@ -668,9 +676,9 @@
 			};
 			name = Debug;
 		};
-		0AEF56101EFC03C50048DA6B /* Release */ = {
+		0ABAF55C1F09686100BAC771 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B06D4244B4B0264DF944B50 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */;
+			baseConfigurationReference = 9B309CFB5762D491558F11D0 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G3UM9C856M;
@@ -686,43 +694,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AEF55DB1EFC03C50048DA6B /* Build configuration list for PBXProject "FlyveMDMInventoryAgent" */ = {
+		0ABAF5271F09686100BAC771 /* Build configuration list for PBXProject "FlyveMDMInventoryAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AEF56061EFC03C50048DA6B /* Debug */,
-				0AEF56071EFC03C50048DA6B /* Release */,
+				0ABAF5521F09686100BAC771 /* Debug */,
+				0ABAF5531F09686100BAC771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AEF56081EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgent" */ = {
+		0ABAF5541F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AEF56091EFC03C50048DA6B /* Debug */,
-				0AEF560A1EFC03C50048DA6B /* Release */,
+				0ABAF5551F09686100BAC771 /* Debug */,
+				0ABAF5561F09686100BAC771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AEF560B1EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentTests" */ = {
+		0ABAF5571F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AEF560C1EFC03C50048DA6B /* Debug */,
-				0AEF560D1EFC03C50048DA6B /* Release */,
+				0ABAF5581F09686100BAC771 /* Debug */,
+				0ABAF5591F09686100BAC771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AEF560E1EFC03C50048DA6B /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentUITests" */ = {
+		0ABAF55A1F09686100BAC771 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AEF560F1EFC03C50048DA6B /* Debug */,
-				0AEF56101EFC03C50048DA6B /* Release */,
+				0ABAF55B1F09686100BAC771 /* Debug */,
+				0ABAF55C1F09686100BAC771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0AEF55D81EFC03C50048DA6B /* Project object */;
+	rootObject = 0ABAF5241F09686100BAC771 /* Project object */;
 }
