@@ -1,0 +1,20 @@
+app_identifier "org.flyve.inventory.agent.example" # The bundle identifier of your app
+apple_id "info@s42.com.ve" # Your Apple email address
+
+team_id "G3UM9C856M" # Developer Portal Team ID
+
+app_identifier "org.flyve.inventory.agent.example.app-store"
+apple_id "info@s42.com.ve"
+
+for_platform :ios do
+  for_lane :test do
+    app_identifier "org.flyve.inventory.agent.example.development"
+  end
+
+  for_lane :beta do
+    app_identifier "org.flyve.inventory.agent.example.app-store"
+  end
+end
+
+# you can even provide different app identifiers, Apple IDs and team names per lane:
+# More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md
