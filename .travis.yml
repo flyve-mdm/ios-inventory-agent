@@ -8,13 +8,13 @@ before_install:
 - chmod a+x scripts/build-app.sh
 - chmod a+x scripts/create-ipa.sh
 - chmod a+x scripts/remove-key.sh
-- "./scripts/add-key.sh"
+#- "./scripts/add-key.sh"
 script:
 - "./scripts/build-app.sh"
 after_success:
-- "./scripts/create-ipa.sh"
+#- "./scripts/create-ipa.sh"
 after_script:
-- "./scripts/remove-key.sh"
+#- "./scripts/remove-key.sh"
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
 env:
