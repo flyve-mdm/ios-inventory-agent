@@ -31,6 +31,7 @@ import XCTest
 class FlyveMDMInventoryAgentTests: XCTestCase {
     
     var window: UIWindow?
+    let agentSettingsController = AgentSettingsController()
     
     override func setUp() {
         super.setUp()
@@ -38,7 +39,7 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let navigationController = UINavigationController(rootViewController: AgentSettingsController())
+        let navigationController = UINavigationController(rootViewController: agentSettingsController)
         
         window?.rootViewController = navigationController
     }
@@ -49,12 +50,16 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
     }
     
     func testAgentSettingsController() {
-        XCTAssertNotNil(window?.rootViewController, "The AgentSettingsController has started correctly")
+        XCTAssertNotNil(window?.rootViewController, "The AgentSettingsControllerdid not start correctly")
+    }
+    
+    func testInventoryTableView() {
+        XCTAssertNotNil(agentSettingsController.inventoryTableView, "inventoryTableView not shown in view")
     }
     
     func testLocalize() {
         
-        XCTAssertNotEqual("app_name".localized, "app_name", "Localizable file valid")
+        XCTAssertNotEqual("app_name".localized, "app_name", "Localizable file not valid")
 
     }
     
