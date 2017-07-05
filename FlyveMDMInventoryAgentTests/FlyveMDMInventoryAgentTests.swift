@@ -57,6 +57,10 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         XCTAssertNotNil(agentSettingsController.inventoryTableView, "inventoryTableView not shown in view")
     }
     
+    func testFooterView() {
+        XCTAssertNotNil(agentSettingsController.footerView, "footerView not shown in view")
+    }
+    
     func testLocalize() {
         
         XCTAssertNotEqual("app_name".localized, "app_name", "Localizable file not valid")
