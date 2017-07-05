@@ -30,14 +30,26 @@ import XCTest
 
 class FlyveMDMInventoryAgentTests: XCTestCase {
     
+    var window: UIWindow?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let navigationController = UINavigationController(rootViewController: AgentSettingsController())
+        
+        window?.rootViewController = navigationController
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testAgentSettingsController() {
+        XCTAssertNotNil(window?.rootViewController, "The AgentSettingsController has started correctly")
     }
     
     func testLocalize() {
