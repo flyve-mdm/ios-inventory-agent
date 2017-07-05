@@ -18,13 +18,17 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    cocoapods
+    #cocoapods
     
   end
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+      workspace: "FlyveMDMInventoryAgent.xcworkspace",
+      scheme: "FlyveMDMInventoryAgent",
+      clean: true
+    )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -33,54 +37,54 @@ platform :ios do
 
     keychain_name = "ios-build.keychain"
 
-  create_keychain(
-    name: keychain_name,
-    default_keychain: true,
-    unlock: true,
-    timeout: 3600,
-    lock_when_sleeps: true,
-    password: SecureRandom.base64
-  )
+    # Create keychain
+    create_keychain(
+      name: keychain_name,
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false,
+      password: SecureRandom.base64
+    )
+    
+    # Import distribution certificate
+    import_certificate(
+      certificate_path: "fastlane/cert/dist.p12",
+      certificate_password: ENV["KEYCHAIN_PASSWORD"],
+      keychain_name: keychain_name
+    )
 
-  # Import distribution certificate
-  import_certificate(
-    certificate_path: "fastlane/cert/dist.p12",
-    certificate_password: ENV["KEYCHAIN_PASSWORD"],
-    keychain_name: keychain_name
-  )
+    # Fetch provisioning profile
+    # sigh
+    sigh(
+      adhoc: false, 
+      username: "info@s42.com.ve",
+      team_id: "G3UM9C856M",
+      provisioning_name: "XC_iOS_orgflyveinventoryagentexample",
+      cert_id: "G3UM9C856M"
+    )
+    
+    increment_build_number(build_number: number_of_commits)
 
-  # Fetch provisioning profile
-  sigh(
-    adhoc: false, 
-    username: "info@s42.com.ve",
-    team_id: "G3UM9C856M",
-    provisioning_name: "CI Example Ad Hoc",
-    cert_id: "G3UM9C856M"
-  )
+    # Build
+    gym(
+      scheme: "FlyveMDMInventoryAgent",
+      configuration: "App Store",
+      sdk: "iphoneos10.3",
+      clean: true,
+      include_bitcode: true,
+      include_symbols: true,
+      use_legacy_build_api: true,
+      export_method: "app-store"
+    )
 
-  increment_build_number(build_number: number_of_commits)
+    pilot
 
-  # Build
-  gym(
-    scheme: "FlyveMDMInventoryAgent"
-    configuration: "App Store",
-    sdk: "iphoneos10.3",
-    clean: true,
-    include_bitcode: true,
-    include_symbols: true,
-    use_legacy_build_api: true,
-    export_method: "app-store"
-  )
+    delete_keychain(
+      name: keychain_name
+    )
 
-  pilot
-
-  delete_keychain(
-    name: keychain_name
-  )
     # match(type: "appstore") # more information: https://codesigning.guide
-    # gym(scheme: "FlyveMDMInventoryAgent") # Build your app - more options available
-    # pilot
-
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
   end
