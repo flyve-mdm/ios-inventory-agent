@@ -28,7 +28,7 @@
 import UIKit
 import FlyveMDMInventory
 import Alamofire
-import  UserNotifications
+import UserNotifications
 
 class AgentSettingsController: UIViewController {
     

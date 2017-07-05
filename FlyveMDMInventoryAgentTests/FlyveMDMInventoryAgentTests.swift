@@ -26,6 +26,7 @@
  */
 
 import XCTest
+import FlyveMDMInventory
 @testable import FlyveMDMInventoryAgent
 
 class FlyveMDMInventoryAgentTests: XCTestCase {
@@ -71,6 +72,16 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
     
     func testLocalize() {
         XCTAssertNotEqual("app_name".localized, "app_name", "Localizable file not valid")
+    }
+    
+    func testCreateInventory() {
+    
+        let inventoryTask = InventoryTask()
+        
+        inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: UserDefaults.standard.string(forKey: "nameTag") ?? "") { result in
+            
+            XCTAssertNotNil(result, "xml inventory was not created")
+        }
     }
     
 }
