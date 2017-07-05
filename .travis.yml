@@ -9,6 +9,9 @@ before_install:
 - chmod a+x scripts/build-app.sh
 - chmod a+x scripts/create-ipa.sh
 - chmod a+x scripts/remove-key.sh
+- gem update --system
+- gem install fastlane --no-rdoc --no-ri --no-document --quiet
+install: true
 
 script:
 # - xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent -sdk iphonesimulator10.3 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
