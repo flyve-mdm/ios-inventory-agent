@@ -20,7 +20,7 @@
  * @date      22/06/17
  * @copyright Copyright © 2017 Teclib. All rights reserved.
  * @license   GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
- * @link      https://github.com/flyve-mdm/fusioninventory-ios
+ * @link      https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent.git
  * @link      https://flyve-mdm.com
  * ------------------------------------------------------------------------------
  */
@@ -28,7 +28,7 @@
 import UIKit
 import FlyveMDMInventory
 import Alamofire
-import  UserNotifications
+import UserNotifications
 
 class AgentSettingsController: UIViewController {
     
