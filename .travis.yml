@@ -12,7 +12,7 @@ before_install:
 
 script:
 # - xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent -sdk iphonesimulator10.3 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
-- faslane test
+- fastlane test
  
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
