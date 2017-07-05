@@ -7,7 +7,7 @@
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-blue.svg)](https://t.me/flyvemdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![GitHub release](https://img.shields.io/github/release/flyve-mdm/flyve-mdm-ios-inventory-agent.svg)](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/releases)
-[![Maven Central](https://img.shields.io/maven-central/v/com.flyvemdm/inventory.svg)](https://bintray.com/flyve-mdm/inventory/flyve-mdm-ios-inventory-agent/)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 Flyve MDM is a Mobile device management software that enables you to secure and manage all the mobile devices of your business or family via a web-based console.
 
@@ -73,6 +73,9 @@ Flyve MDM Inventory Agents can also be used with other open sources projects lik
 Flyve MDM Inventory Agent for iOS is running on iOS 9.3 and higher.
 
 Download the latest IPA, from GitHub releases, TestFligh or Apple Store.
+
+[<img src="https://user-images.githubusercontent.com/663460/26986739-23bffc6e-4d49-11e7-92a2-cdba1b517a08.png" alt="Download from iTunes" height="60">](https://itunes.apple.com/us/app/flyve-mdm-inventory-agent)
+[<img src="https://user-images.githubusercontent.com/663460/26973090-f8fdc986-4d14-11e7-995a-e7c5e79ed925.png" alt="Download APK from GitHub" height="60">](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/releases/latest)
 
 ## Documentation
 
