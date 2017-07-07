@@ -35,25 +35,6 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
 
-    keychain_name = "ios-build.keychain"
-
-    # Create keychain
-    create_keychain(
-      name: keychain_name,
-      default_keychain: true,
-      unlock: true,
-      timeout: 3600,
-      lock_when_sleeps: false,
-      password: SecureRandom.base64
-    )
-    
-    # Import distribution certificate
-    import_certificate(
-      certificate_path: "fastlane/cert/dist.p12",
-      certificate_password: ENV["KEYCHAIN_PASSWORD"],
-      keychain_name: keychain_name
-    )
-
     # Fetch provisioning profile
     # sigh
     sigh(
@@ -64,25 +45,26 @@ platform :ios do
       cert_id: "G3UM9C856M"
     )
     
-    increment_build_number(build_number: number_of_commits)
+    # increment_build_number(build_number: number_of_commits)
+    # update_project_automatic_codesigning(path: "FlyveMDMInventoryAgent.xcodeproj" ,use_automatic_signing: false)
 
     # Build
     gym(
       scheme: "FlyveMDMInventoryAgent",
-      configuration: "App Store",
+      configuration: "Release",
       sdk: "iphoneos10.3",
       clean: true,
       include_bitcode: true,
       include_symbols: true,
-      use_legacy_build_api: true,
-      export_method: "app-store"
+      export_method: "app-store",
+      buildlog_path: 'fastlane/logs'
     )
 
     pilot
 
-    delete_keychain(
-      name: keychain_name
-    )
+    # delete_keychain(
+    #   name: keychain_name
+    # )
 
     # match(type: "appstore") # more information: https://codesigning.guide
     # sh "your_script.sh"
