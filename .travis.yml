@@ -3,28 +3,36 @@ osx_image: xcode8.3
 xcode_workspace: FlyveMDMInventoryAgent.xcworkspace
 xcode_scheme: FlyveMDMInventoryAgent
 podfile: Podfile
-
 before_install:
 - chmod a+x scripts/add-key.sh
-- chmod a+x scripts/build-app.sh
-- chmod a+x scripts/create-ipa.sh
+- chmod a+x scripts/testflight.sh
 - chmod a+x scripts/remove-key.sh
 - gem update --system
 - gem install fastlane --no-rdoc --no-ri --no-document --quiet
 install: true
-
+before_script:
+- ./script/add-key.sh
 script:
-# - xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent -sdk iphonesimulator10.3 ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 - fastlane test
- 
+before_deploy:
+- echo $FASTLANE_PASSWORD >> .env
+deploy:
+  provider: script
+  script: "./scripts/testflight.sh"
+  on:
+    branch: develop
+after_script:
+- ./scripts/remove-key.sh
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
 env:
   global:
   - APPNAME="FlyveMDMInventoryAgent"
   - PROFILE_UUID=XC_iOS_orgflyveinventoryagentexample
+  - KEYCHAIN_NAME="ios-app.keychain"
   - SCRIPT_PATH=./scripts
   - CERTIFICATES_PATH=./scripts/cert
   - PROFILE_PATH=./scripts/profile
   - secure: fJI2J55EtqBR+Cop1C/PlEa6Vo2oJjOzE+MK1t4s6L6IX8rcM8n70gzDYmVEBDRs0QIwuXVWdRiJZJMgzTnPlhKWajHnyt0ic/3KTiPSDI14tX9X0AHYKNNP2t8QScJuW1hYKtZSlcJ7UB0QZwjSWB6snIcl3rhNDRM9pMOjU7cvsHgxYsWrg04C0+KDnWHq5xSmnp3KtU3OpXpK2+GskcKG61QEK/jLRYMzsbHD5lcwCSWjXF8F4mDL8TtnA/mAVZx0i0uAckVz4FRxwGNDYEMnug4lVF621SMHVwSJ8rheQ8hE177fqAQCnNAmWouHTBHsa3S/0GE3Jjz91b+6X9jN/M7XbHkvA0yV4tbz+qboQSChjDq/826u7zOdiA0PofhQDH/8Axf+T9/M9An0PH0kokD7asA0kizy1Heqai9Cy70CA9lJc17bFPr2Nv6u9u5YyY7MnPLq+T9oqZ8YcsbGSB5MKRsBs83pNbfbbiN/269o8nCIGqtIyxbyjBquOZITS1itNgjdLG6VE3Pk7faz8oGOev+W6dDuFvLWU+N/VlzykvBVEyabOE/Hjjz8wrwVJcIQIkAHSgOe+oQONrPHqguY4Ss9Pe98DdLUfb8L5s7knljgzkcRFQYHzzxZC1nKOSLV3J+ZR2JvTdagGcdnq6BXUocB7D69d+CF1ec=
   - secure: MyKJYZK4jjxJYvHouw1uyV3GPQgW22tkXO1aXyDXPjbOzDdnz3xyE1zsjfh8L7kMh1NsiAriTk61wB5RXDz9YvaRWg9ytV6hrYP0HzWGOAdCnoZB/TOXccOmgZ5T0+1T9fxBECBUJZWMaXa5LlWRr5HAhsw76fjbOn9ADO8EFoI6+JvbOmdPQCxXyb0d2Wt/EH4AcuF2tL9ZwGozlUHW3S1O03l9T9nEFwhsAeIJFg+pxpmBFLbg+ifEvGjinDgEL8mZigDsw+y/thgHl7YjYd1GvppnoyNMPvUWnXYSKbcjGVqoJgI5Wu6/f0DhBwyZavDI4MEA99fqyti/j4D0f5QPXikp6Egj0ujnd5rD2yMU+XwOoDI5oVYJXtOGlLHNV7Hs77QCgnWN6Y5oDSLHVQDhcznjBwGcvHi2bvzs3/hJnAyjdaUjK2cG2RR0SCeqyPwLW9ULwdBpkP6V54Hx3szW7I3vjMPQliRHBrUUsv0bo9mL1pt8UAV++4CMkcO+4b57UfoqDxBJDGOprQFhlmgYRwzEBQT5SvOiGumpZRNayGLX7Nb7i0JtSbBegAL+O87YRSJg6sm4gPeQTXc1ddrCK1k6QCCbdPpwsWgC+JB8vdsqOetqtIQUsfV67A+SnV8Uoy+hMlJrV3CHmorTYtPIYoDyWZCrABaZ1puLocE=
+  - secure: AnoxfJh0M+z9jDVZIu3vvePM5wLus8XhGToHA5ogzRfamq9NR7GoJzS5SOXKK2q1CM0ANunhJT+PRKZK8DEwIDQE6v1mVJZSiFhzyys9F09BiGUPWVigHT1PbthCeeM743NydDiz3ST0cHqUiFH7R5Oxtj0uvWOq4DqAbKHTVB9YJx9ScuCadaT+885yM+ROPN6Ql+ddyfcZ7xnEPrP/7FQvhpeiXZf4p+XhmjnHoLuI1RXKmLDumw9MpydsW0VfeThOlQeDyFXuJPYVfngmhN8Tets+Z/qNSS21g3sdYHOoG55O66Z4NJxkgOQjvMUCmzZ1Ron6GscpdDH/kVEbFghTx0dRuA9L3RsT7RQRbb6eubAhA5iktRP7Y12oDmT0WRLS3/JzCw/pLJs2D683+6+NHkl5pnXZ4GwYy6Xxb1a425IHXWwpkWUqorJONgBB55qRnzLcWTqJyS9+5poJwMP90XnxdO0epcdibCibQ5Db8PfaCRAyUdqwHPS5nMRxzh9aGKADAwRfmA8WcNshWyvfFgzKO4cSLWHZnfngNYhJtGcPk+dnRMSwnK8mANetuZcNmOoSkdzG0sxX5EgnRJjd71ullBioSFmVWTusp8gAC6mpmqznSNWvYiAjRIZMtU7q36GpPv/1pgxeu/zOcdGydXEe4dpt1amXZt07cKA=
