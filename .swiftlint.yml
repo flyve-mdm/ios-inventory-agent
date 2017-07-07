@@ -1,0 +1,7 @@
+disabled_rules: # rule identifiers to exclude from running
+  - function_body_length
+  - line_length
+  - identifier_name
+  - empty_enum_arguments
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
