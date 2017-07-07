@@ -28,18 +28,18 @@
 import Foundation
 
 private class Localizator {
-    
+
     static let sharedInstance = Localizator()
-    
+
     lazy var localizableDictionary: NSDictionary! = {
         if let path = Bundle.main.path(forResource: "Localizable", ofType: "plist") {
             return NSDictionary(contentsOfFile: path)
         }
         fatalError("Localizable file NOT found")
     }()
-    
+
     func localize(string: String) -> String {
-        
+
         guard let localizedString = localizableDictionary.value(forKey: string) as? String else {
 
             return string
