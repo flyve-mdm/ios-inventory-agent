@@ -11,7 +11,7 @@ before_install:
 - gem install fastlane --no-rdoc --no-ri --no-document --quiet
 install: true
 before_script:
-- ./script/add-key.sh
+- ./scripts/add-key.sh
 script:
 - fastlane test
 before_deploy:
