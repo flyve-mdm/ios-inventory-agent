@@ -29,7 +29,7 @@ import Foundation
 import UIKit
 
 public class InventoryTask {
-    
+
     private let memory = Memory()
     private let storage = Storage()
     private let hardware = Hardware()
@@ -38,9 +38,9 @@ public class InventoryTask {
     private let cpu = Cpu()
     private let network = Network()
     private let carrier = Carrier()
-    
+
     public init() {}
-    
+
     /**
      Execute generate inventory
      
@@ -51,7 +51,7 @@ public class InventoryTask {
 
         completion(self.createXML(versionClient, tag: tag))
     }
-    
+
     /**
      Creates an invetory
      
@@ -59,11 +59,9 @@ public class InventoryTask {
      - returns: The XML String
      */
     private func createXML(_ versionClient: String, tag: String) -> String {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd H:mm:ss"
         let dateLog = dateFormatter.string(from: Date())
-        
         return "\(createDTD())" +
             createElement(
                 tag: "REQUEST",
@@ -72,7 +70,6 @@ public class InventoryTask {
                     createElement(tag: "VERSIONCLIENT", value: versionClient) +
                     createElement(tag: "DEVICEID", value: "\(hardware.uuid() ?? "not available")") +
                     createElement(tag: "CONTENT", value:
-
                         createElement(tag: "ACCESSLOG", value:
                             createElement(tag: "LOGDATE", value: "\(dateLog)") +
                             createElement(tag: "USERID", value: "N/A")
@@ -144,24 +141,22 @@ public class InventoryTask {
                 )
         )
     }
-    
+
     /**
      Creates the XML DTD
      
      - returns: the XML DTD String
      */
     private func createDTD() -> String {
-        
         return "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>"
     }
-    
+
     /**
      Creates the XML Element
      
      - returns: the XML Element String
      */
     private func createElement(tag: String, value: String) -> String {
-        
         return "<\(tag.uppercased())>\(value)</\(tag.uppercased())>"
     }
 }

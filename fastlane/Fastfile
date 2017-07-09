@@ -11,7 +11,7 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "2.44.1"
+fastlane_version "2.45.0"
 
 default_platform :ios
 
@@ -44,10 +44,7 @@ platform :ios do
       provisioning_name: "XC_iOS_orgflyveinventoryagentexample",
       cert_id: "G3UM9C856M"
     )
-    
-    # increment_build_number(build_number: number_of_commits)
-    # update_project_automatic_codesigning(path: "FlyveMDMInventoryAgent.xcodeproj" ,use_automatic_signing: false)
-
+  
     # Build
     gym(
       scheme: "FlyveMDMInventoryAgent",
@@ -60,23 +57,26 @@ platform :ios do
       buildlog_path: 'fastlane/logs'
     )
 
+    # TestFlight upload
     pilot
 
-    # delete_keychain(
-    #   name: keychain_name
-    # )
-
-    # match(type: "appstore") # more information: https://codesigning.guide
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
   end
 
   desc "Deploy a new version to the App Store"
   lane :release do
-    # match(type: "appstore")
-    # snapshot
+    
+    # Fetch provisioning profile
+    # sigh
+    sigh(
+      adhoc: false, 
+      username: "info@s42.com.ve",
+      team_id: "G3UM9C856M",
+      provisioning_name: "XC_iOS_orgflyveinventoryagentexample",
+      cert_id: "G3UM9C856M"
+    )
+    snapshot
     gym(scheme: "FlyveMDMInventoryAgent") # Build your app - more options available
-    deliver(force: true)
+    # deliver(force: true)
     # frameit
   end
 
