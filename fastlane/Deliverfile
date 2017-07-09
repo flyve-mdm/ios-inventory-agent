@@ -8,3 +8,23 @@
 
 app_identifier "org.flyve.inventory.agent.example" # The bundle identifier of your app
 username "info@s42.com.ve" # your Apple ID user
+
+submission_information({
+   add_id_info_serves_ads: "false",
+   add_id_info_limits_tracking: "true",
+   add_id_info_tracks_action: "false",
+   add_id_info_tracks_install: "true",
+   add_id_info_uses_idfa: "true",
+   content_rights_contains_third_party_content: "false",
+   content_rights_has_rights: "true",
+   export_compliance_available_on_french_store: "false",
+   export_compliance_ccat_file: "false",
+   export_compliance_contains_proprietary_cryptography: "false",
+   export_compliance_contains_third_party_cryptography: "false",
+   export_compliance_is_exempt: "true",
+   export_compliance_uses_encryption: "false",
+   export_compliance_app_type: nil,
+   export_compliance_encryption_updated: "false",
+   export_compliance_compliance_required: "false",
+   export_compliance_platform: "ios"
+})
