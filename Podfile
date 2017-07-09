@@ -8,7 +8,7 @@ target 'FlyveMDMInventoryAgent' do
   # Pods for FlyveMDMInventoryAgent
 
   pod 'Alamofire', '~> 4.5'
-  pod 'FlyveMDMInventory', '~> 1.1'
+  pod 'FlyveMDMInventory', '~> 1.2'
 
   target 'FlyveMDMInventoryAgentTests' do
     inherit! :search_paths

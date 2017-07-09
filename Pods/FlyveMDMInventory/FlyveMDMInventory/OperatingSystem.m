@@ -60,7 +60,7 @@
     
     NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
     
-    return [NSString stringWithFormat:@"%d.%d.%d", version.majorVersion, version.minorVersion, version.patchVersion];
+    return [NSString stringWithFormat:@"%ld.%ld.%ld", (long)version.majorVersion, (long)version.minorVersion, (long)version.patchVersion];
 }
 
 /**
