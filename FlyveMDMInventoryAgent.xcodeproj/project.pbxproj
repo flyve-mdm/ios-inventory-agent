@@ -381,12 +381,12 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D34A89AF9A89E4A00317EA0 /* [CP] Copy Pods Resources */ = {
@@ -396,12 +396,12 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73711ACF70A04655FD8AC019 /* [CP] Embed Pods Frameworks */ = {
@@ -426,12 +426,12 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A7568F0D2309F1B1BDBF7FC7 /* [CP] Embed Pods Frameworks */ = {
@@ -441,7 +441,7 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,12 +456,12 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3E69B48C8FE9C98D6413924 /* [CP] Embed Pods Frameworks */ = {
