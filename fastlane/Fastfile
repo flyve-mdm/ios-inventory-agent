@@ -58,7 +58,10 @@ platform :ios do
     )
 
     # TestFlight upload
-    pilot
+    pilot(
+      app_identifier: "org.flyve.inventory.agent.example",
+      skip_waiting_for_build_processing: true
+    )
 
   end
 
