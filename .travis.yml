@@ -23,7 +23,7 @@ notifications:
 env:
   global:
   - APPNAME="FlyveMDMInventoryAgent"
-  - PROFILE_UUID=XC_iOS_orgflyveinventoryagentexample
+  - PROFILE_UUID=XC_iOS_orgflyveinventoryagent
   - KEYCHAIN_NAME="ios-app.keychain"
   - SCRIPT_PATH=./scripts
   - CERTIFICATES_PATH=./scripts/cert
