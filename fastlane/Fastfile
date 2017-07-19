@@ -11,15 +11,14 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "2.45.0"
+fastlane_version "2.46.1"
 
 default_platform :ios
 
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    #cocoapods
-    
+    # cocoapods
   end
 
   desc "Runs all the tests"
@@ -39,10 +38,10 @@ platform :ios do
     # sigh
     sigh(
       adhoc: false, 
-      username: "info@s42.com.ve",
-      team_id: "G3UM9C856M",
-      provisioning_name: "XC_iOS_orgflyveinventoryagentexample",
-      cert_id: "G3UM9C856M"
+      username: "hrondon@teclib.com",
+      team_id: "H7XJV96LX2",
+      provisioning_name: "XC_iOS_orgflyveinventoryagent",
+      cert_id: "H7XJV96LX2"
     )
   
     # Build
@@ -59,7 +58,7 @@ platform :ios do
 
     # TestFlight upload
     pilot(
-      app_identifier: "org.flyve.inventory.agent.example",
+      app_identifier: "org.flyve.inventory.agent",
       skip_waiting_for_build_processing: true
     )
 
@@ -72,10 +71,10 @@ platform :ios do
     # sigh
     sigh(
       adhoc: false, 
-      username: "info@s42.com.ve",
-      team_id: "G3UM9C856M",
-      provisioning_name: "XC_iOS_orgflyveinventoryagentexample",
-      cert_id: "G3UM9C856M"
+      username: "hrondon@teclib.com",
+      team_id: "H7XJV96LX2",
+      provisioning_name: "XC_iOS_orgflyveinventoryagent",
+      cert_id: "H7XJV96LX2"
     )
     snapshot
     gym(scheme: "FlyveMDMInventoryAgent") # Build your app - more options available
