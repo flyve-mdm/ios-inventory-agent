@@ -249,7 +249,7 @@
 				TargetAttributes = {
 					0AEB1ECB1F10317F00F18217 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = G3UM9C856M;
+						DevelopmentTeam = H7XJV96LX2;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -259,13 +259,13 @@
 					};
 					0AEB1EDF1F10317F00F18217 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = G3UM9C856M;
+						DevelopmentTeam = H7XJV96LX2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0AEB1ECB1F10317F00F18217;
 					};
 					0AEB1EEA1F10317F00F18217 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = G3UM9C856M;
+						DevelopmentTeam = H7XJV96LX2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0AEB1ECB1F10317F00F18217;
 					};
@@ -624,14 +624,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Teclib (H7XJV96LX2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = G3UM9C856M;
+				DEVELOPMENT_TEAM = H7XJV96LX2;
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "021a4eef-d3c7-47ae-b0b1-55ded4b4473b";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent.example";
+				PROVISIONING_PROFILE = "b56e9ec2-abc1-4073-b092-dc05d40eae40";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -642,14 +643,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Teclib (H7XJV96LX2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = G3UM9C856M;
+				DEVELOPMENT_TEAM = H7XJV96LX2;
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "021a4eef-d3c7-47ae-b0b1-55ded4b4473b";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent.example";
+				PROVISIONING_PROFILE = "b56e9ec2-abc1-4073-b092-dc05d40eae40";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -660,7 +662,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = G3UM9C856M;
+				DEVELOPMENT_TEAM = H7XJV96LX2;
 				INFOPLIST_FILE = FlyveMDMInventoryAgentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentTests;
@@ -676,7 +678,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = G3UM9C856M;
+				DEVELOPMENT_TEAM = H7XJV96LX2;
 				INFOPLIST_FILE = FlyveMDMInventoryAgentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentTests;
@@ -691,7 +693,7 @@
 			baseConfigurationReference = F46A2FC618C1AD93B805CC98 /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = G3UM9C856M;
+				DEVELOPMENT_TEAM = H7XJV96LX2;
 				INFOPLIST_FILE = FlyveMDMInventoryAgentUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentUITests;
@@ -706,7 +708,7 @@
 			baseConfigurationReference = 8F9D330769AB62C6396204B3 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = G3UM9C856M;
+				DEVELOPMENT_TEAM = H7XJV96LX2;
 				INFOPLIST_FILE = FlyveMDMInventoryAgentUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentUITests;
