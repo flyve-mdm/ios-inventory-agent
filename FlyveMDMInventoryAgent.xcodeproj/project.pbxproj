@@ -199,12 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AEB1EF71F10317F00F18217 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentTests" */;
 			buildPhases = (
-				E37DA3F844AA0AFD7A21B423 /* [CP] Check Pods Manifest.lock */,
+				E37DA3F844AA0AFD7A21B423 /* [CP] Embed Pods Frameworks */,
 				0AEB1EDC1F10317F00F18217 /* Sources */,
 				0AEB1EDD1F10317F00F18217 /* Frameworks */,
 				0AEB1EDE1F10317F00F18217 /* Resources */,
 				73711ACF70A04655FD8AC019 /* [CP] Embed Pods Frameworks */,
-				6D34A89AF9A89E4A00317EA0 /* [CP] Copy Pods Resources */,
+				6D34A89AF9A89E4A00317EA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,12 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AEB1EFA1F10317F00F18217 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentUITests" */;
 			buildPhases = (
-				68E868708D41B6E5BE279A8C /* [CP] Check Pods Manifest.lock */,
+				68E868708D41B6E5BE279A8C /* [CP] Copy Pods Resources */,
 				0AEB1EE71F10317F00F18217 /* Sources */,
 				0AEB1EE81F10317F00F18217 /* Frameworks */,
 				0AEB1EE91F10317F00F18217 /* Resources */,
-				A7568F0D2309F1B1BDBF7FC7 /* [CP] Embed Pods Frameworks */,
-				799F19A110484CC831BE7657 /* [CP] Copy Pods Resources */,
+				A7568F0D2309F1B1BDBF7FC7 /* [CP] Check Pods Manifest.lock */,
+				799F19A110484CC831BE7657 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,7 +374,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		68E868708D41B6E5BE279A8C /* [CP] Check Pods Manifest.lock */ = {
+		68E868708D41B6E5BE279A8C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,7 +389,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6D34A89AF9A89E4A00317EA0 /* [CP] Copy Pods Resources */ = {
+		6D34A89AF9A89E4A00317EA0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,7 +419,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		799F19A110484CC831BE7657 /* [CP] Copy Pods Resources */ = {
+		799F19A110484CC831BE7657 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -434,7 +434,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7568F0D2309F1B1BDBF7FC7 /* [CP] Embed Pods Frameworks */ = {
+		A7568F0D2309F1B1BDBF7FC7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,7 +449,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E37DA3F844AA0AFD7A21B423 /* [CP] Check Pods Manifest.lock */ = {
+		E37DA3F844AA0AFD7A21B423 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -628,7 +628,7 @@
 				DEVELOPMENT_TEAM = G3UM9C856M;
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent.example;
+				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "021a4eef-d3c7-47ae-b0b1-55ded4b4473b";
 				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent.example";
@@ -646,7 +646,7 @@
 				DEVELOPMENT_TEAM = G3UM9C856M;
 				INFOPLIST_FILE = FlyveMDMInventoryAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent.example;
+				PRODUCT_BUNDLE_IDENTIFIER = org.flyve.inventory.agent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "021a4eef-d3c7-47ae-b0b1-55ded4b4473b";
 				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: org.flyve.inventory.agent.example";
