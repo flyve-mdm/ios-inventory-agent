@@ -14,6 +14,7 @@ before_script:
 - "./scripts/add-key.sh"
 - echo FASTLANE_PASSWORD=$FASTLANE_PASSWORD >> .env
 - echo TELEGRAM_WEBHOOKS=$TELEGRAM_WEBHOOKS >> .env
+- echo GIT_REPO=TRAVIS=$TRAVIS_REPO_SLUG >> .env
 script:
 - xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent
 - "./scripts/run-build.sh"
