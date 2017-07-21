@@ -85,18 +85,17 @@ platform :ios do
   # You can define as many lanes as you want
 
   after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
+    telegram(
+        url_horn: ENV["TELEGRAM_WEBHOOKS"],
+        message: "Fastlane is OK"
+    )
   end
 
   error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
+    telegram(
+        url_horn: ENV["TELEGRAM_WEBHOOKS"],
+        message: "`ERROR` Fastlane FAIL"
+    )
   end
 end
 
