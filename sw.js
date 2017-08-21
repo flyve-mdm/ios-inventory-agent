@@ -3,7 +3,7 @@
 
 self.addEventListener('install', function(e) {
     
-  var CACHE_NAME = 'version-4'
+  var CACHE_NAME = 'version-5'
 
   caches.keys().then(function(cacheNames) {
     return Promise.all(
