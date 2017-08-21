@@ -1,9 +1,11 @@
 ---
 ---
 
-self.addEventListener('install', function(e) {
-    
-  var CACHE_NAME = 'version-5'
+self.addEventListener('install', function(e) { 
+  
+  {% assign name = site.github.project_title | replace: "flyve-mdm-", "" %} 
+
+  var CACHE_NAME = '{{name}}-version-1'
 
   caches.keys().then(function(cacheNames) {
     return Promise.all(
@@ -12,7 +14,7 @@ self.addEventListener('install', function(e) {
           return caches.delete(cacheName)
         }
       })
-    )
+    ) 
   })
   
   e.waitUntil(
@@ -26,9 +28,9 @@ self.addEventListener('install', function(e) {
         '{{ "/css/main.css" | relative_url }}',
         '{{ "/css/syntax.css" | relative_url }}',
         '{{ "/images/typo.png" | relative_url }}',
-        '{{ "/images/iPodTouch.jpg" | relative_url }}',
-        '{{ "/images/iPad.jpg" | relative_url }}',
-        '{{ "/images/iPhone5.jpg" | relative_url }}',
+        '{{ "/images/ipodTouch.png" | relative_url }}',
+        '{{ "/images/ipad.png" | relative_url }}',
+        '{{ "/images/iPhone5.png" | relative_url }}',
         '{{ "/images/logo.png" | relative_url }}',
         '{{ "/js/app.js" | relative_url }}',
         '{{ "/js/jquery.min.js" | relative_url }}',
