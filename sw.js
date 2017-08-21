@@ -3,7 +3,7 @@
 
 self.addEventListener('install', function(e) {
     
-  var CACHE_NAME = 'version-2'
+  var CACHE_NAME = 'version-3'
 
   caches.keys().then(function(cacheNames) {
     return Promise.all(
@@ -26,14 +26,15 @@ self.addEventListener('install', function(e) {
         '{{ "/css/main.css" | relative_url }}',
         '{{ "css/syntax.css" | relative_url }}',
         '{{ "images/typo.png" | relative_url }}',
+        '{{ "images/iPodTouch.jpg" | relative_url }}',
+        '{{ "images/iPad.jpg" | relative_url }}',
+        '{{ "images/iPhone5.jpg" | relative_url }}',
         '{{ "images/logo.png" | relative_url }}',
         '{{ "js/app.js" | relative_url }}',
         '{{ "js/jquery.min.js" | relative_url }}',
         '{{ "js/bootstrap.min.js" | relative_url }}',
-        '{{ "images/logo.png" | relative_url }}',
         '{{ "manifest.json" | relative_url }}',
         '{{ "fonts/glyphs/winjs-symbols.ttf" | relative_url }}',
-        '{{ "images/logo.png" | relative_url }}',
         '{{ "fonts/selawk.ttf" | relative_url }}',
       ])
     })
