@@ -15,4 +15,7 @@
 <url>
 <loc>http://localhost:4000/flyve-mdm-ios-inventory-agent/products.html</loc>
 </url>
+<url>
+<loc>http://localhost:4000/flyve-mdm-ios-inventory-agent/screenshots.html</loc>
+</url>
 </urlset>
