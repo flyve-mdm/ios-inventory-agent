@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<REQUEST>
+    <QUERY>INVENTORY</QUERY>
+    <VERSIONCLIENT>1.0.0</VERSIONCLIENT>
+    <DEVICEID>511A694C-275B-4CB0-88C9-FE5120E7245D</DEVICEID>
+    <CONTENT>
+        <ACCESSLOG>
+            <LOGDATE>2017-07-28 1:07:59</LOGDATE>
+            <USERID>N/A</USERID>
+        </ACCESSLOG>
+        <ACCOUNTINFO>
+            <KEYNAME>TAG</KEYNAME>
+            <KEYVALUE>N/A</KEYVALUE>
+        </ACCOUNTINFO>
+        <BIOS>
+            <BMANUFACTURER>Apple Inc.</BMANUFACTURER>
+            <MMODEL>iPhone7,2</MMODEL>
+            <SMODEL>N61AP</SMODEL>
+        </BIOS>
+        <HARDWARE>
+            <NAME>N61AP</NAME>
+            <TYPE>iPhone7,2</TYPE>
+            <OSNAME>iOS</OSNAME>
+            <OSVERSION>10.3.3</OSVERSION>
+            <OSCOMMENTS>Version 10.3.3 (Build 14G60)</OSCOMMENTS>
+            <ARCHNAME>ARM64_V8</ARCHNAME>
+            <UUID>511A694C-275B-4CB0-88C9-FE5120E7245D</UUID>
+            <MEMORY>1024.0</MEMORY>
+        </HARDWARE>
+        <OPERATINGSYSTEM>
+            <KERNEL_NAME>Darwin</KERNEL_NAME>
+            <KERNEL_VERSION>16.7.0</KERNEL_VERSION>
+            <NAME>iOS</NAME>
+            <VERSION>10.3.3</VERSION>
+            <FULL_NAME>Darwin Kernel Version 16.7.0: Thu Jun 15 18:33:36 PDT 2017; root:xnu-3789.70.16~4/RELEASE_ARM64_T7000</FULL_NAME>
+        </OPERATINGSYSTEM>
+        <CPUS>
+            <NAME>ARM64_V8</NAME>
+            <MANUFACTURER>Apple Inc.</MANUFACTURER>
+            <CACHE>65536</CACHE>
+            <CORE>2</CORE>
+            <SPEED>0</SPEED>
+            <THREAD>2</THREAD>
+        </CPUS>
+        <DRIVES>
+            <LABEL>/dev/disk0s1s1</LABEL>
+            <VOLUMN>/</VOLUMN>
+        </DRIVES>
+        <DRIVES>
+            <LABEL>devfs</LABEL>
+            <VOLUMN>/dev</VOLUMN>
+        </DRIVES>
+        <DRIVES>
+            <LABEL>/dev/disk0s1s2</LABEL>
+            <VOLUMN>/private/var</VOLUMN>
+        </DRIVES>
+        <DRIVES>
+            <LABEL>/dev/disk0s1s3</LABEL>
+            <VOLUMN>/private/var/wireless/baseband_data</VOLUMN>
+        </DRIVES>
+        <MEMORIES>
+            <CAPACITY>1024.0</CAPACITY>
+        </MEMORIES>
+        <NETWORK>
+            <TYPE>WIFI</TYPE>
+            <MACADDR>02:00:00:00:00:00</MACADDR>
+            <IPADDRESS>192.168.1.75</IPADDRESS>
+            <IPSUBNET>192.168.1.255</IPSUBNET>
+            <WIFI_SSID>MOVISTAR_8AB4</WIFI_SSID>
+            <WIFI_BSSID>d8:fb:5e:7b:8a:b5</WIFI_BSSID>
+        </NETWORK>
+        <STORAGES>
+            <DISKSIZE>119.20 GB</DISKSIZE>
+        </STORAGES>
+        <VIDEOS>
+            <CHIPSET>OpenGL ES 2.0 Apple A8 GPU - 96.27.1</CHIPSET>
+            <NAME>Apple Inc.</NAME>
+            <RESOLUTION>1334x750</RESOLUTION>
+        </VIDEOS>
+        <SIMCARD>
+            <OPERATOR_NAME>movistar</OPERATOR_NAME>
+            <COUNTRY_CODE>es</COUNTRY_CODE>
+            <OPERATOR_CODE>07</OPERATOR_CODE>
+        </SIMCARD>
+        <CAMERAS>
+            <RESOLUTION>3264x2448</RESOLUTION>
+        </CAMERAS>
+        <CAMERAS>
+            <RESOLUTION>1280x960</RESOLUTION>
+        </CAMERAS>
+    </CONTENT>
+</REQUEST>
