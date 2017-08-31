@@ -1,0 +1,36 @@
+---
+layout: jazzy
+---
+
+{{#dash_type}}
+<a name="//apple_ref/{{language_stub}}/{{dash_type}}/{{name}}" class="dashAnchor"></a>
+{{/dash_type}}
+<a title="{{name}} {{kind}} Reference"></a>
+{{> header}}
+<div class="content-wrapper">
+  <p id="breadcrumbs">
+    <a href="{{path_to_root}}index.html">{{module_name}} Reference</a>
+    <img id="carat" src="{{path_to_root}}img/carat.png" />
+    {{name}} {{kind}} Reference
+  </p>
+</div>
+<div class="content-wrapper">
+  {{> nav}}
+  <article class="main-content">
+    <section>
+      <section class="section">
+        {{^hide_name}}<h2>{{name}}</h2>{{/hide_name}}
+        {{#declaration}}
+          <div class="declaration">
+            <div class="language">
+              {{{declaration}}}
+            </div>
+          </div>
+        {{/declaration}}
+        {{{overview}}}
+      </section>
+      {{> tasks}}
+    </section>
+    {{> footer}}
+  </article>
+</div>
