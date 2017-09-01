@@ -47,8 +47,6 @@
   {% assign name = name | replace: "windows", " " %} 
 
   <meta name="apple-mobile-web-app-title" content="{{name}}">
-  
-  <script src="{{ "/js/jazzy.js" | relative_url }}" defer></script>
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
