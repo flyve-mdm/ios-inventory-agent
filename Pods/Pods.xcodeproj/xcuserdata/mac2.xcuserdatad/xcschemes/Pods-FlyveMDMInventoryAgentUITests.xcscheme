@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5CC28811B7B31B09799FA659728DBEF1"
+               BlueprintIdentifier = "FBC7B319CB1EC4F2B7E2ADD5753FBE63"
                BuildableName = "Pods_FlyveMDMInventoryAgentUITests.framework"
                BlueprintName = "Pods-FlyveMDMInventoryAgentUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5CC28811B7B31B09799FA659728DBEF1"
+            BlueprintIdentifier = "FBC7B319CB1EC4F2B7E2ADD5753FBE63"
             BuildableName = "Pods_FlyveMDMInventoryAgentUITests.framework"
             BlueprintName = "Pods-FlyveMDMInventoryAgentUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
