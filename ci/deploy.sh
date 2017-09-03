@@ -32,7 +32,7 @@ if [[ -n $GH_TOKEN ]]; then
     git remote add origin https://$GH_USER:$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git
 fi
 
-if [[ "$TRAVIS_BRANCH" == "develop" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
+if [[ "$TRAVIS_BRANCH" == "feature/fix-logo" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
 
     if [[ $TRAVIS_COMMIT_MESSAGE != *"**beta**"* ]]; then
         git checkout $TRAVIS_BRANCH -f

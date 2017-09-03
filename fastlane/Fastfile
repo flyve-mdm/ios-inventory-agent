@@ -47,7 +47,7 @@ platform :ios do
     # Build
     gym(
       scheme: "FlyveMDMInventoryAgent",
-      configuration: "Release",
+      configuration: "Beta",
       sdk: "iphoneos10.3",
       clean: true,
       include_bitcode: true,
