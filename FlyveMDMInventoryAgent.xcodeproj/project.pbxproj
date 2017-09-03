@@ -184,7 +184,6 @@
 				F3E69B48C8FE9C98D6413924 /* [CP] Embed Pods Frameworks */,
 				02AB121BF0588378BF7020CA /* [CP] Copy Pods Resources */,
 				0AC9F6561F10345C00A66DE8 /* ShellScript */,
-				0AC8D12F1F12A335001A9F05 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -332,19 +331,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		0AC8D12F1F12A335001A9F05 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 		0AC9F6561F10345C00A66DE8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
