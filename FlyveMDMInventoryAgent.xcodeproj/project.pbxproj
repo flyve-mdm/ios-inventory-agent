@@ -55,7 +55,10 @@
 		0AEB1EF11F10317F00F18217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		673B72F5F327AB6823D07D89 /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F9D330769AB62C6396204B3 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9AF5EF3FD934F0F36F0E3361 /* Pods-FlyveMDMInventoryAgent.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgent.beta.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent.beta.xcconfig"; sourceTree = "<group>"; };
 		9B03E657C20C27B400956246 /* Pods_FlyveMDMInventoryAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0003EEAFBE364E762AE1525 /* Pods-FlyveMDMInventoryAgentTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.beta.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.beta.xcconfig"; sourceTree = "<group>"; };
+		A9BE59E3838CFE02A4F61E99 /* Pods-FlyveMDMInventoryAgentUITests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentUITests.beta.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests.beta.xcconfig"; sourceTree = "<group>"; };
 		B33C599B8A4040720CB11B85 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.release.xcconfig"; sourceTree = "<group>"; };
 		E0306BFDB6C7BF3B0A1FB8A8 /* Pods_FlyveMDMInventoryAgentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04B8B65BF4FC4E83B80BC67 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +169,9 @@
 				B33C599B8A4040720CB11B85 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */,
 				F46A2FC618C1AD93B805CC98 /* Pods-FlyveMDMInventoryAgentUITests.debug.xcconfig */,
 				8F9D330769AB62C6396204B3 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */,
+				9AF5EF3FD934F0F36F0E3361 /* Pods-FlyveMDMInventoryAgent.beta.xcconfig */,
+				A0003EEAFBE364E762AE1525 /* Pods-FlyveMDMInventoryAgentTests.beta.xcconfig */,
+				A9BE59E3838CFE02A4F61E99 /* Pods-FlyveMDMInventoryAgentUITests.beta.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -198,12 +204,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AEB1EF71F10317F00F18217 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentTests" */;
 			buildPhases = (
+				7E2BC82038A3CE9B6E192D9F /* [CP] Check Pods Manifest.lock */,
 				E37DA3F844AA0AFD7A21B423 /* [CP] Embed Pods Frameworks */,
 				0AEB1EDC1F10317F00F18217 /* Sources */,
 				0AEB1EDD1F10317F00F18217 /* Frameworks */,
 				0AEB1EDE1F10317F00F18217 /* Resources */,
 				73711ACF70A04655FD8AC019 /* [CP] Embed Pods Frameworks */,
 				6D34A89AF9A89E4A00317EA0 /* [CP] Embed Pods Frameworks */,
+				46312AE059C8F6226512360F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,11 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AEB1EFA1F10317F00F18217 /* Build configuration list for PBXNativeTarget "FlyveMDMInventoryAgentUITests" */;
 			buildPhases = (
+				A7568F0D2309F1B1BDBF7FC7 /* [CP] Check Pods Manifest.lock */,
 				68E868708D41B6E5BE279A8C /* [CP] Copy Pods Resources */,
 				0AEB1EE71F10317F00F18217 /* Sources */,
 				0AEB1EE81F10317F00F18217 /* Frameworks */,
 				0AEB1EE91F10317F00F18217 /* Resources */,
-				A7568F0D2309F1B1BDBF7FC7 /* [CP] Check Pods Manifest.lock */,
 				799F19A110484CC831BE7657 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -345,6 +353,21 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		46312AE059C8F6226512360F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4D9A3FA139636E46E9B3F29F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,7 +395,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D34A89AF9A89E4A00317EA0 /* [CP] Embed Pods Frameworks */ = {
@@ -420,6 +443,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7E2BC82038A3CE9B6E192D9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		A7568F0D2309F1B1BDBF7FC7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,7 +470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E37DA3F844AA0AFD7A21B423 /* [CP] Embed Pods Frameworks */ = {
@@ -447,7 +485,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3E69B48C8FE9C98D6413924 /* [CP] Embed Pods Frameworks */ = {
@@ -556,7 +594,7 @@
 		};
 		0AE81BD91F5C92B000029B51 /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8B48CDB5BBFC1FE554C1BC6 /* Pods-FlyveMDMInventoryAgent.release.xcconfig */;
+			baseConfigurationReference = 9AF5EF3FD934F0F36F0E3361 /* Pods-FlyveMDMInventoryAgent.beta.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -575,7 +613,7 @@
 		};
 		0AE81BDA1F5C92B000029B51 /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B33C599B8A4040720CB11B85 /* Pods-FlyveMDMInventoryAgentTests.release.xcconfig */;
+			baseConfigurationReference = A0003EEAFBE364E762AE1525 /* Pods-FlyveMDMInventoryAgentTests.beta.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,7 +629,7 @@
 		};
 		0AE81BDB1F5C92B000029B51 /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F9D330769AB62C6396204B3 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */;
+			baseConfigurationReference = A9BE59E3838CFE02A4F61E99 /* Pods-FlyveMDMInventoryAgentUITests.beta.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = H7XJV96LX2;
