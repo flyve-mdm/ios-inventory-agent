@@ -79,32 +79,32 @@
 /* Begin PBXFileReference section */
 		0211854B24D4C652CE1115D2113A4C1D /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		06DCF43AF2AE6833BF5C109F0BE51CA2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0998CB3FB1CCA70B8848BE58F24B100E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0998CB3FB1CCA70B8848BE58F24B100E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA1E711A7AA940B23D045572DC6FE57 /* Cpu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Cpu.m; path = FlyveMDMInventory/Cpu.m; sourceTree = "<group>"; };
 		0D69EB62163FFE427C5ED7D6067FFD70 /* Pods-FlyveMDMInventoryAgent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlyveMDMInventoryAgent.debug.xcconfig"; sourceTree = "<group>"; };
 		0EE63F15520F83783AEF9ED5A2D775F3 /* OperatingSystem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OperatingSystem.m; path = FlyveMDMInventory/OperatingSystem.m; sourceTree = "<group>"; };
 		100FD3E666874D4A53585A6EE1AB7442 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1053F6F8822BDCBA27E18A97B08A7C45 /* Pods-FlyveMDMInventoryAgentTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FlyveMDMInventoryAgentTests-dummy.m"; sourceTree = "<group>"; };
-		15E626631A9FCDEF7206F35ED240A657 /* Pods-FlyveMDMInventoryAgentTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FlyveMDMInventoryAgentTests.modulemap"; sourceTree = "<group>"; };
+		15E626631A9FCDEF7206F35ED240A657 /* Pods-FlyveMDMInventoryAgentTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FlyveMDMInventoryAgentTests.modulemap"; sourceTree = "<group>"; };
 		1CC3140329CB433BE329C2AF7F383801 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		1D38C17D26ACD656863CAEE889724CBD /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; sourceTree = "<group>"; };
-		212F62C1A5C9B3C37A24A816E7701703 /* FlyveMDMInventory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FlyveMDMInventory.modulemap; sourceTree = "<group>"; };
+		212F62C1A5C9B3C37A24A816E7701703 /* FlyveMDMInventory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FlyveMDMInventory.modulemap; sourceTree = "<group>"; };
 		21A0A3F675DBA5D1D238D28BA279EFCC /* Pods-FlyveMDMInventoryAgentTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlyveMDMInventoryAgentTests-frameworks.sh"; sourceTree = "<group>"; };
 		261E5AB5DDDEFC42CDA4236EB5A20713 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		2648391483A0A36B0A7C7641FA1A578C /* FlyveMDMInventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlyveMDMInventory.framework; path = FlyveMDMInventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2648391483A0A36B0A7C7641FA1A578C /* FlyveMDMInventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlyveMDMInventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		266DE99D028846EABDF8BED0A4A2998A /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		27C545A4B57276BBBD40C2430685E042 /* Network.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Network.h; path = FlyveMDMInventory/Network.h; sourceTree = "<group>"; };
 		28D3BEF0F8168D8E2171CC4E23ACFE14 /* Carrier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Carrier.m; path = FlyveMDMInventory/Carrier.m; sourceTree = "<group>"; };
 		2A729D10ACAA6ACC66BB3A47DBFE93DD /* FlyveMDMInventory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlyveMDMInventory-umbrella.h"; sourceTree = "<group>"; };
 		2F837554942DA082F16172E6B02782DD /* Pods-FlyveMDMInventoryAgentTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlyveMDMInventoryAgentTests-umbrella.h"; sourceTree = "<group>"; };
 		321E0400E7133137B442F701DD9210D9 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		33D71399E6E017E7DDB21B1D72FD760A /* Pods-FlyveMDMInventoryAgent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FlyveMDMInventoryAgent.modulemap"; sourceTree = "<group>"; };
+		33D71399E6E017E7DDB21B1D72FD760A /* Pods-FlyveMDMInventoryAgent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FlyveMDMInventoryAgent.modulemap"; sourceTree = "<group>"; };
 		3571591C27DA7A13D5D6427CFC4A389C /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		366BCAABAAD94621FB420D76F4B87113 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		3E1093CBB3607D0F7C593BE8E4F5FD9A /* Pods_FlyveMDMInventoryAgentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FlyveMDMInventoryAgentTests.framework; path = "Pods-FlyveMDMInventoryAgentTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1093CBB3607D0F7C593BE8E4F5FD9A /* Pods_FlyveMDMInventoryAgentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBA526E3C5854844EDFBE1EE92969BE /* Pods-FlyveMDMInventoryAgentUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlyveMDMInventoryAgentUITests-resources.sh"; sourceTree = "<group>"; };
 		45BB356188FCEAD89A58F6F25FD234BA /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4B6049A3C36E726866B5B5BE6A8FCF2A /* Pods-FlyveMDMInventoryAgentUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FlyveMDMInventoryAgentUITests.modulemap"; sourceTree = "<group>"; };
+		4B6049A3C36E726866B5B5BE6A8FCF2A /* Pods-FlyveMDMInventoryAgentUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FlyveMDMInventoryAgentUITests.modulemap"; sourceTree = "<group>"; };
 		5023C8988FB43DA76B3844AC2B151FB7 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		5097BFFDFE0B6A9BEC8EBF2E335299BA /* Pods-FlyveMDMInventoryAgentUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FlyveMDMInventoryAgentUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5483F8935F2B622A27B456D69BDEF18A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,13 +122,13 @@
 		6F261066468100E7882DD71E53E2EF41 /* InventoryTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InventoryTask.swift; path = FlyveMDMInventory/InventoryTask.swift; sourceTree = "<group>"; };
 		709C72F17F6B92C7003711CBDC4BD913 /* Memory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Memory.m; path = FlyveMDMInventory/Memory.m; sourceTree = "<group>"; };
 		715EFD24C6EFF3DB28C1FFCB875654F0 /* Pods-FlyveMDMInventoryAgentUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FlyveMDMInventoryAgentUITests-dummy.m"; sourceTree = "<group>"; };
-		7758EF9DD6917185A37D132B79AC9A7D /* Pods_FlyveMDMInventoryAgentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FlyveMDMInventoryAgentUITests.framework; path = "Pods-FlyveMDMInventoryAgentUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7758EF9DD6917185A37D132B79AC9A7D /* Pods_FlyveMDMInventoryAgentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FB1654CBDBE0341696AAE24CD32BC1 /* Pods-FlyveMDMInventoryAgent-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlyveMDMInventoryAgent-frameworks.sh"; sourceTree = "<group>"; };
 		7DB3F33F75A37B762A4C5535F1F2E11E /* Pods-FlyveMDMInventoryAgentTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FlyveMDMInventoryAgentTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8410D1DD8048FEECD2CC85F79D6DCFC7 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		8B91523A71836C78AE04D1CF2FA30296 /* OperatingSystem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OperatingSystem.h; path = FlyveMDMInventory/OperatingSystem.h; sourceTree = "<group>"; };
 		8BF714F29A4273AD39EC1ED3ADC9CEEE /* Pods-FlyveMDMInventoryAgent.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlyveMDMInventoryAgent.beta.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93EB006D5976B0F3F184C7DDA0B72B4D /* Pods-FlyveMDMInventoryAgentUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FlyveMDMInventoryAgentUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		94B4C859E826546A68AB7CA652FD4486 /* Pods-FlyveMDMInventoryAgent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlyveMDMInventoryAgent-umbrella.h"; sourceTree = "<group>"; };
 		9E06BA439A8E8ED650B3CCA5B7882F6D /* Pods-FlyveMDMInventoryAgentTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlyveMDMInventoryAgentTests.beta.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		B4E5B55318CEE75E935727B40589CC29 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		B87E6000DF9AFEAC68C800120F820779 /* Storage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Storage.m; path = FlyveMDMInventory/Storage.m; sourceTree = "<group>"; };
 		B9876F108F501FD6F7DC2C62ED76D5B6 /* Cpu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cpu.h; path = FlyveMDMInventory/Cpu.h; sourceTree = "<group>"; };
-		BB82AE5E5B67998F510BA712D70232B8 /* Pods_FlyveMDMInventoryAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FlyveMDMInventoryAgent.framework; path = "Pods-FlyveMDMInventoryAgent.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB82AE5E5B67998F510BA712D70232B8 /* Pods_FlyveMDMInventoryAgent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyveMDMInventoryAgent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCC59C280AAC7D0DE9CD81141BA8EB5 /* Pods-FlyveMDMInventoryAgentTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlyveMDMInventoryAgentTests-resources.sh"; sourceTree = "<group>"; };
 		BC0314807A833767B1EC08302597D7FC /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		BCFD5FD4F87F784DE80B2401AF80E940 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		D28127397BC79C60229315F446AFB0A0 /* Pods-FlyveMDMInventoryAgent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlyveMDMInventoryAgent.release.xcconfig"; sourceTree = "<group>"; };
 		D321562A798B66D12F790D0D1B5E477E /* Hardware.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Hardware.m; path = FlyveMDMInventory/Hardware.m; sourceTree = "<group>"; };
 		E54F9B70D9C598DFBDF13EB83435DDC6 /* Battery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Battery.h; path = FlyveMDMInventory/Battery.h; sourceTree = "<group>"; };
-		E7E7047E6960D47091E2909FBDB8C077 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		E7E7047E6960D47091E2909FBDB8C077 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		E830DC90F501BEDB7611808062D86E47 /* FlyveMDMInventory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlyveMDMInventory.h; path = FlyveMDMInventory/FlyveMDMInventory.h; sourceTree = "<group>"; };
 		E923CD587B0682692F6FB369532319A5 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		EA847A92EDCF45643458A27815AD45B3 /* Memory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Memory.h; path = FlyveMDMInventory/Memory.h; sourceTree = "<group>"; };
@@ -280,7 +280,6 @@
 				B87E6000DF9AFEAC68C800120F820779 /* Storage.m */,
 				2697900C9FBA9D1D7D625C3B1DD0420F /* Support Files */,
 			);
-			name = FlyveMDMInventory;
 			path = FlyveMDMInventory;
 			sourceTree = "<group>";
 		};
@@ -306,7 +305,6 @@
 				266DE99D028846EABDF8BED0A4A2998A /* Validation.swift */,
 				BA60ECD75629D8DB3AB8D9FB542BC98E /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -555,7 +553,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -755,9 +753,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -915,7 +915,9 @@
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -929,6 +931,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1317,7 +1320,9 @@
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_BETA=1",
 					"$(inherited)",
