@@ -1,0 +1,35 @@
+{
+    "name": "@teclib/flyve-mdm-ios-inventory-agent",
+    "version": "1.0.0",
+    "description": "Flyve Inventory Agent for iOS",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "release": "standard-version"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent.git"
+    },
+    "keywords": [
+      "ios",
+      "apple",
+      "inventory",
+      "flyve",
+      "mqtt",
+      "agent",
+      "teclib"
+    ],
+    "author": "Hector Rondon <apple@teclib.com> (https://flyve-mdm.com)",
+    "license": "GPL-3.0",
+    "bugs": {
+      "url": "https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/issues"
+    },
+    "homepage": "https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent#readme",
+    "devDependencies": {
+      "standard-version": "^4.0.0"
+    },
+    "dependencies": {
+      "conventional-github-releaser": "^1.1.10"
+    }
+  }
