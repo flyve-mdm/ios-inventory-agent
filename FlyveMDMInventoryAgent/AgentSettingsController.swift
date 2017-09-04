@@ -30,11 +30,15 @@ import FlyveMDMInventory
 import Alamofire
 import UserNotifications
 
+/// AgentSettingsController class
 class AgentSettingsController: UIViewController {
+    
+    // MARK: Properties
 
     let cellId = "InventoryCell"
     var disable = true
 
+    /// inventoryTableView `UITableView`
     lazy var inventoryTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.delegate = self
@@ -49,6 +53,7 @@ class AgentSettingsController: UIViewController {
         return table
     }()
 
+    /// footerView `UIView`
     let footerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +61,7 @@ class AgentSettingsController: UIViewController {
         return view
     }()
 
+    /// messageLabel `UILabel`
     let messageLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -68,6 +74,7 @@ class AgentSettingsController: UIViewController {
         return label
     }()
 
+    /// loadingIndicatorView `UIActivityIndicatorView`
     let loadingIndicatorView: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         loading.color = .gray
@@ -75,13 +82,17 @@ class AgentSettingsController: UIViewController {
         loading.hidesWhenStopped = true
         return loading
     }()
-
+    
+    // MARK: Methods
+    
+    /// `override loadView()`
     override func loadView() {
         super.loadView()
         setupViews()
         addConstraints()
     }
 
+    /// `setupViews()`
     func setupViews() {
         view.backgroundColor = .white
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
@@ -90,7 +101,8 @@ class AgentSettingsController: UIViewController {
         footerView.addSubview(messageLabel)
         footerView.addSubview(loadingIndicatorView)
     }
-
+    
+    /// `addConstraints()`
     func addConstraints() {
         inventoryTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         inventoryTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -108,6 +120,9 @@ class AgentSettingsController: UIViewController {
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
     }
 
+    /**
+     Generate XML Inventory
+     */
     func generateXML() {
 //        "Generating XML Inventory..."
         messageLabel.text = "button_start_inventory".localized
@@ -118,6 +133,10 @@ class AgentSettingsController: UIViewController {
         }
     }
 
+    /**
+     Send XML Inventory
+     - parameter: XML inventory
+     */
     func sendXmlInventory(_ xml: String) {
 //        "Sending XML Inventory..."
         messageLabel.text = "inventory_sended".localized
@@ -179,7 +198,10 @@ class AgentSettingsController: UIViewController {
             self.loadingIndicatorView.stopAnimating()
         }
     }
-
+    
+    /**
+     Enable or Disable run send xml inventory
+     */
     func switchAtValueChanged(uiSwitch: UISwitch) {
         if uiSwitch.tag == 777 {
             let indexMe: IndexPath = IndexPath(row: 0, section: 0)
@@ -194,12 +216,23 @@ class AgentSettingsController: UIViewController {
     }
 }
 
+// MARK: UITableViewDataSource
 extension AgentSettingsController: UITableViewDataSource {
 
+    /**
+     override `numberOfSections` from super class, get number of sections
+     
+     - return: number of sections
+     */
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-
+    
+    /**
+     override `numberOfRowsInSection` from super class, get number of row in sections
+     
+     - return: number of row in sections
+     */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         if section == 0 {
@@ -209,6 +242,11 @@ extension AgentSettingsController: UITableViewDataSource {
         }
     }
 
+    /**
+     override `cellForRowAt` from super class, Asks the data source for a cell to insert in a particular location of the table view
+     
+     - return: `UITableViewCell`
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellId)
@@ -249,6 +287,11 @@ extension AgentSettingsController: UITableViewDataSource {
         return cell
     }
 
+    /**
+     override `titleForHeaderInSection` from super class, set title for header in section
+     
+     - return: `String`
+     */
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
         if section == 0 {
@@ -259,8 +302,12 @@ extension AgentSettingsController: UITableViewDataSource {
     }
 }
 
+// MARK: UITableViewDelegate
 extension AgentSettingsController: UITableViewDelegate {
 
+    /**
+     override `willDisplayHeaderView` from super class
+     */
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
 
         if let headerView = view as? UITableViewHeaderFooterView, let textLabel = headerView.textLabel {
@@ -271,6 +318,9 @@ extension AgentSettingsController: UITableViewDelegate {
         }
     }
 
+    /**
+     override `didSelectRowAt` from super class, tells the delegate that the specified row is now selected
+     */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if indexPath.section == 0 && indexPath.row == 0 {
@@ -295,8 +345,10 @@ extension AgentSettingsController: UITableViewDelegate {
 
 }
 
+// MARK: ParameterEncoding
 extension String: ParameterEncoding {
-
+    
+    /// :nodoc:
     public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
         var request = try urlRequest.asURLRequest()
         request.httpBody = data(using: .utf8, allowLossyConversion: false)
@@ -304,8 +356,10 @@ extension String: ParameterEncoding {
     }
 }
 
+/// InventoryCell class
 class InventoryCell: UITableViewCell {
-
+    
+    // MARK: init Methods
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 

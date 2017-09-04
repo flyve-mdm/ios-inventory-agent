@@ -27,10 +27,14 @@
 
 import UIKit
 
+/// GlobalSettingsController class
 class GlobalSettingsController: UIViewController {
-
+    
+    // MARK: Properties
+    
     let cellId = "InventoryCell"
 
+    /// settingsTableView `UITableView`
     lazy var settingsTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.delegate = self
@@ -45,6 +49,7 @@ class GlobalSettingsController: UIViewController {
         return table
     }()
 
+    /// footerView `UIView`
     let footerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -52,6 +57,7 @@ class GlobalSettingsController: UIViewController {
         return view
     }()
 
+    /// messageLabel `UILabel`
     let messageLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -65,6 +71,7 @@ class GlobalSettingsController: UIViewController {
         return label
     }()
 
+    /// loadingIndicatorView `UIActivityIndicatorView`
     let loadingIndicatorView: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         loading.color = .gray
@@ -73,13 +80,17 @@ class GlobalSettingsController: UIViewController {
         return loading
     }()
 
+    // MARK: Methods
+    
+    /// `override loadView()`
     override func loadView() {
         super.loadView()
 
         setupViews()
         addConstraints()
     }
-
+    
+    /// `setupViews()`
     func setupViews() {
         view.backgroundColor = .white
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
@@ -88,7 +99,8 @@ class GlobalSettingsController: UIViewController {
         footerView.addSubview(messageLabel)
         footerView.addSubview(loadingIndicatorView)
     }
-
+    
+    /// `addConstraints()`
     func addConstraints() {
         settingsTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         settingsTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -105,7 +117,10 @@ class GlobalSettingsController: UIViewController {
         messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor).isActive = true
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
     }
-
+    
+    /**
+     Enable or Disable notifications
+     */
     func switchAtValueChanged(uiSwitch: UISwitch) {
         if uiSwitch.tag == 777 {
             let index: IndexPath = IndexPath(row: 0, section: 0)
@@ -118,12 +133,23 @@ class GlobalSettingsController: UIViewController {
     }
 }
 
+// MARK: UITableViewDataSource
 extension GlobalSettingsController: UITableViewDataSource {
 
+    /**
+     override `numberOfSections` from super class, get number of sections
+     
+     - return: number of sections
+     */
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
 
+    /**
+     override `numberOfRowsInSection` from super class, get number of row in sections
+     
+     - return: number of row in sections
+     */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -132,6 +158,11 @@ extension GlobalSettingsController: UITableViewDataSource {
         }
     }
 
+    /**
+     override `cellForRowAt` from super class, Asks the data source for a cell to insert in a particular location of the table view
+     
+     - return: `UITableViewCell`
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellId)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
@@ -193,6 +224,11 @@ extension GlobalSettingsController: UITableViewDataSource {
         return cell
     }
 
+    /**
+     override `cellForRowAt` from super class, Asks the data source for a cell to insert in a particular location of the table view
+     
+     - return: `UITableViewCell`
+     */
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "global_title".localized
@@ -204,8 +240,12 @@ extension GlobalSettingsController: UITableViewDataSource {
     }
 }
 
+// MARK: UITableViewDelegate
 extension GlobalSettingsController: UITableViewDelegate {
 
+    /**
+     override `willDisplayHeaderView` from super class
+     */
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
 
         if let headerView = view as? UITableViewHeaderFooterView, let textLabel = headerView.textLabel {
@@ -215,6 +255,9 @@ extension GlobalSettingsController: UITableViewDelegate {
         }
     }
 
+    /**
+     override `didSelectRowAt` from super class, tells the delegate that the specified row is now selected
+     */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "notifications"), forKey: "notifications")
