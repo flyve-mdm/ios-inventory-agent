@@ -3,5 +3,6 @@ disabled_rules: # rule identifiers to exclude from running
   - line_length
   - identifier_name
   - empty_enum_arguments
+  - trailing_whitespace
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
