@@ -11,6 +11,7 @@
 		0AC9F6531F10342600A66DE8 /* GlobalSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */; };
 		0AC9F6541F10342600A66DE8 /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AC9F6501F10342600A66DE8 /* Localizable.plist */; };
 		0AC9F6551F10342600A66DE8 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F6511F10342600A66DE8 /* Localizator.swift */; };
+		0AE81BDD1F5DE89900029B51 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE81BDC1F5DE89900029B51 /* Logger.swift */; };
 		0AEB1ED01F10317F00F18217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1ECF1F10317F00F18217 /* AppDelegate.swift */; };
 		0AEB1ED71F10317F00F18217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB1ED61F10317F00F18217 /* Assets.xcassets */; };
 		0AEB1EE51F10317F00F18217 /* FlyveMDMInventoryAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1EE41F10317F00F18217 /* FlyveMDMInventoryAgentTests.swift */; };
@@ -43,6 +44,7 @@
 		0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettingsController.swift; sourceTree = "<group>"; };
 		0AC9F6501F10342600A66DE8 /* Localizable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Localizable.plist; sourceTree = "<group>"; };
 		0AC9F6511F10342600A66DE8 /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
+		0AE81BDC1F5DE89900029B51 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		0AEB1ECC1F10317F00F18217 /* FlyveMDMInventoryAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyveMDMInventoryAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEB1ECF1F10317F00F18217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AEB1ED61F10317F00F18217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FlyveMDMInventoryAgent/Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */,
 				0AC9F6501F10342600A66DE8 /* Localizable.plist */,
 				0AC9F6511F10342600A66DE8 /* Localizator.swift */,
+				0AE81BDC1F5DE89900029B51 /* Logger.swift */,
 				0AEB1ECF1F10317F00F18217 /* AppDelegate.swift */,
 				0AEB1EDB1F10317F00F18217 /* Info.plist */,
 			);
@@ -510,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE81BDD1F5DE89900029B51 /* Logger.swift in Sources */,
 				0AEB1ED01F10317F00F18217 /* AppDelegate.swift in Sources */,
 				0AC9F6521F10342600A66DE8 /* AgentSettingsController.swift in Sources */,
 				0AC9F6531F10342600A66DE8 /* GlobalSettingsController.swift in Sources */,
