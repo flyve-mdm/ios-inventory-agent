@@ -32,7 +32,7 @@ if [[ -n $GH_TOKEN ]]; then
     git remote add origin https://$GH_USER:$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git
 fi
 
-if [[ "$TRAVIS_BRANCH" == "feature/fix-logo" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
+if [[ "$TRAVIS_BRANCH" == "develop" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
 
     if [[ $TRAVIS_COMMIT_MESSAGE != *"**beta**"* ]]; then
         git checkout $TRAVIS_BRANCH -f
@@ -55,7 +55,7 @@ if [[ "$TRAVIS_BRANCH" == "feature/fix-logo" && "$TRAVIS_PULL_REQUEST" == "false
 
         # Generate documentation with jazzy
         jazzy \
-        --clean \
+        --clean --min-acl private \
         --author Flyve MDM \
         --author_url https://flyve-mdm.com \
         --github_url https://github.com/$TRAVIS_REPO_SLUG \
