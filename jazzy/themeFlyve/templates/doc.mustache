@@ -14,23 +14,26 @@ layout: jazzy
     {{name}} {{kind}} Reference
   </p>
 </div>
-<div class="content-wrapper">
-  {{> nav}}
-  <article class="main-content">
-    <section>
-      <section class="section">
-        {{^hide_name}}<h2>{{name}}</h2>{{/hide_name}}
-        {{#declaration}}
-          <div class="declaration">
-            <div class="language">
-              {{{declaration}}}
+<div class="row">
+  <div class="col-md-6">
+    {{> nav}}
+  </div>
+  <div class="col-md-18 navigation-section">
+    <article class="main-content">
+      <section>
+        <section class="">
+          {{^hide_name}}<h2>{{name}}</h2>{{/hide_name}}
+          {{#declaration}}
+            <div class="declaration">
+              <div class="language">
+                {{{declaration}}}
+              </div>
             </div>
-          </div>
-        {{/declaration}}
-        {{{overview}}}
+          {{/declaration}}
+          {{{overview}}}
+        </section>
+        {{> tasks}}
       </section>
-      {{> tasks}}
-    </section>
-    {{> footer}}
-  </article>
+    </article>
+  </div>
 </div>
