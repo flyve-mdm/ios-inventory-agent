@@ -11,7 +11,7 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "2.46.1"
+fastlane_version "2.55.0"
 
 default_platform :ios
 
@@ -26,7 +26,19 @@ platform :ios do
     scan(
       workspace: "FlyveMDMInventoryAgent.xcworkspace",
       scheme: "FlyveMDMInventoryAgent",
-      clean: true
+      clean: true,
+      code_coverage: true
+    )
+  end
+
+  desc "Run code coverage with xcov"
+  lane :coverage do
+    xcov(
+      workspace: "FlyveMDMInventoryAgent.xcworkspace",
+      scheme: "FlyveMDMInventoryAgent",
+      output_directory: "coverage",
+      json_report: true,
+      only_project_targets: true
     )
   end
 

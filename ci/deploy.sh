@@ -71,12 +71,7 @@ if [[ "$TRAVIS_BRANCH" == "develop" && "$TRAVIS_PULL_REQUEST" == "false" ]]; the
         fastlane test
 
         # Generate code coverage reporting with xcov
-        xcov \
-        --workspace ${APPNAME}.xcworkspace \
-        --scheme ${APPNAME} \
-        --output_directory coverage \
-        --html_report \
-        --only_project_targets
+        fastlane coverage
 
         # Add coverage folder
         git add coverage -f
