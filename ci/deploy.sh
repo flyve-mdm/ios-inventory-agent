@@ -144,6 +144,10 @@ elif [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; th
         # Push commit to origin gh-pages branch
         git push origin gh-pages
 
+        # Checkout to release branch
+        git checkout $TRAVIS_BRANCH -f
+
+        # Send app to release with fastlane 
         fastlane release
     fi
 fi
