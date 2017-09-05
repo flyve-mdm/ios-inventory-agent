@@ -102,7 +102,7 @@ if [[ "$TRAVIS_BRANCH" == "develop" && "$TRAVIS_PULL_REQUEST" == "false" ]]; the
         fastlane beta
     fi
 
-elif [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
+elif [[ "$TRAVIS_BRANCH" == "feature/fix-ci" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
 
     if [[ $TRAVIS_COMMIT_MESSAGE != *"**version**"* && $TRAVIS_COMMIT_MESSAGE != *"**CHANGELOG.md**"* ]]; then
         git checkout $TRAVIS_BRANCH -f
