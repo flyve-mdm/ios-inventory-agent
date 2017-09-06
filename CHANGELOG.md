@@ -7,33 +7,18 @@ title: changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="1.2.0"></a>
-# [1.2.0](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/compare/1.0.0...v1.2.0) (2017-07-07)
-
-
-### Features
-
-* **spec:** add new elements  ([#32](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/issues/32)) ([c6ae723](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/commit/c6ae723))
-
-
-
 <a name="1.1.0"></a>
-# [1.1.0](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/compare/1.0.0...v1.1.0) (2017-06-29)
+# 1.1.0 (2017-09-06)
+
+
+### Bug Fixes
+
+* **assets:** update logo imagen with transparency ([be538e2](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/be538e2))
+* **sign:** fix code signing identity ([398508f](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/398508f))
 
 
 ### Features
 
-* **spec:** add new elements  ([#32](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/issues/32)) ([68475a7](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/commit/68475a7))
-
-
-
-<a name="1.0.0"></a>
-# 1.0.0 (2017-06-22)
-
-
-### Features
-
-* **spec:** add basic implementation  ([#17](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/issues/17)) ([11ae073](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/commit/11ae073))
-* **spec:** create XML skeleton ([#12](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/issues/12)) ([eb5cce5](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/commit/eb5cce5))
-* **spec:** gathering system information ([#26](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/issues/26)) ([2642c27](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/commit/2642c27))
-* **spec:** XML file FusionInventory compatible ([#28](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/issues/28)) ([c36623b](https://github.com/flyve-mdm/flyve-mdm-ios-inventory/commit/c36623b))
+* **assets:** new product icon and splash screen ([#36](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/issues/36)) ([f0b08ce](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/f0b08ce))
+* **assets:** restore project assets  ([#25](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/issues/25)) ([b29e01c](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/b29e01c))
+* **logs:** create class for errors handler ([418e9e9](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/418e9e9))
