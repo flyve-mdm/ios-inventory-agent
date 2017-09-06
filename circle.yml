@@ -1,0 +1,7 @@
+machine:
+  xcode:
+    version: 8.3
+compile:
+  override:
+    - xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+    
