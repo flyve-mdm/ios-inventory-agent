@@ -1,7 +1,39 @@
 machine:
+  environment:
+    APPNAME: FlyveMDMInventoryAgent
+    XCODE_SCHEME: FlyveMDMInventoryAgent
+    XCODE_WORKSPACE: FlyveMDMInventoryAgent.xcworkspace
+    PROFILE_UUID: XC_iOS_orgflyveinventoryagent
+    KEYCHAIN_NAME: ios-app.keychain
+    SCRIPT_PATH: ./ci
+    CERTIFICATES_PATH: ./ci/cert
+    PROFILE_PATH: ./ci/profile
+    GH_USER: flyve-mdm-bot
+    GH_REPO_SLUG: flyve-mdm/flyve-mdm-ios-agent
+    TRANSIFEX_USER: api
   xcode:
     version: 8.3
-compile:
+dependencies:
+  pre:
+    - source ./ci/before_install.sh
   override:
-    - xcodebuild clean build -workspace FlyveMDMInventoryAgent.xcworkspace -scheme FlyveMDMInventoryAgent CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-    
+    - source ./ci/install.sh
+test:
+  pre:
+    - source ./ci/before_test.sh
+  override:
+    - source ./ci/test.sh
+deployment:
+  develop:
+    branch: develop
+    commands:
+      - source ./ci/deploy_develop.sh
+      - source ./ci/after_deploy.sh
+  master:
+    branch: master
+    commands:
+      - source ./ci/deploy_master.sh
+      - source ./ci/after_deploy.sh
+notify:
+  webhooks:
+    - url: https://fathomless-fjord-24024.herokuapp.com/notify
