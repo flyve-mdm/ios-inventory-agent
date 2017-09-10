@@ -16,13 +16,14 @@ fastlane_version "2.55.0"
 default_platform :ios
 
 platform :ios do
+  $lane_active = ""
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    # cocoapods
   end
 
   desc "Runs all the tests"
   lane :test do
+    $lane_active = "Test"
     scan(
       workspace: "FlyveMDMInventoryAgent.xcworkspace",
       scheme: "FlyveMDMInventoryAgent",
@@ -33,32 +34,22 @@ platform :ios do
 
   desc "Run code coverage with xcov"
   lane :coverage do
+    $lane_active = "Coverage"
     xcov(
       workspace: "FlyveMDMInventoryAgent.xcworkspace",
       scheme: "FlyveMDMInventoryAgent",
       output_directory: "coverage",
+      html_report: false,
       json_report: true,
       only_project_targets: true
     )
-  end
-
-  desc "Run code coverage with xcov"
-  lane :coverage do
-    xcov(
-      workspace: "FlyveMDMInventoryAgent.xcworkspace",
-      scheme: "FlyveMDMInventoryAgent",
-      output_directory: "coverage",
-      json_report: true,
-      only_project_targets: true,
-      html_report: false
-    )
-    xcov_report
+    xcov_report    
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-
+    $lane_active = "Beta"
     # Fetch provisioning profile
     # sigh
     sigh(
@@ -86,12 +77,11 @@ platform :ios do
       app_identifier: "org.flyve.inventory.agent",
       skip_waiting_for_build_processing: true
     )
-
   end
 
   desc "Deploy a new version to the App Store"
   lane :release do
-    
+    $lane_active = "Release"
     # Fetch provisioning profile
     # sigh
     sigh(
@@ -102,24 +92,32 @@ platform :ios do
       cert_id: "H7XJV96LX2"
     )
     snapshot
-    gym(scheme: "FlyveMDMInventoryAgent") # Build your app - more options available
-    # deliver(force: true)
-    # frameit
+    # Build
+    gym(
+      scheme: "flyve-mdm-ios",
+      configuration: "Release",
+      sdk: "iphoneos10.3",
+      clean: true,
+      include_bitcode: true,
+      include_symbols: true,
+      export_method: "app-store",
+      buildlog_path: 'fastlane/logs'
+    )
+    deliver(force: true)
+    frameit
   end
-
-  # You can define as many lanes as you want
 
   after_all do |lane|
     telegram(
         url_horn: ENV["TELEGRAM_WEBHOOKS"],
-        message: "Fastlane is OK"
+        message: $lane_active + " Fastlane is OK"
     )
   end
 
   error do |lane, exception|
     telegram(
         url_horn: ENV["TELEGRAM_WEBHOOKS"],
-        message: "`ERROR` Fastlane FAIL"
+        message: "`ERROR` " + $lane_active + " Fastlane FAIL"
     )
   end
 end
