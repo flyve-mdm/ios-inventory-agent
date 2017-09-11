@@ -1,0 +1,22 @@
+---
+---
+
+.coverage {
+
+    .list-items, .row {
+        margin: 0 !important;
+    }
+    .functions {
+        border-top: solid 1px #BEBEBE;
+    }
+    .targets {
+        color: whitesmoke;
+        background-color: #008785;
+        h4 {
+            padding: 13px 0;
+        }
+    }
+    h2 {
+        padding: 37px 0 20px;
+    }
+}

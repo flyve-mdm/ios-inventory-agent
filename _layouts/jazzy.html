@@ -1,55 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+---
+layout: container
+---
 
-  {% include headJazzy.html %}
-
-  <body>
-
-
-      {% include header.html %}
-
-      <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-24 title-page">
-                    {% if page.namePage != "products" %}
-                        {% assign name = site.github.project_title | replace: "flyve-mdm-", "" %}
-                        {% assign name = name | replace: "-", " " %}
-                        <span class="color-type-primary">{{ name }}</span> <span class="color-type-secondary"> {{ site.github.latest_release.tag_name }} </span>   
-                    {% else %}
-                        <span class="color-type-primary">More products of Flyve-MDM</span> <span class="color-type-secondary"> {{ site.github.latest_release.tag_name }} </span>   
-                    {% endif %}
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{ content }}
-
-      <a href="#top" class="back-to-top">
-          <i class="glyph glyph-up"></i>
-          <span class="sr-only">Back to top</span>
-      </a>
-      <img src="{{ 'images/logo2.png' | relative_url }}" class="logo hide">
-
-      {% include footer.html %}   
-
-
-  </body>
-  
-  <script src="{{ "/js/bootstrap.min.js" | relative_url }}"></script>
-  <script src="{{ "/js/app.js" | relative_url }}"></script>
-
-  <script>
-        if('serviceWorker' in navigator) {
-          navigator.serviceWorker
-            .register('{{ "/sw.js" | relative_url }}')
-            .then(function() { console.log("Service Worker Registered") })
-        }
-  </script>
-  
-</html>
-
-
-  
+<div class="jazzy">
+  <h2>Documentation</h2>
+  {{ content }}
+</div>

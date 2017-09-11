@@ -26,10 +26,19 @@
 
   <meta name="theme-color" content="#158784">
 
+  {% if page.layout == 'coverage' %}
+    <link rel="stylesheet" href="{{ "/css/coverage.css" | relative_url }}">
+  {% endif %}
+  
   <link rel="stylesheet" href="{{ "/css/flyve-mdm.min.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
   <link rel="stylesheet" href="{{ 'css/syntax.css' | relative_url }}" /> 
   <link rel="icon" href="{{ "/images/favicon.png" | relative_url }}">
+
+  {% if page.layout == 'jazzy' %}
+    <link rel="stylesheet" href="{{ 'css/jazzy.css' | relative_url }}" /> 
+    <link rel="stylesheet" href="{{ 'css/highlight.css' | relative_url }}" /> 
+  {% endif %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
@@ -47,6 +56,8 @@
   {% assign name = name | replace: "windows", " " %} 
 
   <meta name="apple-mobile-web-app-title" content="{{name}}">
+  
+  <script src="{{ "/js/jazzy.js" | relative_url }}" defer></script>
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
