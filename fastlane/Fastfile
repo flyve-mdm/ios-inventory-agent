@@ -30,6 +30,19 @@ platform :ios do
     )
   end
 
+  desc "Run code coverage with xcov"
+  lane :coverage do
+    xcov(
+      workspace: "FlyveMDMInventoryAgent.xcworkspace",
+      scheme: "FlyveMDMInventoryAgent",
+      output_directory: "coverage",
+      json_report: true,
+      only_project_targets: true,
+      html_report: false
+    )
+    xcov_report
+  end
+
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
