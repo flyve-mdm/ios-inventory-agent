@@ -57,7 +57,7 @@ class GlobalSettingsController: UIViewController {
         return view
     }()
 
-    /// messageLabel `UILabel`
+    /// This property contains the configurations for the message label
     let messageLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
