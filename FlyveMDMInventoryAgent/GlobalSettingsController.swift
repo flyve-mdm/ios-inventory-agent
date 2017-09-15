@@ -90,7 +90,7 @@ class GlobalSettingsController: UIViewController {
         addConstraints()
     }
     
-    /// `setupViews()`
+    /// Set up the views of the controller
     func setupViews() {
         view.backgroundColor = .white
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
