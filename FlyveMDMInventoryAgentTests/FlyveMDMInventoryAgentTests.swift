@@ -53,6 +53,7 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         XCTAssertNotNil(window?.rootViewController, "The AgentSettingsControllerdid not start correctly")
     }
 
+    /// Test if the inventory table is shown in view
     func testInventoryTableView() {
         XCTAssertNotNil(agentSettingsController.inventoryTableView, "inventoryTableView not shown in view")
     }
