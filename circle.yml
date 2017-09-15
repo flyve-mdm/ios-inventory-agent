@@ -42,6 +42,3 @@ deployment:
     commands:
       - source "${SCRIPT_PATH}/deploy_master.sh"
       - source "${SCRIPT_PATH}/keychain_remove.sh"
-notify:
-  webhooks:
-    - url: https://fathomless-fjord-24024.herokuapp.com/notify
