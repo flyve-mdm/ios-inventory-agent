@@ -2,7 +2,7 @@
 
 #   Copyright © 2017 Teclib. All rights reserved.
 #
-# after_deploy.sh is part of FlyveMDMInventoryAgent
+# keychain_remove.sh is part of FlyveMDMInventoryAgent
 #
 # FlyveMDMInventoryAgent is a subproject of Flyve MDM. Flyve MDM is a mobile
 # device management software.

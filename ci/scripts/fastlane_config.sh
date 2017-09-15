@@ -2,7 +2,7 @@
 
 #   Copyright © 2017 Teclib. All rights reserved.
 #
-# test.sh is part of FlyveMDMInventoryAgent
+# fastlane_config.sh is part of FlyveMDMInventoryAgent
 #
 # FlyveMDMInventoryAgent is a subproject of Flyve MDM. Flyve MDM is a mobile
 # device management software.
@@ -25,8 +25,9 @@
 # @link      https://flyve-mdm.com
 # ------------------------------------------------------------------------------
 
-if [[ ("$CIRCLE_BRANCH" == "develop" || "$CIRCLE_BRANCH" == "master") && "$CI_PULL_REQUEST" != "" ]]; then
-    fastlane test
-elif [[ "$CIRCLE_BRANCH" != "develop" && "$CIRCLE_BRANCH" != "master" && "$CI_PULL_REQUEST" == "" ]]; then
-    xcodebuild clean build -workspace ${APPNAME}.xcworkspace -scheme $APPNAME CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-fi
+echo ----------- Create Fastlane environment variables ------------
+# Create Fastlane environment variables
+echo FASTLANE_PASSWORD=$FASTLANE_PASSWORD >> .env
+echo TELEGRAM_WEBHOOKS=$TELEGRAM_WEBHOOKS >> .env
+echo GIT_REPO=$GH_REPO_SLUG >> .env
+echo GIT_BRANCH=$CIRCLE_BRANCH >> .env

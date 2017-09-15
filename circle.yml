@@ -5,35 +5,43 @@ machine:
     XCODE_WORKSPACE: FlyveMDMInventoryAgent.xcworkspace
     PROFILE_UUID: XC_iOS_orgflyveinventoryagent
     KEYCHAIN_NAME: ios-app.keychain
-    SCRIPT_PATH: ./ci
+    SCRIPT_PATH: ./ci/scripts
     CERTIFICATES_PATH: ./ci/cert
     PROFILE_PATH: ./ci/profile
     GH_USER: flyve-mdm-bot
-    GH_REPO_SLUG: flyve-mdm/flyve-mdm-ios-agent
+    GH_REPO_SLUG: flyve-mdm/flyve-mdm-ios-inventory-agent
     TRANSIFEX_USER: api
   xcode:
     version: 8.3
+checkout:
+  post:
+    - git tag | xargs git tag -d
+    - git fetch origin --tags
+    - git tag
 dependencies:
   pre:
-    - source ./ci/before_install.sh
+    - source "${SCRIPT_PATH}/bundler_config.sh"
   override:
-    - source ./ci/install.sh
+    - source "${SCRIPT_PATH}/install.sh"
 test:
   pre:
-    - source ./ci/before_test.sh
+    - source "${SCRIPT_PATH}/fastlane_config.sh"
+    - source "${SCRIPT_PATH}/git_config.sh"
+    - source "${SCRIPT_PATH}/transifex.sh"
+    - source "${SCRIPT_PATH}/keychain_add.sh"
   override:
-    - source ./ci/test.sh
+    - source "${SCRIPT_PATH}/test.sh"
 deployment:
-  develop:
+  deploy_develop:
     branch: develop
     commands:
-      - source ./ci/deploy_develop.sh
-      - source ./ci/after_deploy.sh
-  master:
+      - source "${SCRIPT_PATH}/deploy_develop.sh"
+      - source "${SCRIPT_PATH}/keychain_remove.sh"
+  deploy_master:
     branch: master
     commands:
-      - source ./ci/deploy_master.sh
-      - source ./ci/after_deploy.sh
+      - source "${SCRIPT_PATH}/deploy_master.sh"
+      - source "${SCRIPT_PATH}/keychain_remove.sh"
 notify:
   webhooks:
     - url: https://fathomless-fjord-24024.herokuapp.com/notify
