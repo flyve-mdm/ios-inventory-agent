@@ -71,7 +71,7 @@ class GlobalSettingsController: UIViewController {
         return label
     }()
 
-    /// loadingIndicatorView `UIActivityIndicatorView`
+    /// This property contains the configurations of the loading indicator view
     let loadingIndicatorView: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         loading.color = .gray
