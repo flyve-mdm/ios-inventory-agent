@@ -69,10 +69,6 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         XCTAssertNotNil(agentSettingsController.loadingIndicatorView, "loadingIndicatorView not shown in view")
     }
 
-    func testLocalize() {
-        XCTAssertNotEqual("app_name".localized, "app_name", "Localizable file not valid")
-    }
-
     func testCreateInventory() {
         let inventoryTask = InventoryTask()
         inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: "") { result in
