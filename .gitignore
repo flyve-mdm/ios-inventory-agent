@@ -76,3 +76,7 @@ node_modules/
 
 _docs/
 coverage/
+
+# Bundler
+vendor/
+.bundle/
