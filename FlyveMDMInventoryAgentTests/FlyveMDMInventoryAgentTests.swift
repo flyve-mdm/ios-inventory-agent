@@ -36,6 +36,7 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
     var window: UIWindow?
     let agentSettingsController = AgentSettingsController()
 
+    /// This instance method set up per - test states
     override func setUp() {
         super.setUp()
         window = UIWindow(frame: UIScreen.main.bounds)
