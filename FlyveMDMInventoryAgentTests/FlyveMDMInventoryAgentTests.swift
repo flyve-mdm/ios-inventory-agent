@@ -73,6 +73,7 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         XCTAssertNotNil(agentSettingsController.loadingIndicatorView, "loadingIndicatorView not shown in view")
     }
 
+    /// Test if the inventory is created
     func testCreateInventory() {
         let inventoryTask = InventoryTask()
         inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: "") { result in
