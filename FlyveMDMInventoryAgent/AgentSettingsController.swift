@@ -102,7 +102,7 @@ class AgentSettingsController: UIViewController {
         footerView.addSubview(loadingIndicatorView)
     }
     
-    /// `addConstraints()`
+    /// Add the constraints to the views of the controller
     func addConstraints() {
         inventoryTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         inventoryTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
