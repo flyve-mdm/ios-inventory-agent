@@ -125,7 +125,7 @@ class AgentSettingsController: UIViewController {
      */
     func generateXML() {
 //        "Generating XML Inventory..."
-        messageLabel.text = "button_start_inventory".localized
+        messageLabel.text = NSLocalizedString("button_start_inventory", comment: "")
         loadingIndicatorView.startAnimating()
         let inventoryTask = InventoryTask()
         inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: UserDefaults.standard.string(forKey: "nameTag") ?? "") { result in
@@ -139,10 +139,10 @@ class AgentSettingsController: UIViewController {
      */
     func sendXmlInventory(_ xml: String) {
 //        "Sending XML Inventory..."
-        messageLabel.text = "inventory_sended".localized
+        messageLabel.text = NSLocalizedString("inventory_sended", comment: "")
 
         guard let server = UserDefaults.standard.string(forKey: "nameServer"), !server.isEmpty else {
-            messageLabel.text = "server_empty".localized
+            messageLabel.text = NSLocalizedString("server_empty", comment: "")
             self.loadingIndicatorView.stopAnimating()
             return
         }
@@ -165,13 +165,13 @@ class AgentSettingsController: UIViewController {
 
             switch response.result {
             case .success:
-                self.messageLabel.text = "ok_send_inventory".localized
+                self.messageLabel.text = NSLocalizedString("ok_send_inventory", comment: "")
 
                 if UserDefaults.standard.bool(forKey: "notifications") {
                     let notification = UNMutableNotificationContent()
-                    notification.title = "service_notif_id".localized
+                    notification.title = NSLocalizedString("service_notif_id", comment: "")
                     notification.subtitle = ""
-                    notification.body = "ok_send_inventory".localized
+                    notification.body = NSLocalizedString("ok_send_inventory", comment: "")
 
                     let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                     let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
@@ -181,13 +181,13 @@ class AgentSettingsController: UIViewController {
 
             case .failure( _):
 //                "Error: \(response.result.error?.localizedDescription ?? "failure")"
-                self.messageLabel.text = "error_send_inventory".localized + "\n\(response.result.error?.localizedDescription ?? "failure")"
+                self.messageLabel.text = NSLocalizedString("error_send_inventory", comment: "") + "\n\(response.result.error?.localizedDescription ?? "failure")"
 
                 if UserDefaults.standard.bool(forKey: "notifications") {
                     let notification = UNMutableNotificationContent()
-                    notification.title = "service_notif_id".localized
+                    notification.title = NSLocalizedString("service_notif_id", comment: "")
                     notification.subtitle = ""
-                    notification.body = "error_send_inventory".localized
+                    notification.body = NSLocalizedString("error_send_inventory", comment: "")
 
                     let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                     let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
@@ -258,12 +258,12 @@ extension AgentSettingsController: UITableViewDataSource {
             inventorySwitch.translatesAutoresizingMaskIntoConstraints = false
             inventorySwitch.tag = 777
             inventorySwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
-            cell.textLabel?.text = "inventory".localized
+            cell.textLabel?.text = NSLocalizedString("inventory", comment: "")
 
             if disable {
-                cell.detailTextLabel?.text = "inventory_disable".localized
+                cell.detailTextLabel?.text = NSLocalizedString("inventory_disable", comment: "")
             } else {
-                cell.detailTextLabel?.text = "inventory_enable".localized
+                cell.detailTextLabel?.text = NSLocalizedString("inventory_enable", comment: "")
             }
 
             cell.contentView.addSubview(inventorySwitch)
@@ -276,12 +276,12 @@ extension AgentSettingsController: UITableViewDataSource {
             cell.isUserInteractionEnabled = disable
             cell.textLabel!.isEnabled = disable
             cell.detailTextLabel!.isEnabled = disable
-            cell.textLabel?.text = "inventory_run".localized
-            cell.detailTextLabel?.text = "run".localized
+            cell.textLabel?.text = NSLocalizedString("inventory_run", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("run", comment: "")
 
         } else if indexPath.section == 1 && indexPath.row == 0 {
-            cell.textLabel?.text = "global_title".localized
-            cell.detailTextLabel?.text = "global_subtitle".localized
+            cell.textLabel?.text = NSLocalizedString("global_title", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("global_subtitle", comment: "")
         }
 
         return cell
@@ -295,9 +295,9 @@ extension AgentSettingsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
         if section == 0 {
-            return "inventory".localized
+            return NSLocalizedString("inventory", comment: "")
         } else {
-            return "global".localized
+            return NSLocalizedString("global", comment: "")
         }
     }
 }
