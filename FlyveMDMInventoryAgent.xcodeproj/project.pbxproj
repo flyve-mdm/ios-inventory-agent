@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A16DA781F6C633300002577 /* SnapshotHelperXcode8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A16DA771F6C633300002577 /* SnapshotHelperXcode8.swift */; };
 		0AC9F6521F10342600A66DE8 /* AgentSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */; };
 		0AC9F6531F10342600A66DE8 /* GlobalSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */; };
 		0AC9F6541F10342600A66DE8 /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AC9F6501F10342600A66DE8 /* Localizable.plist */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A16DA771F6C633300002577 /* SnapshotHelperXcode8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelperXcode8.swift; sourceTree = "<group>"; };
 		0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSettingsController.swift; sourceTree = "<group>"; };
 		0AC9F64E1F10342600A66DE8 /* FlyveMDMInventoryAgent-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FlyveMDMInventoryAgent-Bridging-Header.h"; path = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettingsController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0AEB1EEF1F10317F00F18217 /* FlyveMDMInventoryAgentUITests.swift */,
+				0A16DA771F6C633300002577 /* SnapshotHelperXcode8.swift */,
 				0AEB1EF11F10317F00F18217 /* Info.plist */,
 			);
 			path = FlyveMDMInventoryAgentUITests;
@@ -533,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A16DA781F6C633300002577 /* SnapshotHelperXcode8.swift in Sources */,
 				0AEB1EF01F10317F00F18217 /* FlyveMDMInventoryAgentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
