@@ -63,6 +63,7 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         XCTAssertNotNil(agentSettingsController.footerView, "footerView not shown in view")
     }
 
+    /// Test if the message label is shown in view
     func testMessageLabel() {
         XCTAssertNotNil(agentSettingsController.messageLabel, "messageLabel not shown in view")
     }
