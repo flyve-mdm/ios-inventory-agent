@@ -34,7 +34,7 @@ class GlobalSettingsController: UIViewController {
     
     let cellId = "InventoryCell"
 
-    /// settingsTableView `UITableView`
+    /// This property contains the configurations for the table view
     lazy var settingsTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.delegate = self
