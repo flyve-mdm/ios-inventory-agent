@@ -49,6 +49,7 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         super.tearDown()
     }
 
+    /// Test if the Agent Setting Controller started correctly
     func testAgentSettingsController() {
         XCTAssertNotNil(window?.rootViewController, "The AgentSettingsControllerdid not start correctly")
     }
