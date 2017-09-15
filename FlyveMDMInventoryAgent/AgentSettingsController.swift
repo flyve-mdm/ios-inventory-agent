@@ -53,7 +53,7 @@ class AgentSettingsController: UIViewController {
         return table
     }()
 
-    /// footerView `UIView`
+    /// This property contatins the configurations for the footer view
     let footerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
