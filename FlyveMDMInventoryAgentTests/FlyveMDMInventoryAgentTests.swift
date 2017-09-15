@@ -58,6 +58,7 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
         XCTAssertNotNil(agentSettingsController.inventoryTableView, "inventoryTableView not shown in view")
     }
 
+    /// Test if the footer is shown in view
     func testFooterView() {
         XCTAssertNotNil(agentSettingsController.footerView, "footerView not shown in view")
     }
