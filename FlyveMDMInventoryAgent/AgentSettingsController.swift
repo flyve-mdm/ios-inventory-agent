@@ -38,7 +38,7 @@ class AgentSettingsController: UIViewController {
     let cellId = "InventoryCell"
     var disable = true
 
-    /// inventoryTableView `UITableView`
+    /// This property contains the configurations for the table view
     lazy var inventoryTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.delegate = self
