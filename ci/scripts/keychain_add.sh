@@ -2,7 +2,7 @@
 
 #   Copyright © 2017 Teclib. All rights reserved.
 #
-# before_test.sh is part of FlyveMDMInventoryAgent
+# keychain_add.sh is part of FlyveMDMInventoryAgent
 #
 # FlyveMDMInventoryAgent is a subproject of Flyve MDM. Flyve MDM is a mobile
 # device management software.
@@ -24,33 +24,6 @@
 # @link      https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent
 # @link      https://flyve-mdm.com
 # ------------------------------------------------------------------------------
-
-echo ------------------- Configure Transifex --------------------
-# Configure Transifex
-if [[ ("$CIRCLE_BRANCH" == "develop" || "$CIRCLE_BRANCH" == "master") && "$CI_PULL_REQUEST" == "" ]]; then
-    # Create config file transifex
-    sudo echo $'[https://www.transifex.com]\nhostname = https://www.transifex.com\nusername = '"$TRANSIFEX_USER"$'\npassword = '"$TRANSIFEX_API_TOKEN"$'\ntoken = '"$TRANSIFEX_API_TOKEN"$'\n' > ~/.transifexrc
-    
-    # Move to local branch
-    git checkout $CIRCLE_BRANCH -f
-    # get transifex status
-    tx status
-    # push local files to transifex
-    tx push -s -t
-    # pull all the new language
-    tx pull -a
-
-    if [[ -n $GH_TOKEN ]]; then
-        git config --global user.email $GH_EMAIL
-        git config --global user.name "Flyve MDM"
-        git remote remove origin
-        git remote add origin https://$GH_USER:$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git
-    fi
-
-    git add .
-    git commit -m "ci(localization): download languages from **Transifex**"
-    git push origin $CIRCLE_BRANCH
-fi
 
 echo ----------------- Decrypt custom keychain ------------------
 # Decrypt custom keychain

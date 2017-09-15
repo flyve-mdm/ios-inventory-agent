@@ -2,7 +2,7 @@
 
 #   Copyright © 2017 Teclib. All rights reserved.
 #
-# install.sh is part of FlyveMDMInventoryAgent
+# transifex.sh is part of FlyveMDMInventoryAgent
 #
 # FlyveMDMInventoryAgent is a subproject of Flyve MDM. Flyve MDM is a mobile
 # device management software.
@@ -25,26 +25,23 @@
 # @link      https://flyve-mdm.com
 # ------------------------------------------------------------------------------
 
-# Update gem
-gem update --system
-# Install fastlane last version
-gem install fastlane --no-rdoc --no-ri --no-document --quiet
-# Clean Gem
-gem cleanup
-# Install jazzy for generate documentation
-gem install jazzy
-# Install xcov for code coverage reporting
-sudo gem install xcov
-# Install node
-brew install node
-# Install jq for json parse
-brew install jq
-# Install transifex-client
-sudo easy_install pip
-sudo pip install transifex-client
-# Install standard-version scope global
-npm i -g standard-version
-# Install conventional-github-releaser scope global
-npm install -g conventional-github-releaser
-# Install libs from package.json
-npm install
+echo ------------------- Configure Transifex --------------------
+# Configure Transifex on develop branch
+# Create config file transifex
+sudo echo $'[https://www.transifex.com]\nhostname = https://www.transifex.com\nusername = '"$TRANSIFEX_USER"$'\npassword = '"$TRANSIFEX_API_TOKEN"$'\ntoken = '"$TRANSIFEX_API_TOKEN"$'\n' > ~/.transifexrc
+
+# Move to local branch
+git checkout $CIRCLE_BRANCH -f
+# get transifex status
+tx status
+# push local files to transifex
+tx push --source --no-interactive
+# pull all the new language
+tx pull --all --force
+# if there are changes in lenguages
+if [[ -z $(git status -s) ]]; then
+    echo "tree is clean"
+else
+    git add -u
+    git commit -m "ci(localization): download languages from **Transifex**"
+fi
