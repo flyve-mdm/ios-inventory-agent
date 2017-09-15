@@ -74,7 +74,7 @@ class AgentSettingsController: UIViewController {
         return label
     }()
 
-    /// loadingIndicatorView `UIActivityIndicatorView`
+    /// This property contains the configurations of the loading indicator
     let loadingIndicatorView: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         loading.color = .gray
