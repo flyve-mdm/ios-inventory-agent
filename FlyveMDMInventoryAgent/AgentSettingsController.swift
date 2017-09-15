@@ -85,7 +85,7 @@ class AgentSettingsController: UIViewController {
     
     // MARK: Methods
     
-    /// `override loadView()`
+    /// Load the customized view that the controller manages
     override func loadView() {
         super.loadView()
         setupViews()
