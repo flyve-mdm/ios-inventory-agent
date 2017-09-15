@@ -100,7 +100,7 @@ class GlobalSettingsController: UIViewController {
         footerView.addSubview(loadingIndicatorView)
     }
     
-    /// `addConstraints()`
+    /// Add the constraints to the views of the controller
     func addConstraints() {
         settingsTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         settingsTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
