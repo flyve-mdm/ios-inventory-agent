@@ -49,7 +49,7 @@ class GlobalSettingsController: UIViewController {
         return table
     }()
 
-    /// footerView `UIView`
+    /// This property contains the configurations for the footer view
     let footerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
