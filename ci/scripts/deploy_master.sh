@@ -47,6 +47,7 @@ if [[ $GH_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* &
     git push --follow-tags origin $CIRCLE_BRANCH
 
     # Update CHANGELOG.md on gh-pages
+    git branch -D gh-pages
     git fetch origin gh-pages
     git checkout gh-pages
     git checkout $CIRCLE_BRANCH CHANGELOG.md
