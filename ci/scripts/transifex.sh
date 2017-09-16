@@ -43,5 +43,5 @@ if [[ -z $(git status -s) ]]; then
     echo "tree is clean"
 else
     git add -u
-    git commit -m "ci(localization): download languages from **Transifex**"
+    git commit -m "ci(localization): download languages from Transifex"
 fi
