@@ -63,17 +63,18 @@ git add coverage -f
 git commit -m "ci(docs): generate **coverage** for version ${GIT_TAG}"
 
 # Update documentation on gh-pages
+git branch -D gh-pages
 git fetch origin gh-pages
 git checkout gh-pages
 
 # Remove old documetation
-rm CHANGELOG.md
+rm -rf _docs
 rm -rf coverage
 
 git checkout $CIRCLE_BRANCH _docs
 
 # Add _docs folder
-git add CHANGELOG.md
+git add _docs
 # Create commit
 git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}"
 
