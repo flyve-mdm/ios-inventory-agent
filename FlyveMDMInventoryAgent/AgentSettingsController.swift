@@ -361,6 +361,16 @@ extension String: ParameterEncoding {
 class InventoryCell: UITableViewCell {
     
     // MARK: init Methods
+
+    /**
+       override `init` This method initializes a table cell with the given parameters and returns it to the caller
+
+       - Parameter style: a constant indicating a cell style
+
+       - Parameter reuseIdentifier: a string used to identify the cell object
+
+       - Returns: an `UITableViewCellStyle`
+     */
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
