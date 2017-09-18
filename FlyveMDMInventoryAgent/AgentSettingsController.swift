@@ -380,6 +380,11 @@ class InventoryCell: UITableViewCell {
         addConstraints()
     }
 
+    /** 
+       It allows to unarchive the ViewController using an aDecoder object
+
+       - Parameter aDecoder: the decoder object 
+     */
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
