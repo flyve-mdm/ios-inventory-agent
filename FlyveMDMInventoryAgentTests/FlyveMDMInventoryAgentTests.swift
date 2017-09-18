@@ -33,6 +33,7 @@ import Alamofire
 
 class FlyveMDMInventoryAgentTests: XCTestCase {
 
+    /// This property contains the window used to present the app’s visual content on the device’s main screen
     var window: UIWindow?
     let agentSettingsController = AgentSettingsController()
 
