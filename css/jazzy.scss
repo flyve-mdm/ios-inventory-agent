@@ -88,8 +88,8 @@ $aside_warning_border: 5px solid lighten($aside_warning_color, 20%);
 // }
 .section-name {
   color: rgba(128,128,128,1);
-  display: block;
-  font-family: Helvetica;
+  // display: block;
+  // font-family: Helvetica;
   font-size: 22px;
   font-weight: 100;
   margin-bottom: 15px;
@@ -145,10 +145,10 @@ blockquote {
 
 // General Content Wrapper
 
-.content-wrapper {
-  margin: 0 auto;
-  width: $content_wrapper_width;
-}
+// .content-wrapper {
+//   margin: 0 auto;
+//   width: $content_wrapper_width;
+// }
 
 ////////////////////////////////
 // Header & Top Breadcrumbs
@@ -248,13 +248,13 @@ blockquote {
 
 .main-content {
   background-color: $white_color;
-  border: $gray_border;
-  margin-left: $content_body_left_offset;
+  // border: $gray_border;
+  // margin-left: $content_body_left_offset;
   // position: absolute;
   overflow: hidden;
   padding-bottom: 60px;
   top: $content_top_offset;
-  width: $content_wrapper_width - $content_body_left_offset;
+  // width: $content_wrapper_width - $content_body_left_offset;
   p, a, code, em, ul, table, blockquote {
     margin-bottom: 1em;
   }
