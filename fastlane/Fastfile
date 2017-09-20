@@ -80,6 +80,31 @@ platform :ios do
     )
   end
 
+  desc "builds and packages iOS apps"
+  lane :archive do
+    # Fetch provisioning profile
+    # sigh
+    sigh(
+      adhoc: false, 
+      username: "hrondon@teclib.com",
+      team_id: "H7XJV96LX2",
+      provisioning_name: "XC_iOS_orgflyveinventoryagent",
+      cert_id: "H7XJV96LX2"
+    )
+    snapshot
+    # Build
+    gym(
+      scheme: "FlyveMDMInventoryAgent",
+      configuration: "Release",
+      sdk: "iphoneos10.3",
+      clean: true,
+      include_bitcode: true,
+      include_symbols: true,
+      export_method: "app-store",
+      buildlog_path: 'fastlane/logs'
+    )
+  end
+
   desc "Deploy a new version to the App Store"
   lane :release do
     $lane_active = "Release"
