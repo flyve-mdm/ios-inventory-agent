@@ -95,7 +95,7 @@ platform :ios do
     snapshot
     # Build
     gym(
-      scheme: "flyve-mdm-ios",
+      scheme: "FlyveMDMInventoryAgent",
       configuration: "Release",
       sdk: "iphoneos10.3",
       clean: true,
