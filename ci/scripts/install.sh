@@ -44,6 +44,8 @@ sudo pip install transifex-client
 npm i -g standard-version
 # Install conventional-github-releaser scope global
 npm install -g conventional-github-releaser
+# Install node-github-release to create and edit releases on Github
+npm install -g node-github-release
 # Install libs from package.json
 npm install
 # Install gems from Gemfile
