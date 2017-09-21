@@ -63,14 +63,19 @@ if [[ $GH_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* &
     git checkout gh-pages
     git checkout $CIRCLE_BRANCH CHANGELOG.md
 
-    # Create header content
-    HEADER="---\nlayout: modal\ntitle: changelog\n---\n"
+    # Create header content to CHANGELOG.md
+    echo "---" > header.md
+    echo "layout: modal" >> header.md
+    echo "title: changelog" >> header.md
+    echo "---" >> header.md
+
     # Duplicate CHANGELOG.md
     cp CHANGELOG.md CHANGELOG_COPY.md
     # Add header to CHANGELOG.md
-    (echo $HEADER ; cat CHANGELOG_COPY.md) > CHANGELOG.md
+    (cat header.md ; cat CHANGELOG_COPY.md) > CHANGELOG.md
     # Remove CHANGELOG_COPY.md
     rm CHANGELOG_COPY.md
+    rm header.md
 
     # Add CHANGELOG.md
     git add CHANGELOG.md
