@@ -8,8 +8,8 @@ machine:
     SCRIPT_PATH: ./ci/scripts
     CERTIFICATES_PATH: ./ci/cert
     PROFILE_PATH: ./ci/profile
-    GH_USER: flyve-mdm-bot
-    GH_REPO_SLUG: flyve-mdm/flyve-mdm-ios-inventory-agent
+    GITHUB_USER: flyve-mdm-bot
+    GITHUB_REPO_SLUG: flyve-mdm/flyve-mdm-ios-inventory-agent
     TRANSIFEX_USER: api
   xcode:
     version: 8.3

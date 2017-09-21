@@ -29,5 +29,5 @@ echo ----------- Create Fastlane environment variables ------------
 # Create Fastlane environment variables
 echo FASTLANE_PASSWORD=$FASTLANE_PASSWORD >> .env
 echo TELEGRAM_WEBHOOKS=$TELEGRAM_WEBHOOKS >> .env
-echo GIT_REPO=$GH_REPO_SLUG >> .env
+echo GIT_REPO=$GITHUB_REPO_SLUG >> .env
 echo GIT_BRANCH=$CIRCLE_BRANCH >> .env
