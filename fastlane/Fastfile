@@ -26,8 +26,8 @@ platform :ios do
   lane :test do
     $lane_active = "Test"
     scan(
-      workspace: "FlyveMDMInventoryAgent.xcworkspace",
-      scheme: "FlyveMDMInventoryAgent",
+      workspace: ENV["XCODE_WORKSPACE"],
+      scheme: ENV["XCODE_SCHEME"],
       clean: true,
       code_coverage: true
     )
@@ -37,8 +37,8 @@ platform :ios do
   lane :coverage do
     $lane_active = "Coverage"
     xcov(
-      workspace: "FlyveMDMInventoryAgent.xcworkspace",
-      scheme: "FlyveMDMInventoryAgent",
+      workspace: ENV["XCODE_WORKSPACE"],
+      scheme: ENV["XCODE_SCHEME"],
       output_directory: "coverage",
       html_report: false,
       json_report: true,
@@ -54,16 +54,12 @@ platform :ios do
     # Fetch provisioning profile
     # sigh
     sigh(
-      adhoc: false, 
-      username: "hrondon@teclib.com",
-      team_id: "H7XJV96LX2",
-      provisioning_name: "XC_iOS_orgflyveinventoryagent",
-      cert_id: "H7XJV96LX2"
+      adhoc: false
     )
   
     # Build
     gym(
-      scheme: "FlyveMDMInventoryAgent",
+      scheme: ENV["XCODE_SCHEME"],
       configuration: "Beta",
       sdk: "iphoneos10.3",
       clean: true,
@@ -75,26 +71,23 @@ platform :ios do
 
     # TestFlight upload
     pilot(
-      app_identifier: "org.flyve.inventory.agent",
+      app_identifier: ENV["APP_IDENTIFIER"],
       skip_waiting_for_build_processing: true
     )
   end
 
   desc "builds and packages iOS apps"
   lane :archive do
+    $lane_active = "Archive"
     # Fetch provisioning profile
     # sigh
     sigh(
-      adhoc: false, 
-      username: "hrondon@teclib.com",
-      team_id: "H7XJV96LX2",
-      provisioning_name: "XC_iOS_orgflyveinventoryagent",
-      cert_id: "H7XJV96LX2"
+      adhoc: false
     )
     snapshot
     # Build
     gym(
-      scheme: "FlyveMDMInventoryAgent",
+      scheme: ENV["XCODE_SCHEME"],
       configuration: "Release",
       sdk: "iphoneos10.3",
       clean: true,
@@ -107,6 +100,7 @@ platform :ios do
 
   desc "publish in app store"
   lane :publish do
+    $lane_active = "Publish"
     deliver(force: true)
     frameit
   end
@@ -117,16 +111,12 @@ platform :ios do
     # Fetch provisioning profile
     # sigh
     sigh(
-      adhoc: false, 
-      username: "hrondon@teclib.com",
-      team_id: "H7XJV96LX2",
-      provisioning_name: "XC_iOS_orgflyveinventoryagent",
-      cert_id: "H7XJV96LX2"
+      adhoc: false
     )
     snapshot
     # Build
     gym(
-      scheme: "FlyveMDMInventoryAgent",
+      scheme: ENV["XCODE_SCHEME"],
       configuration: "Release",
       sdk: "iphoneos10.3",
       clean: true,

@@ -10,7 +10,7 @@ languages([
 ])
 
 # The name of the scheme which contains the UI Tests
-scheme "FlyveMDMInventoryAgentUITests"
+scheme ENV["XCODE_SCHEME_UI"]
 
 # Where should the resulting screenshots be stored?
 output_directory "./fastlane/screenshots"
@@ -19,7 +19,7 @@ clear_previous_screenshots true # remove the '#' to clear all previously generat
 
 # Choose which project/workspace to use
 # project "./Project.xcodeproj"
-workspace "./FlyveMDMInventoryAgent.xcworkspace"
+workspace ENV["XCODE_WORKSPACE"]
 
 # Arguments to pass to the app on launch. See https://github.com/fastlane/fastlane/tree/master/snapshot#launch-arguments
 launch_arguments(["-favColor red"])
