@@ -49,6 +49,13 @@ if [[ $GH_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* &
     bundle exec fastlane archive
     # Copy ipa file in artifacts folder
     cp ${APPNAME}.ipa $CIRCLE_ARTIFACTS
+    # Upload ipa file to release
+    github-release upload \
+    --user $CIRCLE_PROJECT_USERNAME \
+    --repo $CIRCLE_PROJECT_REPONAME \
+    --tag ${GIT_TAG} \
+    --name "${APPNAME}.ipa" \
+    --file "$CIRCLE_ARTIFACTS/${APPNAME}.ipa"
 
     # Update CHANGELOG.md on gh-pages
     git branch -D gh-pages
