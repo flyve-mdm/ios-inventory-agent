@@ -82,6 +82,6 @@ if [[ $GH_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* &
     # Checkout to release branch
     git checkout $CIRCLE_BRANCH -f
 
-    # Send app to release with fastlane 
-    fastlane release
+    # Send app to App Store with fastlane 
+    bundle exec fastlane publish
 fi
