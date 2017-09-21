@@ -46,11 +46,11 @@ jazzy \
 --author Flyve MDM \
 --author_url https://flyve-mdm.com \
 --github_url $CIRCLE_REPOSITORY_URL \
---output _docs \
+--output docs \
 --theme jazzy/themeFlyve
 
-# Add _docs folder
-git add _docs -f
+# Add docs folder
+git add docs -f
 # Create commit, NOTICE: this commit is not sent
 git commit -m "ci(docs): generate **docs** for version ${GIT_TAG}"
 
@@ -68,13 +68,13 @@ git fetch origin gh-pages
 git checkout gh-pages
 
 # Remove old documetation
-rm -rf _docs
+rm -rf docs
 rm -rf coverage
 
-git checkout $CIRCLE_BRANCH _docs
+git checkout $CIRCLE_BRANCH docs
 
-# Add _docs folder
-git add _docs
+# Add docs folder
+git add docs
 # Create commit
 git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}"
 
