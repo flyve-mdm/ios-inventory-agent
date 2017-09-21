@@ -44,7 +44,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Push commits and tags to origin branch
     git push --follow-tags origin $CIRCLE_BRANCH
     # Create release with conventional-github-releaser
-    conventional-github-releaser -t $GITHUB_TOKEN
+    conventional-github-releaser -p angular -t $GITHUB_TOKEN
     # Archive app
     bundle exec fastlane archive
     # Copy ipa file in artifacts folder
