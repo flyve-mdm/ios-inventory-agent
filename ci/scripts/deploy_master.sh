@@ -47,7 +47,9 @@ if [[ $GH_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* &
     conventional-github-releaser -t $GH_TOKEN
     # Archive app
     bundle exec fastlane archive
-    
+    # Copy ipa file in artifacts folder
+    cp ${APPNAME}.ipa $CIRCLE_ARTIFACTS
+
     # Update CHANGELOG.md on gh-pages
     git branch -D gh-pages
     git fetch origin gh-pages
