@@ -45,6 +45,8 @@ if [[ $GH_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* &
     git push --follow-tags origin $CIRCLE_BRANCH
     # Create release with conventional-github-releaser
     conventional-github-releaser -t $GH_TOKEN
+    # Archive app
+    bundle exec fastlane archive
     
     # Update CHANGELOG.md on gh-pages
     git branch -D gh-pages
