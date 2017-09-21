@@ -1,7 +1,9 @@
 machine:
   environment:
     APPNAME: FlyveMDMInventoryAgent
+    APP_IDENTIFIER: org.flyve.inventory.agent
     XCODE_SCHEME: FlyveMDMInventoryAgent
+    XCODE_SCHEME_UI: FlyveMDMInventoryAgentUITests
     XCODE_WORKSPACE: FlyveMDMInventoryAgent.xcworkspace
     PROFILE_UUID: XC_iOS_orgflyveinventoryagent
     KEYCHAIN_NAME: ios-app.keychain
