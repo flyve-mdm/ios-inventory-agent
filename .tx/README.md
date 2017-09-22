@@ -10,9 +10,9 @@ minimum_perc = 80
 
 ````
 [flyve-mdm-ios-inventory-agent.localizableplist-ios]
-file_filter = flyve-mdm-ios/<lang>.lproj/Localizable.plist
+file_filter = FlyveMDMInventoryAgent/<lang>.lproj/Localizable.strings
 lang_map = en_GB: Base, pt_BR: pt-BR, es_MX: es-MX, es_ES: es, fr_FR: fr, ru_RU: ru, ko_KR: ko
-source_file = flyve-mdm-ios/Base.lproj/Localizable.strings
+source_file = FlyveMDMInventoryAgent/Base.lproj/Localizable.strings
 source_lang = en
-type = PLIST
+type = STRINGS
 ```
