@@ -1,0 +1,80 @@
+/*
+ *   Copyright © 2017 Teclib. All rights reserved.
+ *
+ * Localizable.strings is part of FlyveMDMInventoryAgent
+ *
+ * FlyveMDMInventoryAgent is a subproject of Flyve MDM. Flyve MDM is a mobile
+ * device management software.
+ *
+ * FlyveMDMInventoryAgent is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * FlyveMDMInventoryAgent is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * ------------------------------------------------------------------------------
+ * @author    Hector Rondon
+ * @date      22/09/17
+ * @copyright Copyright © 2017 Teclib. All rights reserved.
+ * @license   GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
+ * @link      https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent.git
+ * @link      https://flyve-mdm.com
+ * ------------------------------------------------------------------------------
+ */
+
+"app_name" = "Flyve MDM Inventory Agent";
+"agent_started" = "Flyve MDM Inventory Agent is started";
+"agent_stopped" = "Flyve MDM Inventory Agent is stopped";
+"agent_reboot" = "Flyve MDM Inventory Agent is restarted";
+"agent_description" = "Agent is running in background";
+"button_start_inventory" = "Start Inventory";
+"menu_settings" = "Settings";
+"menu_clearlog" = "Clear Log";
+"menu_send" = "Send";
+"menu_getinv" = "Get Inventory";
+"all_permissions" = "Grant all possible permissions";
+"agent_connected" = "Connected to Agent Service";
+"agent_disconnected" = "Disconnected from Agent Service";
+"inventory_started" = "Starting inventory...";
+"inventory_sended" = "Sending inventory...";
+"inventory_ended" = "End of inventory.";
+"button_connect_agent" = "Connect Agent";
+"button_disconnect_agent" = "Disconnect Agent";
+"error_inventory" = "Inventory not complet";
+"ok_inventory" = "Inventory complet";
+"error_send_inventory" = "Inventory not sent";
+"ok_send_inventory" = "Inventory sent";
+"service_notif_id" = "Flyve MDM Inventory Agent";
+"agent_settings" = "Agent settings";
+"phone_boot" = "Agent must be launched at phone boot";
+"manual_launch" = "Agent must be launched manually";
+"boot_options" = "Boot options";
+"inventory_server" = "Inventory server";
+"log_text" = "Server response";
+"authentication_credentials" = "HTTP authentication credentials";
+"login" = "Login";
+"login_input" = "Define login";
+"password" = "Password";
+"password_input" = "Define password";
+"tag" = "Tag";
+"tag_input" = "Define tag";
+"server_empty" = "The server address is not configured";
+"inventory" = "Inventory";
+"inventory_disable" = "Click to disable inventory";
+"inventory_enable" = "Click to enable inventory";
+"inventory_run" = "Run inventory now";
+"run" = "Run now";
+"global" = "Global";
+"global_title" = "Global settings";
+"global_subtitle" = "Setup, certificates, server...";
+"notifications" = "Notifications";
+"notifications_disable" = "Click to disable notifications";
+"notifications_enable" = "Click to enable notifications";
+"server" = "Server address";
+"server_title" = "Server settings";
+"server_input" = "Define server address";
+"cancel" = "Cancel";
+"accept" = "Accept";
