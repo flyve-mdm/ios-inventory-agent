@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A16DA781F6C633300002577 /* SnapshotHelperXcode8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A16DA771F6C633300002577 /* SnapshotHelperXcode8.swift */; };
+		0A167A5A1F79B8400071C0D7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A167A591F79B8400071C0D7 /* SnapshotHelper.swift */; };
 		0AC9F6521F10342600A66DE8 /* AgentSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */; };
 		0AC9F6531F10342600A66DE8 /* GlobalSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */; };
 		0AD14F0C1F75625F002F5F37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AD14F0E1F75625F002F5F37 /* Localizable.strings */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A16DA771F6C633300002577 /* SnapshotHelperXcode8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelperXcode8.swift; sourceTree = "<group>"; };
+		0A167A591F79B8400071C0D7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSettingsController.swift; sourceTree = "<group>"; };
 		0AC9F64E1F10342600A66DE8 /* FlyveMDMInventoryAgent-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FlyveMDMInventoryAgent-Bridging-Header.h"; path = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettingsController.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0AEB1EEF1F10317F00F18217 /* FlyveMDMInventoryAgentUITests.swift */,
-				0A16DA771F6C633300002577 /* SnapshotHelperXcode8.swift */,
+				0A167A591F79B8400071C0D7 /* SnapshotHelper.swift */,
 				0AEB1EF11F10317F00F18217 /* Info.plist */,
 			);
 			path = FlyveMDMInventoryAgentUITests;
@@ -547,8 +547,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A16DA781F6C633300002577 /* SnapshotHelperXcode8.swift in Sources */,
 				0AEB1EF01F10317F00F18217 /* FlyveMDMInventoryAgentUITests.swift in Sources */,
+				0A167A5A1F79B8400071C0D7 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +667,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyveMDMInventoryAgent.app/FlyveMDMInventoryAgent";
 			};
@@ -683,7 +683,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = FlyveMDMInventoryAgent;
 			};
@@ -849,7 +849,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyveMDMInventoryAgent.app/FlyveMDMInventoryAgent";
 			};
@@ -866,7 +866,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlyveMDMInventoryAgent.app/FlyveMDMInventoryAgent";
 			};
@@ -882,7 +882,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = FlyveMDMInventoryAgent;
 			};
@@ -898,7 +898,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teclib.FlyveMDMInventoryAgentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = FlyveMDMInventoryAgent;
 			};
