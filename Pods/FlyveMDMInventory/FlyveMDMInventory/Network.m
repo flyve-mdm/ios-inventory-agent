@@ -30,6 +30,7 @@
 #import <UIKit/UIKit.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
 #include <sys/sysctl.h>
+#import <netinet/in.h>
 #include <net/if.h>
 #include <net/if_dl.h>
 #include <ifaddrs.h>
@@ -44,50 +45,30 @@
  */
 -(NSString *)type {
     
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
+    NetworkStatus status = [reachability currentReachabilityStatus];
     NSString *networkType;
-    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKey:@"statusBar"] valueForKey:@"foregroundView"]subviews];
-    NSNumber *dataNetworkItemView = nil;
     
-    for (id subview in subviews) {
-        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
-            dataNetworkItemView = subview;
-            break;
-        }
+    if(status == NotReachable)
+    {
+        // No internet
+        networkType = @"Not Connected";
     }
-    
-    switch ([[dataNetworkItemView valueForKey:@"dataNetworkType"]integerValue]) {
-        case 0:
-            networkType = @"Not Connected";
-            break;
-            
-        case 1:
-            networkType =  @"2G";
-            break;
-            
-        case 2:
-            networkType = @"3G";
-            break;
-            
-        case 3:
-            networkType = @"4G";
-            break;
-            
-        case 4:
-            networkType = @"LTE";
-            break;
-            
-        case 5:
-            networkType = @"WIFI";
-            break;
-            
-            
-        default:
-            networkType = @"Not Connected";
-            break;
+    else if (status == ReachableViaWiFi)
+    {
+        // WIFI
+        networkType = @"WIFI";
     }
-    
+    else if (status == ReachableViaWWAN)
+    {
+        // WAN
+        CTTelephonyNetworkInfo *telephonyInfo = [CTTelephonyNetworkInfo new];
+        networkType = telephonyInfo.currentRadioAccessTechnology;
+    }
+
     return networkType;
-    
 }
 
 /**

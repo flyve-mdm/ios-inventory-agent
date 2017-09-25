@@ -33,6 +33,7 @@
 #import "OperatingSystem.h"
 #import "Battery.h"
 #import "Cpu.h"
+#import "Reachability.h"
 #import "Network.h"
 #import "Carrier.h"
 

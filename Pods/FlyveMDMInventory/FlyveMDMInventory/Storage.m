@@ -262,18 +262,10 @@
         NSString *formattedBytes = nil;
         
         double numberBytes = 1.0 * space;
-        double totalGB = numberBytes / GB;
         double totalMB = numberBytes / MB;
         
-
-        if (totalGB >= 1.0) {
-            formattedBytes = [NSString stringWithFormat:@"%.2f GB", totalGB];
-        } else if (totalMB >= 1)
-            formattedBytes = [NSString stringWithFormat:@"%.2f MB", totalMB];
-        else {
-            formattedBytes = [self memoryToString:space];
-            formattedBytes = [formattedBytes stringByAppendingString:@" bytes"];
-        }
+        // show size in MB
+        formattedBytes = [NSString stringWithFormat:@"%.2f", totalMB];
         
         // Check for errors
         if (formattedBytes == nil || formattedBytes.length <= 0) {
@@ -342,7 +334,7 @@
         
         for(i = 0; i < num_of_mnts; i++) {
             
-            [partitionsDisk appendString:[NSString stringWithFormat:@"<DRIVES><LABEL>%s</LABEL><VOLUMN>%s</VOLUMN></DRIVES>", mntbufp[i].f_mntfromname, mntbufp[i].f_mntonname]];
+            [partitionsDisk appendString:[NSString stringWithFormat:@"<DRIVES><LABEL>%s</LABEL><VOLUMN>%s</VOLUMN><TOTAL>%@</TOTAL><FREE>%@</FREE></DRIVES>", mntbufp[i].f_mntfromname, mntbufp[i].f_mntonname, [self total], [self free:NO] ]];
         }
         
         return partitionsDisk;
