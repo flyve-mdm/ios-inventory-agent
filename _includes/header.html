@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a href="{{ site.url }}{{ site.baseurl }}/" class="navbar-brand">
-                        <img src="{{ 'images/typo.png' | relative_url }}"  height="23" alt="Flyve MDM" />
+                        <img src="{{ 'images/typo.png' | absolute_url }}"  height="23" alt="Flyve MDM" />
                     </a>
                 </div>
             </div>
@@ -21,27 +21,27 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="glyph glyph-hamburger"></i>
                     </button>
-                    <a href="{{ '/' | relative_url }}" class="navbar-brand">
-                        <img src="{{ 'images/logo.png' | relative_url }}" alt="Home" class="logo"/>
+                    <a href="{{ '/' | absolute_url }}" class="navbar-brand">
+                        <img src="{{ 'images/logo.png' | absolute_url }}" alt="Home" class="logo"/>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
 
                         <li>
-                            <a class="color-type-secondary" href="{{ '/news' | relative_url }}">News</a>
+                            <a class="color-type-secondary" href="{{ '/news' | absolute_url }}">News</a>
                         </li>
 
                         <li>
-                            <a class="color-type-secondary" href="{{ '/screenshots' | relative_url }}">Screenshots</a>
+                            <a class="color-type-secondary" href="{{ '/screenshots' | absolute_url }}">Screenshots</a>
                         </li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <i class="glyph glyph-chevron-down-2"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ 'docs/' | relative_url }}">Code documentation</a></li>
+                                <li><a href="{{ 'docs/' | absolute_url }}">Code documentation</a></li>
                                 <li class="divider"></li>
-                                <li><a href="{{ 'coverage/' | relative_url }}">Coverage</a></li>
+                                <li><a href="{{ 'coverage/' | absolute_url }}">Coverage</a></li>
                             </ul>
                         </li>
                         
@@ -52,7 +52,7 @@
                         {% endif %}
 
                         <li>
-                            <a class="color-type-secondary" href="{{ '/projects' | relative_url }}">Projects</a>
+                            <a class="color-type-secondary" href="{{ '/projects' | absolute_url }}">Projects</a>
                         </li>
 
                         {% if page.title != 404 %}
@@ -72,7 +72,7 @@
                         {% endif %}
                         
                         <li>
-                            <a class="color-type-secondary" href="{{ '/contact' | relative_url }}">Contact</a>
+                            <a class="color-type-secondary" href="{{ '/contact' | absolute_url }}">Contact</a>
                         </li>
                         
                         <li class="hidden">
