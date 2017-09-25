@@ -1,14 +1,14 @@
 PODS:
-  - Alamofire (4.5.0)
-  - FlyveMDMInventory (1.2.0)
+  - Alamofire (4.5.1)
+  - FlyveMDMInventory (1.2.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - FlyveMDMInventory (~> 1.2)
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  FlyveMDMInventory: d3a8e0391d8f2996d8aa9ab79ea03f211637aab7
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  FlyveMDMInventory: e0fde922b7ff415418628362585f7a76a05a5780
 
 PODFILE CHECKSUM: 67a29264a31f2844652400755677e19b9e415ac9
 

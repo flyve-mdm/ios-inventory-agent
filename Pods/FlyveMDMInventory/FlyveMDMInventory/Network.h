@@ -26,6 +26,8 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "Reachability.h"
+@import CoreTelephony;
 
 /// Network Information
 @interface Network: NSObject

@@ -30,14 +30,14 @@ import UIKit
 
 public class InventoryTask {
 
-    private let memory = Memory()
-    private let storage = Storage()
-    private let hardware = Hardware()
-    private let os = OperatingSystem()
-    private let battery = Battery()
-    private let cpu = Cpu()
-    private let network = Network()
-    private let carrier = Carrier()
+    public let memory = Memory()
+    public let storage = Storage()
+    public let hardware = Hardware()
+    public let os = OperatingSystem()
+    public let battery = Battery()
+    public let cpu = Cpu()
+    public let network = Network()
+    public let carrier = Carrier()
 
     public init() {}
 
@@ -60,7 +60,7 @@ public class InventoryTask {
      */
     private func createXML(_ versionClient: String, tag: String) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd H:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         let dateLog = dateFormatter.string(from: Date())
         return "\(createDTD())" +
             createElement(

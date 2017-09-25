@@ -18,6 +18,7 @@
 #import "Memory.h"
 #import "Network.h"
 #import "OperatingSystem.h"
+#import "Reachability.h"
 #import "Storage.h"
 
 FOUNDATION_EXPORT double FlyveMDMInventoryVersionNumber;
