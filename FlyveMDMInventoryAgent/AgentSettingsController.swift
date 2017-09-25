@@ -70,7 +70,7 @@ class AgentSettingsController: UIViewController {
         label.numberOfLines = 0
         label.backgroundColor = .clear
         label.textColor = .gray
-        label.font = UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightRegular)
+        label.font = UIFont.systemFont(ofSize: 15.0, weight: UIFont.Weight.regular)
         return label
     }()
 
@@ -202,7 +202,7 @@ class AgentSettingsController: UIViewController {
     /**
      Enable or Disable run send xml inventory
      */
-    func switchAtValueChanged(uiSwitch: UISwitch) {
+    @objc func switchAtValueChanged(uiSwitch: UISwitch) {
         if uiSwitch.tag == 777 {
             let indexMe: IndexPath = IndexPath(row: 0, section: 0)
             let index: IndexPath = IndexPath(row: 1, section: 0)
@@ -313,7 +313,7 @@ extension AgentSettingsController: UITableViewDelegate {
         if let headerView = view as? UITableViewHeaderFooterView, let textLabel = headerView.textLabel {
 
             headerView.backgroundView?.backgroundColor = UIColor.init(red: 239.0/255.0, green: 239.0/255.0, blue: 244.0/255.0, alpha: 1.0)
-            textLabel.font = UIFont.systemFont(ofSize: 12.0, weight: UIFontWeightBold)
+            textLabel.font = UIFont.systemFont(ofSize: 12.0, weight: UIFont.Weight.bold)
             textLabel.textColor = UIColor.gray
         }
     }
