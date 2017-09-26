@@ -44,11 +44,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         //Requesting Authorization for User Interactions
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) { (_, _) in
-            // Enable or disable features based on authorization.
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.alert, .sound]) { (_, _) in
+                // Enable or disable features based on authorization.
+            }
+        } else {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
         }
-        
+
         // Set configuration Bugsnag
         let config = BugsnagConfiguration()
         config.apiKey = "9e545634de96524a1f39e2cd36e894a9"
