@@ -168,15 +168,25 @@ class AgentSettingsController: UIViewController {
                 self.messageLabel.text = NSLocalizedString("ok_send_inventory", comment: "")
 
                 if UserDefaults.standard.bool(forKey: "notifications") {
-                    let notification = UNMutableNotificationContent()
-                    notification.title = NSLocalizedString("service_notif_id", comment: "")
-                    notification.subtitle = ""
-                    notification.body = NSLocalizedString("ok_send_inventory", comment: "")
 
-                    let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-                    let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
-
-                    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                    if #available(iOS 10.0, *) {
+                        let notification = UNMutableNotificationContent()
+                        notification.title = NSLocalizedString("service_notif_id", comment: "")
+                        notification.subtitle = ""
+                        notification.body = NSLocalizedString("ok_send_inventory", comment: "")
+                        
+                        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                        let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
+                        
+                        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                    } else {
+                        let notification = UILocalNotification()
+                        notification.alertTitle = NSLocalizedString("service_notif_id", comment: "")
+                        notification.alertBody = NSLocalizedString("ok_send_inventory", comment: "")
+                        notification.fireDate = Date(timeIntervalSinceNow: 5)
+                        UIApplication.shared.cancelAllLocalNotifications()
+                        UIApplication.shared.scheduledLocalNotifications = [notification]
+                    }
                 }
 
             case .failure( _):
@@ -184,15 +194,24 @@ class AgentSettingsController: UIViewController {
                 self.messageLabel.text = NSLocalizedString("error_send_inventory", comment: "") + "\n\(response.result.error?.localizedDescription ?? "failure")"
 
                 if UserDefaults.standard.bool(forKey: "notifications") {
-                    let notification = UNMutableNotificationContent()
-                    notification.title = NSLocalizedString("service_notif_id", comment: "")
-                    notification.subtitle = ""
-                    notification.body = NSLocalizedString("error_send_inventory", comment: "")
 
-                    let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-                    let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
-
-                    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                    if #available(iOS 10.0, *) {
+                        let notification = UNMutableNotificationContent()
+                        notification.title = NSLocalizedString("service_notif_id", comment: "")
+                        notification.subtitle = ""
+                        notification.body = NSLocalizedString("error_send_inventory", comment: "")
+                        
+                        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                        let request = UNNotificationRequest(identifier: "notificationSuccessful", content: notification, trigger: notificationTrigger)
+                        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                    } else {
+                        let notification = UILocalNotification()
+                        notification.alertTitle = NSLocalizedString("service_notif_id", comment: "")
+                        notification.alertBody = NSLocalizedString("error_send_inventory", comment: "")
+                        notification.fireDate = Date(timeIntervalSinceNow: 5)
+                        UIApplication.shared.cancelAllLocalNotifications()
+                        UIApplication.shared.scheduledLocalNotifications = [notification]
+                    }
                 }
             }
             self.loadingIndicatorView.stopAnimating()
@@ -355,40 +374,4 @@ extension String: ParameterEncoding {
         request.httpBody = data(using: .utf8, allowLossyConversion: false)
         return request
     }
-}
-
-/// InventoryCell class
-class InventoryCell: UITableViewCell {
-    
-    // MARK: init Methods
-
-    /**
-       override `init` This method initializes a table cell with the given parameters and returns it to the caller
-
-       - Parameter style: a constant indicating a cell style
-
-       - Parameter reuseIdentifier: a string used to identify the cell object
-
-       - Returns: an `UITableViewCellStyle`
-     */
-    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        selectionStyle = UITableViewCellSelectionStyle.none
-        contentView.backgroundColor = .clear
-        setupViews()
-        addConstraints()
-    }
-
-    /** 
-       It allows to unarchive the ViewController using an aDecoder object
-
-       - Parameter aDecoder: the decoder object 
-     */
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    func setupViews() { }
-    func addConstraints() { }
 }
