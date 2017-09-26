@@ -9,6 +9,7 @@ target 'FlyveMDMInventoryAgent' do
 
   pod 'Alamofire', '~> 4.5'
   pod 'FlyveMDMInventory', '~> 1.2'
+  pod 'Bugsnag'
 
   target 'FlyveMDMInventoryAgentTests' do
     inherit! :search_paths
