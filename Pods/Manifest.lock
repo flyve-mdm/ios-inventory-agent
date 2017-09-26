@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.5.1)
+  - Bugsnag (5.11.2)
   - FlyveMDMInventory (1.2.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - Bugsnag
   - FlyveMDMInventory (~> 1.2)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Bugsnag: daab816e964545823e9f9b826486bd30c67f22da
   FlyveMDMInventory: e0fde922b7ff415418628362585f7a76a05a5780
 
-PODFILE CHECKSUM: 67a29264a31f2844652400755677e19b9e415ac9
+PODFILE CHECKSUM: cae1c03a57bf13ff048f430cb9f6e6d9865277ce
 
 COCOAPODS: 1.2.1
