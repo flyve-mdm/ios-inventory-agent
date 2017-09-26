@@ -1,6 +1,82 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
+      "line": 38,
+      "symbol": "AgentSettingsController.cellId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
+      "line": 39,
+      "symbol": "AgentSettingsController.disable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
+      "line": 392,
+      "symbol": "InventoryCell.setupViews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
+      "line": 393,
+      "symbol": "InventoryCell.addConstraints()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/GlobalSettingsController.swift",
+      "line": 35,
+      "symbol": "GlobalSettingsController.cellId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/Logger.swift",
+      "line": 33,
+      "symbol": "LogEvent.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/Logger.swift",
+      "line": 33,
+      "symbol": "LogEvent.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/Logger.swift",
+      "line": 33,
+      "symbol": "LogEvent.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/Logger.swift",
+      "line": 33,
+      "symbol": "LogEvent.trace",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/Logger.swift",
+      "line": 33,
+      "symbol": "LogEvent.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/Logger.swift",
+      "line": 35,
+      "symbol": "LogEvent.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/distiller/flyve-mdm-ios-inventory-agent"
 }
