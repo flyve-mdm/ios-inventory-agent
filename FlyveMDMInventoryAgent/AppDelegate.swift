@@ -26,7 +26,8 @@
  */
 
 import UIKit
-import  UserNotifications
+import UserNotifications
+import Bugsnag
 
 /// class starting point of the application
 @UIApplicationMain
@@ -47,6 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         center.requestAuthorization(options: [.alert, .sound]) { (_, _) in
             // Enable or disable features based on authorization.
         }
+        
+        // Set configuration Bugsnag
+        let config = BugsnagConfiguration()
+        config.apiKey = "9e545634de96524a1f39e2cd36e894a9"
+        config.notifyURL = URL(string:"https://hooks.thestralbot.com/-1001061475099/")
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            config.appVersion = version
+        }
+        // Start Bugsnag with custom configuration
+        Bugsnag.start(with: config)
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
