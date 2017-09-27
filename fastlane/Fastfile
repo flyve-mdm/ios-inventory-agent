@@ -98,35 +98,14 @@ platform :ios do
     )
   end
 
-  desc "publish in app store"
+  desc "publish new version in App Store"
   lane :publish do
     $lane_active = "Publish"
-    deliver(force: true)
-    frameit
-  end
-
-  desc "Deploy a new version to the App Store"
-  lane :release do
-    $lane_active = "Release"
-    # Fetch provisioning profile
-    # sigh
-    sigh(
-      adhoc: false
+    deliver(
+      force: true, 
+      skip_metadata: true,
+      ignore_language_directory_validation: true
     )
-    snapshot
-    # Build
-    gym(
-      scheme: ENV["XCODE_SCHEME"],
-      configuration: "Release",
-      sdk: "iphoneos11.0",
-      clean: true,
-      include_bitcode: true,
-      include_symbols: true,
-      export_method: "app-store",
-      buildlog_path: 'fastlane/logs'
-    )
-    deliver(force: true)
-    frameit
   end
 
   after_all do |lane|
