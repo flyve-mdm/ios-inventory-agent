@@ -2,16 +2,32 @@
 layout: modal
 title: changelog
 ---
-
-# Change Logk
+# Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="1.1.0"></a>
-# 1.1.0 (2017-09-21)
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/compare/0.1.0...1.0.0) (2017-09-27)
+
+
+### Bug Fixes
+
+* **push:** fix local push notification for iOS 9 ([6418cdb](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/6418cdb))
 
 
 ### Features
 
-* **localization:** add supported languages ([e34d6b6](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/e34d6b6))
-* **logs:** create class for errors handler ([418e9e9](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/418e9e9))
+* **about:** create screen about us ([fbde60c](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/fbde60c))
+* **assets:** add imagen info ([bcefe43](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/bcefe43))
+* **assets:** add splash for iPhone X ([d332f52](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/d332f52))
+* **assets:** app icon for app store ([3b88a1b](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/3b88a1b))
+
+
+### build
+
+* **version:** prepare app version for release ([c5d153d](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/c5d153d))
+
+
+### BREAKING CHANGES
+
+* **version:** first release
