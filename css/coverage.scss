@@ -1,22 +1,25 @@
 ---
 ---
-
 .coverage {
+  .list-items,
+  .row {
+    margin: 0 !important;
+  }
 
-    .list-items, .row {
-        margin: 0 !important;
+  .functions {
+    border-top: solid 1px #BEBEBE;
+  }
+
+  .targets {
+    background-color: #008785;
+    color: #fff;
+
+    h4 {
+      padding: 13px 0;
     }
-    .functions {
-        border-top: solid 1px #BEBEBE;
-    }
-    .targets {
-        color: whitesmoke;
-        background-color: #008785;
-        h4 {
-            padding: 13px 0;
-        }
-    }
-    h2 {
-        padding: 37px 0 20px;
-    }
+  }
+
+  h2 {
+    padding: 37px 0 20px;
+  }
 }

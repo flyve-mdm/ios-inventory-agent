@@ -1,19 +1,17 @@
 ---
 ---
 
-@import
-  "404",
-  "contact",
-  "footer",
-  "general",
-  "header",
-  "home",
-  "post",
-  "products",
-  "screenshots"
-;
+@import '404',
+'contact',
+'footer',
+'general',
+'header',
+'home',
+'post',
+'products',
+'screenshots';
 
 .guide-figure {
-  max-width: 350px;
   margin: 30px auto;
+  max-width: 350px;
 }
