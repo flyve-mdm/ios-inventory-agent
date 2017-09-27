@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AboutController.swift",
+      "line": 35,
+      "symbol": "AboutController.info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
       "line": 38,
       "symbol": "AgentSettingsController.cellId",
@@ -16,15 +23,8 @@
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
-      "line": 392,
-      "symbol": "InventoryCell.setupViews()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
-      "line": 393,
-      "symbol": "InventoryCell.addConstraints()",
+      "line": 127,
+      "symbol": "AgentSettingsController.openAbout()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
