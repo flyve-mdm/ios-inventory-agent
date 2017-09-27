@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### build
 
-* **version:** prepare app version for release ([c5d153d](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/c5d153d))
+* **version:** prepare app version for release ([871c853](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/871c853))
 
 
 ### BREAKING CHANGES
