@@ -97,7 +97,7 @@ class AgentSettingsController: UIViewController {
         view.backgroundColor = .white
         let infoButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "info"),
                                                           style: .plain,
-                                                          target: self, action: "")
+                                                          target: self, action: #selector(openAbout))
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
         navigationItem.rightBarButtonItem = infoButton
         view.addSubview(inventoryTableView)
@@ -122,6 +122,10 @@ class AgentSettingsController: UIViewController {
         messageLabel.leftAnchor.constraint(equalTo: footerView.leftAnchor, constant: 16).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor, constant: -16).isActive = true
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
+    }
+    
+    @objc func openAbout() {
+        navigationController?.pushViewController(AboutController(), animated: true)
     }
 
     /**
