@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A167A5A1F79B8400071C0D7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A167A591F79B8400071C0D7 /* SnapshotHelper.swift */; };
+		0A29B9B01F7C15360094D8B5 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A29B9AF1F7C15360094D8B5 /* AboutController.swift */; };
 		0AC9F6521F10342600A66DE8 /* AgentSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */; };
 		0AC9F6531F10342600A66DE8 /* GlobalSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */; };
 		0AD14F0C1F75625F002F5F37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AD14F0E1F75625F002F5F37 /* Localizable.strings */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0A167A591F79B8400071C0D7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		0A29B9AF1F7C15360094D8B5 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSettingsController.swift; sourceTree = "<group>"; };
 		0AC9F64E1F10342600A66DE8 /* FlyveMDMInventoryAgent-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FlyveMDMInventoryAgent-Bridging-Header.h"; path = "FlyveMDMInventoryAgent/FlyveMDMInventoryAgent-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettingsController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */,
 				0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */,
+				0A29B9AF1F7C15360094D8B5 /* AboutController.swift */,
 				0AE81BDC1F5DE89900029B51 /* Logger.swift */,
 				0AEB1ECF1F10317F00F18217 /* AppDelegate.swift */,
 				0AEB1EDB1F10317F00F18217 /* Info.plist */,
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE81BDD1F5DE89900029B51 /* Logger.swift in Sources */,
+				0A29B9B01F7C15360094D8B5 /* AboutController.swift in Sources */,
 				0AEB1ED01F10317F00F18217 /* AppDelegate.swift in Sources */,
 				0AC9F6521F10342600A66DE8 /* AgentSettingsController.swift in Sources */,
 				0AC9F6531F10342600A66DE8 /* GlobalSettingsController.swift in Sources */,
