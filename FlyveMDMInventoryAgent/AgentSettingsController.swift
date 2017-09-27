@@ -95,7 +95,11 @@ class AgentSettingsController: UIViewController {
     /// Set up the views of the controller
     func setupViews() {
         view.backgroundColor = .white
+        let infoButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "info"),
+                                                          style: .plain,
+                                                          target: self, action: "")
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
+        navigationItem.rightBarButtonItem = infoButton
         view.addSubview(inventoryTableView)
         view.addSubview(footerView)
         footerView.addSubview(messageLabel)
