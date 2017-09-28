@@ -61,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             config.appVersion = version
         }
+        // Enable / Disable bugsnag
+        config.autoNotify = !UserDefaults.standard.bool(forKey: "health_report")
         // Start Bugsnag with custom configuration
         Bugsnag.start(with: config)
 
