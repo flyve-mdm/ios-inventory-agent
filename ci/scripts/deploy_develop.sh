@@ -90,4 +90,7 @@ git commit -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
 git push origin gh-pages
 
 git checkout $CIRCLE_BRANCH -f
+# Update app info
+source "${SCRIPT_PATH}/app_info.sh"
+# Send app to TestFligth
 bundle exec fastlane beta
