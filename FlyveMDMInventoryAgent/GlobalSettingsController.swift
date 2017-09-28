@@ -26,6 +26,7 @@
  */
 
 import UIKit
+import Bugsnag
 
 /// GlobalSettingsController class
 class GlobalSettingsController: UIViewController {
@@ -132,7 +133,8 @@ class GlobalSettingsController: UIViewController {
         } else if uiSwitch.tag == 888 {
             let index: IndexPath = IndexPath(row: 0, section: 3)
             UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "health_report"), forKey: "health_report")
-            //disable health report
+            // enable / disable bugsnag
+            Bugsnag.configuration()?.autoNotify = !UserDefaults.standard.bool(forKey: "health_report")
             settingsTableView.beginUpdates()
             settingsTableView.reloadRows(at: [index], with: .automatic)
             settingsTableView.endUpdates()
