@@ -129,6 +129,20 @@ class GlobalSettingsController: UIViewController {
             settingsTableView.beginUpdates()
             settingsTableView.reloadRows(at: [index], with: .automatic)
             settingsTableView.endUpdates()
+        } else if uiSwitch.tag == 888 {
+            let index: IndexPath = IndexPath(row: 0, section: 3)
+            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "health_report"), forKey: "health_report")
+            //disable health report
+            settingsTableView.beginUpdates()
+            settingsTableView.reloadRows(at: [index], with: .automatic)
+            settingsTableView.endUpdates()
+        } else if uiSwitch.tag == 999 {
+            let index: IndexPath = IndexPath(row: 1, section: 3)
+            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "usage_data"), forKey: "usage_data")
+            //disable usage data
+            settingsTableView.beginUpdates()
+            settingsTableView.reloadRows(at: [index], with: .automatic)
+            settingsTableView.endUpdates()
         }
     }
 }
@@ -142,7 +156,7 @@ extension GlobalSettingsController: UITableViewDataSource {
      - return: number of sections
      */
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
 
     /**
@@ -220,6 +234,43 @@ extension GlobalSettingsController: UITableViewDataSource {
             } else {
                 cell.detailTextLabel?.text = ""
             }
+        } else if indexPath.section == 3 && indexPath.row == 0 {
+            let crashSwitch = UISwitch()
+            crashSwitch.translatesAutoresizingMaskIntoConstraints = false
+            crashSwitch.tag = 888
+            crashSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
+            cell.textLabel?.text = NSLocalizedString("health_report", comment: "")
+            
+            if UserDefaults.standard.bool(forKey: "health_report") {
+                cell.detailTextLabel?.text = NSLocalizedString("health_report_enable", comment: "")
+            } else {
+                cell.detailTextLabel?.text = NSLocalizedString("health_report_disable", comment: "")
+                
+            }
+            
+            cell.contentView.addSubview(crashSwitch)
+            crashSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
+            crashSwitch.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: -16.0).isActive = true
+            crashSwitch.setOn(!UserDefaults.standard.bool(forKey: "health_report"), animated: false)
+            
+        } else if indexPath.section == 3 && indexPath.row == 1 {
+            let dataSwitch = UISwitch()
+            dataSwitch.translatesAutoresizingMaskIntoConstraints = false
+            dataSwitch.tag = 999
+            dataSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
+            cell.textLabel?.text = NSLocalizedString("usage_data", comment: "")
+            
+            if UserDefaults.standard.bool(forKey: "usage_data") {
+                cell.detailTextLabel?.text = NSLocalizedString("usage_data_enable", comment: "")
+            } else {
+                cell.detailTextLabel?.text = NSLocalizedString("usage_data_disable", comment: "")
+                
+            }
+            
+            cell.contentView.addSubview(dataSwitch)
+            dataSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
+            dataSwitch.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: -16.0).isActive = true
+            dataSwitch.setOn(!UserDefaults.standard.bool(forKey: "usage_data"), animated: false)
         }
         return cell
     }
@@ -234,8 +285,10 @@ extension GlobalSettingsController: UITableViewDataSource {
             return NSLocalizedString("global_title", comment: "")
         } else if section == 1 {
             return NSLocalizedString("server", comment: "")
-        } else {
+        } else if section == 2 {
             return NSLocalizedString("authentication_credentials", comment: "")
+        } else {
+            return NSLocalizedString("privacy", comment: "")
         }
     }
 }
@@ -353,6 +406,20 @@ extension GlobalSettingsController: UITableViewDelegate {
                 })
                 self.present(alert, animated: true, completion: nil)
             }
+        } else if indexPath.section == 3 && indexPath.row == 0 {
+            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "health_report"), forKey: "health_report")
+            //crash
+            tableView.beginUpdates()
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            
+        } else if indexPath.section == 3 && indexPath.row == 1 {
+            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "usage_data"), forKey: "usage_data")
+            //data
+            tableView.beginUpdates()
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            
         }
     }
 }
