@@ -114,7 +114,7 @@ class AboutController: UIViewController {
     /// Set up the views of the controller
     func setupViews() {
         view.backgroundColor = .white
-        navigationItem.title = "About"
+        navigationItem.title = NSLocalizedString("about", comment: "")
         view.addSubview(logoImage)
         view.addSubview(infoTextView)
     }
