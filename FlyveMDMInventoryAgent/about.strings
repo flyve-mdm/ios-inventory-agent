@@ -1,7 +1,5 @@
-/* 
-  about.strings
-  FlyveMDMInventoryAgent
-
-  Created by Hector Rondon on 28/09/17.
-  Copyright © 2017 Teclib. All rights reserved.
-*/
+"version" = "0.1.0";
+"build" = "188";
+"date" = "Thu Sep 28 15:34:48 2017";
+"commit" = "7966c51";
+"commit_full" = "7966c5176e1190bcb42074a80b3e13c98815d3c3";

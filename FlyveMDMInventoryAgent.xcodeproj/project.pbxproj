@@ -17,6 +17,7 @@
 		0AEB1ED71F10317F00F18217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB1ED61F10317F00F18217 /* Assets.xcassets */; };
 		0AEB1EE51F10317F00F18217 /* FlyveMDMInventoryAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1EE41F10317F00F18217 /* FlyveMDMInventoryAgentTests.swift */; };
 		0AEB1EF01F10317F00F18217 /* FlyveMDMInventoryAgentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1EEF1F10317F00F18217 /* FlyveMDMInventoryAgentUITests.swift */; };
+		0AFA24811F7D33C20055C336 /* about.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AFA24801F7D33C20055C336 /* about.strings */; };
 		4729E178735A2932C88C6F99 /* Pods_FlyveMDMInventoryAgentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0306BFDB6C7BF3B0A1FB8A8 /* Pods_FlyveMDMInventoryAgentTests.framework */; };
 		F043C0396234B04DE5C74C1F /* Pods_FlyveMDMInventoryAgentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB44EF50B059D2AB14293936 /* Pods_FlyveMDMInventoryAgentUITests.framework */; };
 		F10C7200A00D7A1246DBB6BB /* Pods_FlyveMDMInventoryAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B03E657C20C27B400956246 /* Pods_FlyveMDMInventoryAgent.framework */; };
@@ -63,6 +64,7 @@
 		0AEB1EEB1F10317F00F18217 /* FlyveMDMInventoryAgentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyveMDMInventoryAgentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEB1EEF1F10317F00F18217 /* FlyveMDMInventoryAgentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyveMDMInventoryAgentUITests.swift; sourceTree = "<group>"; };
 		0AEB1EF11F10317F00F18217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AFA24801F7D33C20055C336 /* about.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = about.strings; sourceTree = "<group>"; };
 		673B72F5F327AB6823D07D89 /* Pods-FlyveMDMInventoryAgentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentTests/Pods-FlyveMDMInventoryAgentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F9D330769AB62C6396204B3 /* Pods-FlyveMDMInventoryAgentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgentUITests/Pods-FlyveMDMInventoryAgentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9AF5EF3FD934F0F36F0E3361 /* Pods-FlyveMDMInventoryAgent.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyveMDMInventoryAgent.beta.xcconfig"; path = "Pods/Target Support Files/Pods-FlyveMDMInventoryAgent/Pods-FlyveMDMInventoryAgent.beta.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				0AEB1ECF1F10317F00F18217 /* AppDelegate.swift */,
 				0AEB1EDB1F10317F00F18217 /* Info.plist */,
 				0AD14F0E1F75625F002F5F37 /* Localizable.strings */,
+				0AFA24801F7D33C20055C336 /* about.strings */,
 			);
 			path = FlyveMDMInventoryAgent;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFA24811F7D33C20055C336 /* about.strings in Resources */,
 				0AEB1ED71F10317F00F18217 /* Assets.xcassets in Resources */,
 				0AD14F0C1F75625F002F5F37 /* Localizable.strings in Resources */,
 			);
