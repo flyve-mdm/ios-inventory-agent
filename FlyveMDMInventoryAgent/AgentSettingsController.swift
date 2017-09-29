@@ -152,6 +152,11 @@ class AgentSettingsController: UIViewController {
         guard let server = UserDefaults.standard.string(forKey: "nameServer"), !server.isEmpty else {
             messageLabel.text = NSLocalizedString("server_empty", comment: "")
             self.loadingIndicatorView.stopAnimating()
+            
+            delay {
+                self.messageLabel.text = ""
+            }
+            
             return
         }
 
@@ -174,7 +179,7 @@ class AgentSettingsController: UIViewController {
             switch response.result {
             case .success:
                 self.messageLabel.text = NSLocalizedString("ok_send_inventory", comment: "")
-
+                self.sendUsageData(xml)
                 if UserDefaults.standard.bool(forKey: "notifications") {
 
                     if #available(iOS 10.0, *) {
@@ -223,6 +228,27 @@ class AgentSettingsController: UIViewController {
                 }
             }
             self.loadingIndicatorView.stopAnimating()
+            delay {
+                self.messageLabel.text = ""
+            }
+        }
+    }
+    
+    func sendUsageData(_ xml: String) {
+        
+        if !UserDefaults.standard.bool(forKey: "usage_data") {
+            
+            Alamofire.request(serverAnonymous, method: .post, parameters: [:], encoding: xml, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseString { response in
+                    
+                    switch response.result {
+                    case .success:
+                        debugPrint("Success: \(response.description)")
+                    case .failure( _):
+                        debugPrint("Error: \(response.result.error?.localizedDescription ?? "failure")")
+                    }
+            }
         }
     }
     
