@@ -312,12 +312,7 @@ extension AgentSettingsController: UITableViewDataSource {
             inventorySwitch.tag = 777
             inventorySwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             cell.textLabel?.text = NSLocalizedString("inventory", comment: "")
-
-            if disable {
-                cell.detailTextLabel?.text = NSLocalizedString("inventory_disable", comment: "")
-            } else {
-                cell.detailTextLabel?.text = NSLocalizedString("inventory_enable", comment: "")
-            }
+            cell.detailTextLabel?.text = NSLocalizedString("inventory_detail", comment: "")
 
             cell.contentView.addSubview(inventorySwitch)
             inventorySwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
