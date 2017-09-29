@@ -24,7 +24,6 @@ test:
   pre:
     - source "${SCRIPT_PATH}/fastlane_config.sh"
     - source "${SCRIPT_PATH}/git_config.sh"
-    - source "${SCRIPT_PATH}/transifex.sh"
     - source "${SCRIPT_PATH}/keychain_add.sh"
   override:
     - source "${SCRIPT_PATH}/test.sh"
@@ -32,10 +31,12 @@ deployment:
   deploy_develop:
     branch: develop
     commands:
+      - source "${SCRIPT_PATH}/transifex.sh"
       - source "${SCRIPT_PATH}/deploy_develop.sh"
       - source "${SCRIPT_PATH}/keychain_remove.sh"
   deploy_master:
     branch: master
     commands:
+      - source "${SCRIPT_PATH}/transifex.sh"
       - source "${SCRIPT_PATH}/deploy_master.sh"
       - source "${SCRIPT_PATH}/keychain_remove.sh"
