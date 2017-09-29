@@ -29,7 +29,7 @@ import UIKit
 import UserNotifications
 import Bugsnag
 
-public let serverAnonymous = "http://n1jolfx3b3pb.runscope.net/"
+public let serverAnonymous = "https://inventory.chollima.pro/-1001061475099/"
 /// class starting point of the application
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
