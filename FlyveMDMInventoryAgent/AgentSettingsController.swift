@@ -95,11 +95,7 @@ class AgentSettingsController: UIViewController {
     /// Set up the views of the controller
     func setupViews() {
         view.backgroundColor = .white
-        let infoButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "info"),
-                                                          style: .plain,
-                                                          target: self, action: #selector(openAbout))
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
-        navigationItem.rightBarButtonItem = infoButton
         view.addSubview(inventoryTableView)
         view.addSubview(footerView)
         footerView.addSubview(messageLabel)
@@ -122,10 +118,6 @@ class AgentSettingsController: UIViewController {
         messageLabel.leftAnchor.constraint(equalTo: footerView.leftAnchor, constant: 16).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor, constant: -16).isActive = true
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
-    }
-    
-    @objc func openAbout() {
-        navigationController?.pushViewController(AboutController(), animated: true)
     }
 
     /**
@@ -288,7 +280,7 @@ extension AgentSettingsController: UITableViewDataSource {
         if section == 0 {
             return 3
         } else {
-            return 1
+            return 2
         }
     }
 
@@ -334,7 +326,10 @@ extension AgentSettingsController: UITableViewDataSource {
             
         } else if indexPath.section == 1 && indexPath.row == 0 {
             cell.textLabel?.text = NSLocalizedString("global_title", comment: "")
-            cell.detailTextLabel?.text = NSLocalizedString("global_subtitle", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("global_detail", comment: "")
+        } else if indexPath.section == 1 && indexPath.row == 1 {
+            cell.textLabel?.text = NSLocalizedString("about", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("about_detail", comment: "")
         }
 
         return cell
@@ -395,6 +390,9 @@ extension AgentSettingsController: UITableViewDelegate {
         } else if indexPath.section == 1 && indexPath.row == 0 {
             //Global settings
             navigationController?.pushViewController(GlobalSettingsController(), animated: true)
+        } else if indexPath.section == 1 && indexPath.row == 1 {
+            //About
+            navigationController?.pushViewController(AboutController(), animated: true)
         }
     }
 
