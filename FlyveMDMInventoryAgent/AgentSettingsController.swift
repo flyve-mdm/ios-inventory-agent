@@ -388,6 +388,10 @@ extension AgentSettingsController: UITableViewDelegate {
             //run now
             generateXML()
 
+        } else if indexPath.section == 0 && indexPath.row == 2 {
+            //show my inventory
+            navigationController?.pushViewController(InventoryController(), animated: true)
+            
         } else if indexPath.section == 1 && indexPath.row == 0 {
             //Global settings
             navigationController?.pushViewController(GlobalSettingsController(), animated: true)
