@@ -257,13 +257,10 @@ class AgentSettingsController: UIViewController {
      */
     @objc func switchAtValueChanged(uiSwitch: UISwitch) {
         if uiSwitch.tag == 777 {
-            let indexMe: IndexPath = IndexPath(row: 0, section: 0)
-            let index: IndexPath = IndexPath(row: 1, section: 0)
             disable = !disable
-
             //disable inventory
             inventoryTableView.beginUpdates()
-            inventoryTableView.reloadRows(at: [indexMe, index], with: .automatic)
+            inventoryTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
             inventoryTableView.endUpdates()
         }
     }
@@ -289,7 +286,7 @@ extension AgentSettingsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         if section == 0 {
-            return 2
+            return 3
         } else {
             return 1
         }
@@ -327,6 +324,14 @@ extension AgentSettingsController: UITableViewDataSource {
             cell.textLabel?.text = NSLocalizedString("inventory_run", comment: "")
             cell.detailTextLabel?.text = NSLocalizedString("run", comment: "")
 
+        } else if indexPath.section == 0 && indexPath.row == 2 {
+            
+            cell.isUserInteractionEnabled = disable
+            cell.textLabel!.isEnabled = disable
+            cell.detailTextLabel!.isEnabled = disable
+            cell.textLabel?.text = NSLocalizedString("show_inventory", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("show_inventory_detail", comment: "")
+            
         } else if indexPath.section == 1 && indexPath.row == 0 {
             cell.textLabel?.text = NSLocalizedString("global_title", comment: "")
             cell.detailTextLabel?.text = NSLocalizedString("global_subtitle", comment: "")
@@ -373,12 +378,10 @@ extension AgentSettingsController: UITableViewDelegate {
 
         if indexPath.section == 0 && indexPath.row == 0 {
 
-            let index: IndexPath = IndexPath(row: 1, section: 0)
             disable = !disable
-
             //disable inventory
             tableView.beginUpdates()
-            tableView.reloadRows(at: [indexPath, index], with: .automatic)
+            tableView.reloadSections(IndexSet(integer: indexPath.section), with: .automatic)
             tableView.endUpdates()
 
         } else if indexPath.section == 0 && indexPath.row == 1 {
