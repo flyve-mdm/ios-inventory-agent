@@ -46,12 +46,12 @@ prose:
           value: false
       - name: "hackerNewsURL"
         field:
-          element: "text" 
+          element: "text"
           label: Hacker News URL
           value: ""
       - name: "redditURL"
         field:
-          element: "text"
+          element: "text" 
           label: Reddit URL
           value: ""
 
@@ -59,7 +59,7 @@ prose:
       - name: "layout"
         field:
           element: "hidden"
-          value: "container"
+          value: "post"
       - name: "title"
         field:
           element: "text"
@@ -74,6 +74,11 @@ prose:
         field:
           element: "checkbox"
           label: "wiki"
+          value: false
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
           value: false
       - name: "description"
         field:
