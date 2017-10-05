@@ -33,7 +33,7 @@ class InventoryController: UIViewController {
     // MARK: Properties
     
     let cellId = "InventoryCell"
-    var inventory = [String: AnyObject]()
+    var inventory = [AnyObject]()
     
     /// This property contains the configurations for the table view
     lazy var inventoryTableView: UITableView = {
@@ -58,7 +58,12 @@ class InventoryController: UIViewController {
         
         setupViews()
         addConstraints()
-        loadInventory()
+        
+        loadInventory { error in
+            if error == nil {
+                self.inventoryTableView.reloadData()
+            }
+        }
     }
     
     /// Set up the views of the controller
@@ -76,23 +81,40 @@ class InventoryController: UIViewController {
         inventoryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
-    func loadInventory() {
+    func loadInventory(completion: @escaping (Error?) -> Void) {
         
-        let inventoryTask = InventoryTask()
-        inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", json: true) { result in
-            
-            if let data = result.data(using: .utf8) {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] ?? [String: AnyObject]()
-                    
-                    if let dictionary: [String: AnyObject] = json["request"]?["content"] as? [String : AnyObject] {
-                        self.inventory = dictionary
-                        self.inventoryTableView.reloadData()
+        let queue = DispatchQueue(label: "loadInventory")
+
+        // submit a task to the queue for background execution
+        queue.async {
+            let inventoryTask = InventoryTask()
+            inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", json: true) { result in
+                
+                if let data = result.data(using: .utf8) {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] ?? [String: AnyObject]()
+                        
+                        if let dictionary: [String: AnyObject] = json["request"]?["content"] as? [String : AnyObject] {
+                            
+                            for item in dictionary {
+                                for object in (item.value as? [AnyObject] ?? [AnyObject]()) {
+                                    
+                                    var dictionarySection = [String: AnyObject]()
+                                    dictionarySection[item.key] = object
+                                    self.inventory.insert(dictionarySection as AnyObject, at: self.inventory.count)
+                                }
+                            }
+                            DispatchQueue.main.async {
+                                completion(nil)
+                            }
+                        }
+                        
+                    } catch {
+                        print(error.localizedDescription)
+                        DispatchQueue.main.async {
+                            completion(error)
+                        }
                     }
-                    
-                    self.inventoryTableView.reloadData()
-                } catch {
-                    print(error.localizedDescription)
                 }
             }
         }
@@ -116,11 +138,12 @@ extension InventoryController: UITableViewDataSource {
      - return: number of row in sections
      */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let key = Array(inventory.keys)[section]
-        let value = inventory[key] as? [AnyObject] ?? [AnyObject]()
-        let dic = value[0] as? [String: AnyObject] ?? [String: AnyObject]()
+        
+        let dic = inventory[section] as? [String: AnyObject] ?? [String: AnyObject]()
+        let key = Array(dic.keys)[0]
+        let object = dic[key] as? [String: String] ?? [String: String]()
 
-        return dic.count
+        return object.count
     }
     
     /**
@@ -133,14 +156,14 @@ extension InventoryController: UITableViewDataSource {
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellId)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
-        let keyParent = Array(inventory.keys)[indexPath.section]
-        let array = inventory[keyParent] as? [AnyObject] ?? [AnyObject]()
-        let dic = array[0] as? [String: AnyObject] ?? [String: AnyObject]()
-        let key = Array(dic.keys)[indexPath.row]
-        let value = Array(dic.values)[indexPath.row]
-        
+        let dic = inventory[indexPath.section] as? [String: AnyObject] ?? [String: AnyObject]()
+        let index = Array(dic.keys)[0]
+        let object = dic[index] as? [String: String] ?? [String: String]()
+        let key = Array(object.keys)[indexPath.row]
+        let value = Array(object.values)[indexPath.row]
+
         cell.textLabel?.text = key.lowercased()
-        cell.detailTextLabel?.text = value as? String ?? ""
+        cell.detailTextLabel?.text = value
         cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.textColor = .darkGray
         
@@ -153,7 +176,9 @@ extension InventoryController: UITableViewDataSource {
      - return: `UITableViewCell`
      */
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Array(inventory.keys)[section].uppercased()
+        let dic = inventory[section] as? [String: AnyObject] ?? [String: AnyObject]()
+        let key = Array(dic.keys)[0]
+        return key.uppercased()
     }
 }
 
