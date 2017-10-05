@@ -126,19 +126,19 @@ class InventoryController: UIViewController {
     @objc func share() {
         
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: nil, message: "Share inventory", preferredStyle: .actionSheet)
+            let alertController = UIAlertController(title: nil, message: NSLocalizedString("inventory_share", comment: ""), preferredStyle: .actionSheet)
             
-            let cancelAction = UIAlertAction(title: "cancel", style: .cancel) { _ in
+            let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel) { _ in
                 // ...
             }
             alertController.addAction(cancelAction)
             
-            let xmlAction = UIAlertAction(title: "xml", style: .default) { _ in
+            let xmlAction = UIAlertAction(title: "XML", style: .default) { _ in
                 self.shareInventory()
             }
             alertController.addAction(xmlAction)
             
-            let jsonAction = UIAlertAction(title: "json", style: .default) { _ in
+            let jsonAction = UIAlertAction(title: "JSON", style: .default) { _ in
                 self.shareInventory(json: true)
             }
             alertController.addAction(jsonAction)
