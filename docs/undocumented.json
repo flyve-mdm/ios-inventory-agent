@@ -153,6 +153,13 @@
       "symbol": "LogEvent.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/String+Extension.swift",
+      "line": 32,
+      "symbol": "String.camelCaseToWords()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/distiller/flyve-mdm-ios-inventory-agent"
