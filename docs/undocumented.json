@@ -2,9 +2,9 @@
   "warnings": [
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AboutController.swift",
-      "line": 35,
-      "symbol": "AboutController.info",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "line": 132,
+      "symbol": "AboutController.getResource(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -23,16 +23,65 @@
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
-      "line": 127,
-      "symbol": "AgentSettingsController.openAbout()",
+      "line": 229,
+      "symbol": "AgentSettingsController.sendUsageData(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AppDelegate.swift",
+      "line": 32,
+      "symbol": "serverAnonymous",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/GlobalSettingsController.swift",
-      "line": 35,
+      "line": 36,
       "symbol": "GlobalSettingsController.cellId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
+      "line": null,
+      "symbol": "InventoryController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
+      "line": null,
+      "symbol": "InventoryController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
+      "line": 31,
+      "symbol": "InventoryController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
+      "line": 35,
+      "symbol": "InventoryController.cellId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
+      "line": 36,
+      "symbol": "InventoryController.inventory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
+      "line": 84,
+      "symbol": "InventoryController.loadInventory(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
