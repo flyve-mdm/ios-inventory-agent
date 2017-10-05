@@ -34,6 +34,7 @@ class InventoryController: UIViewController {
     
     let cellId = "InventoryCell"
     var inventory = [AnyObject]()
+    let inventoryTask = InventoryTask()
     
     /// This property contains the configurations for the table view
     lazy var inventoryTableView: UITableView = {
@@ -69,7 +70,9 @@ class InventoryController: UIViewController {
     /// Set up the views of the controller
     func setupViews() {
         view.backgroundColor = .white
+        let shareButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target: self, action: #selector(self.share))
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
+        navigationItem.rightBarButtonItem = shareButton
         view.addSubview(inventoryTableView)
     }
     
@@ -87,8 +90,8 @@ class InventoryController: UIViewController {
 
         // submit a task to the queue for background execution
         queue.async {
-            let inventoryTask = InventoryTask()
-            inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", json: true) { result in
+            
+            self.inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", json: true) { result in
                 
                 if let data = result.data(using: .utf8) {
                     do {
@@ -116,6 +119,60 @@ class InventoryController: UIViewController {
                         }
                     }
                 }
+            }
+        }
+    }
+    
+    @objc func share() {
+        
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: nil, message: "Share inventory", preferredStyle: .actionSheet)
+            
+            let cancelAction = UIAlertAction(title: "cancel", style: .cancel) { _ in
+                // ...
+            }
+            alertController.addAction(cancelAction)
+            
+            let xmlAction = UIAlertAction(title: "xml", style: .default) { _ in
+                self.shareInventory()
+            }
+            alertController.addAction(xmlAction)
+            
+            let jsonAction = UIAlertAction(title: "json", style: .default) { _ in
+                self.shareInventory(json: true)
+            }
+            alertController.addAction(jsonAction)
+            
+            self.present(alertController, animated: true) { }
+            
+        }
+    }
+    
+    func shareInventory(json: Bool = false) {
+        
+        self.inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", json: json) { result in
+            createFile(result, json: json) { result in
+                if let path: URL = result {
+                    let activityVC = UIActivityViewController(activityItems: [path], applicationActivities: nil)
+                    self.present(activityVC, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func createFile(_ inventory: String, json: Bool = false, completion: @escaping (_ result: URL?) -> Void) {
+        
+        let fileName = json ? "inventory.json" : "inventory.xml"
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let path = dir.appendingPathComponent(fileName)
+            
+            do {
+                try inventory.write(to: path, atomically: false, encoding: String.Encoding.utf8)
+                completion(path)
+            } catch {
+                completion(nil)
             }
         }
     }
