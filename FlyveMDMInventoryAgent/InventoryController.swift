@@ -219,7 +219,7 @@ extension InventoryController: UITableViewDataSource {
         let key = Array(object.keys)[indexPath.row]
         let value = Array(object.values)[indexPath.row]
 
-        cell.textLabel?.text = key.lowercased()
+        cell.textLabel?.text = key.camelCaseToWords().uppercased()
         cell.detailTextLabel?.text = value
         cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.textColor = .darkGray
@@ -235,7 +235,7 @@ extension InventoryController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let dic = inventory[section] as? [String: AnyObject] ?? [String: AnyObject]()
         let key = Array(dic.keys)[0]
-        return key.uppercased()
+        return key.camelCaseToWords().uppercased()
     }
 }
 
