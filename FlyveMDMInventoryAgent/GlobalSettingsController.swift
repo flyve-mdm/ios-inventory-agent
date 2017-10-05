@@ -43,7 +43,6 @@ class GlobalSettingsController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.tableFooterView = UIView()
         table.backgroundColor = UIColor.init(red: 239.0/255.0, green: 239.0/255.0, blue: 244.0/255.0, alpha: 1.0)
-        table.isScrollEnabled = false
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 100
         table.register(UITableViewCell.self, forCellReuseIdentifier: self.cellId)
