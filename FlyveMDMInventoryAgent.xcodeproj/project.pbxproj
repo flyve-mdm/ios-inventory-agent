@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A167A5A1F79B8400071C0D7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A167A591F79B8400071C0D7 /* SnapshotHelper.swift */; };
+		0A1E74B71F86D263001BD6F8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E74B61F86D263001BD6F8 /* String+Extension.swift */; };
 		0A29B9B01F7C15360094D8B5 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A29B9AF1F7C15360094D8B5 /* AboutController.swift */; };
 		0A2C0EDE1F856887007B6053 /* InventoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C0EDD1F856887007B6053 /* InventoryController.swift */; };
 		0AC9F6521F10342600A66DE8 /* AgentSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0A167A591F79B8400071C0D7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		0A1E74B61F86D263001BD6F8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0A29B9AF1F7C15360094D8B5 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		0A2C0EDD1F856887007B6053 /* InventoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryController.swift; sourceTree = "<group>"; };
 		0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSettingsController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		0AEB1ECE1F10317F00F18217 /* FlyveMDMInventoryAgent */ = {
 			isa = PBXGroup;
 			children = (
+				0A1E74B61F86D263001BD6F8 /* String+Extension.swift */,
 				0AFA24871F7DC6570055C336 /* Delay+Helper.swift */,
 				0AC9F64D1F10342600A66DE8 /* AgentSettingsController.swift */,
 				0AC9F64F1F10342600A66DE8 /* GlobalSettingsController.swift */,
@@ -557,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1E74B71F86D263001BD6F8 /* String+Extension.swift in Sources */,
 				0AE81BDD1F5DE89900029B51 /* Logger.swift in Sources */,
 				0A2C0EDE1F856887007B6053 /* InventoryController.swift in Sources */,
 				0A29B9B01F7C15360094D8B5 /* AboutController.swift in Sources */,
