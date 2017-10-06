@@ -2,8 +2,15 @@
   "warnings": [
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AboutController.swift",
-      "line": 132,
+      "line": 139,
       "symbol": "AboutController.getResource(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AboutController.swift",
+      "line": 143,
+      "symbol": "AboutController.sendError()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
