@@ -188,7 +188,12 @@ extension GlobalSettingsController: UITableViewDataSource {
             notificationSwitch.tag = 777
             notificationSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             cell.textLabel?.text = NSLocalizedString("notifications", comment: "")
-            cell.detailTextLabel?.text = NSLocalizedString("notifications_detail", comment: "")
+            
+            if UserDefaults.standard.bool(forKey: "notifications") {
+                cell.detailTextLabel?.text = NSLocalizedString("notifications_disable", comment: "")
+            } else {
+                cell.detailTextLabel?.text = NSLocalizedString("notifications_enable", comment: "")
+            }
 
             cell.contentView.addSubview(notificationSwitch)
             notificationSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
@@ -236,7 +241,12 @@ extension GlobalSettingsController: UITableViewDataSource {
             crashSwitch.tag = 888
             crashSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             cell.textLabel?.text = NSLocalizedString("health_report", comment: "")
-            cell.detailTextLabel?.text = NSLocalizedString("health_report_detail", comment: "")
+            
+            if UserDefaults.standard.bool(forKey: "health_report") {
+                cell.detailTextLabel?.text = NSLocalizedString("health_report_enable", comment: "")
+            } else {
+                cell.detailTextLabel?.text = NSLocalizedString("health_report_disable", comment: "")
+            }
 
             cell.contentView.addSubview(crashSwitch)
             crashSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
@@ -249,7 +259,12 @@ extension GlobalSettingsController: UITableViewDataSource {
             dataSwitch.tag = 999
             dataSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             cell.textLabel?.text = NSLocalizedString("usage_data", comment: "")
-            cell.detailTextLabel?.text = NSLocalizedString("usage_data_detail", comment: "")
+            
+            if UserDefaults.standard.bool(forKey: "usage_data") {
+                cell.detailTextLabel?.text = NSLocalizedString("usage_data_enable", comment: "")
+            } else {
+                cell.detailTextLabel?.text = NSLocalizedString("usage_data_disable", comment: "")
+            }
             
             cell.contentView.addSubview(dataSwitch)
             dataSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
