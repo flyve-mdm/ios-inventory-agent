@@ -198,7 +198,7 @@ extension GlobalSettingsController: UITableViewDataSource {
         } else if indexPath.section == 1 && indexPath.row == 0 {
             cell.textLabel?.text = NSLocalizedString("server", comment: "")
 
-            if UserDefaults.standard.string(forKey: "nameServer") != "" {
+            if UserDefaults.standard.string(forKey: "nameServer") != "" && UserDefaults.standard.string(forKey: "nameServer") != nil {
                 cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameServer") ?? NSLocalizedString("server_input", comment: "")
             } else {
                 cell.detailTextLabel?.text = NSLocalizedString("server_input", comment: "")
@@ -207,10 +207,10 @@ extension GlobalSettingsController: UITableViewDataSource {
         } else if indexPath.section == 1 && indexPath.row == 1 {
             cell.textLabel?.text = NSLocalizedString("tag", comment: "")
 
-            if UserDefaults.standard.string(forKey: "nameTag") != "" {
+            if UserDefaults.standard.string(forKey: "nameTag") != "" && UserDefaults.standard.string(forKey: "nameTag") != nil {
                 cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: "nameTag") ?? ""
             } else {
-                cell.detailTextLabel?.text = ""
+                cell.detailTextLabel?.text = NSLocalizedString("tag_input", comment: "")
             }
 
         } else if indexPath.section == 2 && indexPath.row == 0 {
