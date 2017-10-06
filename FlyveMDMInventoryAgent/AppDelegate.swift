@@ -69,6 +69,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
+        // Change global tint color
+        let flyveColor = UIColor.init(red: 23.0/255.0, green: 134.0/255.0, blue: 131.0/255.0, alpha: 1.0)
+        window?.tintColor = flyveColor
+        UISwitch.appearance().onTintColor = flyveColor
+        
         let navigationController = UINavigationController(rootViewController: AgentSettingsController())
         window?.rootViewController = navigationController
 
