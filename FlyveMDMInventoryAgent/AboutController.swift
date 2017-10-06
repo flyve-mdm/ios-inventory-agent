@@ -26,6 +26,7 @@
  */
 
 import UIKit
+import Bugsnag
 
 /// AboutController class
 class AboutController: UIViewController {
@@ -33,12 +34,18 @@ class AboutController: UIViewController {
     // MARK: Properties
     
     /// This property contatins the logo for view
-    let logoImage: UIImageView = {
+    lazy var logoImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "agent")
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
+        imageView.isUserInteractionEnabled = true
+        
+        let multiTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.sendError))
+        multiTap.numberOfTapsRequired = 10
+        imageView.addGestureRecognizer(multiTap)
+        
         return imageView
     }()
     
@@ -131,5 +138,12 @@ class AboutController: UIViewController {
     
     func getResource(_ key: String) -> String {
         return NSLocalizedString(key, tableName: "about", comment: "")
+    }
+    
+    @objc func sendError() {
+        let exception = NSException(name:NSExceptionName(rawValue: "TestException"),
+                                    reason:"Testing crash report",
+                                    userInfo:nil)
+        Bugsnag.notify(exception)
     }
 }
