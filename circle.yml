@@ -10,6 +10,10 @@ machine:
     CERTIFICATES_PATH: ./ci/cert
   xcode:
     version: 9.0
+general:
+  branches:
+    ignore:
+      - gh-pages
 checkout:
   post:
     - git tag | xargs git tag -d
