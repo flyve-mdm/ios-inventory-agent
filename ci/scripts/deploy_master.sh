@@ -47,6 +47,11 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     conventional-github-releaser -p angular -t $GITHUB_TOKEN
     # Archive app
     bundle exec fastlane archive
+    # Add screenshots folder
+    git add fastlane/screenshots -f
+    # Create commit, NOTICE: this commit is not sent
+    git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
+
     # Copy ipa file in artifacts folder
     cp ${APPNAME}.ipa $CIRCLE_ARTIFACTS
     # Upload ipa file to release
@@ -81,6 +86,31 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git add CHANGELOG.md
     # Create commit
     git commit -m "ci(docs): generate CHANGELOG.md for version ${GIT_TAG}"
+
+    # Remove old screenshots
+    rm -rf screenshots
+    
+    git checkout $CIRCLE_BRANCH fastlane/screenshots
+    mv fastlane/screenshots/ screenshots/
+
+    # Create header content to screenshots
+    echo "---" > header.html
+    echo "layout: container" >> header.html
+    echo "namePage: screenshots" >> header.html
+    echo "---" >> header.html
+
+    # Add header to CHANGELOG.md
+    (cat header.html ; cat screenshots/screenshots.html) > screenshots/index.html
+    # Remove CHANGELOG_COPY.md
+    rm screenshots/screenshots.html
+    rm header.html
+
+    # Add screenshots folder
+    git add fastlane/screenshots/
+    git add screenshots
+    # Create commit
+    git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
+
     # Push commit to origin gh-pages branch
     git push origin gh-pages
 
