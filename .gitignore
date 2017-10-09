@@ -4,3 +4,8 @@ _site
 .jekyll-metadata
 .DS_Store 
 node_modules
+.bundle/
+FlyveMDMInventoryAgent.xcworkspace/
+Pods/
+fastlane/
+vendor/
