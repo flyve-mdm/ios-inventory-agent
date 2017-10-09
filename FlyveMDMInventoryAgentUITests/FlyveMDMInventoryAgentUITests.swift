@@ -54,8 +54,10 @@ class FlyveMDMInventoryAgentUITests: XCTestCase {
     /// This method take screenshots from fastlane snapshot
     func testTakeScreenshots() {
         
-        app.tap()
-        app.navigationBars.buttons.element(boundBy: 0).tap()
+        let alert = app.alerts.element.collectionViews.buttons["OK"]
+        if alert.exists {
+            alert.tap()
+        }
         snapshot("01Screen")
         let cells = app.tables.cells
         let inventoryCell = cells.element(boundBy: 2)
