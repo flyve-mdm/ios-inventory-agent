@@ -55,10 +55,19 @@ class FlyveMDMInventoryAgentUITests: XCTestCase {
     func testTakeScreenshots() {
         
         app.tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
         snapshot("01Screen")
         let cells = app.tables.cells
-        let lastCell = cells.element(boundBy: cells.count - 1)
-        lastCell.tap()
+        let inventoryCell = cells.element(boundBy: 2)
+        inventoryCell.tap()
         snapshot("02Screen")
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        let globalCell = cells.element(boundBy: cells.count-2)
+        globalCell.tap()
+        snapshot("03Screen")
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        let aboutCell = cells.element(boundBy: cells.count-1)
+        aboutCell.tap()
+        snapshot("04Screen")
     }
 }
