@@ -83,9 +83,9 @@ public class InventoryTask {
                                     createElement(tag: "KEYVALUE", key: "KEY_VALUE", value: "\(tag != "" ? tag : "N/A" )")
                         ) +
                             createElement(tag: "BIOS", key: "BIOS", value:
-                                createElement(tag: "BMANUFACTURER", key: "BMANUFACTURER", value: "\(hardware.gpuVendor() ?? "not available")") +
-                                    createElement(tag: "MMODEL", key: "MMODEL", value: "\(hardware.identifier() ?? "not available")") +
-                                    createElement(tag: "SMODEL", key: "SMODEL", value: "\(hardware.model() ?? "not available")")
+                                createElement(tag: "BMANUFACTURER", key: "BIOS_MANUFACTURER", value: "\(hardware.gpuVendor() ?? "not available")") +
+                                    createElement(tag: "MMODEL", key: "MOTHERBOARD_MODEL", value: "\(hardware.identifier() ?? "not available")") +
+                                    createElement(tag: "SMODEL", key: "SYSTEM_MODEL", value: "\(hardware.model() ?? "not available")")
                         ) +
                             createElement(tag: "HARDWARE", key: "HARDWARE", value:
                                 createElement(tag: "NAME", key: "NAME", value: "\(hardware.model() ?? "not available")") +
