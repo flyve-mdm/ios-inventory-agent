@@ -28,7 +28,7 @@
 GIT_TAG=$(jq -r ".version" package.json)
 
 echo "\"version\" = \"$GIT_TAG\";" > "$APPNAME/about.strings"
-echo "\"build\" = \"188\";" >> "$APPNAME/about.strings"
+echo "\"build\" = \"$CIRCLE_BUILD_NUM\";" >> "$APPNAME/about.strings"
 echo "\"date\" = \"$(date "+%a %b %d %H:%M:%S %Y")\";" >> "$APPNAME/about.strings"
 echo "\"commit\" = \"${CIRCLE_SHA1:0:7}\";" >> "$APPNAME/about.strings"
 echo "\"commit_full\" = \"$CIRCLE_SHA1\";" >> "$APPNAME/about.strings"
