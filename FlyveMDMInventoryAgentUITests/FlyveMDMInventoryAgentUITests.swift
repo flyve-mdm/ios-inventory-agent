@@ -43,6 +43,7 @@ class FlyveMDMInventoryAgentUITests: XCTestCase {
         setupSnapshot(app)
         app.launch()
         sleep(1)
+
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
@@ -54,14 +55,16 @@ class FlyveMDMInventoryAgentUITests: XCTestCase {
     /// This method take screenshots from fastlane snapshot
     func testTakeScreenshots() {
         
-        let alert = app.alerts.element.collectionViews.buttons["OK"]
-        if alert.exists {
-            alert.tap()
+        app.tap()
+        let element: XCUIElement = app.navigationBars.buttons.element(boundBy: 0)
+        if element.exists {
+            element.tap()
         }
         snapshot("01Screen")
         let cells = app.tables.cells
         let inventoryCell = cells.element(boundBy: 2)
         inventoryCell.tap()
+        sleep(3)
         snapshot("02Screen")
         app.navigationBars.buttons.element(boundBy: 0).tap()
         let globalCell = cells.element(boundBy: cells.count-2)
@@ -70,6 +73,7 @@ class FlyveMDMInventoryAgentUITests: XCTestCase {
         app.navigationBars.buttons.element(boundBy: 0).tap()
         let aboutCell = cells.element(boundBy: cells.count-1)
         aboutCell.tap()
+        sleep(3)
         snapshot("04Screen")
     }
 }
