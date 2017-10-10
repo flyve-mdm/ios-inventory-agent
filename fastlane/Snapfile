@@ -27,6 +27,11 @@ clear_previous_screenshots true
 # Don't open the HTML summary after running snapshot
 skip_open_summary true
 
+# Reisntall app for each test
+reinstall_app true
+# Erase simulator
+erase_simulator true
+
 # Choose which project/workspace to use
 # project "./Project.xcodeproj"
 workspace ENV["XCODE_WORKSPACE"]
