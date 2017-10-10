@@ -21,7 +21,11 @@ scheme ENV["XCODE_SCHEME_UI"]
 # Where should the resulting screenshots be stored?
 output_directory "./fastlane/screenshots"
 
-clear_previous_screenshots true # remove the '#' to clear all previously generated screenshots before creating new ones
+# clear all previously generated screenshots before creating new ones
+clear_previous_screenshots true
+
+# Don't open the HTML summary after running snapshot
+skip_open_summary true
 
 # Choose which project/workspace to use
 # project "./Project.xcodeproj"
