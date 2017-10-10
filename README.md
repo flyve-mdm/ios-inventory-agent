@@ -28,7 +28,7 @@ To get started, check out <https://flyve-mdm.com/>!
 
 This application is the iOS inventory agent of the Flyve MDM project.
 
-It features a complete inventory of your iOS devices: both hardware and software informations are collected. You get the data about processor, memory, drives, sensors, etc. and also the list and description of installed application (ipa).
+It features a complete inventory of your iOS devices: both hardware and software informations are collected. You get the data about processor, memory, drives, sensors and [more](#data-collected).
 
 Flyve MDM Inventory Agent for iOS can send inventory to:
 
@@ -36,33 +36,33 @@ Flyve MDM Inventory Agent for iOS can send inventory to:
 * OCSInventory NG (ocsng) 1.3.x and 2.x
 * Mandriva Pulse2
 
-The FusionInventory project is an open source project providing:
+The Inventory project is a free software project providing:
 
 * Hardware and software inventory (multiplatform)
 * Network discovery
-* Network inventory for printers and switchs
+* Network inventory for printers and switches
 * Wake On Lan (WOL)
 * Software deployment
 * Total integration with the GLPI project (open source asset management software and helpdesk)
 
 Flyve MDM Inventory Agents can also be used with other open sources projects like Uranos or Rudder.
 
-**What's included?**
+#### Data Collected
 
 * Hardware
 * Bios
+* Operating System
 * Memory
-* Inputs
-* Sensors
+* Storages
 * Drives
 * CPUs
 * Simcards
 * Videos
 * Cameras
 * Networks
-* Envs
-* Softwares
 * Battery
+
+Visit our [website](http://flyve.org/flyve-mdm-ios-inventory-agent/) for more information.
 
 ## Build Status
 
@@ -74,14 +74,14 @@ Flyve MDM Inventory Agents can also be used with other open sources projects lik
 
 Flyve MDM Inventory Agent for iOS is running on iOS 9.3 and higher.
 
-Download the latest IPA, from GitHub releases, TestFligh or Apple Store.
+Download the latest IPA, from GitHub releases, TestFlight or Apple Store.
 
 [<img src="https://user-images.githubusercontent.com/663460/26986739-23bffc6e-4d49-11e7-92a2-cdba1b517a08.png" alt="Download from iTunes" height="60">](https://itunes.apple.com/us/app/flyve-mdm-inventory-agent)
 [<img src="https://user-images.githubusercontent.com/663460/30159664-a0e818f4-93c9-11e7-9937-501201c36709.png" alt="Download IPA from GitHub" height="60">](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/releases/latest)
 
 ## Documentation
 
-We share long-form content about the project in the [wiki](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/wiki).
+We maintain a detailed documentation of the project on its [website](http://flyve.org/flyve-mdm-ios-inventory-agent/).
 
 ## Versioning
 
