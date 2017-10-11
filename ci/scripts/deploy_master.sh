@@ -45,6 +45,8 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git push --follow-tags origin $CIRCLE_BRANCH
     # Create release with conventional-github-releaser
     conventional-github-releaser -p angular -t $GITHUB_TOKEN
+    # Update app info
+    source "${SCRIPT_PATH}/app_info.sh"
     # Archive app
     bundle exec fastlane archive
     # Add screenshots folder
@@ -116,8 +118,6 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
 
     # Checkout to release branch
     git checkout $CIRCLE_BRANCH -f
-    # Update app info
-    source "${SCRIPT_PATH}/app_info.sh"
     # Send app to App Store with fastlane 
     bundle exec fastlane publish
 fi
