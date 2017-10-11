@@ -20,7 +20,7 @@
 # @author    Hector Rondon
 # @date      28/09/17
 # @copyright Copyright © 2017 Teclib. All rights reserved.
-# @license   GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
+# @license   LGPLv3 https://www.gnu.org/licenses/lgpl-3.0.html
 # @link      https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent
 # @link      https://flyve-mdm.com
 # ------------------------------------------------------------------------------
