@@ -1,0 +1,7 @@
+clean: true
+author: Flyve MDM
+author_url: https://flyve-mdm.com
+github_url: $CIRCLE_REPOSITORY_URL
+output: docs
+theme: ./jazzy/themeFlyve
+min_acl: private
