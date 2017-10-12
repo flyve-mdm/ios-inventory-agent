@@ -113,6 +113,23 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit
     git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
 
+    # Create header content to cache
+    echo "---" > header_cache
+    echo "cache_version: $CIRCLE_SHA1" >> header_cache
+    echo "---" >> header_cache
+    # Remove header from file
+    sed -e '1,3d' sw.js > cache_file
+    rm sw.js
+    # Add new header
+    (cat header_cache ; cat cache_file) > sw.js
+    # Remove temp files
+    rm cache_file
+    rm header_cache
+    # Add sw.js to git
+    git add -u
+    # Create commit
+    git commit -m "ci(cache): force update cache for version ${GIT_TAG}"
+
     # Push commit to origin gh-pages branch
     git push origin gh-pages
 
