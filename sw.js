@@ -1,11 +1,10 @@
 ---
-cache_version: 2fce50aa9cb034bb0446f7403442fd18880b08fd
 ---
 self.addEventListener('install', function(e) { 
   
   {% assign name = site.github.project_title | replace: "flyve-mdm-", "" %} 
-
-  var CACHE_NAME = '{{name}}-version-10'
+    
+  var CACHE_NAME = '{{ site.data.config.cache_version }}'
 
   caches.keys().then(function(cacheNames) {
     return Promise.all(
@@ -14,7 +13,7 @@ self.addEventListener('install', function(e) {
           return caches.delete(cacheName)
         }
       })
-    ) 
+    )
   })
   
   e.waitUntil(
@@ -28,9 +27,6 @@ self.addEventListener('install', function(e) {
         '{{ "/css/main.css" | absolute_url }}',
         '{{ "/css/syntax.css" | absolute_url }}',
         '{{ "/images/typo.png" | absolute_url }}',
-        '{{ "/images/ipodTouch.png" | absolute_url }}',
-        '{{ "/images/ipad.png" | absolute_url }}',
-        '{{ "/images/IPhone6.png" | absolute_url }}',
         '{{ "/images/logo.png" | absolute_url }}',
         '{{ "/js/app.js" | absolute_url }}',
         '{{ "/js/jquery.min.js" | absolute_url }}',
@@ -38,6 +34,8 @@ self.addEventListener('install', function(e) {
         '{{ "/manifest.json" | absolute_url }}',
         '{{ "/fonts/glyphs/winjs-symbols.ttf" | absolute_url }}',
         '{{ "/fonts/selawk.ttf" | absolute_url }}',
+        '{{ "/fonts/selawkl.ttf" | absolute_url }}',
+        '{{ "/fonts/selawksl.ttf" | absolute_url }}'
       ])
     })
   )
