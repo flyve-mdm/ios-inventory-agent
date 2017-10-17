@@ -138,7 +138,8 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git fetch origin develop
     git checkout develop
     # Merge master on develop
-    git merge $CIRCLE_BRANCH
+    git rebase master
+    git push origin develop
 
     # Checkout to release branch
     git checkout $CIRCLE_BRANCH -f
