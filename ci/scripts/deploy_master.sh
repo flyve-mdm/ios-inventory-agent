@@ -133,6 +133,13 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Push commit to origin gh-pages branch
     git push origin gh-pages
 
+    # Update develop branch
+    git branch -D develop
+    git fetch origin develop
+    git checkout develop
+    # Merge master on develop
+    git merge $CIRCLE_BRANCH
+
     # Checkout to release branch
     git checkout $CIRCLE_BRANCH -f
     # Send app to App Store with fastlane 
