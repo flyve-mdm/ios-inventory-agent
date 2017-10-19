@@ -2,7 +2,7 @@
 
 ![Flyve MDM banner](https://user-images.githubusercontent.com/663460/26935464-54267e9c-4c6c-11e7-86df-8cfa6658133e.png)
 
-[![License](https://img.shields.io/github/license/flyve-mdm/flyve-mdm-ios-inventory-agent.svg?&label=License)](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/blob/master/LICENSE.md)
+[![License](https://img.shields.io/badge/license-LGPL_v3.0-blue.svg)](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/blob/master/LICENSE.md)
 [![Follow twitter](https://img.shields.io/twitter/follow/FlyveMDM.svg?style=social&label=Twitter&style=flat-square)](https://twitter.com/FlyveMDM)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-blue.svg)](https://t.me/flyvemdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
@@ -104,5 +104,5 @@ Ping me @hectorerb in the IRC chatroom if you get stuck.
 
 * **Name**: [Flyve MDM](https://flyve-mdm.com/) is a registered trademark of [Teclib'](http://www.teclib-edition.com/en/).
 * **Code**: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License ([GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)).
+    it under the terms of the GNU Lesser General Public License ([LGPL v3.0](https://www.gnu.org/licenses/lgpl.html)).
 * **Documentation**: released under Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
