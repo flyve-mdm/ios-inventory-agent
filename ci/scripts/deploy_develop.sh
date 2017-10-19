@@ -33,8 +33,6 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     npm run release -- -t ''
     # Get version number from package.json
     export GIT_TAG=$(jq -r ".version" package.json)
-    # Revert last commit
-    git reset --hard HEAD~1
     # Update CFBundleShortVersionString
     /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${GIT_TAG}" ${PWD}/${APPNAME}/Info.plist
     # Update CFBundleVersion
