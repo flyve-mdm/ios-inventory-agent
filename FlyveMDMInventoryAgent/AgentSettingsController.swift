@@ -36,7 +36,7 @@ class AgentSettingsController: UIViewController {
     // MARK: Properties
 
     let cellId = "InventoryCell"
-    var disable = true
+    var disable = !UserDefaults.standard.bool(forKey: "inventory")
 
     /// This property contains the configurations for the table view
     lazy var inventoryTableView: UITableView = {
@@ -248,7 +248,8 @@ class AgentSettingsController: UIViewController {
      */
     @objc func switchAtValueChanged(uiSwitch: UISwitch) {
         if uiSwitch.tag == 777 {
-            disable = !disable
+            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "inventory"), forKey: "inventory")
+            disable = !UserDefaults.standard.bool(forKey: "inventory")
             //disable inventory
             inventoryTableView.beginUpdates()
             inventoryTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
