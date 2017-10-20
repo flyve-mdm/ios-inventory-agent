@@ -47,12 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Requesting Authorization for User Interactions
         if #available(iOS 10.0, *) {
             let center = UNUserNotificationCenter.current()
-            center.requestAuthorization(options: [.alert, .sound]) { (_, _) in
-                // Enable or disable features based on authorization.
+            center.requestAuthorization(options: [.alert, .sound]) { (granted, _ ) in
+                if !granted {
+                    UserDefaults.standard.set(false, forKey: "notifications")
+                } else {
+                    UserDefaults.standard.set(true, forKey: "notifications")
+                }
             }
         } else {
-            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert], categories: nil))
-            UIApplication.shared.registerForRemoteNotifications()
+            
+            UIApplication.shared.registerUserNotificationSettings(
+                UIUserNotificationSettings(types: [.sound, .alert], categories: nil)
+            )
         }
 
         // Set configuration Bugsnag
@@ -79,6 +85,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
 
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        
+        if let settings = UIApplication.shared.currentUserNotificationSettings {
+            if settings.types.contains([.sound, .alert]) {
+                //Have alert and sound permissions
+                UserDefaults.standard.set(true, forKey: "notifications")
+            } else {
+                UserDefaults.standard.set(false, forKey: "notifications")
+            }
+        }
     }
 
     /// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
