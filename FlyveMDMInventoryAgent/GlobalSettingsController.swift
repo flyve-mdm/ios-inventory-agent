@@ -26,6 +26,7 @@
  */
 
 import UIKit
+import UserNotifications
 import Bugsnag
 
 /// GlobalSettingsController class
@@ -82,6 +83,14 @@ class GlobalSettingsController: UIViewController {
 
     // MARK: Methods
     
+    /// Load before view appear
+    override func viewWillAppear(_ animated: Bool) {
+        
+        checkNotificationEnabled()
+        settingsTableView.reloadData()
+        super.viewWillAppear(animated)
+    }
+    
     /// Load the customized view that the controller manages
     override func loadView() {
         super.loadView()
@@ -116,6 +125,32 @@ class GlobalSettingsController: UIViewController {
         messageLabel.leftAnchor.constraint(equalTo: footerView.leftAnchor).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor).isActive = true
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
+    }
+    
+    /// check state of notifications
+    func checkNotificationEnabled() {
+        
+        if #available(iOS 10.0, *) {
+            
+            UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+                if settings.authorizationStatus == .authorized {
+                    // Notifications allowed
+                    UserDefaults.standard.set(true, forKey: "notifications")
+                } else {
+                    UserDefaults.standard.set(false, forKey: "notifications")
+                }
+            }
+            
+        } else {
+            if let settings = UIApplication.shared.currentUserNotificationSettings {
+                if settings.types.contains([.sound, .alert]) {
+                    //Have alert and sound permissions
+                    UserDefaults.standard.set(true, forKey: "notifications")
+                } else {
+                    UserDefaults.standard.set(false, forKey: "notifications")
+                }
+            }
+        }
     }
     
     /**
