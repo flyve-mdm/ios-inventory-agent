@@ -83,20 +83,16 @@ class GlobalSettingsController: UIViewController {
 
     // MARK: Methods
     
-    /// Load before view appear
-    override func viewWillAppear(_ animated: Bool) {
-        
-        checkNotificationEnabled()
-        settingsTableView.reloadData()
-        super.viewWillAppear(animated)
-    }
-    
     /// Load the customized view that the controller manages
     override func loadView() {
         super.loadView()
-
+        
+        checkNotificationEnabled()
         setupViews()
         addConstraints()
+        
+        // set observer for UIApplicationWillEnterForeground
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
     /// Set up the views of the controller
@@ -127,6 +123,12 @@ class GlobalSettingsController: UIViewController {
         messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
     }
     
+    /// this method is called when app enter to foreground
+    @objc func willEnterForeground() {
+        checkNotificationEnabled()
+        settingsTableView.reloadData()
+    }
+    
     /// check state of notifications
     func checkNotificationEnabled() {
         
@@ -153,17 +155,47 @@ class GlobalSettingsController: UIViewController {
         }
     }
     
+    /// show system settings
+    func openSettings() {
+        var message = String()
+        
+        if UserDefaults.standard.bool(forKey: "notifications") {
+            message = NSLocalizedString("alert_disable_notifications", comment: "")
+        } else {
+            message = NSLocalizedString("alert_enable_notifications", comment: "")
+        }
+        
+        let alertController = UIAlertController (title: NSLocalizedString("notifications", comment: ""), message: message, preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: NSLocalizedString("open_settings", comment: ""), style: .default) { (_) -> Void in
+            guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: { (_ ) in
+                    })
+                } else {
+                    UIApplication.shared.openURL(settingsUrl)
+                }
+            }
+        }
+        alertController.addAction(settingsAction)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("later", comment: ""), style: .default, handler: { (_) -> Void in
+            self.settingsTableView.reloadData()
+        })
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     /**
      Enable or Disable notifications
      */
     @objc func switchAtValueChanged(uiSwitch: UISwitch) {
         if uiSwitch.tag == 777 {
-            let index: IndexPath = IndexPath(row: 0, section: 0)
-            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "notifications"), forKey: "notifications")
-            //disable inventory
-            settingsTableView.beginUpdates()
-            settingsTableView.reloadRows(at: [index], with: .automatic)
-            settingsTableView.endUpdates()
+            openSettings()
         } else if uiSwitch.tag == 888 {
             let index: IndexPath = IndexPath(row: 0, section: 3)
             UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "health_report"), forKey: "health_report")
@@ -347,11 +379,7 @@ extension GlobalSettingsController: UITableViewDelegate {
      */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
-            UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "notifications"), forKey: "notifications")
-            //notifications
-            tableView.beginUpdates()
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-            tableView.endUpdates()
+            openSettings()
 
         } else if indexPath.section == 1 && indexPath.row == 0 {
             //Server address
