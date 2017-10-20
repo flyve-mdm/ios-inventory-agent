@@ -58,20 +58,6 @@ class GlobalSettingsController: UIViewController {
         return view
     }()
 
-    /// This property contains the configurations for the message label
-    let messageLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = ""
-        label.sizeToFit()
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.backgroundColor = .clear
-        label.textColor = .gray
-        label.font = UIFont.systemFont(ofSize: 15.0, weight: UIFont.Weight.regular)
-        return label
-    }()
-
     /// This property contains the configurations of the loading indicator view
     let loadingIndicatorView: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
@@ -100,9 +86,6 @@ class GlobalSettingsController: UIViewController {
         view.backgroundColor = .white
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
         view.addSubview(settingsTableView)
-        view.addSubview(footerView)
-        footerView.addSubview(messageLabel)
-        footerView.addSubview(loadingIndicatorView)
     }
     
     /// Add the constraints to the views of the controller
@@ -111,16 +94,6 @@ class GlobalSettingsController: UIViewController {
         settingsTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         settingsTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         settingsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        footerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        footerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        footerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        footerView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
-        loadingIndicatorView.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -24).isActive = true
-        loadingIndicatorView.centerXAnchor.constraint(equalTo: footerView.centerXAnchor).isActive = true
-        messageLabel.bottomAnchor.constraint(equalTo: loadingIndicatorView.topAnchor, constant: -24).isActive = true
-        messageLabel.leftAnchor.constraint(equalTo: footerView.leftAnchor).isActive = true
-        messageLabel.rightAnchor.constraint(equalTo: footerView.rightAnchor).isActive = true
-        messageLabel.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 8).isActive = true
     }
     
     /// this method is called when app enter to foreground
@@ -157,37 +130,40 @@ class GlobalSettingsController: UIViewController {
     
     /// show system settings
     func openSettings() {
-        var message = String()
         
-        if UserDefaults.standard.bool(forKey: "notifications") {
-            message = NSLocalizedString("alert_disable_notifications", comment: "")
-        } else {
-            message = NSLocalizedString("alert_enable_notifications", comment: "")
-        }
-        
-        let alertController = UIAlertController (title: NSLocalizedString("notifications", comment: ""), message: message, preferredStyle: .alert)
-        
-        let settingsAction = UIAlertAction(title: NSLocalizedString("open_settings", comment: ""), style: .default) { (_) -> Void in
-            guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
-                return
+        DispatchQueue.main.async {
+            var message = String()
+            
+            if UserDefaults.standard.bool(forKey: "notifications") {
+                message = NSLocalizedString("alert_disable_notifications", comment: "")
+            } else {
+                message = NSLocalizedString("alert_enable_notifications", comment: "")
             }
             
-            if UIApplication.shared.canOpenURL(settingsUrl) {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(settingsUrl, completionHandler: { (_ ) in
-                    })
-                } else {
-                    UIApplication.shared.openURL(settingsUrl)
+            let alertController = UIAlertController (title: NSLocalizedString("notifications", comment: ""), message: message, preferredStyle: .alert)
+            
+            let settingsAction = UIAlertAction(title: NSLocalizedString("open_settings", comment: ""), style: .default) { (_) -> Void in
+                guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                    return
+                }
+                
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(settingsUrl, completionHandler: { (_ ) in
+                        })
+                    } else {
+                        UIApplication.shared.openURL(settingsUrl)
+                    }
                 }
             }
+            alertController.addAction(settingsAction)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("later", comment: ""), style: .default, handler: { (_) -> Void in
+                self.settingsTableView.reloadData()
+            })
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
-        alertController.addAction(settingsAction)
-        let cancelAction = UIAlertAction(title: NSLocalizedString("later", comment: ""), style: .default, handler: { (_) -> Void in
-            self.settingsTableView.reloadData()
-        })
-        alertController.addAction(cancelAction)
-        
-        present(alertController, animated: true, completion: nil)
     }
     
     /**
@@ -326,13 +302,13 @@ extension GlobalSettingsController: UITableViewDataSource {
             dataSwitch.tag = 999
             dataSwitch.addTarget(self, action: #selector(self.switchAtValueChanged(uiSwitch:)), for: UIControlEvents.valueChanged)
             cell.textLabel?.text = NSLocalizedString("usage_data", comment: "")
-            
+
             if UserDefaults.standard.bool(forKey: "usage_data") {
                 cell.detailTextLabel?.text = NSLocalizedString("usage_data_enable", comment: "")
             } else {
                 cell.detailTextLabel?.text = NSLocalizedString("usage_data_disable", comment: "")
             }
-            
+
             cell.contentView.addSubview(dataSwitch)
             dataSwitch.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
             dataSwitch.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: -16.0).isActive = true
