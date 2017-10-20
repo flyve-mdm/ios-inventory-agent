@@ -43,8 +43,15 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AppDelegate.swift",
+      "line": 90,
+      "symbol": "AppDelegate.application(_:didRegister:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/GlobalSettingsController.swift",
-      "line": 36,
+      "line": 37,
       "symbol": "GlobalSettingsController.cellId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
