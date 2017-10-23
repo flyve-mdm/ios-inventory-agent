@@ -127,8 +127,10 @@ class AgentSettingsController: UIViewController {
         messageLabel.text = NSLocalizedString("button_start_inventory", comment: "")
         loadingIndicatorView.startAnimating()
         let inventoryTask = InventoryTask()
-        inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: UserDefaults.standard.string(forKey: "nameTag") ?? "") { result in
-            sendXmlInventory(result)
+        let osName = inventoryTask.os.name() ?? ""
+        let osVersion = inventoryTask.os.version() ?? ""
+        inventoryTask.execute(versionClient(osName: osName, osVersion: osVersion), tag: UserDefaults.standard.string(forKey: "nameTag") ?? "") { result in
+            sendXmlInventory(result, versionClient: versionClient(osName: osName, osVersion: osVersion))
         }
     }
 
@@ -136,7 +138,7 @@ class AgentSettingsController: UIViewController {
      Send XML Inventory
      - parameter: XML inventory
      */
-    func sendXmlInventory(_ xml: String) {
+    func sendXmlInventory(_ xml: String, versionClient: String) {
 //        "Sending XML Inventory..."
         messageLabel.text = NSLocalizedString("inventory_sended", comment: "")
 
@@ -152,7 +154,7 @@ class AgentSettingsController: UIViewController {
         }
 
         var headers: HTTPHeaders = [
-            "User-Agent": "FusionInventory-Agent-iOS_v1.0",
+            "User-Agent": versionClient,
             "Content-Type": "text/plain; charset=ISO-8859-1"
         ]
 
@@ -170,7 +172,7 @@ class AgentSettingsController: UIViewController {
             switch response.result {
             case .success:
                 self.messageLabel.text = NSLocalizedString("ok_send_inventory", comment: "")
-                self.sendUsageData()
+                self.sendUsageData(versionClient: versionClient)
                 if UserDefaults.standard.bool(forKey: "notifications") {
 
                     if #available(iOS 10.0, *) {
@@ -228,14 +230,14 @@ class AgentSettingsController: UIViewController {
     /**
      Send usage data JSON Inventory
      */
-    func sendUsageData() {
+    func sendUsageData(versionClient: String) {
         if !UserDefaults.standard.bool(forKey: "usage_data") {
             let inventoryTask = InventoryTask()
-            inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: UserDefaults.standard.string(forKey: "nameTag") ?? "", json: true) { result in
+            inventoryTask.execute(versionClient, tag: UserDefaults.standard.string(forKey: "nameTag") ?? "", json: true) { result in
                 if !result.isEmpty {
                     
                     let headers: HTTPHeaders = [
-                        "User-Agent": "FusionInventory-Agent-iOS_v1.0",
+                        "User-Agent": versionClient,
                         "Content-Type": "application/json"
                     ]
                     
@@ -254,6 +256,19 @@ class AgentSettingsController: UIViewController {
                 }
             }
         }
+    }
+    
+    /**
+     Get Client version
+     */
+    func versionClient(osName: String, osVersion: String) -> String {
+        
+        let nameApp = "Inventory Agent"
+        let versionApp = NSLocalizedString("version", tableName: "about", comment: "")
+        let buildApp = NSLocalizedString("build", tableName: "about", comment: "")
+        let app = "Flyve MDM"
+        
+        return "\(nameApp)/\(versionApp)[\(buildApp)] (\(osName); \(osVersion); \(app))"
     }
     
     /**
