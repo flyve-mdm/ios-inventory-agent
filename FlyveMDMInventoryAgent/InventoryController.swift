@@ -91,7 +91,9 @@ class InventoryController: UIViewController {
         // submit a task to the queue for background execution
         queue.async {
             
-            self.inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", json: true) { result in
+            let osName = self.inventoryTask.os.name() ?? ""
+            let osVersion = self.inventoryTask.os.version() ?? ""
+            self.inventoryTask.execute(self.versionClient(osName: osName, osVersion: osVersion), json: true) { result in
                 
                 if let data = result.data(using: .utf8) {
                     do {
@@ -150,7 +152,9 @@ class InventoryController: UIViewController {
     
     func shareInventory(json: Bool = false) {
         
-        self.inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", json: json) { result in
+        let osName = inventoryTask.os.name() ?? ""
+        let osVersion = inventoryTask.os.version() ?? ""
+        self.inventoryTask.execute(versionClient(osName: osName, osVersion: osVersion), json: json) { result in
             createFile(result, json: json) { result in
                 if let path: URL = result {
                     let activityVC = UIActivityViewController(activityItems: [path], applicationActivities: nil)
@@ -175,6 +179,19 @@ class InventoryController: UIViewController {
                 completion(nil)
             }
         }
+    }
+    
+    /**
+     Get Client version
+     */
+    func versionClient(osName: String, osVersion: String) -> String {
+        
+        let nameApp = "Inventory Agent"
+        let versionApp = NSLocalizedString("version", tableName: "about", comment: "")
+        let buildApp = NSLocalizedString("build", tableName: "about", comment: "")
+        let app = "Flyve MDM"
+        
+        return "\(nameApp)/\(versionApp)[\(buildApp)] (\(osName); \(osVersion); \(app))"
     }
 }
 
