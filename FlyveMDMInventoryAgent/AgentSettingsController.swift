@@ -170,7 +170,7 @@ class AgentSettingsController: UIViewController {
             switch response.result {
             case .success:
                 self.messageLabel.text = NSLocalizedString("ok_send_inventory", comment: "")
-                self.sendUsageData(xml)
+                self.sendUsageData()
                 if UserDefaults.standard.bool(forKey: "notifications") {
 
                     if #available(iOS 10.0, *) {
@@ -225,20 +225,33 @@ class AgentSettingsController: UIViewController {
         }
     }
     
-    func sendUsageData(_ xml: String) {
-        
+    /**
+     Send usage data JSON Inventory
+     */
+    func sendUsageData() {
         if !UserDefaults.standard.bool(forKey: "usage_data") {
-            
-            Alamofire.request(serverAnonymous, method: .post, parameters: [:], encoding: xml, headers: nil)
-                .validate(statusCode: 200..<300)
-                .responseString { response in
+            let inventoryTask = InventoryTask()
+            inventoryTask.execute("FusionInventory-Agent-iOS_v1.0", tag: UserDefaults.standard.string(forKey: "nameTag") ?? "", json: true) { result in
+                if !result.isEmpty {
                     
-                    switch response.result {
-                    case .success:
-                        debugPrint("Success: \(response.description)")
-                    case .failure( _):
-                        debugPrint("Error: \(response.result.error?.localizedDescription ?? "failure")")
+                    let headers: HTTPHeaders = [
+                        "User-Agent": "FusionInventory-Agent-iOS_v1.0",
+                        "Content-Type": "application/json"
+                    ]
+                    
+                    Alamofire.request(serverAnonymous, method: .post, parameters: [:], encoding: result, headers: headers)
+                        .validate(statusCode: 200..<300)
+                        .responseString { response in
+                            
+                            switch response.result {
+                            case .success:
+                                debugPrint("Success: \(response.description)")
+                            case .failure( _):
+                                debugPrint("Error: \(response.result.error?.localizedDescription ?? "failure")")
+                            }
+                            
                     }
+                }
             }
         }
     }
