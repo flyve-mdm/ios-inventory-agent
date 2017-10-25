@@ -129,8 +129,9 @@ class AgentSettingsController: UIViewController {
         let inventoryTask = InventoryTask()
         let osName = inventoryTask.os.name() ?? ""
         let osVersion = inventoryTask.os.version() ?? ""
-        inventoryTask.execute(versionClient(osName: osName, osVersion: osVersion), tag: UserDefaults.standard.string(forKey: "nameTag") ?? "") { result in
-            sendXmlInventory(result, versionClient: versionClient(osName: osName, osVersion: osVersion))
+        let typeDevice = inventoryTask.hardware.identifier() ?? ""
+        inventoryTask.execute(InventoryController.versionClient(osName: osName, osVersion: osVersion, typeDevice: typeDevice), tag: UserDefaults.standard.string(forKey: "nameTag") ?? "") { result in
+            sendXmlInventory(result, versionClient: InventoryController.versionClient(osName: osName, osVersion: osVersion, typeDevice: typeDevice))
         }
     }
 
@@ -256,19 +257,6 @@ class AgentSettingsController: UIViewController {
                 }
             }
         }
-    }
-    
-    /**
-     Get Client version
-     */
-    func versionClient(osName: String, osVersion: String) -> String {
-        
-        let nameApp = "Inventory Agent"
-        let versionApp = NSLocalizedString("version", tableName: "about", comment: "")
-        let buildApp = NSLocalizedString("build", tableName: "about", comment: "")
-        let app = "Flyve MDM"
-        
-        return "\(nameApp)/\(versionApp)[\(buildApp)] (\(osName); \(osVersion); \(app))"
     }
     
     /**
