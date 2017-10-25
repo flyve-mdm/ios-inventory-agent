@@ -100,21 +100,21 @@
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 128,
+      "line": 129,
       "symbol": "InventoryController.share()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 153,
+      "line": 154,
       "symbol": "InventoryController.shareInventory(json:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 167,
+      "line": 169,
       "symbol": "InventoryController.createFile(_:json:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
