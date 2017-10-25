@@ -1,5 +1,7 @@
 # Inventory Agent for iOS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/flyve-mdm/flyve-mdm-ios-inventory-agent.svg)](https://greenkeeper.io/)
+
 ![Flyve MDM banner](https://user-images.githubusercontent.com/663460/26935464-54267e9c-4c6c-11e7-86df-8cfa6658133e.png)
 
 [![License](https://img.shields.io/badge/license-LGPL_v3.0-blue.svg)](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/blob/master/LICENSE.md)
