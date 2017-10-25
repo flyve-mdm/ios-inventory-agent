@@ -93,7 +93,8 @@ class InventoryController: UIViewController {
             
             let osName = self.inventoryTask.os.name() ?? ""
             let osVersion = self.inventoryTask.os.version() ?? ""
-            self.inventoryTask.execute(self.versionClient(osName: osName, osVersion: osVersion), json: true) { result in
+            let typeDevice = self.inventoryTask.hardware.identifier() ?? ""
+            self.inventoryTask.execute(InventoryController.versionClient(osName: osName, osVersion: osVersion, typeDevice: typeDevice), json: true) { result in
                 
                 if let data = result.data(using: .utf8) {
                     do {
@@ -154,7 +155,8 @@ class InventoryController: UIViewController {
         
         let osName = inventoryTask.os.name() ?? ""
         let osVersion = inventoryTask.os.version() ?? ""
-        self.inventoryTask.execute(versionClient(osName: osName, osVersion: osVersion), json: json) { result in
+        let typeDevice = inventoryTask.hardware.identifier() ?? ""
+        self.inventoryTask.execute(InventoryController.versionClient(osName: osName, osVersion: osVersion, typeDevice: typeDevice), json: json) { result in
             createFile(result, json: json) { result in
                 if let path: URL = result {
                     let activityVC = UIActivityViewController(activityItems: [path], applicationActivities: nil)
@@ -184,14 +186,15 @@ class InventoryController: UIViewController {
     /**
      Get Client version
      */
-    func versionClient(osName: String, osVersion: String) -> String {
+    class func versionClient(osName: String, osVersion: String, typeDevice: String) -> String {
         
         let nameApp = "Inventory Agent"
         let versionApp = NSLocalizedString("version", tableName: "about", comment: "")
-        let buildApp = NSLocalizedString("build", tableName: "about", comment: "")
+        let iOSVersion = osVersion.replacingOccurrences(of: ".", with: "_", options: .literal, range: nil)
         let app = "Flyve MDM"
         
-        return "\(nameApp)/\(versionApp)[\(buildApp)] (\(osName); \(osVersion); \(app))"
+        //        Inventory Agent/0.2.0 (iPhone5,1; CPU iOS 10.3.3 like Mac OS X; Flyve MDM)
+        return "\(nameApp)/\(versionApp) (\(typeDevice); CPU \(osName) \(iOSVersion) like Mac OS X; \(app))"
     }
 }
 
