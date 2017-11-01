@@ -30,6 +30,6 @@
     "standard-version": "^4.2.0"
   },
   "dependencies": {
-    "conventional-github-releaser": "^1.1.12"
+    "conventional-github-releaser": "^2.0.0"
   }
 }
