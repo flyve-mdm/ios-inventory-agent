@@ -29,13 +29,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AgentSettingsController.swift",
-      "line": 228,
-      "symbol": "AgentSettingsController.sendUsageData(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AppDelegate.swift",
       "line": 32,
       "symbol": "serverAnonymous",
@@ -43,8 +36,15 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/AppDelegate.swift",
+      "line": 90,
+      "symbol": "AppDelegate.application(_:didRegister:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/GlobalSettingsController.swift",
-      "line": 36,
+      "line": 37,
       "symbol": "GlobalSettingsController.cellId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -100,21 +100,21 @@
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 126,
+      "line": 129,
       "symbol": "InventoryController.share()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 151,
+      "line": 154,
       "symbol": "InventoryController.shareInventory(json:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/flyve-mdm-ios-inventory-agent/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 163,
+      "line": 169,
       "symbol": "InventoryController.createFile(_:json:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
