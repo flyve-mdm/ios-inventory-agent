@@ -1,7 +1,7 @@
 repository:
-  name: flyve-mdm-ios-inventory-agent
+  name: ios-inventory-agent
   description: Flyve MDM Inventory Agent
-  homepage: http://flyve.org/flyve-mdm-ios-inventory-agent/
+  homepage: http://flyve.org/ios-inventory-agent/
   topics: flyve-mdm, ios, inventory, agent
   private: false
   has_issues: true
