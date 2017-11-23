@@ -2,12 +2,12 @@
 
 ![Flyve MDM banner](https://user-images.githubusercontent.com/663460/26935464-54267e9c-4c6c-11e7-86df-8cfa6658133e.png)
 
-[![License](https://img.shields.io/badge/license-LGPL_v3.0-blue.svg)](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/blob/master/LICENSE.md)
+[![License](https://img.shields.io/badge/license-LGPL_v3.0-blue.svg)](https://github.com/flyve-mdm/ios-inventory-agent/blob/master/LICENSE.md)
 [![Follow twitter](https://img.shields.io/twitter/follow/FlyveMDM.svg?style=social&label=Twitter&style=flat-square)](https://twitter.com/FlyveMDM)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-blue.svg)](https://t.me/flyvemdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-[![Greenkeeper badge](https://badges.greenkeeper.io/flyve-mdm/flyve-mdm-ios-inventory-agent.svg)](https://greenkeeper.io/)
-[![GitHub release](https://img.shields.io/github/release/flyve-mdm/flyve-mdm-ios-inventory-agent.svg)](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/releases)
+[![Greenkeeper badge](https://badges.greenkeeper.io/flyve-mdm/ios-inventory-agent.svg)](https://greenkeeper.io/)
+[![GitHub release](https://img.shields.io/github/release/flyve-mdm/ios-inventory-agent.svg)](https://github.com/flyve-mdm/ios-inventory-agent/releases)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 Flyve MDM is a Mobile device management software that enables you to secure and manage all the mobile devices of your business or family via a web-based console.
@@ -63,13 +63,13 @@ Flyve MDM Inventory Agents can also be used with other open sources projects lik
 * Networks
 * Battery
 
-Visit our [website](http://flyve.org/flyve-mdm-ios-inventory-agent/) for more information.
+Visit our [website](http://flyve.org/ios-inventory-agent/) for more information.
 
 ## Build Status
 
 | **Release channel** | **Beta channel** |
 |:---:|:---:|
-| [![Build Status](https://circleci.com/gh/flyve-mdm/flyve-mdm-ios-inventory-agent/tree/master.svg?style=svg)](https://circleci.com/gh/flyve-mdm/flyve-mdm-inventory-agent/tree/master) | [![Build Status](https://circleci.com/gh/flyve-mdm/flyve-mdm-ios-inventory-agent/tree/develop.svg?style=svg)](https://circleci.com/gh/flyve-mdm/flyve-mdm-inventory-agent/tree/develop)
+| [![Build Status](https://circleci.com/gh/flyve-mdm/ios-inventory-agent/tree/master.svg?style=svg)](https://circleci.com/gh/flyve-mdm/ios-inventory-agent/tree/master) | [![Build Status](https://circleci.com/gh/flyve-mdm/ios-inventory-agent/tree/develop.svg?style=svg)](https://circleci.com/gh/flyve-mdm/ios-inventory-agent/tree/develop)
 
 ## Installation
 
@@ -78,27 +78,27 @@ Flyve MDM Inventory Agent for iOS is running on iOS 9.3 and higher.
 Download the latest IPA, from GitHub releases, TestFlight or Apple Store.
 
 [<img src="https://user-images.githubusercontent.com/663460/26986739-23bffc6e-4d49-11e7-92a2-cdba1b517a08.png" alt="Download from iTunes" height="60">](https://itunes.apple.com/us/app/flyve-mdm-inventory-agent)
-[<img src="https://user-images.githubusercontent.com/663460/30159664-a0e818f4-93c9-11e7-9937-501201c36709.png" alt="Download IPA from GitHub" height="60">](https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/releases/latest)
+[<img src="https://user-images.githubusercontent.com/663460/30159664-a0e818f4-93c9-11e7-9937-501201c36709.png" alt="Download IPA from GitHub" height="60">](https://github.com/flyve-mdm/ios-inventory-agent/releases/latest)
 
 ## Documentation
 
-We maintain a detailed documentation of the project on its [website](http://flyve.org/flyve-mdm-ios-inventory-agent/).
+We maintain a detailed documentation of the project on its [website](http://flyve.org/ios-inventory-agent/).
 
 ## Versioning
 
 In order to provide transparency on our release cycle and to maintain backward compatibility, Flyve MDM is maintained under [the Semantic Versioning guidelines](http://semver.org/). We are committed to following and complying with the rules, the best we can.
 
-See [the tags section of our GitHub project](http://github.com/flyve-mdm/flyve-mdm-flyve-mdm.github.io/tags) for changelogs for each release version of Flyve MDM. Release announcement posts on [the official Teclib' blog](http://www.teclib-edition.com/en/communities/blog-posts/) contain summaries of the most noteworthy changes made in each release.
+See [the tags section of our GitHub project](http://github.com/flyve-mdm/ios-inventory-agent/tags) for changelogs for each release version of Flyve MDM. Release announcement posts on [the official Teclib' blog](http://www.teclib-edition.com/en/communities/blog-posts/) contain summaries of the most noteworthy changes made in each release.
 
 ## Contribute
 
 Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our
-guidelines for [contributing](./CONTRIBUTING.md) and then check out one of our issues in the [Issues Dashboard](https://github.com/flyve-mdm/flyve-mdm-flyve-mdm.github.io/issues).
+guidelines for [contributing](./CONTRIBUTING.md) and then check out one of our issues in the [Issues Dashboard](https://github.com/flyve-mdm/ios-inventory-agent/issues).
 
 ## Contact
 
 For notices about major changes and general discussion of Flyve MDM development, subscribe to the [/r/FlyveMDM](http://www.reddit.com/r/FlyveMDM) subreddit.
-You can also chat with us via IRC in [#flyve-mdm on freenode](http://webchat.freenode.net/?channels=flyve-mdm]).
+You can also chat with us via IRC in [#flyve-mdm on freenode](http://webchat.freenode.net/?channels=flyve-mdm).
 Ping me @hectorerb in the IRC chatroom if you get stuck.
 
 ## Copying
