@@ -1,9 +1,9 @@
 title: ios inventory agent
 email: ml-flyvemdm@teclib.com
 twitter: flyvemdm
-baseurl: "/flyve-mdm-ios-inventory-agent"
+baseurl: "/ios-inventory-agent"
 url: "http://flyve.org"   
-image: http://flyve.org/flyve-mdm-ios-inventory-agent/images/logo2.png 
+image: http://flyve.org/ios-inventory-agent/images/logo2.png 
 
 # Build settings
 markdown: kramdown
@@ -13,7 +13,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-repository: flyve-mdm/flyve-mdm-ios-inventory-agent
+repository: flyve-mdm/ios-inventory-agent
 
 sass:
     style: compressed
