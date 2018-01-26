@@ -1,18 +1,24 @@
 ---
 ---
+
+$white: #fff;
+$seagreen: #008785;
+$gray: #bebebe;
+
+
 .coverage {
   .list-items,
   .row {
-    margin: 0 !important;
+    margin: 0;
   }
 
   .functions {
-    border-top: solid 1px #BEBEBE;
+    border-top: solid 1px $gray;
   }
 
   .targets {
-    background-color: #008785;
-    color: #fff;
+    background-color: $seagreen;
+    color: $white;
 
     h4 {
       padding: 13px 0;
