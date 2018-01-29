@@ -1,33 +1,17 @@
-<!--
-PLEASE HELP US PROCESS GITHUB ISSUES FASTER BY PROVIDING THE FOLLOWING INFORMATION.
--->
+### Step 1: Are you in the right place?
 
-# Checklist
-<!-- Check one of the following options with "x" -->
+* For issues or feature requests related to the code **in this repository** file a Github issue.
+* For general technical questions, post a question on [StackOverflow](http://stackoverflow.com/) tagged appropriately.
+* For general discussion, use the [Flyve-MDM mailing list](http://mail.ow2.org/wws/info/flyve-mdm-dev).
+* For help troubleshooting for customers [support channel](https://support.teclib.com/).
+  
+### Step 2: Describe the problem:
+  
+#### Observed Results:
 
-- [ ] Regression (a behaviour that used to work and stopped working in a new release)
-- [ ] Bug report <!-- Please search GitHub for a similar issue or PR before submitting -->
-- [ ] Feature request
-- [ ] Documentation issue or request
-- [ ] Support request => Please do not submit support request here, instead see <https://git.io/vNPs1>
+<!-- This could be a description, error output, steps to reproduce, a feature missed, etc. -->
+  
+#### Expected behavior:
 
-## Current behaviour
-<!-- Describe how the issue manifests. -->
+<!-- What did you expect to happen? -->
 
-
-## Expected behaviour
-<!-- Describe what the desired behaviour would be. -->
-
-
-## Steps to reproduce the behaviour
-<!--
-For bug reports please provide the *STEPS TO REPRODUCE* and if possible a *MINIMAL DEMO* of the problem or similar.
--->
-
-
-## Environment
-<!-- Check whether this is still an issue in the most recent version, add relevant information like Operating system version, GLPI version, IDE, package manager, HTTP server ... -->
-
-* Inventory Agent version: X.Y.Z
-* Device:
-* iOS version:
