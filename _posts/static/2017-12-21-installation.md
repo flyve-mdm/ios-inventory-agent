@@ -5,6 +5,7 @@ published: true
 title: Installation
 permalink: howtos/installation
 description: Get it now
+category: user
 ---
 You can install the application by downloading it from the App Store
 
