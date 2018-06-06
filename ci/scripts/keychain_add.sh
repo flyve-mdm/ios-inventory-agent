@@ -46,8 +46,6 @@ echo ----- Set keychain timeout to 1 hour for long builds -------
 security set-keychain-settings -t 3600 -l ~/Library/Keychains/$KEYCHAIN_NAME
 echo -------------- Add certificates to keychain ----------------
 # Add certificates to keychain and allow codesign to access them
-security import $CERTIFICATES_PATH/apple.cer -k ~/Library/Keychains/$KEYCHAIN_NAME -T /usr/bin/codesign
-security import $CERTIFICATES_PATH/dist.cer -k ~/Library/Keychains/$KEYCHAIN_NAME -T /usr/bin/codesign
 security import $CERTIFICATES_PATH/dist.p12 -k ~/Library/Keychains/$KEYCHAIN_NAME -P "$KEYCHAIN_PASSWORD" -T /usr/bin/codesign
 
 security set-key-partition-list -S apple-tool:,apple: -s -k $KEYCHAIN_PASSWORD $KEYCHAIN_NAME
