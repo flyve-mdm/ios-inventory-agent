@@ -20,6 +20,9 @@ jobs:
           environment:
             CERTIFICATES_PATH: ./ci/cert
             KEYCHAIN_NAME: ios-app.keychain
+      - run:
+          name: Build and Test project
+          command: source ./ci/scripts/test.sh
 
 workflows:
   version: 2

@@ -25,7 +25,7 @@
 # @link      https://flyve-mdm.com
 # ------------------------------------------------------------------------------
 
-if [[ "$CIRCLE_BRANCH" == "develop" || "$CIRCLE_BRANCH" == "master" ]]; then
+if [[ "$CIRCLE_BRANCH" == "feature/circle-2.0" || "$CIRCLE_BRANCH" == "master" ]]; then
     bundle exec fastlane test
 else
     xcodebuild clean build -workspace ${APPNAME}.xcworkspace -scheme $APPNAME CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
