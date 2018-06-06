@@ -36,8 +36,52 @@ jobs:
           name: Build and Test project
           command: source ./ci/scripts/test.sh
 
+  deploy_develop:
+    macos:
+      xcode: "9.2.0"
+    steps:
+      - checkout
+      - run:
+          name: Configure bundler
+          command: source ./ci/scripts/bundler_config.sh
+      - run:
+          name: Install dependencies
+          command: source ./ci/scripts/install.sh
+      - run:
+          name: Configure utf-8 locate
+          command: source ./ci/scripts/set_locate.sh
+      - run:
+          name: Configure Fastlane environment variables
+          command: source ./ci/scripts/fastlane_config.sh
+      - run:
+          name: Create keychain & Add certificates
+          command: source ./ci/scripts/keychain_add.sh
+          environment:
+            CERTIFICATES_PATH: ./ci/cert
+            KEYCHAIN_NAME: ios-app.keychain
+      - run:
+          name: Configure Transifex
+          command: source ./ci/scripts/transifex.sh
+
 workflows:
   version: 2
   build-and-test:
     jobs:
       - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+      - deploy_develop:
+          requires:
+            - test
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - feature/circle-2.0
