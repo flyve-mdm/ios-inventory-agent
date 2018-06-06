@@ -2,7 +2,7 @@
 
 #   Copyright © 2017 Teclib. All rights reserved.
 #
-# test.sh is part of FlyveMDMInventoryAgent
+# fastlane_config.sh is part of FlyveMDMInventoryAgent
 #
 # FlyveMDMInventoryAgent is a subproject of Flyve MDM. Flyve MDM is a mobile
 # device management software.
@@ -18,15 +18,13 @@
 # GNU General Public License for more details.
 # ------------------------------------------------------------------------------
 # @author    Hector Rondon
-# @date      25/08/17
+# @date      06/06/18
 # @copyright Copyright © 2017 Teclib. All rights reserved.
 # @license   LGPLv3 https://www.gnu.org/licenses/lgpl-3.0.html
 # @link      https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent
 # @link      https://flyve-mdm.com
 # ------------------------------------------------------------------------------
 
-if [[ "$CIRCLE_BRANCH" == "develop" || "$CIRCLE_BRANCH" == "master" ]]; then
-    bundle exec fastlane test
-else
-    xcodebuild clean build -workspace ${APPNAME}.xcworkspace -scheme $APPNAME CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-fi
+echo ---------------------- UTF-8 locale --------------------------
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
