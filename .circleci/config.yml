@@ -11,6 +11,9 @@ jobs:
       - run:
           name: Configure Ruby dependencies
           command: source ./ci/scripts/install_ruby.sh
+      - run:
+          name: Configure Fastlane environment variables
+          command: source ./ci/scripts/fastlane_config.sh
 
 workflows:
   version: 2
