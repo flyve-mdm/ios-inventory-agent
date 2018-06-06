@@ -12,6 +12,9 @@ jobs:
           name: Configure Ruby dependencies
           command: source ./ci/scripts/install_ruby.sh
       - run:
+          name: Configure utf-8 locate
+          command: source ./ci/scripts/set_locate.sh
+      - run:
           name: Configure Fastlane environment variables
           command: source ./ci/scripts/fastlane_config.sh
       - run:
