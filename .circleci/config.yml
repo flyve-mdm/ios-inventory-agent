@@ -68,6 +68,9 @@ jobs:
           environment:
             SCRIPT_PATH: ./ci/scripts
       - run:
+          name: Build and Test project
+          command: source ./ci/scripts/test.sh
+      - run:
           name: Develop deploy
           command: source ./ci/scripts/deploy_develop.sh
           environment:
