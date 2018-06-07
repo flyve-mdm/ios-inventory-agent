@@ -37,8 +37,8 @@ platform :ios do
   lane :coverage do
     $lane_active = "Coverage"
     xcov(
-      workspace: ENV["XCODE_WORKSPACE"],
-      scheme: ENV["XCODE_SCHEME"],
+      workspace: "FlyveMDMInventoryAgent.xcworkspace",#ENV["XCODE_WORKSPACE"],
+      scheme: "FlyveMDMInventoryAgent",#ENV["XCODE_SCHEME"],
       output_directory: "coverage",
       html_report: false,
       json_report: true,
