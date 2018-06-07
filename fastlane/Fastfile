@@ -37,8 +37,8 @@ platform :ios do
   lane :coverage do
     $lane_active = "Coverage"
     xcov(
-      workspace: "FlyveMDMInventoryAgent.xcworkspace",#ENV["XCODE_WORKSPACE"],
-      scheme: "FlyveMDMInventoryAgent",#ENV["XCODE_SCHEME"],
+      workspace: ENV["XCODE_WORKSPACE"],
+      scheme: ENV["XCODE_SCHEME"],
       output_directory: "coverage",
       html_report: false,
       json_report: true,
@@ -61,7 +61,7 @@ platform :ios do
     gym(
       scheme: ENV["XCODE_SCHEME"],
       configuration: "Beta",
-      sdk: "iphoneos11.0",
+      sdk: "iphoneos11.2",
       clean: true,
       include_bitcode: true,
       include_symbols: true,
@@ -89,7 +89,7 @@ platform :ios do
     gym(
       scheme: ENV["XCODE_SCHEME"],
       configuration: "Release",
-      sdk: "iphoneos11.0",
+      sdk: "iphoneos11.2",
       clean: true,
       include_bitcode: true,
       include_symbols: true,

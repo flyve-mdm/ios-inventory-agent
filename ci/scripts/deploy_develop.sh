@@ -65,7 +65,6 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
 
     # Update documentation on gh-pages
-    git branch -D gh-pages
     git fetch origin gh-pages
     git checkout gh-pages
 
