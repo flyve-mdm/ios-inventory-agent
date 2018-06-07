@@ -62,6 +62,11 @@ jobs:
       - run:
           name: Configure Transifex
           command: source ./ci/scripts/transifex.sh
+      - run:
+          name: Develop deploy
+          command: source ./ci/scripts/deploy_develop.sh
+          environment:
+            SCRIPT_PATH: ./ci/scripts
 
 workflows:
   version: 2
@@ -84,4 +89,3 @@ workflows:
               only: 
                 - develop
                 - master
-                - feature/circle-2.0
