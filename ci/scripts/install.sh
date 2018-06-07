@@ -36,16 +36,10 @@ gem install jazzy
 # Install jq for json parse
 brew install jq
 # Install transifex-client
-sudo easy_install pip
-sudo pip install transifex-client
-# Install standard-version scope global
-npm i -g standard-version
-# Install conventional-github-releaser scope global
-npm install -g conventional-github-releaser
-# Install node-github-release to create and edit releases on Github
-npm install -g node-github-release
+easy_install pip
+pip install transifex-client
 # Install libs from package.json
-npm install
+yarn install
 # Install gems from Gemfile
 bundle install --path vendor/bundle
 # Update fastlane plugin
