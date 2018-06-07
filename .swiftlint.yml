@@ -6,3 +6,4 @@ disabled_rules: # rule identifiers to exclude from running
   - trailing_whitespace
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
+  - vendor
