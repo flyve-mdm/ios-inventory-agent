@@ -63,6 +63,11 @@ jobs:
           name: Configure Transifex
           command: source ./ci/scripts/transifex.sh
       - run:
+          name: Configure github
+          command: source ./ci/scripts/git_config.sh
+          environment:
+            SCRIPT_PATH: ./ci/scripts
+      - run:
           name: Develop deploy
           command: source ./ci/scripts/deploy_develop.sh
           environment:
