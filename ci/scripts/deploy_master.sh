@@ -30,7 +30,7 @@ GITHUB_COMMIT_MESSAGE=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
 if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* && $GITHUB_COMMIT_MESSAGE != *"ci(build): release version"* ]]; then
 
     # Generate CHANGELOG.md and increment version
-    yarn standard-version -- -t '' -m "ci(release): generate CHANGELOG.md for version %s"
+    yarn standard-version -t '' -m "ci(release): generate CHANGELOG.md for version %s"
     # Get version number from package.json
     export GIT_TAG=$(jq -r ".version" package.json)
     # Update CFBundleShortVersionString
@@ -44,7 +44,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Push commits and tags to origin branch
     git push --follow-tags origin $CIRCLE_BRANCH
     # Create release with conventional-github-releaser
-    conventional-github-releaser -p angular -t $GITHUB_TOKEN
+    yarn conventional-github-releaser -p angular -t $GITHUB_TOKEN
     # Update app info
     source "${SCRIPT_PATH}/app_info.sh"
     # Archive app
@@ -57,7 +57,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Copy ipa file in artifacts folder
     cp ${APPNAME}.ipa $CIRCLE_ARTIFACTS
     # Upload ipa file to release
-    github-release upload \
+    yarn node-github-release upload \
     --user $CIRCLE_PROJECT_USERNAME \
     --repo $CIRCLE_PROJECT_REPONAME \
     --tag ${GIT_TAG} \
