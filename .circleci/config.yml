@@ -79,6 +79,49 @@ jobs:
           environment:
             KEYCHAIN_NAME: ios-app.keychain
 
+  deploy_master:
+    macos:
+      xcode: "9.2.0"
+    steps:
+      - checkout
+      - run:
+          name: Configure bundler
+          command: source ./ci/scripts/bundler_config.sh
+      - run:
+          name: Install dependencies
+          command: source ./ci/scripts/install.sh
+      - run:
+          name: Configure utf-8 locate
+          command: source ./ci/scripts/set_locate.sh
+      - run:
+          name: Configure Fastlane environment variables
+          command: source ./ci/scripts/fastlane_config.sh
+      - run:
+          name: Create keychain & Add certificates
+          command: source ./ci/scripts/keychain_add.sh
+          environment:
+            CERTIFICATES_PATH: ./ci/cert
+            KEYCHAIN_NAME: ios-app.keychain
+      - run:
+          name: Configure Transifex
+          command: source ./ci/scripts/transifex.sh
+      - run:
+          name: Configure github
+          command: source ./ci/scripts/git_config.sh
+      - run:
+          name: Build and Test project
+          command: source ./ci/scripts/test.sh
+      - run:
+          name: Master deploy
+          command: source ./ci/scripts/deploy_master.sh
+          environment:
+            SCRIPT_PATH: ./ci/scripts
+      - run:
+          name: Remove keychain & certificates
+          command: source ./ci/scripts/keychain_remove.sh
+          environment:
+            KEYCHAIN_NAME: ios-app.keychain
+
 workflows:
   version: 2
   build-and-test:
@@ -99,3 +142,10 @@ workflows:
             branches:
               only: 
                 - develop
+      - deploy_master:
+          requires:
+            - test
+          filters:
+            branches:
+              only: 
+                - master
