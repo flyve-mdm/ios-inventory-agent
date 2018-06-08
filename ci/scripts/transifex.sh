@@ -36,7 +36,7 @@ tx push --source --no-interactive
 # pull all the new language
 tx pull --all --force
 # if there are changes in lenguages
-if [[ -z $(git status -s) ]]; then
+if [[ -z $(git status -uno -s) ]]; then
     echo "tree is clean"
 else
     git add -u
