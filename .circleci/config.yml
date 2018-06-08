@@ -65,16 +65,19 @@ jobs:
       - run:
           name: Configure github
           command: source ./ci/scripts/git_config.sh
-          environment:
-            SCRIPT_PATH: ./ci/scripts
       - run:
           name: Build and Test project
           command: source ./ci/scripts/test.sh
       - run:
-          name: Develop deploy
+          name: Generate changelog, docs, coverage and snapshots
           command: source ./ci/scripts/deploy_develop.sh
           environment:
             SCRIPT_PATH: ./ci/scripts
+      - run:
+          name: Remove keychain & certificates
+          command: source ./ci/scripts/keychain_remove.sh
+          environment:
+            KEYCHAIN_NAME: ios-app.keychain
 
 workflows:
   version: 2
@@ -96,4 +99,3 @@ workflows:
             branches:
               only: 
                 - develop
-                - master
