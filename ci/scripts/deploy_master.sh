@@ -30,7 +30,7 @@ GITHUB_COMMIT_MESSAGE=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
 if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* && $GITHUB_COMMIT_MESSAGE != *"ci(build): release version"* ]]; then
 
     # Generate CHANGELOG.md and increment version
-    npm run release -- -t '' -m "ci(release): generate CHANGELOG.md for version %s"
+    yarn standard-version -- -t '' -m "ci(release): generate CHANGELOG.md for version %s"
     # Get version number from package.json
     export GIT_TAG=$(jq -r ".version" package.json)
     # Update CFBundleShortVersionString
@@ -65,7 +65,6 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     --file "$CIRCLE_ARTIFACTS/${APPNAME}.ipa"
 
     # Update CHANGELOG.md on gh-pages
-    git branch -D gh-pages
     git fetch origin gh-pages
     git checkout gh-pages
     git checkout $CIRCLE_BRANCH CHANGELOG.md
@@ -134,7 +133,6 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git push origin gh-pages
 
     # Update develop branch
-    git branch -D develop
     git fetch origin develop
     git checkout develop
     # Merge master on develop
