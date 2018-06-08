@@ -60,11 +60,11 @@ jobs:
             CERTIFICATES_PATH: ./ci/cert
             KEYCHAIN_NAME: ios-app.keychain
       - run:
-          name: Configure Transifex
-          command: source ./ci/scripts/transifex.sh
-      - run:
           name: Configure github
           command: source ./ci/scripts/git_config.sh
+      - run:
+          name: Configure Transifex
+          command: source ./ci/scripts/transifex.sh
       - run:
           name: Build and Test project
           command: source ./ci/scripts/test.sh
@@ -103,11 +103,11 @@ jobs:
             CERTIFICATES_PATH: ./ci/cert
             KEYCHAIN_NAME: ios-app.keychain
       - run:
-          name: Configure Transifex
-          command: source ./ci/scripts/transifex.sh
-      - run:
           name: Configure github
           command: source ./ci/scripts/git_config.sh
+      - run:
+          name: Configure Transifex
+          command: source ./ci/scripts/transifex.sh
       - run:
           name: Build and Test project
           command: source ./ci/scripts/test.sh
