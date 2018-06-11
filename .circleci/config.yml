@@ -116,6 +116,8 @@ jobs:
           command: source ./ci/scripts/deploy_master.sh
           environment:
             SCRIPT_PATH: ./ci/scripts
+      - store_artifacts:
+          path: ./$APPNAME.ipa
       - run:
           name: Remove keychain & certificates
           command: source ./ci/scripts/keychain_remove.sh
