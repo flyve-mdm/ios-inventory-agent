@@ -54,8 +54,9 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
 
+
     # Upload ipa file to release
-    yarn node-github-release upload \
+    yarn github-release upload \
     --user $CIRCLE_PROJECT_USERNAME \
     --repo $CIRCLE_PROJECT_REPONAME \
     --tag ${GIT_TAG} \
