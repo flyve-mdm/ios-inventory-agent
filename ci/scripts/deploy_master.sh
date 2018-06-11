@@ -54,15 +54,13 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
 
-    # Copy ipa file in artifacts folder
-    cp ${APPNAME}.ipa $CIRCLE_ARTIFACTS
     # Upload ipa file to release
     yarn node-github-release upload \
     --user $CIRCLE_PROJECT_USERNAME \
     --repo $CIRCLE_PROJECT_REPONAME \
     --tag ${GIT_TAG} \
     --name "${APPNAME}.ipa" \
-    --file "$CIRCLE_ARTIFACTS/${APPNAME}.ipa"
+    --file "${APPNAME}.ipa"
 
     # Update CHANGELOG.md on gh-pages
     git fetch origin gh-pages
