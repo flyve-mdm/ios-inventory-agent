@@ -17,7 +17,7 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 # ------------------------------------------------------------------------------
-# @author    Hector Rondon
+# @author    Hector Rondon <hrondon@teclib.com>
 # @date      08/09/17
 # @copyright Copyright © 2017 Teclib. All rights reserved.
 # @license   LGPLv3 https://www.gnu.org/licenses/lgpl-3.0.html
