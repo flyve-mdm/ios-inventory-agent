@@ -1,14 +1,14 @@
 {
-  "name": "@teclib/flyve-mdm-ios-inventory-agent",
+  "name": "@teclib/ios-inventory-agent",
   "version": "0.1.0",
-  "description": "Flyve Inventory Agent for iOS",
+  "description": "Inventory Agent for iOS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent.git"
+    "url": "git+https://github.com/flyve-mdm/ios-inventory-agent.git"
   },
   "keywords": [
     "ios",
@@ -22,9 +22,9 @@
   "author": "Hector Rondon <apple@teclib.com> (https://flyve-mdm.com)",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/issues"
+    "url": "https://github.com/flyve-mdm/ios-inventory-agent/issues"
   },
-  "homepage": "https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent#readme",
+  "homepage": "https://github.com/flyve-mdm/ios-inventory-agent#readme",
   "devDependencies": {
     "standard-version": "^4.4.0",
     "conventional-github-releaser": "^3.1.2",
