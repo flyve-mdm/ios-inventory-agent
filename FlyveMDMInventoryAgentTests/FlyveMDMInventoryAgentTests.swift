@@ -21,6 +21,7 @@
  * @copyright Copyright © 2017-2018 Teclib. All rights reserved.
  * @license   LGPLv3 https://www.gnu.org/licenses/lgpl-3.0.html
  * @link      https://github.com/flyve-mdm/ios-inventory-agent.git
+ * @link      http://flyve.org/ios-inventory-agent
  * @link      https://flyve-mdm.com
  * ------------------------------------------------------------------------------
  */
