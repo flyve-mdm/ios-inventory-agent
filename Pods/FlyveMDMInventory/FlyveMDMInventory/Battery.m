@@ -1,5 +1,5 @@
 /*
- *   Copyright © 2017 Teclib. All rights reserved.
+ *   LICENSE
  *
  * Battery.m is part of FlyveMDMInventory
  *
@@ -20,7 +20,7 @@
  * ------------------------------------------------------------------------------
  * @author    Hector Rondon <hrondon@teclib.com>
  * @date      14/06/17
- * @copyright Copyright © 2017 Teclib. All rights reserved.
+ * @copyright Copyright © 2017-2018 Teclib. All rights reserved.
  * @license   Apache License, Version 2.0 https://www.apache.org/licenses/LICENSE-2.0
  * @link      https://github.com/flyve-mdm/flyve-mdm-ios-inventory
  * @link      https://flyve-mdm.com

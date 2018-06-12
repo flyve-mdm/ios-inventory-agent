@@ -1,5 +1,5 @@
 /*
- * Copyright © 2017 Teclib. All rights reserved.
+ * LICENSE
  *
  * AboutController.swift is part of FlyveMDMInventoryAgent
  *
@@ -18,9 +18,9 @@
  * ------------------------------------------------------------------------------
  * @author    Hector Rondon <hrondon@teclib.com>
  * @date      26/09/17
- * @copyright Copyright © 2017 Teclib. All rights reserved.
+ * @copyright Copyright © 2017-2018 Teclib. All rights reserved.
  * @license   LGPLv3 https://www.gnu.org/licenses/lgpl-3.0.html
- * @link      https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent.git
+ * @link      https://github.com/flyve-mdm/ios-inventory-agent.git
  * @link      https://flyve-mdm.com
  * ------------------------------------------------------------------------------
  */
@@ -57,7 +57,7 @@ class AboutController: UIViewController {
         let date = NSAttributedString(string: "Build on \(getResource("date")). ")
         
         let commit = "Last commit \(getResource("commit")).\n"
-        let urlCommit = "https://github.com/flyve-mdm/flyve-mdm-ios-inventory-agent/commit/\(getResource("commit_full"))"
+        let urlCommit = "https://github.com/flyve-mdm/ios-inventory-agent.git/commit/\(getResource("commit_full"))"
         let rangeCommit = NSRange(location: 12, length: commit.characters.count-14)
         let linkCommit = NSMutableAttributedString(string: commit)
         linkCommit.addAttribute(NSAttributedStringKey.link, value: NSURL(string: urlCommit)!, range: rangeCommit)
