@@ -28,7 +28,7 @@
 GITHUB_COMMIT_MESSAGE=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
 
 if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* && $GITHUB_COMMIT_MESSAGE != *"ci(build): release version"* ]]; then
-
+    echo "Generate CHANGELOG.md and increment version"
     # Generate CHANGELOG.md and increment version
     yarn standard-version -t '' -m "ci(release): generate CHANGELOG.md for version %s"
     # Get version number from package.json
@@ -43,18 +43,21 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git commit -m "ci(build): release version ${GIT_TAG}"
     # Push commits and tags to origin branch
     git push --follow-tags origin $CIRCLE_BRANCH
+    echo "Create release with conventional-github-releaser"
     # Create release with conventional-github-releaser
     yarn conventional-github-releaser -p angular -t $GITHUB_TOKEN
     # Update app info
     source "${SCRIPT_PATH}/app_info.sh"
+    echo "Archive app"
     # Archive app
     bundle exec fastlane archive
+    echo "Generate screenshots"
     # Add screenshots folder
     git add fastlane/screenshots -f
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
 
-
+    echo "Upload ipa file to release"
     # Upload ipa file to release
     yarn github-release upload \
     --user $CIRCLE_PROJECT_USERNAME \
@@ -63,6 +66,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     --name "${APPNAME}.ipa" \
     --file "${APPNAME}.ipa"
 
+    echo "Update CHANGELOG.md on gh-pages"
     # Update CHANGELOG.md on gh-pages
     git fetch origin gh-pages
     git checkout gh-pages
@@ -87,6 +91,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit
     git commit -m "ci(docs): generate CHANGELOG.md for version ${GIT_TAG}"
 
+    echo "Update screenshots"
     # Remove old screenshots
     rm -rf screenshots
     
@@ -111,6 +116,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit
     git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
 
+    echo "Update cache"
     # Create header content to cache
     echo "---" > header_cache
     echo "cache_version: $CIRCLE_SHA1" >> header_cache

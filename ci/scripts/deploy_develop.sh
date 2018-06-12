@@ -28,7 +28,7 @@
 GITHUB_COMMIT_MESSAGE=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
 
 if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* && $GITHUB_COMMIT_MESSAGE != *"ci(build): release version"* ]]; then
-
+    echo "Generate CHANGELOG.md and increment version"
     # Generate CHANGELOG.md and increment version
     yarn standard-version -- -t ''
     # Get version number from package.json
@@ -42,6 +42,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit
     git commit -m "ci(beta): generate **beta** for version ${GIT_TAG}"
 
+    echo "Generate documentation with jazzy"
     # Generate documentation with jazzy
     jazzy
     # Add docs folder
@@ -49,6 +50,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(docs): generate **docs** for version ${GIT_TAG}"
 
+    echo "Generate code coverage reporting with xcov"
     # Generate code coverage reporting with xcov
     bundle exec fastlane coverage
 
@@ -57,6 +59,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(docs): generate **coverage** for version ${GIT_TAG}"
 
+    echo "Generate screenshots"
     # Generate screenshots
     bundle exec fastlane snapshot
     # Add screenshots folder
@@ -64,6 +67,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
 
+    echo "Update documentation on gh-pages"
     # Update documentation on gh-pages
     git fetch origin gh-pages
     git checkout gh-pages
@@ -79,6 +83,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit
     git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}"
 
+    echo "Get code coverage from develop branch"
     # Get code coverage from develop branch
     git checkout $CIRCLE_BRANCH coverage
     # Add coverage folder
@@ -86,6 +91,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit
     git commit -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
 
+    echo "Update screenshots"
     # Remove old screenshots
     rm -rf screenshots
 
@@ -110,6 +116,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit
     git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
 
+    echo "Update cache"
     # Create header content to cache
     echo "---" > header_cache
     echo "cache_version: $CIRCLE_SHA1" >> header_cache
