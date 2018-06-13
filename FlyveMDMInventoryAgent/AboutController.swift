@@ -142,9 +142,9 @@ class AboutController: UIViewController {
     }
     
     @objc func sendError() {
-        let exception = NSException(name:NSExceptionName(rawValue: "TestException"),
-                                    reason:"Testing crash report",
-                                    userInfo:nil)
+        let exception = NSException(name: NSExceptionName(rawValue: "TestException"),
+                                    reason: "Testing crash report",
+                                    userInfo: nil)
         Bugsnag.notify(exception)
     }
 }

@@ -101,7 +101,7 @@ class InventoryController: UIViewController {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] ?? [String: AnyObject]()
                         
-                        if let dictionary: [String: AnyObject] = json["request"]?["content"] as? [String : AnyObject] {
+                        if let dictionary: [String: AnyObject] = json["request"]?["content"] as? [String: AnyObject] {
                             
                             for item in dictionary {
                                 for object in (item.value as? [AnyObject] ?? [AnyObject]()) {
