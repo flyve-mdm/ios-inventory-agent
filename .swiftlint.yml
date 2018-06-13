@@ -4,6 +4,8 @@ disabled_rules: # rule identifiers to exclude from running
   - identifier_name
   - empty_enum_arguments
   - trailing_whitespace
+  - file_length
+  - cyclomatic_complexity
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
   - vendor
