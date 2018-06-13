@@ -52,10 +52,9 @@ class AboutController: UIViewController {
     
     /// This property contatins the info about app
     lazy var infoTextView: UITextView = {
-        
         let version = NSAttributedString(string: "\(Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? ""), version \(getResource("version")), build \(getResource("build")).\n")
-        
-        let date = NSAttributedString(string: "Build on \(getResource("date")). ")
+        let strDate = self.view.bounds.width > 320 ? "Build on \(getResource("date")). " : "Build on \(getResource("date")).\n"
+        let date = NSAttributedString(string: strDate)
         
         let commit = "Last commit \(getResource("commit")).\n"
         let urlCommit = "https://github.com/flyve-mdm/ios-inventory-agent.git/commit/\(getResource("commit_full"))"
@@ -89,7 +88,9 @@ class AboutController: UIViewController {
         info.append(linkLicense)
         info.append(linkFlyve)
         
-        let font = UIFont.systemFont(ofSize: 13.0, weight: UIFont.Weight.light)
+        let fontSize: CGFloat = self.view.bounds.width > 375 ? 13.0 : 12.0
+        
+        let font = UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.light)
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.paragraphSpacing = 0.5 * font.lineHeight
