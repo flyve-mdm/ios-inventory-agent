@@ -106,7 +106,6 @@ class FlyveMDMInventoryAgentTests: XCTestCase {
 
                 case .failure( _):
                     XCTFail("Expected get statusCode 200 to succeed, but it failed")
-                    break
                 }
         }
     }
