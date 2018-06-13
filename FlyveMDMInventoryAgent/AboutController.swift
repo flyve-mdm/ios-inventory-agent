@@ -59,25 +59,25 @@ class AboutController: UIViewController {
         
         let commit = "Last commit \(getResource("commit")).\n"
         let urlCommit = "https://github.com/flyve-mdm/ios-inventory-agent.git/commit/\(getResource("commit_full"))"
-        let rangeCommit = NSRange(location: 12, length: commit.characters.count-14)
+        let rangeCommit = NSRange(location: 12, length: commit.count-14)
         let linkCommit = NSMutableAttributedString(string: commit)
         linkCommit.addAttribute(NSAttributedStringKey.link, value: NSURL(string: urlCommit)!, range: rangeCommit)
         
         let teclib = "© Teclib' 2017. "
         let urlTeclib = "http://teclib-edition.com/"
-        let rangeTeclib = NSRange(location: 2, length: teclib.characters.count-8)
+        let rangeTeclib = NSRange(location: 2, length: teclib.count-8)
         let linkTeclib = NSMutableAttributedString(string: teclib)
         linkTeclib.addAttribute(NSAttributedStringKey.link, value: NSURL(string: urlTeclib)!, range: rangeTeclib)
         
         let license = "Licensed under LGPLv3. "
         let urlLicense = "https://www.gnu.org/licenses/lgpl-3.0.html"
-        let rangeLicense = NSRange(location: 15, length: license.characters.count-17)
+        let rangeLicense = NSRange(location: 15, length: license.count-17)
         let linkLicense = NSMutableAttributedString(string: license)
         linkLicense.addAttribute(NSAttributedStringKey.link, value: NSURL(string: urlLicense)!, range: rangeLicense)
         
         let flyve = "Flyve MDM®"
         let urlFlyve = "https://flyve-mdm.com/"
-        let rangeFlyve = NSRange(location: 0, length: flyve.characters.count-1)
+        let rangeFlyve = NSRange(location: 0, length: flyve.count-1)
         let linkFlyve = NSMutableAttributedString(string: flyve)
         linkFlyve.addAttribute(NSAttributedStringKey.link, value: NSURL(string: urlFlyve)!, range: rangeFlyve)
         
@@ -95,7 +95,7 @@ class AboutController: UIViewController {
         paragraphStyle.paragraphSpacing = 0.5 * font.lineHeight
         let attributes = [NSAttributedStringKey.font: font, NSAttributedStringKey.paragraphStyle: paragraphStyle]
         
-        info.addAttributes(attributes, range: NSRange(location: 0, length: info.string.characters.count))
+        info.addAttributes(attributes, range: NSRange(location: 0, length: info.string.count))
         
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
