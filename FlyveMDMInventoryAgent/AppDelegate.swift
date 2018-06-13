@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set configuration Bugsnag
         let config = BugsnagConfiguration()
         config.apiKey = "9e545634de96524a1f39e2cd36e894a9"
-        config.notifyURL = URL(string:"https://hooks.thestralbot.com/-1001061475099/")
+        config.notifyURL = URL(string: "https://hooks.thestralbot.com/-1001061475099/")
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             config.appVersion = version
         }
