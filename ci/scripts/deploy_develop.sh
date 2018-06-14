@@ -82,7 +82,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Add docs folder
     git add docs
     # Create commit
-    git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}"
+    git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}" &>/dev/null
 
     echo "Get code coverage from develop branch"
     # Get code coverage from develop branch
@@ -90,7 +90,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Add coverage folder
     git add coverage
     # Create commit
-    git commit -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
+    git commit -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}" &>/dev/null
 
     echo "Update screenshots"
     # Remove old screenshots
@@ -115,7 +115,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git add fastlane/screenshots/
     git add screenshots
     # Create commit
-    git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
+    git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}" &>/dev/null
 
     echo "Update cache"
     # Create header content to cache
@@ -133,10 +133,10 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Add sw.js to git
     git add -u
     # Create commit
-    git commit -m "ci(cache): force update cache for version ${GIT_TAG}"
+    git commit -m "ci(cache): force update cache for version ${GIT_TAG}" &>/dev/null
 
     # Push commit to origin gh-pages branch
-    git push origin gh-pages
+    git push origin gh-pages &>/dev/null
 
     git checkout $CIRCLE_BRANCH -f
     # Update app info
