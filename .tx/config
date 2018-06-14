@@ -3,7 +3,7 @@ host = https://www.transifex.com
 minimum_perc = 80
 [ios-inventory-agent.localizablestrings]
 file_filter = FlyveMDMInventoryAgent/<lang>.lproj/Localizable.strings
-lang_map = en_GB: Base, pt_BR: pt-BR, es_MX: es-MX, es_ES: es, fr_FR: fr, ru_RU: ru, ko_KR: ko
+lang_map = en_GB: Base, ar_EG: ar-EG, ar_SA: ar-SA, ca_ES: ca, zh_CH: zh, cs_CZ: cs-CZ, fr_FR: fr, gl_ES: gl-ES, de_DE: de-DE, he_IL: he-IL, hi_IN: hi-IN, hu_HU: hu-HU, it_IT: it-IT, ja_JP: ja-JP, ko_KR: ko, pl_PL: pl-PL, pt_BR: pt-BR, pt_PT: pt-PT, ru_RU: ru, es_AR: es-AR, es_MX: es-MX, es_ES: es, th_TH: th-TH, ur_PK: ur-PK
 source_file = FlyveMDMInventoryAgent/Base.lproj/Localizable.strings
 source_lang = en
 type = STRINGS
