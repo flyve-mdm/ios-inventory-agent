@@ -30,6 +30,8 @@ GITHUB_COMMIT_MESSAGE=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
 
 if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* && $GITHUB_COMMIT_MESSAGE != *"ci(build): release version"* ]]; then
     echo "Generate CHANGELOG.md and increment version"
+    # Get gh=pages branch
+    git fetch origin gh-pages
     # Generate CHANGELOG.md and increment version
     yarn standard-version -- -t ''
     # Get version number from package.json
@@ -50,6 +52,8 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git add docs -f
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(docs): generate **docs** for version ${GIT_TAG}"
+    # Update documentation on gh-pages branch
+    yarn gh-pages --dist docs --dest docs -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}"
 
     echo "Generate code coverage reporting with xcov"
     # Generate code coverage reporting with xcov
@@ -59,6 +63,8 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git add coverage -f
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(docs): generate **coverage** for version ${GIT_TAG}"
+    # Update coverage on gh-pages branch
+    yarn gh-pages --dist coverage --dest coverage -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
 
     echo "Generate screenshots"
     # Generate screenshots
@@ -68,29 +74,27 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
 
-    echo "Update documentation on gh-pages"
-    # Update documentation on gh-pages
-    git fetch origin gh-pages
+    # git fetch origin gh-pages
     git checkout gh-pages
 
-    # Remove old documetation
-    rm -rf docs
-    rm -rf coverage
+    # # Remove old documetation
+    # rm -rf docs
+    # rm -rf coverage
 
-    git checkout $CIRCLE_BRANCH docs
+    # git checkout $CIRCLE_BRANCH docs
 
-    # Add docs folder
-    git add docs
-    # Create commit
-    git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}" &>/dev/null
+    # # Add docs folder
+    # git add docs
+    # # Create commit
+    # git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}" &>/dev/null
 
-    echo "Get code coverage from develop branch"
-    # Get code coverage from develop branch
-    git checkout $CIRCLE_BRANCH coverage
-    # Add coverage folder
-    git add coverage
-    # Create commit
-    git commit -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}" &>/dev/null
+    # echo "Get code coverage from develop branch"
+    # # Get code coverage from develop branch
+    # git checkout $CIRCLE_BRANCH coverage
+    # # Add coverage folder
+    # git add coverage
+    # # Create commit
+    # git commit -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}" &>/dev/null
 
     echo "Update screenshots"
     # Remove old screenshots
