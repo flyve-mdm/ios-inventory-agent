@@ -2,49 +2,49 @@
   "warnings": [
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/AboutController.swift",
-      "line": 139,
+      "line": 141,
       "symbol": "AboutController.getResource(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/AboutController.swift",
-      "line": 143,
+      "line": 145,
       "symbol": "AboutController.sendError()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/AgentSettingsController.swift",
-      "line": 38,
+      "line": 39,
       "symbol": "AgentSettingsController.cellId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/AgentSettingsController.swift",
-      "line": 39,
+      "line": 40,
       "symbol": "AgentSettingsController.disable",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/AppDelegate.swift",
-      "line": 32,
+      "line": 33,
       "symbol": "serverAnonymous",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/AppDelegate.swift",
-      "line": 90,
+      "line": 91,
       "symbol": "AppDelegate.application(_:didRegister:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/GlobalSettingsController.swift",
-      "line": 37,
+      "line": 38,
       "symbol": "GlobalSettingsController.cellId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -65,105 +65,105 @@
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "InventoryController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 35,
+      "line": 36,
       "symbol": "InventoryController.cellId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 36,
+      "line": 37,
       "symbol": "InventoryController.inventory",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 37,
+      "line": 38,
       "symbol": "InventoryController.inventoryTask",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 87,
+      "line": 88,
       "symbol": "InventoryController.loadInventory(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 129,
+      "line": 130,
       "symbol": "InventoryController.share()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 154,
+      "line": 155,
       "symbol": "InventoryController.shareInventory(json:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/InventoryController.swift",
-      "line": 169,
+      "line": 170,
       "symbol": "InventoryController.createFile(_:json:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/Logger.swift",
-      "line": 33,
+      "line": 34,
       "symbol": "LogEvent.debug",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/Logger.swift",
-      "line": 33,
+      "line": 34,
       "symbol": "LogEvent.error",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/Logger.swift",
-      "line": 33,
+      "line": 34,
       "symbol": "LogEvent.info",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/Logger.swift",
-      "line": 33,
+      "line": 34,
       "symbol": "LogEvent.trace",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/Logger.swift",
-      "line": 33,
+      "line": 34,
       "symbol": "LogEvent.warning",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/Logger.swift",
-      "line": 35,
+      "line": 36,
       "symbol": "LogEvent.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/distiller/project/FlyveMDMInventoryAgent/String+Extension.swift",
-      "line": 32,
+      "line": 33,
       "symbol": "String.camelCaseToWords()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
