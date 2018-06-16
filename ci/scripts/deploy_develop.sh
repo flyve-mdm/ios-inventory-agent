@@ -69,38 +69,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     echo "Generate screenshots"
     # Generate screenshots
     bundle exec fastlane snapshot
-    # Add screenshots folder
-    git add fastlane/screenshots -f
-    # Create commit, NOTICE: this commit is not sent
-    git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
-
-    # git fetch origin gh-pages
-    git checkout gh-pages
-
-    # # Remove old documetation
-    # rm -rf docs
-    # rm -rf coverage
-
-    # git checkout $CIRCLE_BRANCH docs
-
-    # # Add docs folder
-    # git add docs
-    # # Create commit
-    # git commit -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}" &>/dev/null
-
-    # echo "Get code coverage from develop branch"
-    # # Get code coverage from develop branch
-    # git checkout $CIRCLE_BRANCH coverage
-    # # Add coverage folder
-    # git add coverage
-    # # Create commit
-    # git commit -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}" &>/dev/null
-
-    echo "Update screenshots"
-    # Remove old screenshots
-    rm -rf screenshots
-
-    git checkout $CIRCLE_BRANCH fastlane/screenshots
+    
     mv fastlane/screenshots/ screenshots/
 
     # Create header content to screenshots
@@ -116,10 +85,18 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     rm header.html
 
     # Add screenshots folder
-    git add fastlane/screenshots/
-    git add screenshots
-    # Create commit
-    git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
+    git add screenshots -f
+    # Create commit, NOTICE: this commit is not sent
+    git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
+    # Update coverage on gh-pages branch
+    yarn gh-pages --dist screenshots --dest screenshots -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
+
+    # Send untracked files to stash
+    git add .
+    git stash
+    # Checkout to gh-pages branch
+    git checkout gh-pages
+    git pull origin gh-pages
 
     echo "Update cache"
     # Create header content to cache
@@ -143,6 +120,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git push origin gh-pages
 
     git checkout $CIRCLE_BRANCH -f
+    git stash apply stash@{0}
     # Update app info
     source "${SCRIPT_PATH}/app_info.sh"
     # Send app to TestFligth
