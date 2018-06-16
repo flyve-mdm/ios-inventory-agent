@@ -26,8 +26,9 @@
   },
   "homepage": "https://github.com/flyve-mdm/ios-inventory-agent#readme",
   "devDependencies": {
-    "standard-version": "^4.4.0",
     "conventional-github-releaser": "^3.1.2",
-    "node-github-release": "^0.2.1"
+    "gh-pages": "^1.2.0",
+    "node-github-release": "^0.2.1",
+    "standard-version": "^4.4.0"
   }
 }
