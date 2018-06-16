@@ -119,7 +119,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git add fastlane/screenshots/
     git add screenshots
     # Create commit
-    git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}" &>/dev/null
+    git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
 
     echo "Update cache"
     # Create header content to cache
@@ -137,10 +137,10 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Add sw.js to git
     git add -u
     # Create commit
-    git commit -m "ci(cache): force update cache for version ${GIT_TAG}" &>/dev/null
+    git commit -m "ci(cache): force update cache for version ${GIT_TAG}"
 
     # Push commit to origin gh-pages branch
-    git push origin gh-pages &>/dev/null
+    git push origin gh-pages
 
     git checkout $CIRCLE_BRANCH -f
     # Update app info
