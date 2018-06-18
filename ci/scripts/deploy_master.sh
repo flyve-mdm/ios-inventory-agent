@@ -34,6 +34,26 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     yarn standard-version -t '' -m "ci(release): generate CHANGELOG.md for version %s"
     # Get version number from package.json
     export GIT_TAG=$(jq -r ".version" package.json)
+    
+    echo "Update CHANGELOG.md on gh-pages"
+    # Create header content to CHANGELOG.md
+    echo "---" > header.md
+    echo "layout: modal" >> header.md
+    echo "title: changelog" >> header.md
+    echo "---" >> header.md
+
+    # Duplicate CHANGELOG.md
+    cp CHANGELOG.md CHANGELOG_COPY.md
+    # Add header to CHANGELOG.md
+    (cat header.md ; cat CHANGELOG_COPY.md) > CHANGELOG.md
+    # Remove CHANGELOG_COPY.md
+    rm CHANGELOG_COPY.md
+    rm header.md
+    # Update CHANGELOG.md on gh-pages
+    yarn gh-pages --dist ./ --src CHANGELOG.md --dest ./ --add -m "ci(docs): generate CHANGELOG.md for version ${GIT_TAG}"
+    # Reset CHANGELOG.md
+    git checkout CHANGELOG.md -f
+
     # Update CFBundleShortVersionString
     /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${GIT_TAG}" ${PWD}/${APPNAME}/Info.plist
     # Update CFBundleVersion
@@ -71,26 +91,6 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Update CHANGELOG.md on gh-pages
     git fetch origin gh-pages
     git checkout gh-pages
-    git checkout $CIRCLE_BRANCH CHANGELOG.md
-
-    # Create header content to CHANGELOG.md
-    echo "---" > header.md
-    echo "layout: modal" >> header.md
-    echo "title: changelog" >> header.md
-    echo "---" >> header.md
-
-    # Duplicate CHANGELOG.md
-    cp CHANGELOG.md CHANGELOG_COPY.md
-    # Add header to CHANGELOG.md
-    (cat header.md ; cat CHANGELOG_COPY.md) > CHANGELOG.md
-    # Remove CHANGELOG_COPY.md
-    rm CHANGELOG_COPY.md
-    rm header.md
-
-    # Add CHANGELOG.md
-    git add CHANGELOG.md
-    # Create commit
-    git commit -m "ci(docs): generate CHANGELOG.md for version ${GIT_TAG}"
 
     echo "Update screenshots"
     # Remove old screenshots
