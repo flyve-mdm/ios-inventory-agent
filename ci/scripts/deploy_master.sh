@@ -77,28 +77,8 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git add fastlane/screenshots -f
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(snapshot): generate **snapshot** for version ${GIT_TAG}"
-
-    echo "Upload ipa file to release"
-    # Upload ipa file to release
-    yarn github-release upload \
-    --user $CIRCLE_PROJECT_USERNAME \
-    --repo $CIRCLE_PROJECT_REPONAME \
-    --tag ${GIT_TAG} \
-    --name "${APPNAME}.ipa" \
-    --file "${APPNAME}.ipa"
-
-    echo "Update CHANGELOG.md on gh-pages"
-    # Update CHANGELOG.md on gh-pages
-    git fetch origin gh-pages
-    git checkout gh-pages
-
-    echo "Update screenshots"
-    # Remove old screenshots
-    rm -rf screenshots
     
-    git checkout $CIRCLE_BRANCH fastlane/screenshots
     mv fastlane/screenshots/ screenshots/
-
     # Create header content to screenshots
     echo "---" > header.html
     echo "layout: container" >> header.html
@@ -110,12 +90,24 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Remove CHANGELOG_COPY.md
     rm screenshots/screenshots.html
     rm header.html
+    # Update screenshots on gh-pages
+    yarn gh-pages --dist screenshots --dest screenshots -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
 
-    # Add screenshots folder
-    git add fastlane/screenshots/
-    git add screenshots
-    # Create commit
-    git commit -m "ci(snapshot): generate screenshots for version ${GIT_TAG}"
+    echo "Upload ipa file to release"
+    # Upload ipa file to release
+    yarn github-release upload \
+    --user $CIRCLE_PROJECT_USERNAME \
+    --repo $CIRCLE_PROJECT_REPONAME \
+    --tag ${GIT_TAG} \
+    --name "${APPNAME}.ipa" \
+    --file "${APPNAME}.ipa"
+
+    # Send untracked files to stash
+    git add .
+    git stash
+    # Checkout to gh-pages branch
+    git checkout gh-pages
+    git pull origin gh-pages
 
     echo "Update cache"
     # Create header content to cache
