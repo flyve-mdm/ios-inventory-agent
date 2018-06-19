@@ -134,10 +134,12 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     git push origin gh-pages
 
     # Update develop branch
+    git branch -D develop
     git fetch origin develop
     git checkout develop
-    # Merge master on develop
-    git rebase master
+    # # Merge master on develop
+    git fetch origin master
+    git rebase origin/master
     git push origin develop
 
     # Checkout to release branch
