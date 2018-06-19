@@ -84,7 +84,6 @@ platform :ios do
     sigh(
       adhoc: false
     )
-    snapshot
     # Build
     gym(
       scheme: ENV["XCODE_SCHEME"],
