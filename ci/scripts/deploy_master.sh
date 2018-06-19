@@ -29,6 +29,8 @@
 GITHUB_COMMIT_MESSAGE=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
 
 if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version"* && $GITHUB_COMMIT_MESSAGE != *"ci(build): release version"* ]]; then
+    # Get gh=pages branch
+    git fetch origin gh-pages
     echo "Generate CHANGELOG.md and increment version"
     # Generate CHANGELOG.md and increment version
     yarn standard-version -t '' -m "ci(release): generate CHANGELOG.md for version %s"
