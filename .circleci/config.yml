@@ -67,7 +67,7 @@ jobs:
           command: source ./ci/scripts/transifex.sh
       - run:
           name: Build and Test project
-          command: source ./ci/scripts/test.sh
+          command: source ./ci/scripts/test.sh 
       - run:
           name: Generate changelog, docs, coverage and snapshots
           command: source ./ci/scripts/deploy_develop.sh
@@ -109,9 +109,6 @@ jobs:
           name: Configure Transifex
           command: source ./ci/scripts/transifex.sh
       - run:
-          name: Build and Test project
-          command: source ./ci/scripts/test.sh
-      - run:
           name: Master deploy
           command: source ./ci/scripts/deploy_master.sh
           environment:
@@ -129,10 +126,13 @@ workflows:
   build-and-test:
     jobs:
       - build
-      - test
+      - test:
+          branches:
+            ignore:
+              - develop
       - deploy_develop:
           requires:
-            - test
+            - build
           filters:
             branches:
               only: 
