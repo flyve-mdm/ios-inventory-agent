@@ -65,7 +65,7 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(docs): generate **coverage** for version ${GIT_TAG}"
     # Update coverage on gh-pages branch
-    yarn gh-pages --dist coverage --dest coverage -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
+    yarn gh-pages --dist coverage --dest development/coverage -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
 
     echo "Generate screenshots"
     # Generate screenshots
