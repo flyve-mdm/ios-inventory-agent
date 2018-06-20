@@ -76,6 +76,7 @@ node_modules/
 # Documentation 
 
 docs/
+code-documentation/
 coverage/
 
 # Bundler
