@@ -48,12 +48,13 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     echo "Generate documentation with jazzy"
     # Generate documentation with jazzy
     jazzy
+    mv docs/ code-documentation/  
     # Add docs folder
-    git add docs -f
+    git add code-documentation -f
     # Create commit, NOTICE: this commit is not sent
     git commit -m "ci(docs): generate **docs** for version ${GIT_TAG}"
     # Update documentation on gh-pages branch
-    yarn gh-pages --dist docs --dest docs -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}"
+    yarn gh-pages --dist code-documentation --dest development/code-documentation -m "ci(docs): generate documentation with jazzy for version ${GIT_TAG}"
 
     echo "Generate code coverage reporting with xcov"
     # Generate code coverage reporting with xcov
