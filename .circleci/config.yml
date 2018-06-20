@@ -129,14 +129,7 @@ workflows:
   build-and-test:
     jobs:
       - build
-      - test:
-          requires:
-            - build
-          filters:
-            branches:
-              only: 
-                - develop
-                - master
+      - test
       - deploy_develop:
           requires:
             - test
