@@ -68,6 +68,10 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     yarn gh-pages --dist coverage --dest development/coverage -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
 
     echo "Generate test report"
+    # remove default styles
+    sed -i -e 's/header { position: fixed;width: 100%;background: rgba(249, 254, 255, 0.9);margin: 0;padding: 10px;}//g' ./fastlane/test_output/report.html
+    sed -i -e 's/footer { clear: both;position: relative;z-index: 10;height: 40px;margin-top: -10px; margin-left:30px; font-size:12px;}//g' ./fastlane/test_output/report.html
+
     # Generate test report
     mv fastlane/test_output/report.html fastlane/test_output/index.html
     yarn gh-pages --dist fastlane/test_output --src index.html --dest development/test-reports -m "ci(docs): generate test report for version ${GIT_TAG}" 
