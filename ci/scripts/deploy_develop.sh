@@ -67,6 +67,11 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     # Update coverage on gh-pages branch
     yarn gh-pages --dist coverage --dest development/coverage -m "ci(docs): generate coverage with xcov for version ${GIT_TAG}"
 
+    echo "Generate test report"
+    # Generate test report
+    mv fastlane/test_output/report.html fastlane/test_output/index.html
+    yarn gh-pages --dist fastlane/test_output --src index.html --dest development/test-reports -m "ci(docs): generate test report for version ${GIT_TAG}" 
+
     echo "Generate screenshots"
     # Generate screenshots
     bundle exec fastlane snapshot
