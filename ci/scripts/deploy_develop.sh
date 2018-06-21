@@ -72,6 +72,17 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     sed -i -e 's/header { position: fixed;width: 100%;background: rgba(249, 254, 255, 0.9);margin: 0;padding: 10px;}//g' ./fastlane/test_output/report.html
     sed -i -e 's/footer { clear: both;position: relative;z-index: 10;height: 40px;margin-top: -10px; margin-left:30px; font-size:12px;}//g' ./fastlane/test_output/report.html
 
+    # Create header content to test report
+    echo "---" > header.html
+    echo "layout: page" >> header.html
+    echo "---" >> header.html
+
+    # Add header to test report
+    (cat header.html ; cat fastlane/test_output/report.html) > fastlane/test_output/index.html
+    # Remove test report copy
+    rm fastlane/test_output/report.html
+    rm header.html
+
     # Generate test report
     mv fastlane/test_output/report.html fastlane/test_output/index.html
     yarn gh-pages --dist fastlane/test_output --src index.html --dest development/test-reports -m "ci(docs): generate test report for version ${GIT_TAG}" 
