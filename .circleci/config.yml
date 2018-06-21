@@ -127,9 +127,10 @@ workflows:
     jobs:
       - build
       - test:
-          branches:
-            ignore:
-              - develop
+          filters:
+            branches:
+              ignore: 
+                - develop
       - deploy_develop:
           requires:
             - build
