@@ -84,7 +84,6 @@ if [[ $GITHUB_COMMIT_MESSAGE != *"ci(release): generate CHANGELOG.md for version
     rm header.html
 
     # Generate test report
-    mv fastlane/test_output/report.html fastlane/test_output/index.html
     yarn gh-pages --dist fastlane/test_output --src index.html --dest development/test-reports -m "ci(docs): generate test report for version ${GIT_TAG}" 
 
     echo "Generate screenshots"
