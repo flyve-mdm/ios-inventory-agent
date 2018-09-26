@@ -1,3 +1,92 @@
 ---
-layout: page
+layout: testReport
 ---
+
+<div class="total row">
+    <h2 class="col-sm-12">Test Results</h2>
+    <h2 class="col-sm-12">8 tests</h2>
+</div>
+
+<div>
+    <div class="test-suite row failing" onclick="changeDisplay('#test-1')">
+        <h4 class="col-sm-12">FlyveMDMInventoryAgentUITests</h4>
+        <h4 class="col-sm-12">1 test</h4>
+    </div>
+        <!-- Failing or passing class -->
+    <div id="test-1">
+        <div class="test failing row">
+            <div class="title col-sm-12">
+                <p>testTakeScreenshots</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>29.457s</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="test-suite row passing" onclick="changeDisplay('#test-2')">
+        <h4 class="col-sm-12">FlyveMDMInventoryAgentTests</h4>
+        <h4 class="col-sm-12">7 tests</h4>
+    </div>
+    <div id="test-2">
+        <div class="test passing row">    
+            <div class="title col-sm-12">
+                <p>testAgentSettingsController</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>0.020s</p>
+            </div>
+        </div>
+        <div class="test passing row">    
+            <div class="title col-sm-12">
+                <p>testCreateInventory</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>0.045s</p>
+            </div>
+        </div>
+        <div class="test passing row">     
+            <div class="title col-sm-12">
+                <p>testFooterView</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>0.017s</p>
+            </div>
+        </div>
+        <div class="test passing row">     
+            <div class="title col-sm-12">
+                <p>testInventoryTableView</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>0.017s</p>
+            </div>
+        </div>
+        <div class="test passing row">     
+            <div class="title col-sm-12">
+                <p>testLoadingIndicatorView</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>0.022s</p>
+            </div>
+        </div>
+        <div class="test passing row"> 
+            <div class="title col-sm-12">
+                <p>testMessageLabel</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>0.021s</p>
+            </div>
+        </div>
+        <div class="test passing row">     
+            <div class="title col-sm-12">
+                <p>testSendXMLInventory</p>
+            </div>
+            <div class="time col-sm-12">
+                <p>0.053s</p>
+            </div>
+        </div>
+    </div>
+          
+</div>

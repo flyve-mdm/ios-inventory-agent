@@ -1,0 +1,72 @@
+---
+---
+
+.test-report {
+
+    p {
+        padding: 10px;
+    }
+
+    .total {
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .test-suite {
+        cursor: pointer;
+
+        &.passing {
+            h4 {
+              background-color: #6fba6f;
+              padding: 4px 4px;
+              color: #000000;
+              overflow: auto;
+            }
+            margin: 11.5px 0px;
+        }
+
+        &.failing {
+            h4 {
+                background-color: #FA4444;
+                padding: 4px 4px;
+                color: #000000;
+                overflow: auto;
+            }
+            margin: 11.5px 0px;
+        }
+    }
+
+    .test {
+        &.passing {
+            &.row {
+                margin-left: 0px;
+                margin-right: 0px;
+                border-bottom: groove;
+                border-width: 1px;
+                border-color: #6fba6f;
+                background-color: #eaeaea;
+            }
+        }
+    }
+
+    .test {
+        &.failing {
+            &.row {
+                margin-left: 0px;
+                margin-right: 0px;
+                border-bottom: groove;
+                border-width: 1px;
+                border-color: #FA4444;
+                background-color: #eaeaea;
+            }
+        }
+    }
+
+    .time {
+        p {
+            float: right;
+        }
+    }
+
+}
