@@ -44,6 +44,9 @@
     <script src="{{ "/js/jazzy.js" | absolute_url }}" defer></script>
   {% endif %}
 
+  {% if page.layout == 'testReport' %}
+  <link rel="stylesheet" href="{{ "/css/testReport.css" | absolute_url }}">
+  {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | absolute_url }}">
   
