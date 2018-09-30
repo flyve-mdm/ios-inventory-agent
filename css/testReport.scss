@@ -9,64 +9,48 @@
 
     .total {
         h2 {
-            margin-bottom: 30px;
+            padding-top: 2px;
         }
     }
 
     .test-suite {
         cursor: pointer;
+        margin: 11.5px 0px;
+    }
 
-        &.passing {
-            h4 {
-              background-color: #6fba6f;
-              padding: 4px 4px;
-              color: #000000;
-              overflow: auto;
-            }
-            margin: 11.5px 0px;
-        }
-
-        &.failing {
-            h4 {
-                background-color: #FA4444;
-                padding: 4px 4px;
-                color: #000000;
-                overflow: auto;
-            }
-            margin: 11.5px 0px;
+    .test-suite--failing {
+        h4 {
+            background-color: #FA4444;
+            padding: 4px 4px;
+            color: #000000;
+            overflow: auto;
         }
     }
 
-    .test {
-        &.passing {
-            &.row {
-                margin-left: 0px;
-                margin-right: 0px;
-                border-bottom: groove;
-                border-width: 1px;
-                border-color: #6fba6f;
-                background-color: #eaeaea;
-            }
+    .test-suite--passing {
+        h4 {
+          background-color: #6fba6f;
+          padding: 4px 4px;
+          color: #000000;
+          overflow: auto;
         }
     }
 
-    .test {
-        &.failing {
-            &.row {
-                margin-left: 0px;
-                margin-right: 0px;
-                border-bottom: groove;
-                border-width: 1px;
-                border-color: #FA4444;
-                background-color: #eaeaea;
-            }
-        }
+    .test-case--passing {
+        margin-left: 0px;
+        margin-right: 0px;
+        border-bottom: groove;
+        border-width: 1px;
+        border-color: #6fba6f;
+        background-color: #eaeaea;
     }
 
-    .time {
-        p {
-            float: right;
-        }
+    .test-case--failing {
+        margin-left: 0px;
+        margin-right: 0px;
+        border-bottom: groove;
+        border-width: 1px;
+        border-color: #FA4444;
+        background-color: #eaeaea;
     }
-
 }
